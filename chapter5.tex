@@ -1,0 +1,69 @@
+%----------------------------------------------------------------------------
+\chapter{Szoftveres komponensek}
+%----------------------------------------------------------------------------
+
+TODO 
+
+%----------------------------------------------------------------------------
+\section{Mikrokontroller}
+%----------------------------------------------------------------------------
+
+A C-RTU kiegészítõ moduljaiban leggyakrabban az STM32F303 mikrokontrollert használjuk, mivel ez a processzor már kellõen erõs az összes eddig felmerült feladat ellátására, ezek mellett viszont nagyobb darabszámnál viszonylag alacsony költségû.
+
+A maximális órajel 72MHz, ehhez 90 DMIPS számítási teljesítmény társul. Tartalmaz ezek mellett FPU-t, ami az analóg alkalmazások esetén rendkívül hasznos. Perifériák tekintetében is jól felszerelt a kontroller, rengeteg timer, ADC csatorna és kommunikációs interfész áll a fejlesztõ rendelkezésére.
+
+%----------------------------------------------------------------------------
+\section{Firmware}
+%----------------------------------------------------------------------------
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/5_1_0_CUBEMX.png}
+\caption{STM32CubeMX konfigurációs felülete}
+\end{figure}
+
+A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifjezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. Már az áramkörtervezés folyamatában használtam az STM32CubeMX programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert. Mivel a cégen belül Standard Peripherl Libraries-t alkalmazunk, a segédprogramot elsõsorban nem kódgenerálásra, hanem a különbözõ perifériák kiosztásának ellenõrzéséhez alkalmaztam.
+
+
+
+%----------------------------------------------------------------------------
+\subsection{Debug soros port}
+%----------------------------------------------------------------------------
+
+A fejlesztés támogatásához a készülékben helyet kapott egy soros port. Ennek a kezelése sokkal egyszerûbb, mint a C-CAN használata, így egyszerû diagnosztikához kitûnõen alkalmas. A jobb átláthatóság érdekében a soros porton nem egyszerûen kiírja az eszköz az adatokat, illetve szöveges üzeneteket, hanem ANSI escape karakterek használatával kurzor mozgatást valósít meg, így hosszabb képernyõ tartalmak esetén sem fog villogni a kép, az elõzõ képernyõ tartalmát egyszerûen felülírja az új.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=50mm, keepaspectratio]{figures/5_1_1_dbg_serial.png}
+\caption{Debug soros port kimenete}
+\end{figure}
+
+A fejlesztés során többször fordult elõ, hogy valamilyen hibás konfigurálás következtében már az inicializáció során elakadt a program futása, ezek forrását a debug interfész segítségével rendkívül egyszerûen, egy-egy sor vagy változó kiíratásával meg lehetett találni.
+
+%----------------------------------------------------------------------------
+\section{Linux oldali szoftver}
+%----------------------------------------------------------------------------
+
+TODO 
+
+Az alapkészülékben a csomagok fogadását, a paraméterezést viszonylag kevés munkával, egy SQL adatbázis ..........
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/5_3_1_CRWEB.png}
+\caption{CR-WEB fejlesztõi felület}
+\end{figure}
+
+
+%----------------------------------------------------------------------------
+\section{Gyártás támogatás}
+%----------------------------------------------------------------------------
+
+Egy gyártott terméknek elengedhetetlen a tesztelése mielõtt azt eladásra szánja az elõállító. Ez kis darabszámnál még történhet egyedi mérések alapján, melyet a fejlesztõ, vagy egy technikus végez el minden legyártott darabon, azonban ez nem jó hatásfokú, valamint nagyobb darabszámnál szûk keresztmetszetet jelenthet a termék elõállításában, eladásában. Ezt a tesztet összevonhatjuk a termék kalibrációjával, amely elengedhetetlen egy pontos mérõ gyártásánál, hiszen minden felhasznált alkatrésznek lesz valamilyen szórása. Ezen eltérések kiküszöböléséhez valamilyen precíziós jelforráshoz kell hasonlítani az elkészült mérõt, majd az eredmény alapján eliminálni a rendszeres hibákat. A végmérés és kalibráció összevonása után egy egyszerûen végrehajtható leírást kapunk, melyet lépésrõl lépésre követve meggyõzõdhetünk a gyártott termék helyességérõl, valamint kalibráció után garantálhatjuk a specifikált pontosságot.
+
+TODO
+
+%----------------------------------------------------------------------------
+\subsection{Végmérés és kalibráció}
+%----------------------------------------------------------------------------

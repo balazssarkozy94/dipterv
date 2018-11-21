@@ -1,0 +1,265 @@
+%----------------------------------------------------------------------------
+\chapter{Hardver konstrukcio}
+%----------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------
+\section{Szabványosság}
+%----------------------------------------------------------------------------
+
+Egy eladásra szánt terméknél elengedhetetlen a szabványoknak való megfelelés, azonban ezen szabványok megismerése és betartása jelentõs feladat a projekt fejlesztése során. Egy-egy ilyen dokumentum értelmezéséhez jelentõs villamosmérnöki háttértudás és utánajárás szükséges, ugyanakkor rendkívül tanulságosak, hiszen ezek egy jelentõs része kifejezetten a villamosmérnöki gyakorlat tapasztalatai alapján készültek el. Már önmagában az is kihívás lehet, hogy egy adott terméknek mely szabványoknak kell megfelelnie, ugyanis bizonyos terméket funkcióit tekintve akár több szabvány is érinthet, néhányra azonban csak általános szabványok vonatkoznak.
+444
+%----------------------------------------------------------------------------
+\subsection{Szigeteléskoordináció}
+%----------------------------------------------------------------------------
+
+Az egyik betartandó szabvány az IEC 60664, ''Kifeszültségû rendszerek villamos szerkezeteinek szigeteléskoordinációja''. Ez a dokumentum írja lesz az eljárást, amely alapján meg kell határozni a szigeteléshez szükséges légközöket, kúszóutakat. A dokumentum értelmezése a termékek és felhasználási helyének sokfélesége miatt idõintenzív, éppen ezért egy segítõ folyamatábrát készítettem, amivel egyszerûbb a szükséges minimális távolságok meghatározása.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_1_1_szigkoord.png}
+\caption{Szigeteléskoordináció IEC 60664 alapján}
+\end{figure}
+
+%----------------------------------------------------------------------------
+\subsection{EMC}
+%----------------------------------------------------------------------------
+
+Az elektromágneses kompatibilitás (EMC) egy termék megfelelõ mûködését jelenti a (villamos) környezetében, anélkül, hogy az más eszközben elfogadadhatatlan (villamos) zavarokat keltene. Ebbõl következik a két komponenese:
+\begin{enumerate}
+	\item \emph{Immunitás,} amely a zavartûrõ képessége a vizsgált eszköznek.
+	\item \emph{Emisszió,} ami pedig a zavarkibocsájtását írja le.
+\end{enumerate}
+
+A tervezõ mérnöknek a kapcsolási rajz készítése, alkatrészek kiválasztása, NYÁK rétegszám meghatározásánál és rajzolat kialakításánál számításba kell vennie, hogy az immunitásnak jobbnak kell lennie, mint a szabványok által elõírt minimális, az emissziónak pedig alacsonyabbnak, mint a megadott maximális határérték. Sajnos, a villamosmérnöki szakma egyik legkevsébé egzakt tudományterülete az elektromágneses kompatibilitás, gyakran ''fekete mágiának'' tartják, mivel itt már a koncentrált paraméteres modell nem mindig állja meg a helyét, illetve a diszkrét kondenzátorok induktív karakterisztikát is mutathatnak, a tekercsek pedig kapacitívat, de egy széles spektrumú zavaró jelnél, mint például egy ESD esemény, a frekvencia tartomány különbözõ részein más-más jelleget mutathatnak az alkatrészek. Tovább nehezíti a terület problémáinak tiszta megértését a hiba lokalizálása, mivel egy komplex áramkör esetén egy néhány pF-os mérõfej is jelentõsen befolyásolja a mérendõ rendszert, általában csak a termék teszt alatti meghibásodásából következtethetünk a hibaforrásra. Az áramkör készítõje lényegében csak törekedni tud a megfelelésre, garantálni azt csak utólagos mérésekkel lehet, illetve amennyiben az áramkör egyik verziója elbukik az EMC teszteken, akkor az alkatrész értékek változtatásában lehet bizakodni.
+
+TODO CITÁCIÓZÁS www.emtest.com what is standards.php
+
+EMC követelmények számos szabványban szerepelnek, ezek struktúrája a következõ:
+
+\begin{enumerate}
+	\item \emph{Alapszabványok (Basic standards):} Ezen szabványok mutatják be a vizsgált jelenségeket, leírják a teszteszközök tulajdonságait, valamint bemutatják a szükséges mérések helyes elvégzésének lépéseit.
+	\item \emph{Általános szabványok (Generic standards):} Bizonyos felhasználási területekre írnak elõ szükséges teljesítendõ teszt szinteket, utalva az alapszabványokban leírt mérésekre. Az ebbe a kategóriába tarozó elõírásokat abban az esetben kell alkalmazni, amennyiben nincs termékszabvány.
+	\item \emph{Termékszabványok (Product standards):} A legspecifikusabb szabványok, melyek szigorú követelményeket támasztanak elõ egy konkrét termékkel kapcsolatban. Ezekben a dokumentumokban különleges teszteket is elõírhatnak, melyek sem az alapszabványokban, sem az általános szabványokban nem szerepeltek.
+\end{enumerate}
+
+Egy termék tesztelése esetén a TODO BEHIVATKOZNI A FENTI LISTÁT I GUESS fenti listán alulról felfelé haladva kell meghatározni a legszigorúbb szinteket. Egy háztartási vízforraló példáján keresztül nézzük a lépéseket:
+
+\begin{enumerate}
+	\item \emph{Alapszabvány:} IEC 61000-4-x sorozat, tartalmazza a különbözõ EMC jelenségek leírását, méréseket. 
+	\item \emph{Általános szabvány:} IEC 61000-6-1, lakossági felhasználású eszközök teszt szintjei.
+	\item \emph{Termékszabvány:} EN 55014-1, háztartási eszközök követelményei.
+\end{enumerate}
+
+A fenti listából, mivel létezik termékszabvány, annak az értékeit vesszük, és az alapszabvány tesztejeit hajtjuk végre.
+
+TODO KÉP A TIPIKUS FORRÁS ÉS NYELÕRÕL
+
+Egy elektronikus eszköz tervezése során nem elég a mérnököknek laborkörülmények között mûködõ terméket készíteni, gondolni kell a késõbbi tényleges használat során felmerülõ zavaró hatásokra. Ennek a figyelmen kívül hagyása miatt találkozhatunk például olyan olcsóbb USB-s egerekkel, amelyek elveszítik a kapcsolatot a számítógéppel egy másik eszköz csatlakoztatásakor.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=100mm, keepaspectratio]{figures/4_1_2_emc_fa.png}
+\caption{EMC vizsgálatok osztályzása}
+\end{figure}
+
+%----------------------------------------------------------------------------
+\subsubsection{Immunitás}
+%----------------------------------------------------------------------------
+
+A zavarérzékenység vizsgálatához különbözõ zavaró jeleket viszünk be a rendszerbe, melyek valamilyen ténylegesen elõforduló jelenséget hivatottak szimulálni.
+
+\begin{enumerate}
+	\item \emph{Burst:} Ez a zavar egy relé kontaktusain kialakult ív sorozat hatását utánozza. todotodo
+	\item \emph{Surge:} ejjlmao
+	\item \emph{ESD:} ejjlmao
+\end{enumerate}
+
+%----------------------------------------------------------------------------
+\subsubsection{Emisszió}
+%----------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------
+\subsection{EMC tesztek}
+%----------------------------------------------------------------------------
+
+Mivel a CR-PM3 a diplomaterv írásának idején még csak prototípus fázisban volt, nem vizsgáltattuk be azt külön hitelesített laborban, ahol az eszközpark bérlése jelentõs költségeket jelent, ehelyett a Prolan Zrt. saját laboratóriumában végeztünk el bizonyos immunitás teszteket. Az itt rendelkezésre álló speciális mûszerek:
+
+\begin{enumerate}
+	\item \emph{EM Test DITO:} IEC 61000-4-2-ben leírt tesztnek megfelelõ kézi elketrosztatikus kisülés generátor  
+	\item \emph{EM Test UCS 500 M:} Burst, surge, tápkimaradás szimulátor. 
+	\item \emph{PMM 3000:} 10kHz-1GHz átfogású jelgenerátor 
+	\item \emph{PMM 6000N:} 9kHz-230MHz átfogású erõsítõ
+\end{enumerate}
+
+A CR-PM3 teszteji során az IEC 62052-11:2003 termékszabványban találhatóak a szükséges mérési szintek, illetve speciális mérési elõírások.
+
+
+%----------------------------------------------------------------------------
+\subsubsection{ESD (IEC 61000-4-2)}
+%----------------------------------------------------------------------------
+
+Mivel a CR-PM3 semmilyen vezetõ felülete nem érinthetõ a felhasználó által, így nem szükséges a közvetlen kisülést vizsgálni, elég csupán a közvetett esetet nézni, amikor egy horizontális és vertikális csatolósíkkal juttatjuk be a zavarokat a rendszerbe.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_4_ESD_SETUP.png}
+\caption{ESD mérési összeállítás}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_5_ESD_V.png}
+\caption{Zavarás vertikális csatolósíkkal}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_6_ESD_H.png}
+\caption{Zavarás horizontális csatolósíkkal}
+\end{figure}
+
+Erre a tesztre az elõírt feszültség 8kV, amit az STM32-es processzor hiba nélkül kibírt mind a két csatolási síkkal, azonban az ADE7978 +6kV-nál és -3kV-nál is újraindult horizontális csatolósíknál. A termékszabványban szereplõ kritérium ugyan elfogadhatónak tartja az átmeneti funkcióvesztést, ez mégis a termék robosztusságát, illetve annak hiányát jelzi. Miután több alkatrész érték megváltoztatása sem hozott lényegi javulást, arra a következtetésre jutottunk több kollégámmal, hogy az áramkört mindenképpen legalább 4 rétegû NYÁK-ra kell tervezni a javított zavarvédelem érdekében.
+
+%----------------------------------------------------------------------------
+\subsubsection{Burst (IEC 61000-4-4)}
+%----------------------------------------------------------------------------
+
+A méréshez a közvetlen söntös elrendezést alkalmaztuk, mivel így valószínûleg nagyobb zavar jut a mérõhöz, mint egy áramváltó transzformátoron keresztüli bekötés esetén. A terhelés egy elektromos fûtõtest volt, amivel az áramcsatornán nagyjából a mérési tartomány közepére jutó terhelés alakult ki.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_1_BURSTSURGE_SETUP.png}
+\caption{Burst és surge teszt mérési összeállítása}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_2_BURST_SIM.png}
+\caption{Szimulátor beállításai burst teszthez}
+\end{figure}
+
+A mérés során nem történt funkcióvesztés, a webes felületen keresztül folyamatosan nyomon tudtuk követni a vizsgált értékeket a webes felületen keresztül. 
+
+%----------------------------------------------------------------------------
+\subsubsection{Surge (IEC 61000-4-5)}
+%----------------------------------------------------------------------------
+
+A mérési elrendezés nem változott a burst vizsgálathoz képest, mindössze a szimulátor beállításait kellett módosítani.
+
+A méréshez a szabvány 1/min maximális frekvenciát ír elõ, mivel a lehetséges védelmek (pl. varisztor) tulajdonságai melegedés hatására megváltozhatnak. Mivel mi a házi laboratóriumban egy elõmérést végzünk, az elõírt paramétertõl eltérõen, 15 másodperces gyakorisággal kapcsoltuk a zavaró jelet a készülékre. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_3_SURGE.png}
+\caption{Szimulátor beállításai surge teszthez}
+\end{figure}
+
+Ezen a teszten sem történt funkcióvesztés, az értékek a webes felületen folyamatosan frissültek.
+
+%----------------------------------------------------------------------------
+\subsubsection{Vezetett RF (IEC-61000-4-6)}
+%----------------------------------------------------------------------------
+
+A rádiófrekvenciás terek által keltett vezetett zavarok vizsgálata során nem tapasztaltunk hibás mûködést. A zavaró jel 150kHz-tõl 80MHz-ig pásztázta végig a frekvenciatartományt.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_7_RF.png}
+\caption{Vezetett RF zavarok mérési összeállítása}
+\end{figure}
+
+%----------------------------------------------------------------------------
+\subsection{Javítási tervek}
+%----------------------------------------------------------------------------
+
+Sajnos a diplomaterv leadásáig nem volt már idõm újratervezni a készüléket, azonban a következõ módosításokat kellene végrehajtani a következõ prototípus legyártása elõtt:
+
+\begin{enumerate}
+	\item \emph{Rétegszám növelése:} Kétségkívül a legfontosabb módosítás legalább két további réteg felvétele, amelyek egybefüggõ földkitöltést, illetve táp szigeteket tartalmaznak. Ezek a visszaáramok szempontjából alacsony impedanciás utat biztosítanak, táp szempontjából pedig egy nagyon alacsony impedanciájú, néhány 100pF-os kondenzátort jelentenek, amely nagyobb frekvenciákon (például ESD által keltett tranziensek spektrumának egy jelentõs része) kiemelten fontos. Ezek mellett természetesen árnyékolást is biztosítanak a kitöltött rétegek.
+	\item \emph{ADE7978 áthelyezése:} Jelenleg a CR-PM3A és CR-PM3C közötti csatlakozón keresztül van vezetve az ADE7978 és a négy ADE7933 összes kommunikációs vonala. Mivel egy-egy tûsor középpontja egymástól 2.54mm-re helyezkedik el egymástól, ezért ott nem elhanyagolható méretû hurkok vannak, amely zavartûrés és kibocsájtás szempontjából sem szerencsések. Ezt csökkenteni úgy lehetne, hogy a DSP-t áthelyezzük az alsó NYÁK-ra, így az ADE7978 és mikrokontroller közötti SPI, reset, interrupt és táp vonalakat kell csak átvinni.
+	\item \emph{SPI vonalak lezárása:} A különbözõ vonalak impedancia illesztésének elhanyagolása okozhat EMC problémákat, akár emisszió, akár immunitás tekintetében, mivel normál mûködés közben reflexiók alakulnak ki, amelyek hosszú vonalakon a zavarkibocsájtáshoz járulhatnak hozzá. Amennyiben a zavaró jeleket kívülrõl csatoljuk a vonalra, azok szintént tudnak reflektálódni az illesztetlen lezárásokon (pl. nagy impedanciás digitális bemenetek) így azok zavaró hatása hosszabb ideig áll fenn. Ezekre a problémákra megoldásként a leggyakrabban soros lezárást alkalmazunk a meghajtó oldalon, amennyiben ez nem bizonyul elégnek, párhuzamos RC lezárást a fogadónál.
+	\item \emph{NYÁK kapacitás kialakítása:} A táp és a föld közötti kapacitáson túl, egy zajvédelmi kondenzátor is kialakításra kerülhet több rétegû konstrukciónál, amely az ADE7933-as IC-k alatt, az izolált oldalak és a rendszer földje közé kerülnek. Ezt a kapacitást az angol terminológia ''stitching capacitor''-nak nevezi, szerepe pedig, hogy a leválasztás során keletkezett zavarokat csökkentse.
+\end{enumerate}
+	
+%----------------------------------------------------------------------------
+\section{Mechanika}
+%----------------------------------------------------------------------------
+
+A CR-PM3 háromfázisú teljesítménymérõ modul három nyomtatott áramköri lapból épül fel, ezek rendre:
+
+\begin{enumerate}
+	\item \emph{CR-PM3A:} A ''front-end''-et valósítja meg, itt kapott helyet a 4 darab ADE7933 izolált mérõ IC, az ezekhez kapcsolódó elektronika, valamint a KIF csatlakozók.
+	\item \emph{CR-PM3C:} A mikrokontroller, illetve az ADE7978 égetett kódú DSP helyezkedik el ezen a szinten.
+	\item \emph{CR-PM3P:} Elektronikai funkciót nem lát el, csupán a termék elõlapja.
+\end{enumerate}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_2_1_konstr_expl.png}
+\caption{CR-PM3 összeállítása}
+\end{figure}
+
+A készüléken 4 csatlakozó található, ezek a 3 fázis, valamint a nulla vezetõhöz tartozó jelek csatlakoztatásáért felelõsek. Egy ilyen csatlakozónak a kiosztása: I-,I+,V-,V+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_2_2_konstr_compl.png}
+\caption{CR-PM3 a készülékházban}
+\end{figure}
+
+A két elektronikát tartalmazó emelet közötti kapcsolatot a Samtec által gyártott speciális, DW családba tartozó tûsorával, és HLE családba tartozó hüvelysorával valósítottam meg. A DW tûsorok a szokványos társaiktól eltérõen egy további mûanyag távtartóval rendelkeznek, amely magasságát 5mil felbontással lehet megválasztani a gyártó honlapján. Ezzel a távtartóval egyszerûen be lehet állítani a két NYÁK távolságát, az összeszerelést jelentõsen egyszerûsíti. A HLE hüvelysor pedig egy ''Pass-through'' típusú csatlakozó, vagyis akár alulról, akár felülrõl is képes fogadni az ellenpárját. Ez utóbbi tulajdonságát kihasználva tudtam a CR-PM3C-t egyoldalas szerelésûre kialakítani, mivel a NYÁK-on a csatlakozó felül helyezkedett el, alatta pedig fémezetlen furatok lettek kialakítva, így alulról akadálymentesen tudott a tûsor kontaktus kialakítani.
+
+Az elõlapon a C-RTU család minden tagján kötelezõ bizonyos állapotokat LED-del megjeleníteni. A tervezés fázisában a tényleges megvalósításra nem volt teljes elõírás, ezért a modulon egy addig nem használt megvalósítást próbálhattam ki. SMD LED-eket helyeztem el a CR-PM3C-n, majd a CR-PM3P elõlapi NYÁK-ra bepréselhetõ Bivar PLP2-215 polikarbonátból készült, 3mm-es fényvezetõit terveztem. Ezzel a megoldással a furatszerelt LED-ek beültetését, váltottam ki, amely során nehézkes az alkatrész magasságának a pontos beállítása, ellenben egy fényvezetõ bepréselésének eredménye kellõen konzisztens eredményt tud adni.
+
+%----------------------------------------------------------------------------
+\section{Kapcsolási rajz}
+%----------------------------------------------------------------------------
+
+A kapcsolási rajzot OrCAD Capture-ben hoztam létre, melynek számos funkciója segíti a tervezõ mérnökök, illetve a gyártás elõkészítés munkatársainak közös munkáját. A tervezõ az alkatrész lehelyezésekor láthatja, hogy az adott komponensbõl hány darab van raktáron, mennyi annak a beszerzési ára, így elkerülhetõek az olyan szituációk, hogy egy már nem beszerezhetõ, vagy feleslegesen drága alternatíva kerül egy új termékbe.
+
+A kapcsolási rajzok készítése során bizonyos formázási kérdések a fejlesztõre vannak bízva. Az átláthatóság érdekében én ahol csak lehet a hierarchikus felépítést, illetve a lapokon belüli további, az értelmezést segítõ felbontást preferálom.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_3_1_kapcsrajz.png}
+\caption{Lapon belüli felbontás}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_3_2_kapcsrajz2.png}
+\caption{Hierarchikus tervezés}
+\end{figure}
+
+A CR-PM3C-n egy 3.3V-os tápegységet és a hátlapi buszfeszültség visszaolvasását leszámítva tisztán digitális áramkörök helyezkednek el. Ezen a NYÁK-on a fõbb komponensek:
+
+\begin{enumerate}
+	\item \emph{C-CAN címbeállító switch:} Ez egy 4 karos kétállású kapcsoló, melynek az állását inicializáció során olvassa ki a kontroller.
+	\item \emph{3.3V-os tápegység:} Ez a Richtek RT7285/A kapcsolóüzemû tápegységén alapul, a hátlapi 12V-ból állítja elõ a modulnak szükséges tápfeszültséget.
+	\item \emph{Elõlapi LED-ek:} A C-RTU moduloknak elõírt színû LED-ek. Funkcióik sorban: státusz, busz kommunikáció, hiba, L1 fázis, L2 fázis, L3 fázis, illetve a DSP által vezérelt CF1 és CF2, konfigurálható jelentéssel.
+	\item \emph{Mikrokontroller:} Az STM32F303-as mikrokontroller, illetve a mûködéséhez szükséges alkatrészek.
+	\item \emph{DSP:} Az ADE7978-as égetett kódú DSP. 
+	\item \emph{CAN meghajtás} 
+	\item \emph{Reset/PPS áramkör:} Ugyanazon a hátlapi két vonalon egy differenciális PPS jel van, amelynek a megszûnése egy rövid idõn belül mûködteti a reset áramkört.
+	\item \emph{Reset gomb} Rövid idejû nyomvatartása után a reset áramkört mûködésbe lép.
+	\item \emph{Debug UART csatlakozó:} A fejlesztéshez használandó, ESD védelemmel van ellátva.
+	\item \emph{Programozó csatlakozó:} Ez egy Tag-Connect csatlakozó, ami gyakorlatilag tisztán NYÁK rajzolattal kialakítható, nem szükséges alkatrészt beültetni hozzá. 
+	\item \emph{Busz és emelet csatlakozók:} Samtec ''Pass-Through'' keresztülmenõ hüvelysorok. 
+
+A CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrészek, az emeleti tûsor csatlakozó, továbbá a csatornák védelmei, a mérõ söntök, a nagyfeszültségû ellenállás osztók és a KIF csatlakozók találhatók.
+
+\end{enumerate}
+
+%----------------------------------------------------------------------------
+\section{NYÁK terv}
+%----------------------------------------------------------------------------
+
+A nyomtatott áramköri terveket Allegro PCB Designer-ben valósítottam meg, költséghatékonysági szempontból 2 rétegen. Fontos feladat a tervek készítésekor figyelembe venni a gyárthatósági szempontokat, hiszen az alkatrész és NYÁK költségek mellett a termék önköltségéhez ugyanúgy hozzájárul a gyártás ára.
+
+Elsõ lépésként a készülékház gyártója által szolgáltatott 3D modellbõl indultam ki, amelyben a különbözõ szintekhez tartozó sablonok találhatók. Ezekbõl .dxf kiterjesztésû, 2 dimenziós rajzokat készítettem, majd ezt importáltam be a tervezõ programba az ''Outline'' rétegre. Ezt követõen elhelyeztem a csatlakozókat, mechanikai furatokat, illetve bejelöltem azokat a területeket a NYÁK-okon, ahol a készülékház miatt valamilyen megkötés van, például alsó/felsõ oldalra nem helyezhetõ bizonyos értéknél magasabb alkatrész. Ezután felvettem a kényszereket, majd elhelyeztem a LED-eket, címbeállító kapcsolót, valamint a reset nyomógombot, mivel ezek pozíciója határozza meg a felhasználói felületet, amennyire csak lehet, ergonomikussá kell tenni azt. Csak ezek után következett az összes többi alkatrész, ügyelve a szûrõ kondenzátorok, kvarcok helyzetére, a táp vonalak huzalozásának integritására. A CR-PM3C-n ''via stiching''-et alkalmaztam, ami segítségével szabályos rácsban viákat helyeztem el a GND rétegre, ezzel javítva a földelés minõségét. A terveket sikerült egy oldalas szerelésre elékszíteni, ezzel csökkentve a modul gyártási költségét.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_4_1_CRPM3_PCB.png}
+\caption{CR-PM3A és CR-PM3C}
+\end{figure}

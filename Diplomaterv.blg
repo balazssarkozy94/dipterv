@@ -1,0 +1,44 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Diplomaterv.aux
+A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: declaration.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
+A level-1 auxiliary file: overall.aux
+A level-1 auxiliary file: acknowledgement.aux
+The style file: unsrt.bst
+A level-1 auxiliary file: appendices.aux
+Database file #1: mybib.bib
+Warning--string name "szeptember" is undefined
+--line 4 of file mybib.bib
+Warning--string name "majus" is undefined
+--line 15 of file mybib.bib
+Warning--string name "majus" is undefined
+--line 25 of file mybib.bib
+Warning--string name "julius" is undefined
+--line 47 of file mybib.bib
+Warning--string name "aprilis" is undefined
+--line 57 of file mybib.bib
+Warning--string name "szeptember" is undefined
+--line 67 of file mybib.bib
+Warning--string name "marcius" is undefined
+--line 77 of file mybib.bib
+Warning--string name "december" is undefined
+--line 87 of file mybib.bib
+Warning--string name "majus" is undefined
+--line 97 of file mybib.bib
+Warning--empty author in MSZ_EN_60664-1_2008
+Warning--empty author in MSZ_EN_62052-11_2003
+Warning--empty author in CEER_BENCHMARK_6TH
+Warning--empty author in MSZ_EN_6100-6-1_2007
+Warning--empty author in MSZ_EN_55014-1_2007
+Warning--empty author in MSZ_EN_61000-4-2_2009
+Warning--empty author in MSZ_EN_61000-4-4_2011
+Warning--empty author in MSZ_EN_61000-4-5_2014
+Warning--empty author in MSZ_EN_61000-4-6_2014
+(There were 18 warnings)

@@ -1,0 +1,65 @@
+\begin{thebibliography}{10}
+
+\bibitem{MSZ_EN_60664-1_2008}
+{MSZ EN 60664-1:2008, Kisfeszültségû rendszerek villamos szerkezeteinek
+  szigeteléskoordinációja. 1. rész: Alapelvek, követelmények és vizsgálatok
+  (IEC 60664-1:2007)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2008.
+
+\bibitem{MSZ_EN_62052-11_2003}
+{MSZ EN 62052-11:2003, Váltakozó áramú villamos fogyasztásmérõ berendezések.
+  Általános követelmények, vizsgálatok és vizsgálati feltételek. 11. rész:
+  Fogyasztásmérõ berendezések (IEC 62052-11:2003)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2003.
+
+\bibitem{CEER_BENCHMARK_6TH}
+{CEER 6th Benchmarking Report on the Quality of Electricity and Gas Supply}.
+\newblock Jelentés, Council of European Energy Regulators (CEER), 2016.
+
+\bibitem{emtest_what_is_standards}
+{EM TEST (Switzerland) GmbH}.
+\newblock The structure of {EMC} standards (2018. november 12.).
+\newblock \url{http://www.emtest.com/what_is/standards.php}.
+
+\bibitem{MSZ_EN_6100-6-1_2007}
+{Elektromágneses összeférhetõség (EMC). 6-1. rész: Általános szabványok.
+  Zavartûrés a lakóhelyi, a kereskedelmi és az enyhén ipari környezetekre (IEC
+  61000-6-1:2005)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2007.
+
+\bibitem{MSZ_EN_55014-1_2007}
+{Elektromágneses összeférhetõség. Háztartási készülékek, villamos szerszámok és
+  hasonló eszközök követelményei. 1. rész: Zavarkibocsátás (CISPR 14-1:2005)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2007.
+
+\bibitem{MSZ_EN_61000-4-2_2009}
+{Elektromágneses összeférhetõség (EMC). 4-2. rész: Vizsgálati és mérési
+  módszerek. Elektrosztatikus kisüléssel szembeni zavartûrési vizsgálat (IEC
+  61000-4-2:2008)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2009.
+
+\bibitem{MSZ_EN_61000-4-4_2011}
+{Elektromágneses összeférhetõség (EMC). 4-4. rész: Vizsgálati és mérési
+  módszerek. Gyors villamos tranziens/burst jelenségekkel szembeni zavartûrési
+  vizsgálat (IEC 61000-4-4:2012)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2011.
+
+\bibitem{MSZ_EN_61000-4-5_2014}
+{Elektromágneses összeférhetõség (EMC). 4-5. rész: Vizsgálati és mérési
+  módszerek. Lökõhullámmal szembeni zavartûrési vizsgálat (IEC
+  61000-4-5:2014)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2014.
+
+\bibitem{MSZ_EN_61000-4-6_2014}
+{Elektromágneses összeférhetõség (EMC). 4-6. rész: Vizsgálati és mérési
+  módszerek. Rádiófrekvenciás terek által keltett, vezetett zavarokkal szembeni
+  zavartûrés vizsgálata (IEC 61000-4-6:2013)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 2014.
+
+\bibitem{schneider_16451}
+{Schneider Electric}.
+\newblock Schneider legacy products - 16451 (2018. november 21.).
+\newblock
+  \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
+
+\end{thebibliography}

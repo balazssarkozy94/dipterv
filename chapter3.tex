@@ -1,0 +1,120 @@
+%----------------------------------------------------------------------------
+\chapter{Rendszer jellemzõk}
+%----------------------------------------------------------------------------
+
+A tervezendõ adatgyûjtõ rendszerhez a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségei feszültségváltókon, az áramai áramváltókon keresztül csatlakozik. Ezeknek a kimenete jellemzõen 100VAC illetve 5A peak, így a tervezendõ eszköz mérési tartományát is úgy kell kialakítani, hogy legalább ezt a tartományt tudja kezelni. A szélesebb körû felhasználást biztosítva, a prototípus úgy lesz kialakítva, hogy az eszközt akár közvetlenül is lehessen a kisfeszültségû hálózatra csatlakoztatni. Minden mérési megoldásnál egyformán elvárás a legalább 2.5kVeff izoláció. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
+
+%----------------------------------------------------------------------------
+\section{Feszültségmérés}
+%----------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------
+\subsection{Feszültségváltó transzformátor}
+%----------------------------------------------------------------------------
+
+Egy precízen tekercselt mérõtranszformátor segítségével az 50Hz-es váltakozó feszültséget leválaszthatjuk és letranszformálhatjuk a mérési tartományunkra, ezt egy nagy impedanciás mérõvel feldolgozhatjuk, így a transzformátor gyakorlatilag üresjárásban üzemel. A feszültségváltó transzformátor jellemzõ hibája az áttételi hiba, vagyis a névleges áttételtõl való eltérés, illetve a szöghiba, amely a primer és szekunder oldal közötti fáziseltolás. A túlfeszültséget jól tolerálja, a szükséges szigetelési szilárdság könnyen megvalósítható. Méretében a többi megoldáshoz képest nagy, a precízebb, például 0.1 pontossági osztályú, kis szöghibájú típusok ára jelentõs.
+
+%----------------------------------------------------------------------------
+\subsection{Ellenállásosztó és izolációs erõsítõ}
+%----------------------------------------------------------------------------
+
+A készülék bemeneti feszültségét egy nagy impedanciás ellenállás osztón keresztül leképezhetjük egy izolációs erõsítõ bemeneti tartományára, majd egy izolációs erõsítõvel elérhetjük a megfelelõ szigetelési szilárdságú galvanikus leválasztást. Az izolációs erõsítõ mûködhet optikai, induktív vagy kapacitív elven. Az induktív elvûek esetében az analóg bemeneti jelet digitálissá alakítják, majd a tokozáson belül kialakított légmagos transzformátorok segítségével, a mágneses téren keresztül választják le a jelet, majd alakítják vissza analóggá. Ez a megoldás akár kis teljesítményû leválasztott tápok kialakítását is lehetõvé teszi a digitális jelek átvitele mellett. A kapacitív elven mûködõ izolátorok szintén digitalizálják a bemeneti jelet, majd a szilícium lapkákon kialakított nagyfeszültségû kondenzátorok segítségével, az elektromos téren keresztül juttatják át a a jelet a fogadó oldalra, ahol visszaalakítják analóg jellé. Az induktív és kapacitív izolátorok digitális átviteli megoldása kiküszöböli az optikai izolációs erõsítõk legfõbb problémáját, az öregedés következtében fellépõ paraméter változásokat.
+
+%----------------------------------------------------------------------------
+\subsection{3.1.2 Ellenállásosztó és leválasztott ADC}
+%----------------------------------------------------------------------------
+
+Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell letranszformálni az ADC mérési tartományára a feszültséget, majd az átalakítást követõen a digitális kommunikációt kell leválasztani. A digitális kommunikáció leválasztására számos izolátor és optocsatoló típus áll rendelkezésre, melyek költsége alacsonyabb, mint az analóg izolációs erõsítõké.
+
+%----------------------------------------------------------------------------
+\section{Árammérés}
+%----------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------
+\subsection{Áramváltó transzformátor}
+%----------------------------------------------------------------------------
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=130mm, keepaspectratio]{figures/3_2_1_aram_valto.png}
+\caption{Áramváltó transzformátor mûködési elve}
+\end{figure}
+
+A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldható. A transzformátor kialakítását tekintve a szekunder oldal fix menetszámmal rendelkezik, míg a primer oldalon az adott felhasználásnak megfelelõ menetszámban kell átfûzni egy nagyobb áramú vezetõt. Itt a menetszám tipikusan kevés, leggyakrabban 1-3 közötti. A szekunder oldalt egy minél alacsonyabb értékû sönt ellenállással zárjuk le, ezzel próbáljuk közelíteni a transzformátor rövidzárási állapotát. A szekunder oldali áramot mérve tudunk ezután következtetni a primer áramra, mivel az áttétel elõre ismert. A feszültségváltó transzformátorral hasonló módon méretét tekintve nagy, precízebb típusok költségesek. Gyártanak bontható típusúakat is, azonban ezek tovább emelik a szenzor transzformátor árát. Egy jelentõs hátrány, hogy lezáratlan állapotban életveszélyes feszültségek jelennek meg a szekunder oldalon már alacsonyabb primer áramoknál is. Ez utóbbi abból következik, hogy míg normális mûködés közben a primer és szekunder oldalon keletkezõ fluxus azonos nagyságú és ellentétes irányú, ezzel kioltva egymást, addig a szekunder oldali szakadás esetén a vasmagban kialakuló fluxus megnõ, a szekunder tekercselésben az feszültséget indukál, az pedig a transzformátor tönkremeneteléhez vezethet, vagy pedig a telepítõ szakembert veszélyeztetheti, ezért a telepítésénél kellõ figyelemmel kell eljárni, a szekunder oldalt rövidzárban kell tartani, vagy a primer oldali áramot 0-án kell tartani a szekunder lezárásáig.
+
+%----------------------------------------------------------------------------
+\subsection{Rogowski-tekercs}
+%----------------------------------------------------------------------------
+
+Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kivitelû. Ez lehetõvé teszi az üzem közbeni felszerelését a mérõnek, nem kell az áramszolgáltatást szüneteltetni. A tekercs közepén átfolyó áram változásával arányos feszültség indukálódik, azt integrálva az áram értékét nagy pontossággal meg tudjuk határozni. Magas frekvenciákig, nagy áramok esetében is használható, például tranziensek vizsgálatához. Ma már tisztán nyomtatott áramkörön is kialakítható, azonban ezek pontossága még nem éri el a tekercselt kivitelûekét. A pontosabb kivitelû típusok ára magas.
+
+%----------------------------------------------------------------------------
+\subsection{Sönt ellenállás és izolációs erõsítõ}
+%----------------------------------------------------------------------------
+
+Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció.
+
+%----------------------------------------------------------------------------
+\subsection{Hall-szenzoros árammérõ}
+%----------------------------------------------------------------------------
+
+A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokba integrálva is be lehet szerezni, kitûnõ dinamikus tulajdonságokkal rendelkeznek, alkalmasak DC áramok mérésére, a mérendõ áramot nem szükséges egy ellenálláson keresztül vezetni és így feszültséget ejtetni, az áram nagysága az általa keltett mágneses mezõn keresztül van mérve, a Hall-effektust kihasználva, így a leválasztás a mágneses téren keresztül valósul meg. Pontos mérésekhez a külsõ mágneses tér zavaró hatása ellen speciális mérési eljárásokkal lehet védekezni, mely során több, egymás mellett elhelyezett Hall-szenzor kimenetét kell mérni, azok segítségével pedig kiszûrhetõ a külsõ tér zavaró hatása. Pontosabb típusok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján azonban ezeknek a szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
+
+%----------------------------------------------------------------------------
+\section{Adatfeldolgozás}
+%----------------------------------------------------------------------------
+
+A lehetséges szenzor megoldások megismerése után nézzük milyen lehetséges jelfeldolgozók közül választhatunk.
+
+%----------------------------------------------------------------------------
+\subsection{Digitális Jelfeldolgozó Processzor}
+%----------------------------------------------------------------------------
+
+Az elsõ lehetséges megoldás egy saját fejlesztésû szoftvert futtató digitális jelfeldolgozót tartalmaz, ez végzi el a méréseket, kompenzációt, valamint számolja ki a hálózati jellemzõket a mért feszültség- és áramértékekbõl. Ennek a megoldásnak elõnye a flexibilitás, illetve, hogy nem tartalmaz ''fekete dobozokat'', vagyis nem ismert belsõ mûködésû blokkokat. A piacon elérhetõ számos jelfeldolgozó processzor, így a tervezõ a célalkalmazásnak megfelelõ típust tud kiválasztani.
+
+%----------------------------------------------------------------------------
+\subsection{Programozható Logika}
+%----------------------------------------------------------------------------
+
+Az alkalmazás megvalósítható konfigurálható logikai eszközökkel is, például FPGA-val. A párhuzamosan mûködõ blokkok jelentõs számítási teljesítménnyel bírnak, digitális jelfeldolgozáshoz kitûnõen használhatók. Amennyiben szükséges soft-core processzor szintetizálható a rendszerbe, kiegészítve ezzel a párhuzamosan futó blokkokat egy soros végrehajtású CPU-val. A feladat bonyolultságát figyelembe véve egy kisebb teljesítményû FPGA is kielégítõ lehet, azonban még ezek ára is igen magas, illetve legtöbbjük BGA tokozású, amely kisebb szériás termékek esetén, illetve prototípus gyártásnál problémákat okozhat.
+
+%----------------------------------------------------------------------------
+\subsection{Mérõ IC, beégetett DSP kóddal}
+%----------------------------------------------------------------------------
+
+Több gyártó kínál komplett megoldásokat egy tokban realizálva. Ezek tartalmazzák az analóg végfokot, nagy felbontású analóg-digitális átalakítót, valamint egy elõre felprogramozott digitális jelfeldolgozó processzort. Az Analog Devices egyik termékcsaládja még 5kV RMS izolációt is biztosít a digitális interfészéhez egy tokban, illetve ugyanitt leválasztott segéd tápot is elõállít a mérõ oldalnak. Ezeknek a megoldásoknak elõnye a remek pontosság, jó paraméterezhetõség, illetve a sokkal rövidebb fejlesztési idõ. A különbözõ kompenzációs algoritmusok mind implementálva vannak, a fejlesztõnek az alkalmazáshoz megfelelõen fel kell konfigurálnia a mérõt, majd a kész adatokat kell kiolvasnia és felhasználnia. Közös hátrány azonban, hogy a gyártó bármikor kivonhatja az adott típust a forgalomból, így a fejlesztõnek át kell terveznie a terméket, újra bevizsgáltatnia, ami költséges és idõigényes lehet, ezért ennél a megoldásnál elengedhetetlen utánanézni az adott alkatrész beszerezhetõségének.
+
+%----------------------------------------------------------------------------
+\section{Választott megoldás}
+%----------------------------------------------------------------------------
+
+A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint, feszültségméréshez az Analog Devices ADE7978 beégetett kódú DPS-jét, illetve az ehhez a családhoz tartozó ADE7933-as, 3 analóg-digitális átalakítót, 5kV-os digitális izolációt, illetve tápleválasztást tartalmazó mérõ IC-t választottam. Ez a típus elsõsorban sönt ellenállásos árammérést támogat. Ezekkel az alkatrészekkel a specifikáció kielégítéséhez szükséges pontosságú, kis méretû megoldást lehet kialakítani. A választott megoldás ugyan áramméréshez sönt ellenállást használ, azonban ennek értéke rendkívül alacsony, mivel az ADE7933 árammérõ bemenetén a feszültség +-31.25mV, amennyiben ehhez a 6mOhmos tervezett mérõsöntöt vesszük, a maximális disszipáció nem haladja meg a 100mW-ot sem, így a választott mérési elv nem jár jelentõs hõfejlõdéssel.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=130mm, keepaspectratio]{figures/3_4_1_rendszer.png}
+\caption{Rendszer felépítése}
+\end{figure}
+
+Egy használható áramváltó, melyet késõbb a tesztalkalmazásban is válaszottam, a Schneider Electric 16451-es 50/5-ös áramváltó transzformátora. Ezzel a 32A-re biztosított vonalak árama jól fedi a tervezett mérési tartományt. Az áramváltó primer vezetékének átmérõje maximálisan 21mm, a szekunder oldali kivezetésre villás sarukkal lehet csatlakozni. A transzformátor pontossági osztálya a terhelés nagyságától függ, a TODO TODO táblázat mutatja a garantált értékeket.
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+CI & 0,5 & 1    & 3   \\ \hline
+VA &     & 1,25 & 1,5 \\ \hline
+\end{tabular}
+\caption{16451-es áramváltó transzformátor pontossága terhelés függvényében}
+\label{16451_ct_spec}
+\end{table}
+
+Mivel a mérõ az árammérõ csatornán kevesebb mint 100mW-ot disszipál el, így legalább 1\%-os pontossággal számolhatunk kalibráció nélkül.
+
+Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltûntetik.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=130mm, keepaspectratio]{figures/3_4_2_rendszer_sontos.png}
+\caption{Áramváltó nélküli mérési elrendezés}
+\end{figure}
