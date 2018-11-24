@@ -106,17 +106,21 @@ Mivel a CR-PM3 semmilyen vezetõ felülete nem érinthetõ a felhasználó által, így 
 \caption{ESD mérési összeállítás}
 \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_5_ESD_V.png}
-\caption{Zavarás vertikális csatolósíkkal}
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=150mm, keepaspectratio]{figures/4_1_3_6_ESD_H.png}
-\caption{Zavarás horizontális csatolósíkkal}
-\end{figure}
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[height=60mm]{figures/4_1_3_5_ESD_V.png}
+        \caption{Zavarás vertikális csatolósíkkal}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[height=60mm]{figures/4_1_3_6_ESD_H.png}
+        \caption{Zavarás horizontális csatolósíkkal}
+    \end{subfigure}
+    \caption{ESD teszt csatoló síkokkal}
+\end{figure*}
 
 Erre a tesztre az elõírt feszültség 8kV, amit az STM32-es processzor hiba nélkül kibírt mind a két csatolási síkkal, azonban az ADE7978 +6kV-nál és -3kV-nál is újraindult horizontális csatolósíknál. A termékszabványban szereplõ kritérium ugyan elfogadhatónak tartja az átmeneti funkcióvesztést, ez mégis a termék robosztusságát, illetve annak hiányát jelzi. Miután több alkatrész érték megváltoztatása sem hozott lényegi javulást, arra a következtetésre jutottunk több kollégámmal, hogy az áramkört mindenképpen legalább 4 rétegû NYÁK-ra kell tervezni a javított zavarvédelem érdekében.
 
