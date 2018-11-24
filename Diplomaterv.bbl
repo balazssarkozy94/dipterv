@@ -62,4 +62,36 @@
 \newblock
   \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
 
+\bibitem{ST_UM0892}
+{UM0892, STM32 ST-LINK utility software description}.
+\newblock User manual, STMicroelectronics, 2018.
+
+\bibitem{ST_AN4056}
+{AN4056, EEPROM emulation in STM32F30x/STM32F31x/STM32F37x/STM32F38x
+  microcontrollers}.
+\newblock Application note, STMicroelectronics, 2012.
+
+\bibitem{ST_UM1718}
+{UM1718, STM32CubeMX for STM32 configuration and initialization C code
+  generation}.
+\newblock User manual, STMicroelectronics, 2018.
+
+\bibitem{ST_DS9118}
+{DS9118, STM32F303xB STM32F303xC datasheet}.
+\newblock Datasheet, STMicroelectronics, 2018.
+
+\bibitem{ADE_7978/ADE_7933/ADE_7932/ADE_7923}
+{ADE7978/ADE7933/ADE7932/ADE7923}.
+\newblock Datasheet, Analog Devices, November 2018.
+
+\bibitem{AN-1259}
+{AN-1259, Calibrating the ADE7978 and ADE7932/ADE7933 Isolated Metering
+  Chipset}.
+\newblock Application note, Analog Devices, 2013.
+
+\bibitem{AN-1333}
+{AN-1333, Architecting a Direct, 3-Phase Energy Meter with Shunts Using the
+  ADE7932/ADE7933/ADE7978}.
+\newblock Application note, Analog Devices, 2014.
+
 \end{thebibliography}

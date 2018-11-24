@@ -35,16 +35,19 @@
 \BOOKMARK [1][-]{section.4.4}{NY\301K terv}{chapter.4}% 35
 \BOOKMARK [0][-]{chapter.5}{Szoftveres komponensek}{}% 36
 \BOOKMARK [1][-]{section.5.1}{Mikrokontroller}{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.2}{Firmware}{chapter.5}% 38
-\BOOKMARK [2][-]{subsection.5.2.1}{Debug soros port}{section.5.2}% 39
-\BOOKMARK [1][-]{section.5.3}{Linux oldali szoftver}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.4}{Gy\341rt\341s t\341mogat\341s}{chapter.5}% 41
-\BOOKMARK [2][-]{subsection.5.4.1}{V\351gm\351r\351s \351s kalibr\341ci\363}{section.5.4}% 42
-\BOOKMARK [0][-]{chapter.6}{P\351ldaalkalmaz\341s}{}% 43
-\BOOKMARK [0][-]{chapter*.34}{\326sszefoglal\341s}{}% 44
-\BOOKMARK [0][-]{chapter*.35}{K\366sz\366netnyilv\341n\355t\341s}{}% 45
-\BOOKMARK [0][-]{chapter*.36}{\301br\341k jegyz\351ke}{}% 46
-\BOOKMARK [0][-]{chapter*.37}{T\341bl\341zatok jegyz\351ke}{}% 47
-\BOOKMARK [0][-]{chapter*.38}{Irodalomjegyz\351k}{}% 48
-\BOOKMARK [0][-]{appendix*.39}{F\374ggel\351k}{}% 49
-\BOOKMARK [1][-]{section.F.1}{F\374ggel\351k 1}{appendix*.39}% 50
+\BOOKMARK [1][-]{section.5.2}{Emul\341lt EEPROM}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.3}{Firmware}{chapter.5}% 39
+\BOOKMARK [2][-]{subsection.5.3.1}{Program fel\351p\355t\351se}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.2}{M\351ro IC-t kezelo f\374ggv\351nyek, strukt\372r\341k}{section.5.3}% 41
+\BOOKMARK [2][-]{subsection.5.3.3}{Debug soros port}{section.5.3}% 42
+\BOOKMARK [1][-]{section.5.4}{Linux oldali szoftver}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.5}{Gy\341rt\341s t\341mogat\341s}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.5.1}{V\351gm\351r\351s \351s kalibr\341ci\363}{section.5.5}% 45
+\BOOKMARK [0][-]{chapter.6}{P\351ldaalkalmaz\341s}{}% 46
+\BOOKMARK [0][-]{chapter*.35}{\326sszefoglal\341s}{}% 47
+\BOOKMARK [0][-]{chapter*.36}{K\366sz\366netnyilv\341n\355t\341s}{}% 48
+\BOOKMARK [0][-]{chapter*.37}{\301br\341k jegyz\351ke}{}% 49
+\BOOKMARK [0][-]{chapter*.38}{T\341bl\341zatok jegyz\351ke}{}% 50
+\BOOKMARK [0][-]{chapter*.39}{Irodalomjegyz\351k}{}% 51
+\BOOKMARK [0][-]{appendix*.40}{F\374ggel\351k}{}% 52
+\BOOKMARK [1][-]{section.F.1}{F\374ggel\351k 1}{appendix*.40}% 53
