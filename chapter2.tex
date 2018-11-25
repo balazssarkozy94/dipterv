@@ -30,15 +30,20 @@ Az alapkészülék egy 4 modulhely (71.6mm) széles készülékházban kapott helyet. Tö
 \section{Kiegészítõ modulok}
 %----------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------
-\section{Protokoll}
-%----------------------------------------------------------------------------
+A kiegészítõ modulok adják a C-RTU rendszerek flexibilitását, az alapkészülék mellé mindig csak az éppen szükséges ki- és bemenetek kerülnek, ezzel minimalizálva a helyigényt, költségeket.
 
-A C-CAN protokoll egy házon belül kifejlesztett, CAN fizikai rétegû kommunikáció, 
+A kommunikáció az alapkészülék és modulok között egy CAN alapú, belsõ fejlesztésû C-CAN elnevezésû kommunikációval történik, ez speciális címzéseket és csomag típusokat definiál, egy masteres topológiával.
 
-csomagtípusok, beszélhetek errõl?
+A modulok elõlapján kötelezõ elhelyezni egy címbeállító dil switchet, amely segítségével a C-CAN címét tudjuk beállítani a modulnak, indulás után ez alapján tudja a modul, hogy mely üzenetek vonatkoznak rá. Az összes kiegészítõ készülék, amely valamilyen mikrokontrollert tartalmaz, egy bootloader futtatásával indul, az alapkészülék ezen keresztül tudja akár távolról is frissíteni a firmware-t.
 
-TODO
+A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a futásukhoz szükséges adatokat átadja. Ezt követõen a kiegészítõ készülékek életjelet küldenek, valamint a paramétereknek megfelelõen adatokat. A különbözõ adatokat kétféleképpen küldhetik fel az alapkészüléknek:
+
+\begin{enumerate}
+\item\emph{Ciklusidõ alapján:} Elõre beállított idõnként a modul elküldi a figyelt változót, annak értékének változásától függetlenül. 
+\item\emph{Szignifikancia alapján:} Egy beállított különbséghatárérték átlépése esetén a változó új értékét elküldi az alapkészüléknek, majd onnantól kezdve ezt az új értéket veszi alapnak a változások figyelésénél.
+\end{enumerate}
+
+A két változás figyelési módszer egyszerre is alkalmazható, ilyenkor mindig az éppen hamarabb bekövetkezõ kritérium alapján történik a felküldés.
 
 %----------------------------------------------------------------------------
 \section{Mechanikai kialakítás}

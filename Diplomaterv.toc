@@ -7,8 +7,7 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {2}C-RTU csal\'ad}{9}{chapter.2}
 \select@language {magyar} \contentsline {section}{\numberline {2.1}Alapk\'esz\"ul\'ek}{9}{section.2.1}
 \select@language {magyar} \contentsline {section}{\numberline {2.2}Kieg\'esz\IeC {\'\i }t\H o modulok}{10}{section.2.2}
-\select@language {magyar} \contentsline {section}{\numberline {2.3}Protokoll}{10}{section.2.3}
-\select@language {magyar} \contentsline {section}{\numberline {2.4}Mechanikai kialak\IeC {\'\i }t\'as}{11}{section.2.4}
+\select@language {magyar} \contentsline {section}{\numberline {2.3}Mechanikai kialak\IeC {\'\i }t\'as}{11}{section.2.3}
 \select@language {magyar} \contentsline {chapter}{\numberline {3}Rendszer jellemz\H ok}{12}{chapter.3}
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Specifik\'aci\'o}{12}{section.3.1}
 \select@language {magyar} \contentsline {section}{\numberline {3.2}Fesz\"ults\'egm\'er\'es}{13}{section.3.2}
@@ -48,14 +47,14 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3.1}Program fel\'ep\IeC {\'\i }t\'ese}{37}{subsection.5.3.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3.2}M\'er\H o IC-t kezel\H o f\"uggv\'enyek, strukt\'ur\'ak}{41}{subsection.5.3.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.3.3}Debug soros port}{43}{subsection.5.3.3}
-\select@language {magyar} \contentsline {section}{\numberline {5.4}Linux oldali szoftver}{44}{section.5.4}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}Linux oldali szoftver <- ide csak a crweb}{44}{section.5.4}
 \select@language {magyar} \contentsline {section}{\numberline {5.5}Gy\'art\'as t\'amogat\'as}{44}{section.5.5}
 \select@language {magyar} \contentsline {subsection}{\numberline {5.5.1}V\'egm\'er\'es \'es kalibr\'aci\'o}{45}{subsection.5.5.1}
 \select@language {magyar} \contentsline {chapter}{\numberline {6}P\'eldaalkalmaz\'as}{46}{chapter.6}
-\select@language {magyar} \contentsline {chapter}{\"Osszefoglal\'as}{47}{chapter*.39}
-\select@language {magyar} \contentsline {chapter}{K\"osz\"onetnyilv\'an\IeC {\'\i }t\'as}{48}{chapter*.40}
-\select@language {magyar} \contentsline {chapter}{\'Abr\'ak jegyz\'eke}{49}{chapter*.41}
-\select@language {magyar} \contentsline {chapter}{T\'abl\'azatok jegyz\'eke}{50}{chapter*.42}
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{52}{chapter*.43}
-\select@language {magyar} \contentsline {chapter}{F\"uggel\'ek}{53}{appendix*.44}
+\select@language {magyar} \contentsline {chapter}{\"Osszefoglal\'as}{47}{chapter*.40}
+\select@language {magyar} \contentsline {chapter}{K\"osz\"onetnyilv\'an\IeC {\'\i }t\'as}{48}{chapter*.41}
+\select@language {magyar} \contentsline {chapter}{\'Abr\'ak jegyz\'eke}{49}{chapter*.42}
+\select@language {magyar} \contentsline {chapter}{T\'abl\'azatok jegyz\'eke}{50}{chapter*.43}
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{52}{chapter*.44}
+\select@language {magyar} \contentsline {chapter}{F\"uggel\'ek}{53}{appendix*.45}
 \select@language {magyar} \contentsline {section}{\numberline {F.1}F\"uggel\'ek 1}{53}{section.F.1}

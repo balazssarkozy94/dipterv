@@ -263,7 +263,7 @@ A fejlesztés támogatásához a készülékben helyet kapott egy soros port. Ennek a k
 A fejlesztés során többször fordult elõ, hogy valamilyen hibás konfigurálás következtében már az inicializáció során elakadt a program futása, ezek forrását a debug interfész segítségével rendkívül egyszerûen, egy-egy sor vagy változó kiíratásával meg lehetett találni.
 
 %----------------------------------------------------------------------------
-\section{Linux oldali szoftver}
+\section{Linux oldali szoftver <- ide csak a crweb}
 %----------------------------------------------------------------------------
 
 TODO 
@@ -282,10 +282,34 @@ Az alapkészülékben a csomagok fogadását, a paraméterezést viszonylag kevés munká
 \section{Gyártás támogatás}
 %----------------------------------------------------------------------------
 
-Egy gyártott terméknek elengedhetetlen a tesztelése mielõtt azt eladásra szánja az elõállító. Ez kis darabszámnál még történhet egyedi mérések alapján, melyet a fejlesztõ, vagy egy technikus végez el minden legyártott darabon, azonban ez nem jó hatásfokú, valamint nagyobb darabszámnál szûk keresztmetszetet jelenthet a termék elõállításában, eladásában. Ezt a tesztet összevonhatjuk a termék kalibrációjával, amely elengedhetetlen egy pontos mérõ gyártásánál, hiszen minden felhasznált alkatrésznek lesz valamilyen szórása. Ezen eltérések kiküszöböléséhez valamilyen precíziós jelforráshoz kell hasonlítani az elkészült mérõt, majd az eredmény alapján eliminálni a rendszeres hibákat. A végmérés és kalibráció összevonása után egy egyszerûen végrehajtható leírást kapunk, melyet lépésrõl lépésre követve meggyõzõdhetünk a gyártott termék helyességérõl, valamint kalibráció után garantálhatjuk a specifikált pontosságot.
-
-TODO
+Egy gyártott terméknek elengedhetetlen a tesztelése mielõtt azt eladásra szánja az elõállító. Ez kis darabszámnál még történhet egyedi mérések alapján, melyet a fejlesztõ, vagy egy technikus végez el minden legyártott darabon, azonban ez nem jó hatásfokú, valamint nagyobb darabszámnál szûk keresztmetszetet jelenthet a termék elõállításában, eladásában. Ezt a tesztet összevonhatjuk a termék kalibrációjával, amely szintén elengedhetetlen egy pontos mérõ gyártásánál, hiszen minden felhasznált alkatrésznek lesz valamilyen szórása ezen eltérések kiküszöböléséhez pedig valamilyen precíziós jelforráshoz kell hasonlítani az elkészült mérõt, majd az eredmény alapján a lehetõ legjobban eliminálni a rendszeres hibákat. A végmérés és kalibráció összevonása után egy egyszerûen végrehajtható leírást kapunk, melyet lépésrõl lépésre követve meggyõzõdhetünk a gyártott termék helyességérõl, valamint kalibráció után garantálhatjuk a specifikált pontosságot. Ezen összevont folyamathoz a legjobb megoldás egy végmérõ- és kalibrálószoftvert készíteni, amellyel egy kezelõ egyszerûen elvégezheti ezeket a feladatokat lépésrõl lépésre.
 
 %----------------------------------------------------------------------------
 \subsection{Végmérés és kalibráció}
 %----------------------------------------------------------------------------
+
+A végmérés és kalibráció a CR-PM3 esetében gyakorlatilag szétválaszthatatlan, mivel a külvilág felé a kimenetei mindössze az elõlapon található LED-ek, az összes csatlakozón mérõbemenet található, ezeknek pedig elengedhetetlen a kalibrációja, e közben pedig meggyõzõdhetünk a helyes mûködésrõl.
+
+A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosítota. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban:
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Paraméter} & \textbf{Érték}\\ \hline
+Feszültségtartomány & 0...300VAC	\\ \hline
+Feszültséggenerátor tipikus pontossága & <0.03$\%$ reading + 0.01$\%$ range	\\ \hline
+Feszültséggenerátor garantált pontossága & <0.08$\%$ reading + 0.02$\%$ range	\\ \hline
+Áramtartomány & 0...64AAC	\\ \hline
+Áramgenerátor tipikus pontossága & <0.05$\%$ reading + 0.02$\%$ range	\\ \hline
+Áramgenerátor garantált pontossága & <0.15$\%$ reading + 0.05$\%$ range\\ \hline
+Generátorok frekvencia pontossága & $\pm$0.5ppm	\\ \hline
+Névleges frekvenciatartomány & 10...1000Hz	\\ \hline
+Teljes frekvenciatartomány & 10...3000Hz	\\ \hline
+\end{tabular}
+\caption{Omicron CMC 356 specifikációja háromfázisú konfigurációban}
+\label{OmicronCMC356spec}
+\end{table}
+
+
+TODOTODTODO

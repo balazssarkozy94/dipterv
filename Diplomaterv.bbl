@@ -105,4 +105,16 @@
   power isolation (2018. november 25.).
 \newblock \url{https://www.edn.com/Home/PrintView?contentItemId=4458172}.
 
+\bibitem{PROLAN_CRTU}
+{Prolan Zrt.}
+\newblock Kompakt mérésadatgyûjtõ, vezérlõ rendszer (c-rtu) (2018. november
+  25.).
+\newblock \url{http://www.prolan.hu/hu/megoldasok/CRTU}.
+
+\bibitem{OMRON_CMC_356}
+{OMICRON electronics GmbH}.
+\newblock Cmc 356 universal relay test set and commissioning tool (2018.
+  november 25.).
+\newblock \url{https://www.omicronenergy.com/en/products/cmc-356/}.
+
 \end{thebibliography}
