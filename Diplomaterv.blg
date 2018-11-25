@@ -44,6 +44,8 @@ Warning--string name "december" is undefined
 --line 157 of file mybib.bib
 Warning--string name "majus" is undefined
 --line 167 of file mybib.bib
+Warning--string name "augusztus" is undefined
+--line 177 of file mybib.bib
 Warning--empty author in MSZ_EN_60664-1_2008
 Warning--empty author in MSZ_EN_62052-11_2003
 Warning--empty author in CEER_BENCHMARK_6TH
@@ -60,4 +62,5 @@ Warning--empty author in ST_DS9118
 Warning--empty author in ADE_7978/ADE_7933/ADE_7932/ADE_7923
 Warning--empty author in AN-1259
 Warning--empty author in AN-1333
-(There were 31 warnings)
+Warning--empty author in VIA_STICH_STUDY
+(There were 33 warnings)

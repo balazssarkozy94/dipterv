@@ -94,4 +94,15 @@
   ADE7932/ADE7933/ADE7978}.
 \newblock Application note, Analog Devices, 2014.
 
+\bibitem{VIA_STICH_STUDY}
+{The EMI benefits of ground plane stitching in multi-layer power bus stacks}.
+\newblock Tanulmány, Xiaoning Ye, D.M. Hockanson, Min Li, Wei Cui, S. Radu,
+  J.L. Drewniak, T.P. VanDoren, T.H. Hubing, R.E. DuBroff, 2000.
+
+\bibitem{EDN_ISOLATION_FILTER}
+{Anand Reghunathan, Koteshwar Rao, Anant Kamath}.
+\newblock How to achieve low radiated emissions with fully integrated data and
+  power isolation (2018. november 25.).
+\newblock \url{https://www.edn.com/Home/PrintView?contentItemId=4458172}.
+
 \end{thebibliography}

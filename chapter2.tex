@@ -2,6 +2,14 @@
 \chapter{C-RTU család}
 %----------------------------------------------------------------------------
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=100mm, keepaspectratio]{figures/2_1_0_CRTU_FAMILY.png}
+\caption{C-RTU család}
+\end{figure}
+
+A PROLAN Zrt. C-RTU családjával kisméretû, moduláris adatgyûjtõ és vezérlõ rendszereket lehet kialakítani. Az alapkészülék mellé számos kiegészítõ modul áll rendelkezésre, melyek között CAN kommunikációval történik az adatcsere egy moduláris hátlapi buszon keresztül. Ezek a modulok lehetnek például: digitális be- és kimenetek, feszültség és árammérõk, tápkimaradás áthidaló okos tápegységek, különbözõ kommunikációs interfészt biztosító kiegészítõk vagy akár elektromos jármû töltés vezérlõk. A legtöbb kiegészítõ modulban lévõ, helyi mikrokontroller a Linux operációs rendszert futtató C-RTU alapkészülékkel CAN buszon kommunikál. A kontroller látja el a modul specifikus feladatokat, az alapkészüléknek már csak a magasabb szintû logikát, feldolgozást kell megvalósítania Linux operációs rendszer alól. 
+
 %----------------------------------------------------------------------------
 \section{Alapkészülék}
 %----------------------------------------------------------------------------
@@ -12,19 +20,23 @@
 \caption{C-RTU alapkészülék}
 \end{figure}
 
-A PROLAN Zrt. C-RTU családjával kisméretû, moduláris adatgyûjtõ és vezérlõ rendszereket lehet kialakítani. Számos kiegészítõ modul áll rendelkezésre, melyek között CAN kommunikációval történik az adatcsere egy moduláris hátlapi buszon keresztül. Ezek a modulok lehetnek például: digitális be- és kimenetek, feszültség és árammérõk, tápkimaradás áthidaló egységek, különbözõ kommunikációs interfészt biztosító kiegészítõk vagy akár elektromos jármû töltés vezérlõk. Az összes modulban közös, hogy a Linux operációs rendszert futtató C-RTU alapkészülékkel CAN buszon kommunikál egy, a kiegészítõ modulban lévõ, helyi mikrokontroller. A kontroller látja el a modul specifikus feladatokat, az alapkészüléknek már csak a magasabb szintû logikát kell megvalósítania Linux operációs rendszer alól. Az alapkészülékben fut egy diagnosztikai célú webszerver, ezen... TODOTODOTODO
+TODO CITÁCIÓ NXP, KARO, PROLAN!
+
+Az alapkészülékben egy Ka-Ro electronics GmbH által gyártott ''Computer-On-Module'' található, ez a processzor egy-egy C-RTU alkalmazásnak a lelke. A modulon az NXP i.MX 6UltraLite MCIMX6G2-es processzora van, ez egy alacsony fogyasztású alkalmazás processzor. Emellé a modulon 4GiB eMMC társul, továbbá 256MiB SDRAM, valamint egy komplex tápáramkör, aminek már csak egy bemeneti feszültségre van szüksége a mûködéshez.
+
+Az alapkészülék egy 4 modulhely (71.6mm) széles készülékházban kapott helyet. Több szoftveresen választható helyi, külsõ kommunikációs vonal is használható. A lehetséges konfigurációk: RS422, vagy 2 RS485 vonal, vagy egy RS485 és egy CAN busz. Hardveresen vezetéknélküli opciók közül választhatunk 2G/3G/4G GSM, vagy LTE 450, vagy LoRa kommunikációból, illetve ezek helyett optikai ethernetet. Mindegyik alapkészülékben van továbbá egy réz alapú ethernet port is.
 
 %----------------------------------------------------------------------------
-\section{Specifikáció}
+\section{Kiegészítõ modulok}
 %----------------------------------------------------------------------------
-
-TODO
 
 %----------------------------------------------------------------------------
 \section{Protokoll}
 %----------------------------------------------------------------------------
 
 A C-CAN protokoll egy házon belül kifejlesztett, CAN fizikai rétegû kommunikáció, 
+
+csomagtípusok, beszélhetek errõl?
 
 TODO
 

@@ -69,14 +69,39 @@ Egy elektronikus eszköz tervezése során nem elég a mérnököknek laborkörülmények 
 A zavarérzékenység vizsgálatához különbözõ zavaró jeleket viszünk be a rendszerbe, melyek valamilyen ténylegesen elõforduló jelenséget hivatottak szimulálni.
 
 \begin{enumerate}
-	\item \emph{Burst:} Ez a zavar egy relé kontaktusain kialakult ív sorozat hatását utánozza. todotodo
-	\item \emph{Surge:} ejjlmao
-	\item \emph{ESD:} ejjlmao
+	\item \emph{Burst:} Ez a zavar egy kontaktuson kialakult, prellegõ ív sorozat hatását utánozza. A hatását csökkenteni megfelelõ földeléssel, közösmódusú folytó tekercsekkel lehet.
+	\item \emph{Surge:} Induktív terhelések kapcsolása, biztosítékok kiégése, illetve villámcsapások másodlagos hatásaként jönnek létre hasonló, nagy energiájú jelalakok. Különbözõ túlfeszültség levezetõk alkalmazásával, például varisztorokkal, TVS diódákkal lehet megvédeni a készüléket.
+	\item \emph{ESD:} A leggyakrabban elõforduló, hétköznapok során is megtapasztalt jelenség, mely gyakran a legnagyobb fejfájást okozza a fejlesztõnek, mivel nagyon rövidejû a lefutása, széles a spektruma. Megfelelõ földeléssel, kondenzátorokkal, ellenállásokkal, ferritekkel és TVS diódákkal növelhetõ az ezek elleni immunitás.
+	\item \emph{Vezetett RF:} Ez a zavar közeli kábelek induktív és kapacitív egymásrahatását utánozza. Az AM modulált zavarjelet gyakran demodulálják a félvezetõk, ami hibás mûködéshez vezethet. A különbözõ csatlakozókon bejövõ jelek megfelelõ szûrésével, árnyékolt kábelek használatával lehet védekezni ellene.
 \end{enumerate}
 
 %----------------------------------------------------------------------------
 \subsubsection{Emisszió}
 %----------------------------------------------------------------------------
+
+A zavarkibcsojtás mérése során elsõsorban a vezetett és sugárzott zavarokat különböztetjük meg.
+
+TODO klik rát, meg minden
+
+Sajnos a diplomaterv írása során nem volt lehetõség emisszió vizsgálatok elvégzésére egy EMC laboratóriumban, így errõl nincsenek közölhetõ adatok. Valószínûsíthetõleg a vezetett zavarkibocsájtás nem haladja meg a határértéket, mivel a CR-PM3-nek csak bemenetei vannak, ezek pedig RC tagokkal csatlakoznak az analóg-digitáls konverterekhez. 
+
+A sugárzott zavarkibocsájtást nagy valószínûséggel a 180MHz-en mûködõ iCoupler alapú integrált táp leválasztók dominálják az ADE7933-akban, ezek a kritikus alkatrészek. Ahhoz, hogy egy apró tokozású, néhány mm-es alkatrészen belül tápot tudjanak leválasztani, a légmagos transzformátort nagy, több 10, de akár 100MHz-es frekvencián kell járatni. A probléma a transzformátor két oldala közötti kapacitásból következik, mivel ekkora frekvenciákon a primer oldal kapcsolási tranziensei a szekunder oldalon közösmódusú zavarokat tud kelteni. Ezek a zavarok viszont csak a két oldal közötti, NYÁK szintû kapacitásokon keresztül tudnak záródni, ami így viszont jelentõs méretû, nagyfrekvenciás áramhurkok létrejöttéhez vezethet.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG}
+\caption{Emisszió csökkentése integrált izolált táp esetén}
+\end{figure}
+
+Az innen származó sugárzás csökkentésére az egymástól elszigetelt földeket érdemes egy nagyfeszültségû, kis értékû, néhány száz pF-os kondenzátorral összekötni, amely megfelelõ kapacitás érték választása esetén a zavart gyakorlatilag kisöntöli. A tényleges megvalósítás esetén szembekerülhetünk azzal a problémával, hogy a választott nagyfeszültségû kondenzátor soros induktivitása dominál a szükséges frekvenciákon, ezzel jelentõsen csökkentve a zavarcsökkentõ hatását. Ezt elkerülendõ létrehozhatjuk a szükséges kapacitást a NYÁK-on is, a két oldal egymásra lapolásával. Ennél a módszernél figyelembe kell venni az FR4-es NYÁK dielektromos szilárdságát, illetve a szabványok által elõírt szükséges minimális szigetelési távolságokat.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_1_2_3_Stitching.PNG}
+\caption{Emisszió csökkentésének tényleges megvalósítása}
+\end{figure}
+
+TODO CITÁCIÓ! + a képre is!
 
 %----------------------------------------------------------------------------
 \subsection{EMC tesztek}
@@ -260,10 +285,11 @@ A CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrész
 
 A nyomtatott áramköri terveket Allegro PCB Designer-ben valósítottam meg, költséghatékonysági szempontból 2 rétegen. Fontos feladat a tervek készítésekor figyelembe venni a gyárthatósági szempontokat, hiszen az alkatrész és NYÁK költségek mellett a termék önköltségéhez ugyanúgy hozzájárul a gyártás ára.
 
-Elsõ lépésként a készülékház gyártója által szolgáltatott 3D modellbõl indultam ki, amelyben a különbözõ szintekhez tartozó sablonok találhatók. Ezekbõl .dxf kiterjesztésû, 2 dimenziós rajzokat készítettem, majd ezt importáltam be a tervezõ programba az ''Outline'' rétegre. Ezt követõen elhelyeztem a csatlakozókat, mechanikai furatokat, illetve bejelöltem azokat a területeket a NYÁK-okon, ahol a készülékház miatt valamilyen megkötés van, például alsó/felsõ oldalra nem helyezhetõ bizonyos értéknél magasabb alkatrész. Ezután felvettem a kényszereket, majd elhelyeztem a LED-eket, címbeállító kapcsolót, valamint a reset nyomógombot, mivel ezek pozíciója határozza meg a felhasználói felületet, amennyire csak lehet, ergonomikussá kell tenni azt. Csak ezek után következett az összes többi alkatrész, ügyelve a szûrõ kondenzátorok, kvarcok helyzetére, a táp vonalak huzalozásának integritására. A CR-PM3C-n ''via stiching''-et alkalmaztam, ami segítségével szabályos rácsban viákat helyeztem el a GND rétegre, ezzel javítva a földelés minõségét. A terveket sikerült egy oldalas szerelésre elékszíteni, ezzel csökkentve a modul gyártási költségét.
+Elsõ lépésként a készülékház gyártója által szolgáltatott 3D modellbõl indultam ki, amelyben a különbözõ szintekhez tartozó sablonok találhatók. Ezekbõl .dxf kiterjesztésû, 2 dimenziós rajzokat készítettem, majd ezt importáltam be a tervezõ programba az ''Outline'' rétegre. Ezt követõen elhelyeztem a csatlakozókat, mechanikai furatokat, illetve bejelöltem azokat a területeket a NYÁK-okon, ahol a készülékház miatt valamilyen megkötés van, például alsó/felsõ oldalra nem helyezhetõ bizonyos értéknél magasabb alkatrész. Ezután felvettem a kényszereket, majd elhelyeztem a LED-eket, címbeállító kapcsolót, valamint a reset nyomógombot, mivel ezek pozíciója határozza meg a felhasználói felületet, amennyire csak lehet, ergonomikussá kell tenni azt. Csak ezek után következett az összes többi alkatrész, ügyelve a szûrõ kondenzátorok, kvarcok helyzetére, a táp vonalak huzalozásának integritására. A CR-PM3C-n via stiching-et alkalmaztam, ami segítségével szabályos rácsban viákat helyeztem el a GND rétegre, ezzel javítva a földelés minõségét. A via stiching jelentõsen tudja javítani az immunitást, illetve csökkenteni az emissziót több rétegû NYÁK-ok esetén. A terveket sikerült egy oldalas szerelésre elékszíteni, ezzel csökkentve a modul gyártási költségét.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=150mm, keepaspectratio]{figures/4_4_1_CRPM3_PCB.png}
 \caption{CR-PM3A és CR-PM3C}
 \end{figure}
+

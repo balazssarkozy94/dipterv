@@ -2,7 +2,43 @@
 \chapter{Rendszer jellemzõk}
 %----------------------------------------------------------------------------
 
-A tervezendõ adatgyûjtõ rendszerhez a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségei feszültségváltókon, az áramai áramváltókon keresztül csatlakozik. Ezeknek a kimenete jellemzõen 100VAC illetve 5A peak, így a tervezendõ eszköz mérési tartományát is úgy kell kialakítani, hogy legalább ezt a tartományt tudja kezelni. A szélesebb körû felhasználást biztosítva, a prototípus úgy lesz kialakítva, hogy az eszközt akár közvetlenül is lehessen a kisfeszültségû hálózatra csatlakoztatni. Minden mérési megoldásnál egyformán elvárás a legalább 2.5kVeff izoláció. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
+A tervezendõ adatgyûjtõ rendszer a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségeihez közvetlenül, vagy feszültségváltókon, az áramaihoz közvetlen söntön, vagy áramváltókon keresztül csatlakozik. Minden mérési megoldásnál egyformán elvárás a legalább 2.5kVeff izoláció. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
+
+%----------------------------------------------------------------------------
+\section{Specifikáció}
+%----------------------------------------------------------------------------
+
+A CR-PM3 egyik lehetséges felhasználása egy másik, a szintén Prolan által gyártott ProField mezõgép AF500-as moduljának kiváltása. Mivel ez a készülék nagyobb darabszámban eladott, így ennek a specifikációját vettem alapul tervezéshez. A modul precíz feszültség és áram mérések elvégzésre alkalmas, áram- és feszültségváltó transzformátorokon keresztül. Maga a ProField rendszer rack-es kivitelû, így helyigénye is nagyobb, mint egy C-RTU-val megvalósított alkalmazás. A hivatalos specifikációja a modulnak:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Névleges fázisfeszültség-tartomány & 0-200VAC (RMS)	\\ \hline
+Teljes fázisfeszültség-tartomány & 0-450VAC (Peak)	\\ \hline
+Névleges áramtartomány & 0-1AAC / 0-5AAC (konfiguráció függõ)	\\ \hline
+Névleges frekvenciatartomány & 45-55Hz	\\ \hline
+Névleges fázismérés-tartomány & $\pm$180$\textdegree$	\\ \hline
+Mûködési hõmérséklettartomány & 0...+55C$\textdegree$ / -20...+70C$\textdegree$ (verzió függõ)	\\ \hline
+Pontosság & 0.5$\%$ 	\\ \hline
+\end{tabular}
+\caption{AF500 ProField modul specifikációja}
+\label{AF500_spec}
+\end{table}
+
+Az AF500 a következõ adatokat szolgáltatja a ProField rendszerben:
+
+\begin{enumerate}
+	\item \emph{Vonalifeszültségek}
+	\item \emph{Fázisfeszültségek}
+	\item \emph{Fázisszögek}
+	\item \emph{Fázisteljesítmények (P, Q, S)}
+	\item \emph{Háromfázisú teljesítmények (P, Q, S)}
+	\item \emph{Frekvencia}
+	\item \emph{Zérus sorrendû feszültség és áramok}
+\end{enumerate}
+
+A tervezendõ modulnak a fenti tulajdonságokat, illetve funkciókat kell tudnia, vagy azokat meghaladnia, hogy versenyképes lehessen, ugyanakkor alacsonyabb önköltséggel kell megoldani a feladatot.
 
 %----------------------------------------------------------------------------
 \section{Feszültségmérés}
@@ -36,7 +72,7 @@ Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell letranszformálni az
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=130mm, keepaspectratio]{figures/3_2_1_aram_valto.png}
+\includegraphics[width=100mm, keepaspectratio]{figures/3_2_1_aram_valto.png}
 \caption{Áramváltó transzformátor mûködési elve}
 \end{figure}
 
@@ -98,7 +134,7 @@ A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint
 
 Egy használható áramváltó, melyet késõbb a tesztalkalmazásban is válaszottam, a Schneider Electric 16451-es 50/5-ös áramváltó transzformátora. Ezzel a 32A-re biztosított vonalak árama jól fedi a tervezett mérési tartományt. Az áramváltó primer vezetékének átmérõje maximálisan 21mm, a szekunder oldali kivezetésre villás sarukkal lehet csatlakozni. A transzformátor pontossági osztálya a terhelés nagyságától függ, a TODO TODO táblázat mutatja a garantált értékeket.
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -118,3 +154,57 @@ Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transz
 \includegraphics[width=130mm, keepaspectratio]{figures/3_4_2_rendszer_sontos.png}
 \caption{Áramváltó nélküli mérési elrendezés}
 \end{figure}
+
+%----------------------------------------------------------------------------
+\subsection{Elméleti specifikáció, funkcionalitás}
+%----------------------------------------------------------------------------
+
+A rendszer felépítésének megtervezése után vessük össze az elméleti pontosságokat, illetve kinyerhetõ adatokat a ProField AF500-as modul értékeivel a ~\ref{AF500_spec}-es táblázat alapján.
+
+0.1$\%$-os alkatrészek alkalmazásával az ADE7978 adatlapja a következõ tipikus pontossági értékeket adja meg:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Paraméter & Tipikus érték	\\ \hline
+Hatásos teljesítmény & 0.1$\%$ (Kompenzáció után)	\\ \hline
+Meddõ teljesítmény & 0.1$\%$ (Kompenzáció után)	\\ \hline
+Mérési sávszélesség & 3.3kHz	\\ \hline
+Effektív feszültség & 0.1$\%$	\\ \hline
+Effektív áram & 0.25$\%$	\\ \hline
+Névleges frekvenciatartomány & 45-65Hz	\\ \hline
+\end{tabular}
+\caption{ADE7978 tipikus pontossági értékei 0.1$\%$-os alkatrészek alkatrészek alkalmazásával}
+\label{ade7978_spec}
+\end{table}
+
+Az AF500-zal összevetve az elméleti pontosság tekintetében a CR-PM3 képes lehet jobb eredményeket szolgáltatni megfelelõ kalibrációval, alkatrészválasztással. Nézzük meg, milyen információkat nyerhetünk ki közvetlenül a mérõ IC-bõl, megfelelõ regiszter konfigurálás után:
+
+\begin{enumerate}
+\item \emph{Effektív fázis feszültségek}
+\item \emph{Effektív fázis feszültségek alapharmonikusa}
+\item \emph{Effektív fázis áramok}
+\item \emph{Effektív fázis áramok alapharmonikusa}
+\item \emph{Fázisonkénti teljes hatásos energia}
+\item \emph{Fázisonkénti alapharmonikushoz tartozó hatásos energia}
+\item \emph{Fázisonkénti teljes meddõ energia}
+\item \emph{Fázisonkénti alapharmonikushoz tartozó meddõ energia}
+\item \emph{Fázisonkénti látszólagos energia}
+\item \emph{Feszültség csúcs egy elõre megadott hálózati periódus számban}
+\item \emph{Fázisonkénti áram csúcs egy elõre megadott hálózati periódus számban}
+\item \emph{Fázisonkénti túláram esemény (Egy konfigurálható határértékhez képest)}
+\item \emph{Fázisonkénti túlfeszültség esemény (Egy konfigurálható határértékhez képest)}
+\item \emph{Fázisonkénti feszültség letörés esemény (Egy konfigurálható határértékhez képest)}
+\item \emph{Fázisonkénti teljes hatásos teljesítmény}
+\item \emph{Fázisonkénti teljes meddõ teljesítmény}
+\item \emph{Fázisonkénti teljes hatásos teljesítmény}
+\item \emph{Fázisonkénti teljes látszólagos teljesítmény}
+\item \emph{Fázisonkénti teljes harmonikus torzítás a feszültségben}
+\item \emph{Fázisonkénti teljes harmonikus torzítás az áramban}
+\item \emph{Fázisonkénti zérus terhelés esemény (Egy elõre konfigurálható határértékhez képest)}
+\item \emph{Fázisonkénti teljesítmény tényezõk}
+\item \emph{Fázisonkénti hálózati periódusidõk}
+\end{enumerate}
+
+Ezek mellett rendelkezésre áll a nullvezetõ effektív árama, valamint az összes pillanatnyi kiolvasott érték 8kSPS gyakorisággal. Látható, hogy azokat az igényeket, amelyeket az AF500 funkcionalitás kielégített, a CR-PM3 is ki fog tudni szolgálni, illetve utóbbi további hasznos információkat szolgáltathat igény szerint, melyek az AF500-nál még nem álltak elõ.
