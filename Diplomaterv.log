@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  25 NOV 2018 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  25 NOV 2018 21:03
 entering extended mode
 **./Diplomaterv.tex
 (Diplomaterv.tex
@@ -684,12 +684,12 @@ Package pdftex.def Info: figures/1_2_1_ceer_eves.png  used on input line 20.
 
  (chapter2.tex
 2. fejezet.
-<figures/2_1_0_CRTU_FAMILY.png, id=369, 752.8125pt x 502.12593pt>
+<figures/2_1_0_CRTU_FAMILY.png, id=369, 1003.75pt x 669.50125pt>
 File: figures/2_1_0_CRTU_FAMILY.png Graphic file (type png)
 <use figures/2_1_0_CRTU_FAMILY.png>
 Package pdftex.def Info: figures/2_1_0_CRTU_FAMILY.png  used on input line 7.
-(pdftex.def)             Requested size: 284.52756pt x 189.78316pt.
-<figures/2_1_1_crtu_alap.png, id=371, 240.462pt x 232.2495pt>
+(pdftex.def)             Requested size: 284.52756pt x 189.77805pt.
+<figures/2_1_1_crtu_alap.png, id=370, 240.462pt x 232.2495pt>
 File: figures/2_1_1_crtu_alap.png Graphic file (type png)
 <use figures/2_1_1_crtu_alap.png>
 Package pdftex.def Info: figures/2_1_1_crtu_alap.png  used on input line 19.
@@ -735,7 +735,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 54.
 
 [13]
-<figures/3_2_1_aram_valto.png, id=407, 302.63063pt x 191.9672pt>
+<figures/3_2_1_aram_valto.png, id=406, 302.63063pt x 191.9672pt>
 File: figures/3_2_1_aram_valto.png Graphic file (type png)
 <use figures/3_2_1_aram_valto.png>
 Package pdftex.def Info: figures/3_2_1_aram_valto.png  used on input line 75.
@@ -758,7 +758,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\H' on input line 118.
 
-<figures/3_4_1_rendszer.png, id=417, 684.30656pt x 514.92375pt>
+<figures/3_4_1_rendszer.png, id=416, 684.30656pt x 514.92375pt>
 File: figures/3_4_1_rendszer.png Graphic file (type png)
 <use figures/3_4_1_rendszer.png>
 Package pdftex.def Info: figures/3_4_1_rendszer.png  used on input line 131.
@@ -818,16 +818,16 @@ File: figures/4_1_3_4_ESD_SETUP.png Graphic file (type png)
 Package pdftex.def Info: figures/4_1_3_4_ESD_SETUP.png  used on input line 130.
 
 (pdftex.def)             Requested size: 426.79134pt x 392.04427pt.
-<figures/4_1_3_5_ESD_V.png, id=514, 1439.3775pt x 1306.8825pt>
+<figures/4_1_3_5_ESD_V.png, id=514, 1919.17pt x 1742.51pt>
 File: figures/4_1_3_5_ESD_V.png Graphic file (type png)
 <use figures/4_1_3_5_ESD_V.png>
 Package pdftex.def Info: figures/4_1_3_5_ESD_V.png  used on input line 138.
 (pdftex.def)             Requested size: 188.00417pt x 170.71652pt.
-<figures/4_1_3_6_ESD_H.png, id=515, 1692.3225pt x 1502.61375pt>
+<figures/4_1_3_6_ESD_H.png, id=515, 2256.43pt x 2003.485pt>
 File: figures/4_1_3_6_ESD_H.png Graphic file (type png)
 <use figures/4_1_3_6_ESD_H.png>
 Package pdftex.def Info: figures/4_1_3_6_ESD_H.png  used on input line 144.
-(pdftex.def)             Requested size: 192.25021pt x 170.71652pt.
+(pdftex.def)             Requested size: 192.25882pt x 170.71652pt.
 
 Overfull \hbox (4.84323pt too wide) in paragraph at lines 136--147
  [][]  [] 
@@ -1036,7 +1036,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
 Here is how much of TeX's memory you used:
  12114 strings out of 492970
  186045 string characters out of 3126149
- 550056 words of memory out of 3000000
+ 550047 words of memory out of 3000000
  15327 multiletter control sequences out of 15000+200000
  26769 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1064,7 +1064,7 @@ amsfonts/cm/cmmi10.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Balazs/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Balazs/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Diplomaterv.pdf (54 pages, 59230619 bytes).
+Output written on Diplomaterv.pdf (54 pages, 19661145 bytes).
 PDF statistics:
  1629 PDF objects out of 1728 (max. 8388607)
  352 named destinations out of 1000 (max. 500000)
