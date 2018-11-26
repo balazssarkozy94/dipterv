@@ -83,6 +83,14 @@ void eeReadFloat(volatile float* calib_address, uint16_t ee_address)
 \end{lstlisting}
 \end{absolutelynopagebreak}
 
+Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM32 ST-LINK Utility használata, melyben implementálva van a ''LiveUpdate'' funkció, mellyel futás közben monitorozhatjuk a flash memória tartalmát. Ezzel a kalibrációs függvények fejlesztése nagyban egyszerûsödött, az esetleges hibákat az elsõ futásnál fel lehetett ismerni. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/5_1_0_emul_eeprom.PNG}
+\caption{STM32 ST-LINK Utility LiveUpdate opcióval}
+\end{figure}
+
 %----------------------------------------------------------------------------
 \section{Firmware}
 %----------------------------------------------------------------------------

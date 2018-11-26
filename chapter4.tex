@@ -280,6 +280,66 @@ A CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrész
 \end{enumerate}
 
 %----------------------------------------------------------------------------
+\subsection{Bemeneti áramkör - Áram bemenet}
+%----------------------------------------------------------------------------
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_3_5_CURR_INPUT.PNG}
+\caption{Az áramméréshez tartozó bemeneti áramkör}
+\end{figure}
+
+A CR-PM3 árammérõ bemeneteit elsõsorban árammérõ transzformátorok fogadására kell felkészíteni, ugyanakkor szemelõtt kell tartani az esetleges tisztán (külsõ) söntös alkalmazások lehetõségét.
+
+Áramváltó transzformátoros megoldás esetén a kis értékû sönt használata miatt egy lebegõ áramforrásként tekinthetünk a bemeneti jelforrásra, amely a mérõsöntön feszültséget ejt, ezt pedig a szûrõ- és védõáramkörökön keresztül az ADE7933 jelkondicionáló fokozatára, majd analóg digitális átalakítójára jut. 
+
+A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6mOhm-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5mOhm-os, négy vezetékes sönt, mely nagyobb költségû. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
+
+A söntöket ferrit szûrõk követik, melyek néhány 10kHz-es tartományig Ohm-os nagyságrend alatti impedanciát képviselnek, szûrõ hatásukat a 100MHz, illetve afeletti tartományban fejtik ki.
+
+Az RC aluláteresztõ tervezett töréspontja 4823Hz, ez 10$\%$-os kondenzátor tûréssel, és 1$\%$-os ellenállás tûréssel legrosszabb esetben 4337Hz-re csökken, amely még mindig jóval az ADE7933-ra specifikált 3.3kHz-es sávszélessége felett van.
+
+A bemeneten található gyors diódák hatékony kétirányú ESD védelmet biztosítanak, illetve túláram esetén a keletkezõ hosszabb idejû feszültségtüskék levágását biztosítják. A szivárgási áramuk üzemszerû mûködés közben TODO
+
+TODO számítások mellé esetleg képletek?
+Generic rizsa, mi miért mennyi, opciók, méretezés, sávszél, torzítás akár szimuláció is
+
+%----------------------------------------------------------------------------
+\subsection{Bemeneti áramkör - Feszültség bemenet}
+%----------------------------------------------------------------------------
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_3_4_VOLT_INPUT.PNG}
+\caption{A feszültségméréshez tartozó bemeneti áramkör}
+\end{figure}
+
+TODO
+Generic rizsa, mi miért mennyi, opciók, méretezés, sávszél, torzítás akár szimuláció is
+
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[height=40mm]{figures/4_3_1_tipik_varistor.png}
+        \caption{Tipikus varisztor}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[height=40mm]{figures/4_3_2_varistor_inside.png}
+        \caption{Varisztor belsõ felépítése}
+    \end{subfigure}
+    \caption{A varisztor}
+\end{figure*}
+
+TODO
+Todo citáció, innen a képek: % https://www.electronics-tutorials.ws/resistor/varistor.html 
+
+Diódás kis dolog (hasonlóan az áramhoz...),
+Varisztoros rész, ketté rizsázva, akár mûködésrõl is kicsit.
+
+%----------------------------------------------------------------------------
 \section{NYÁK terv}
 %----------------------------------------------------------------------------
 
