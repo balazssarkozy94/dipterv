@@ -4,31 +4,33 @@
 \select@language {magyar} \contentsline {figure}{\numberline {2.1.}{\ignorespaces C-RTU csal\'ad\relax }}{9}{figure.caption.6}
 \select@language {magyar} \contentsline {figure}{\numberline {2.2.}{\ignorespaces C-RTU alapk\'esz\"ul\'ek\relax }}{10}{figure.caption.7}
 \select@language {magyar} \addvspace {10\p@ }
-\select@language {magyar} \contentsline {figure}{\numberline {3.1.}{\ignorespaces \'Aramv\'alt\'o transzform\'ator m\H uk\"od\'esi elve\relax }}{14}{figure.caption.9}
-\select@language {magyar} \contentsline {figure}{\numberline {3.2.}{\ignorespaces Rendszer fel\'ep\IeC {\'\i }t\'ese\relax }}{17}{figure.caption.10}
-\select@language {magyar} \contentsline {figure}{\numberline {3.3.}{\ignorespaces \'Aramv\'alt\'o n\'elk\"uli m\'er\'esi elrendez\'es\relax }}{18}{figure.caption.12}
+\select@language {magyar} \contentsline {figure}{\numberline {3.1.}{\ignorespaces Line\'aris optocsatol\'os anal\'og jel lev\'alaszt\'as\relax }}{14}{figure.caption.9}
+\select@language {magyar} \contentsline {figure}{\numberline {3.2.}{\ignorespaces \'Aramv\'alt\'o transzform\'ator m\H uk\"od\'esi elve\relax }}{15}{figure.caption.10}
+\select@language {magyar} \contentsline {figure}{\numberline {3.3.}{\ignorespaces Rendszer fel\'ep\IeC {\'\i }t\'ese\relax }}{18}{figure.caption.11}
+\select@language {magyar} \contentsline {figure}{\numberline {3.4.}{\ignorespaces \'Aramv\'alt\'o n\'elk\"uli m\'er\'esi elrendez\'es\relax }}{19}{figure.caption.13}
 \select@language {magyar} \addvspace {10\p@ }
-\select@language {magyar} \contentsline {figure}{\numberline {4.1.}{\ignorespaces Szigetel\'eskoordin\'aci\'o IEC 60664 alapj\'an\relax }}{21}{figure.caption.14}
-\select@language {magyar} \contentsline {figure}{\numberline {4.2.}{\ignorespaces EMC vizsg\'alatok oszt\'alyz\'asa\relax }}{22}{figure.caption.15}
-\select@language {magyar} \contentsline {figure}{\numberline {4.3.}{\ignorespaces Emisszi\'o cs\"okkent\'ese integr\'alt izol\'alt t\'ap eset\'en\relax }}{24}{figure.caption.18}
-\select@language {magyar} \contentsline {figure}{\numberline {4.4.}{\ignorespaces Emisszi\'o cs\"okkent\'es\'enek t\'enyleges megval\'os\IeC {\'\i }t\'asa\relax }}{24}{figure.caption.19}
-\select@language {magyar} \contentsline {figure}{\numberline {4.5.}{\ignorespaces ESD m\'er\'esi \"ossze\'all\IeC {\'\i }t\'as\relax }}{26}{figure.caption.21}
-\select@language {magyar} \contentsline {figure}{\numberline {4.6.}{\ignorespaces ESD teszt csatol\'o s\IeC {\'\i }kokkal\relax }}{26}{figure.caption.22}
-\select@language {magyar} \contentsline {figure}{\numberline {4.7.}{\ignorespaces Burst \'es surge teszt m\'er\'esi \"ossze\'all\IeC {\'\i }t\'asa\relax }}{27}{figure.caption.24}
-\select@language {magyar} \contentsline {figure}{\numberline {4.8.}{\ignorespaces Szimul\'ator be\'all\IeC {\'\i }t\'asai burst teszthez\relax }}{28}{figure.caption.25}
-\select@language {magyar} \contentsline {figure}{\numberline {4.9.}{\ignorespaces Szimul\'ator be\'all\IeC {\'\i }t\'asai surge teszthez\relax }}{28}{figure.caption.27}
-\select@language {magyar} \contentsline {figure}{\numberline {4.10.}{\ignorespaces Vezetett RF zavarok m\'er\'esi \"ossze\'all\IeC {\'\i }t\'asa\relax }}{29}{figure.caption.29}
-\select@language {magyar} \contentsline {figure}{\numberline {4.11.}{\ignorespaces CR-PM3 \"ossze\'all\IeC {\'\i }t\'asa\relax }}{30}{figure.caption.30}
-\select@language {magyar} \contentsline {figure}{\numberline {4.12.}{\ignorespaces CR-PM3 a k\'esz\"ul\'ekh\'azban\relax }}{31}{figure.caption.31}
-\select@language {magyar} \contentsline {figure}{\numberline {4.13.}{\ignorespaces Lapon bel\"uli felbont\'as\relax }}{32}{figure.caption.32}
-\select@language {magyar} \contentsline {figure}{\numberline {4.14.}{\ignorespaces Hierarchikus tervez\'es\relax }}{32}{figure.caption.33}
-\select@language {magyar} \contentsline {figure}{\numberline {4.15.}{\ignorespaces Az \'aramm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{33}{figure.caption.34}
-\select@language {magyar} \contentsline {figure}{\numberline {4.16.}{\ignorespaces A fesz\"ults\'egm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{34}{figure.caption.35}
-\select@language {magyar} \contentsline {figure}{\numberline {4.17.}{\ignorespaces A varisztor\relax }}{35}{figure.caption.36}
-\select@language {magyar} \contentsline {figure}{\numberline {4.18.}{\ignorespaces CR-PM3A \'es CR-PM3C\relax }}{36}{figure.caption.37}
+\select@language {magyar} \contentsline {figure}{\numberline {4.1.}{\ignorespaces Szigetel\'eskoordin\'aci\'o IEC 60664 alapj\'an\relax }}{22}{figure.caption.15}
+\select@language {magyar} \contentsline {figure}{\numberline {4.2.}{\ignorespaces EMC vizsg\'alatok oszt\'alyz\'asa\relax }}{23}{figure.caption.16}
+\select@language {magyar} \contentsline {figure}{\numberline {4.3.}{\ignorespaces Emisszi\'o cs\"okkent\'ese integr\'alt izol\'alt t\'ap eset\'en\relax }}{25}{figure.caption.19}
+\select@language {magyar} \contentsline {figure}{\numberline {4.4.}{\ignorespaces Emisszi\'o cs\"okkent\'es\'enek t\'enyleges megval\'os\IeC {\'\i }t\'asa\relax }}{25}{figure.caption.20}
+\select@language {magyar} \contentsline {figure}{\numberline {4.5.}{\ignorespaces ESD m\'er\'esi \"ossze\'all\IeC {\'\i }t\'as\relax }}{27}{figure.caption.22}
+\select@language {magyar} \contentsline {figure}{\numberline {4.6.}{\ignorespaces ESD teszt csatol\'o s\IeC {\'\i }kokkal\relax }}{27}{figure.caption.23}
+\select@language {magyar} \contentsline {figure}{\numberline {4.7.}{\ignorespaces Burst \'es surge teszt m\'er\'esi \"ossze\'all\IeC {\'\i }t\'asa\relax }}{28}{figure.caption.25}
+\select@language {magyar} \contentsline {figure}{\numberline {4.8.}{\ignorespaces Szimul\'ator be\'all\IeC {\'\i }t\'asai burst teszthez\relax }}{29}{figure.caption.26}
+\select@language {magyar} \contentsline {figure}{\numberline {4.9.}{\ignorespaces Szimul\'ator be\'all\IeC {\'\i }t\'asai surge teszthez\relax }}{29}{figure.caption.28}
+\select@language {magyar} \contentsline {figure}{\numberline {4.10.}{\ignorespaces Vezetett RF zavarok m\'er\'esi \"ossze\'all\IeC {\'\i }t\'asa\relax }}{30}{figure.caption.30}
+\select@language {magyar} \contentsline {figure}{\numberline {4.11.}{\ignorespaces CR-PM3 \"ossze\'all\IeC {\'\i }t\'asa\relax }}{31}{figure.caption.31}
+\select@language {magyar} \contentsline {figure}{\numberline {4.12.}{\ignorespaces CR-PM3 a k\'esz\"ul\'ekh\'azban\relax }}{32}{figure.caption.32}
+\select@language {magyar} \contentsline {figure}{\numberline {4.13.}{\ignorespaces Lapon bel\"uli felbont\'as\relax }}{33}{figure.caption.33}
+\select@language {magyar} \contentsline {figure}{\numberline {4.14.}{\ignorespaces Hierarchikus tervez\'es\relax }}{33}{figure.caption.34}
+\select@language {magyar} \contentsline {figure}{\numberline {4.15.}{\ignorespaces RT7285/A alap\'u kapcsol\'o\"uzem\H u t\'apegys\'eg\relax }}{34}{figure.caption.35}
+\select@language {magyar} \contentsline {figure}{\numberline {4.16.}{\ignorespaces Az \'aramm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{37}{figure.caption.37}
+\select@language {magyar} \contentsline {figure}{\numberline {4.17.}{\ignorespaces A fesz\"ults\'egm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{38}{figure.caption.38}
+\select@language {magyar} \contentsline {figure}{\numberline {4.18.}{\ignorespaces A varisztor\relax }}{39}{figure.caption.39}
+\select@language {magyar} \contentsline {figure}{\numberline {4.19.}{\ignorespaces CR-PM3A \'es CR-PM3C\relax }}{40}{figure.caption.40}
 \select@language {magyar} \addvspace {10\p@ }
-\select@language {magyar} \contentsline {figure}{\numberline {5.1.}{\ignorespaces STM32 ST-LINK Utility LiveUpdate opci\'oval\relax }}{40}{figure.caption.39}
-\select@language {magyar} \contentsline {figure}{\numberline {5.2.}{\ignorespaces STM32CubeMX konfigur\'aci\'os fel\"ulete\relax }}{41}{figure.caption.40}
-\select@language {magyar} \contentsline {figure}{\numberline {5.3.}{\ignorespaces Debug soros port kimenete\relax }}{46}{figure.caption.41}
-\select@language {magyar} \contentsline {figure}{\numberline {5.4.}{\ignorespaces CR-WEB fejleszt\H oi fel\"ulet\relax }}{47}{figure.caption.42}
+\select@language {magyar} \contentsline {figure}{\numberline {5.1.}{\ignorespaces STM32 ST-LINK Utility LiveUpdate opci\'oval\relax }}{44}{figure.caption.42}
+\select@language {magyar} \contentsline {figure}{\numberline {5.2.}{\ignorespaces STM32CubeMX konfigur\'aci\'os fel\"ulete\relax }}{45}{figure.caption.43}
+\select@language {magyar} \contentsline {figure}{\numberline {5.3.}{\ignorespaces Debug soros port kimenete\relax }}{50}{figure.caption.44}
+\select@language {magyar} \contentsline {figure}{\numberline {5.4.}{\ignorespaces CR-WEB fejleszt\H oi fel\"ulet\relax }}{51}{figure.caption.45}
 \select@language {magyar} \addvspace {10\p@ }

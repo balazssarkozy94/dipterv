@@ -30,7 +30,7 @@ Az elektromágneses kompatibilitás (EMC) egy termék megfelelõ mûködését jelenti a
 	\item \emph{Emisszió,} ami pedig a zavarkibocsájtását írja le.
 \end{enumerate}
 
-A tervezõ mérnöknek a kapcsolási rajz készítése, alkatrészek kiválasztása, NYÁK rétegszám meghatározásánál és rajzolat kialakításánál számításba kell vennie, hogy az immunitásnak jobbnak kell lennie, mint a szabványok által elõírt minimális, az emissziónak pedig alacsonyabbnak, mint a megadott maximális határérték. Sajnos, a villamosmérnöki szakma egyik legkevsébé egzakt tudományterülete az elektromágneses kompatibilitás, gyakran ''fekete mágiának'' tartják, mivel itt már a koncentrált paraméteres modell nem mindig állja meg a helyét, illetve a diszkrét kondenzátorok induktív karakterisztikát is mutathatnak, a tekercsek pedig kapacitívat, de egy széles spektrumú zavaró jelnél, mint például egy ESD esemény, a frekvencia tartomány különbözõ részein más-más jelleget mutathatnak az alkatrészek. Tovább nehezíti a terület problémáinak tiszta megértését a hiba lokalizálása, mivel egy komplex áramkör esetén egy néhány pF-os mérõfej is jelentõsen befolyásolja a mérendõ rendszert, általában csak a termék teszt alatti meghibásodásából következtethetünk a hibaforrásra. Az áramkör készítõje lényegében csak törekedni tud a megfelelésre, garantálni azt csak utólagos mérésekkel lehet, illetve amennyiben az áramkör egyik verziója elbukik az EMC teszteken, akkor az alkatrész értékek változtatásában lehet bizakodni.
+A tervezõ mérnöknek a kapcsolási rajz készítése, alkatrészek kiválasztása, NYÁK rétegszám meghatározásánál és rajzolat kialakításánál számításba kell vennie, hogy az immunitásnak jobbnak kell lennie, mint a szabványok által elõírt minimális, az emissziónak pedig alacsonyabbnak, mint a megadott maximális határérték. Sajnos, a villamosmérnöki szakma egyik legkevsébé egzakt tudományterülete az elektromágneses kompatibilitás, gyakran ''fekete mágiának'' tartják, mivel itt már a koncentrált paraméteres modell nem mindig állja meg a helyét, illetve a diszkrét kondenzátorok induktív karakterisztikát is mutathatnak, a tekercsek pedig kapacitívat, de egy széles spektrumú zavaró jelnél, mint például egy ESD esemény, a frekvencia tartomány különbözõ részein más-más jelleget mutathatnak az alkatrészek. Tovább nehezíti a terület problémáinak tiszta megértését a hiba lokalizálása, mivel egy komplex áramkör esetén egy néhány pF-os mérõfej is jelentõsen befolyásolja a mérendõ rendszert, általában csak a termék teszt alatti meghibásodásából következtethetünk a hibaforrásra. Az áramkör készítõje lényegében csak törekedni tud a megfelelésre, ellenõrizni azt csak utólagos mérésekkel lehet, illetve amennyiben az áramkör egyik verziója elbukik az EMC teszteken, akkor az alkatrész értékek változtatásában lehet bizakodni.
 
 TODO CITÁCIÓZÁS www.emtest.com what is standards.php
 
@@ -69,7 +69,7 @@ Egy elektronikus eszköz tervezése során nem elég a mérnököknek laborkörülmények 
 A zavarérzékenység vizsgálatához különbözõ zavaró jeleket viszünk be a rendszerbe, melyek valamilyen ténylegesen elõforduló jelenséget hivatottak szimulálni.
 
 \begin{enumerate}
-	\item \emph{Burst:} Ez a zavar egy kontaktuson kialakult, prellegõ ív sorozat hatását utánozza. A hatását csökkenteni megfelelõ földeléssel, közösmódusú folytó tekercsekkel lehet.
+	\item \emph{Burst:} Ez a zavar egy kontaktuson kialakult, prellegõ ív sorozat hatását utánozza. A hatását csökkenteni megfelelõ földeléssel, közösmódusú fojtó tekercsekkel lehet.
 	\item \emph{Surge:} Induktív terhelések kapcsolása, biztosítékok kiégése, illetve villámcsapások másodlagos hatásaként jönnek létre hasonló, nagy energiájú jelalakok. Különbözõ túlfeszültség levezetõk alkalmazásával, például varisztorokkal, TVS diódákkal lehet megvédeni a készüléket.
 	\item \emph{ESD:} A leggyakrabban elõforduló, hétköznapok során is megtapasztalt jelenség, mely gyakran a legnagyobb fejfájást okozza a fejlesztõnek, mivel nagyon rövidejû a lefutása, széles a spektruma. Megfelelõ földeléssel, kondenzátorokkal, ellenállásokkal, ferritekkel és TVS diódákkal növelhetõ az ezek elleni immunitás.
 	\item \emph{Vezetett RF:} Ez a zavar közeli kábelek induktív és kapacitív egymásrahatását utánozza. Az AM modulált zavarjelet gyakran demodulálják a félvezetõk, ami hibás mûködéshez vezethet. A különbözõ csatlakozókon bejövõ jelek megfelelõ szûrésével, árnyékolt kábelek használatával lehet védekezni ellene.
@@ -93,7 +93,7 @@ A sugárzott zavarkibocsájtást nagy valószínûséggel a 180MHz-en mûködõ iCoupler a
 \caption{Emisszió csökkentése integrált izolált táp esetén}
 \end{figure}
 
-Az innen származó sugárzás csökkentésére az egymástól elszigetelt földeket érdemes egy nagyfeszültségû, kis értékû, néhány száz pF-os kondenzátorral összekötni, amely megfelelõ kapacitás érték választása esetén a zavart gyakorlatilag kisöntöli. A tényleges megvalósítás esetén szembekerülhetünk azzal a problémával, hogy a választott nagyfeszültségû kondenzátor soros induktivitása dominál a szükséges frekvenciákon, ezzel jelentõsen csökkentve a zavarcsökkentõ hatását. Ezt elkerülendõ létrehozhatjuk a szükséges kapacitást a NYÁK-on is, a két oldal egymásra lapolásával. Ennél a módszernél figyelembe kell venni az FR4-es NYÁK dielektromos szilárdságát, illetve a szabványok által elõírt szükséges minimális szigetelési távolságokat.
+Az innen származó sugárzás csökkentésére az egymástól elszigetelt földeket érdemes egy nagyfeszültségû, kis értékû, néhány száz pF-os Y kondenzátorral összekötni, amely megfelelõ kapacitás érték választása esetén a zavart gyakorlatilag kisöntöli. Az Y osztályú kodnenzátorok megnövelt elektromos és mechanikai megbízhatósággal bírnak, amelyet kötelezõ tesztelni, továbbá számos szabványnak meg kell felelniük, hiszen ezek meghibásodása akár életvédelmi kockázattal is járhat. Az Y kondenzátorokat további alkategóriákba sorolják a névleges üzemifeszültségük, illetve az ehhez tartozó impulzus feszültség alapján. Y kondenzátort kell alkalmazni, amennyiben az alkatrészt L-PE, vagy N-PE közé helyezzük el, így a mi alkalmazásunkban, földelt C-RTU rendszer esetén N-PE közé kerül. A tényleges megvalósítás esetén szembekerülhetünk azzal a problémával, hogy a választott nagyfeszültségû kondenzátor soros induktivitása dominál a szükséges frekvenciákon, ezzel jelentõsen csökkentve a zavarcsökkentõ hatását. Ezt elkerülendõ létrehozhatjuk a szükséges kapacitást a NYÁK-on is, a két oldal egymásra lapolásával. Ennél a módszernél figyelembe kell venni az FR4-es NYÁK dielektromos szilárdságát, illetve a szabványok által elõírt szükséges minimális szigetelési távolságokat.
 
 \begin{figure}[!ht]
 \centering
@@ -175,7 +175,7 @@ A mérés során nem történt funkcióvesztés, a webes felületen keresztül folyamatos
 
 A mérési elrendezés nem változott a burst vizsgálathoz képest, mindössze a szimulátor beállításait kellett módosítani.
 
-A méréshez a szabvány 1/min maximális frekvenciát ír elõ, mivel a lehetséges védelmek (pl. varisztor) tulajdonságai melegedés hatására megváltozhatnak. Mivel mi a házi laboratóriumban egy elõmérést végzünk, az elõírt paramétertõl eltérõen, 15 másodperces gyakorisággal kapcsoltuk a zavaró jelet a készülékre. 
+A méréshez a szabvány 1/min minimális frekvenciát ír elõ, mivel a lehetséges védelmek (pl. varisztor) tulajdonságai melegedés hatására megváltozhatnak. Mi a házi laboratóriumban 15 másodperces gyakorisággal kapcsoltuk a zavaró jelet a készülékre. 
 
 \begin{figure}[!ht]
 \centering
@@ -228,7 +228,7 @@ A CR-PM3 háromfázisú teljesítménymérõ modul három nyomtatott áramköri lapból épü
 \caption{CR-PM3 összeállítása}
 \end{figure}
 
-A készüléken 4 csatlakozó található, ezek a 3 fázis, valamint a nulla vezetõhöz tartozó jelek csatlakoztatásáért felelõsek. Egy ilyen csatlakozónak a kiosztása: I-,I+,V-,V+
+A készüléken 4 csatlakozó található, ezek a 3 fázis, valamint a nulla vezetõhöz tartozó jelek csatlakoztatásáért felelõsek.
 
 \begin{figure}[!ht]
 \centering
@@ -236,7 +236,7 @@ A készüléken 4 csatlakozó található, ezek a 3 fázis, valamint a nulla vezetõhöz 
 \caption{CR-PM3 a készülékházban}
 \end{figure}
 
-A két elektronikát tartalmazó emelet közötti kapcsolatot a Samtec által gyártott speciális, DW családba tartozó tûsorával, és HLE családba tartozó hüvelysorával valósítottam meg. A DW tûsorok a szokványos társaiktól eltérõen egy további mûanyag távtartóval rendelkeznek, amely magasságát 5mil felbontással lehet megválasztani a gyártó honlapján. Ezzel a távtartóval egyszerûen be lehet állítani a két NYÁK távolságát, az összeszerelést jelentõsen egyszerûsíti. A HLE hüvelysor pedig egy ''Pass-through'' típusú csatlakozó, vagyis akár alulról, akár felülrõl is képes fogadni az ellenpárját. Ez utóbbi tulajdonságát kihasználva tudtam a CR-PM3C-t egyoldalas szerelésûre kialakítani, mivel a NYÁK-on a csatlakozó felül helyezkedett el, alatta pedig fémezetlen furatok lettek kialakítva, így alulról akadálymentesen tudott a tûsor kontaktus kialakítani.
+A két elektronikát tartalmazó emelet közötti kapcsolatot a Samtec által gyártott speciális, DW családba tartozó tûsorával, és HLE családba tartozó hüvelysorával valósítottam meg. A DW tûsorok a szokványos társaiktól eltérõen egy további mûanyag távtartóval rendelkeznek, amely magasságát 5mil felbontással lehet megválasztani rendelés során. Ezzel a távtartóval egyszerûen be lehet állítani a két NYÁK távolságát, az összeszerelést jelentõsen egyszerûsíti. A HLE hüvelysor pedig egy ''Pass-through'' típusú csatlakozó, vagyis akár alulról, akár felülrõl is képes fogadni az ellenpárját. Ez utóbbi tulajdonságát kihasználva tudtam a CR-PM3C-t egyoldalas szerelésûre kialakítani, mivel a NYÁK-on a csatlakozó felül helyezkedett el, alatta pedig fémezetlen furatok lettek kialakítva, így alulról akadálymentesen tudott a tûsor kontaktus kialakítani.
 
 Az elõlapon a C-RTU család minden tagján kötelezõ bizonyos állapotokat LED-del megjeleníteni. A tervezés fázisában a tényleges megvalósításra nem volt teljes elõírás, ezért a modulon egy addig nem használt megvalósítást próbálhattam ki. SMD LED-eket helyeztem el a CR-PM3C-n, majd a CR-PM3P elõlapi NYÁK-ra bepréselhetõ Bivar PLP2-215 polikarbonátból készült, 3mm-es fényvezetõit terveztem. Ezzel a megoldással a furatszerelt LED-ek beültetését, váltottam ki, amely során nehézkes az alkatrész magasságának a pontos beállítása, ellenben egy fényvezetõ bepréselésének eredménye kellõen konzisztens eredményt tud adni.
 
@@ -263,7 +263,7 @@ A kapcsolási rajzok készítése során bizonyos formázási kérdések a fejlesztõre va
 A CR-PM3C-n egy 3.3V-os tápegységet és a hátlapi buszfeszültség visszaolvasását leszámítva tisztán digitális áramkörök helyezkednek el. Ezen a NYÁK-on a fõbb komponensek:
 
 \begin{enumerate}
-	\item \emph{C-CAN címbeállító switch:} Ez egy 4 karos kétállású kapcsoló, melynek az állását inicializáció során olvassa ki a kontroller.
+	\item \emph{C-CAN címbeállító switch:} Ez egy 4 karos kétállású kapcsoló, melynek az állását inicializáció során olvassa ki a kontroller, így a C-RTU rendszeren belül beállítható a címe a modulnak. Ez minden kiegészítõ modullal szemben elvárás.
 	\item \emph{3.3V-os tápegység:} Ez a Richtek RT7285/A kapcsolóüzemû tápegységén alapul, a hátlapi 12V-ból állítja elõ a modulnak szükséges tápfeszültséget.
 	\item \emph{Elõlapi LED-ek:} A C-RTU moduloknak elõírt színû LED-ek. Funkcióik sorban: státusz, busz kommunikáció, hiba, L1 fázis, L2 fázis, L3 fázis, illetve a DSP által vezérelt CF1 és CF2, konfigurálható jelentéssel.
 	\item \emph{Mikrokontroller:} Az STM32F303-as mikrokontroller, illetve a mûködéséhez szükséges alkatrészek.
@@ -280,6 +280,83 @@ A CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrész
 \end{enumerate}
 
 %----------------------------------------------------------------------------
+\subsection{Kapcsolóüzemû tápegység}
+%----------------------------------------------------------------------------
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/4_3_0_DC_DC.png}
+\caption{RT7285/A alapú kapcsolóüzemû tápegység}
+\end{figure}
+
+A 12V-os hátlapi buszfeszültségrõl elõ kell állítani a készülék mûködéséhez szükséges 3.3V-os tápfeszültséget, ehhez pedig a Richtek 7285/A-s kapcsolóüzemû táp IC-jét választottam rendkívül alacsony költsége, minimális külsõ alkatrészigénye miatt.
+
+Az IC fontosabb jellemzõi a TODOTODOTODO táblázatban láthatóak.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Paraméter} & \textbf{Érték} \\ \hline
+Bemeneti feszültségtartomány & 4.3...18V	\\ \hline
+Kimeneti feszültségtartomány & 0.6...8V	\\ \hline
+Maximális konstans kimeneti áram & 1.5A	\\ \hline
+Kapcsolási frekvencia & 500kHz (fix)	\\ \hline
+Maximális kitöltési tényezõ & 90$\%$	\\ \hline
+Mûködési hõmérséklettartomány & -40...85C$\textdegree$	\\ \hline
+Tokozás & SOT-23-6	\\ \hline
+\end{tabular}
+\caption{RT7285/A fontosabb jellemzõi}
+\label{RT7285_spec}
+\end{table}
+
+Kapcsolóüzemû tápegységek tervezésénél gyakran ökölszabályokból indulunk ki, vagy már meglévõ kapcsolásokból épitkezünk. A következõkben bemutatom a tápegység méretezését.
+
+Elõször is sorra kell vennünk a ''fix'' paramétereket, melyek a következõk:
+
+\[ V_{IN} = 12V \]
+\[ V_{OUT} = 3.3V \]
+\[ f_{SW} = 500kHz \]
+\[ I_{OUT(MAX)} = 1.5A \]
+
+Ezek után meghatározzuk a megengedhetõ áramhullámosságot. Ezt egyszerûen ökölszabály alapján tesszük, általában a maximális áram 20...50$\%$-a közé szokás választani, az alkatrész méret illetve a kimeneti feszültséghullámosság kompromisszumos megválasztásával. Jelen alkalmazásban, mivel a fontos analóg mérések csak az izolált oldalon vannak, amellyek maguknak egy külön leválasztott táppal állítják elõ a feszültséget, nem kritikus az alacsony hullámosság, legyen  
+
+\[ \Delta I_L = 0.75A \]
+
+Ezután már a szükséges induktivitás értéke számolható:
+
+\[L = \frac{V_{OUT}*(V_{IN}-V_{OUT})}{V_{IN}*f_{SW}* \Delta I_L} = \frac{3.3V*(12V-3.3V)}{12V*500kHz*0.75A } = 6.38\mu H\]
+
+Az ehhez legközelebbi sztenderd érték 6.8 $\mu H$, így az áramkörben ezt választottam. Természetesen el lehet térni ettõl az értéktõl mind a két irányban. Amennyiben nagyobb induktivitást alkalmazunk, csökkentjük az áramhullámosságot, ezzel pedig a kimeneten fellépõ feszültséghullámosságot, de cserébe rontjuk a tranziens válaszát a tápnak, mivel az induktivitás áramát lassabban tudjuk növelni. Egy alacsonyabb érték választása esetén az elõzõvel éppen ellentétesen változnának a paraméterek: Gyorsabb kiszabályzás, de nagyobb feszültséghullámosság a kimeneten.
+
+Ezek mellett természetesen figyelembe kell vennünk a tekercs telítési áramát, amelynek minimális értéke:
+
+\[ I_{SAT} = + I_{OUT(MAX)} + \Delta I_L \]
+
+Ezek után a be- és kimeneti kapacitások meghatározása következik. 
+
+A bemeneti kapacitásra a kapcsolások miatt kialakuló, gyors fel és lefutású áramtüskék miatt van szükség. A kondenzátoroknak kell szolgáltatniuk a szükséges áram egy részét, illetve kisimítaniuk a feszültséget a kapcsolóelemek elõtt. A bemeneten fellépõ 500kHz-es áramhullámosság, amelyet a kondenzátoroknak kell elviselni:
+
+
+\[ I_{RMS} = I_{OUT(MAX)}* \frac{V_{OUT}}{V_{IN}}*  \sqrt{ \frac{V_{IN}}{V_{OUT}}-1} = 1.5A * \frac{3.3V}{12V}*  \sqrt{ \frac{12V}{3.3V}-1} = 0.67A \]
+
+Mivel a gyártók gyakran nem közölnek kerámia kondenzátorra maximálisan megengedhetõ áramhullámosságot, így a bemeneten inkább több kondenzátort helyeztem el párhuzamosan, két 100nF-os kondenzátort a nagyobb frekvenciákra, illetve egy 10$\mu$-os kondenzátort az alacsonyabb frekvenciás szûrésre.
+
+A kimeneti kapacitás értéke, illetve a kondenzátor soros ellenállása (ESR) határozza meg a táp feszültséghullámosságát:
+
+\[ V_{RIPPLE} = V_{RIPPLE(ESR)} + V_{RIPPLE(C)} \]
+\[ V_{RIPPLE(ESR)} = \Delta I_L  * R_{ESR} \]
+\[ V_{RIPPLE(C)} = \frac{\Delta I_L}{8*C_{OUT}*f_{SW}} \]
+
+Természetesen ezek a képletek csak folytonos üzemre igazak, szaggatott üzemben a feszültséghullámosságot teljesen más, bonyolultabb képletekkel lehet számolni, azonban attól most tekintsünk el. Kis méretû SMD kerámia kondenzátorok tipikus ESR-je 10m$\Omega$ alatti, így én a legrosszabb esetet tekintve 10m$\Omega$-mal számolok. A kimeneti kapacitást elsõ körben vegyünk 20$\mu$F-nak, vizsgáljuk meg, hogy ez elég-e. A tényleges eszközben a különbözõ IC-k mellett összesen ennél nagyobb kapacitás lesz, azonban mi egy minimumot számolunk, a több kondenzátor hatására csak csökkenni fog a feszültséghullámosság.
+
+\[ V_{RIPPLE(ESR)} = 0.75A  * 0.010\Omega = 7.5mV \]
+\[ V_{RIPPLE(C)} = \frac{0.75A}{8*20 \mu F*500kHz} = 9.4mV \]
+\[ V_{RIPPLE} = 7.5mV + 9.4mV = 16.9mV \]
+
+Ezt a maximális feszültséghullámosságot minden rendszerben lévõ eszköz probléma nélkül el fogja viselni.
+
+%----------------------------------------------------------------------------
 \subsection{Bemeneti áramkör - Áram bemenet}
 %----------------------------------------------------------------------------
 
@@ -293,16 +370,13 @@ A CR-PM3 árammérõ bemeneteit elsõsorban árammérõ transzformátorok fogadására kel
 
 Áramváltó transzformátoros megoldás esetén a kis értékû sönt használata miatt egy lebegõ áramforrásként tekinthetünk a bemeneti jelforrásra, amely a mérõsöntön feszültséget ejt, ezt pedig a szûrõ- és védõáramkörökön keresztül az ADE7933 jelkondicionáló fokozatára, majd analóg digitális átalakítójára jut. 
 
-A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6mOhm-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5mOhm-os, négy vezetékes sönt, mely nagyobb költségû. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
+A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6m$\Omega$-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5m$\Omega$-os, négy vezetékes sönt, mely nagyobb költségû. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
 
-A söntöket ferrit szûrõk követik, melyek néhány 10kHz-es tartományig Ohm-os nagyságrend alatti impedanciát képviselnek, szûrõ hatásukat a 100MHz, illetve afeletti tartományban fejtik ki.
+A söntöket ferrit szûrõk követik, melyek néhány 10kHz-es tartományig $\Omega$-os nagyságrend alatti impedanciát képviselnek, szûrõ hatásukat a 100MHz, illetve afeletti tartományban fejtik ki.
 
-Az RC aluláteresztõ tervezett töréspontja 4823Hz, ez 10$\%$-os kondenzátor tûréssel, és 1$\%$-os ellenállás tûréssel legrosszabb esetben 4337Hz-re csökken, amely még mindig jóval az ADE7933-ra specifikált 3.3kHz-es sávszélessége felett van.
+Az RC aluláteresztõ tervezett töréspontja \[\frac{1}{2*\pi*R*C} = \frac{1}{2*\pi*1000*33*10^{-9}} = 4823Hz\], ez 10$\%$-os kondenzátor tûréssel, és 1$\%$-os ellenállás tûréssel számolva legrosszabb esetben 4337Hz-re csökken, amely még mindig jóval az ADE7933-ra specifikált 3.3kHz-es sávszélessége felett van.
 
-A bemeneten található gyors diódák hatékony kétirányú ESD védelmet biztosítanak, illetve túláram esetén a keletkezõ hosszabb idejû feszültségtüskék levágását biztosítják. A szivárgási áramuk üzemszerû mûködés közben TODO
-
-TODO számítások mellé esetleg képletek?
-Generic rizsa, mi miért mennyi, opciók, méretezés, sávszél, torzítás akár szimuláció is
+A bemeneten található gyors diódák hatékony kétirányú ESD védelmet biztosítanak, illetve túláram esetén a keletkezõ hosszabb idejû feszültségtüskék levágását biztosítják. A szivárgási áramuk üzemszerû mûködés közben elhanyagolható. Típusukat tekintve gyors diódák, feléledési idejük $t_{rr}\leq4ns$, ezek pedig a bemeneten található RC szûrõkkel megfelelõ védelmet biztosítanak az esetleges sztatikus kisülések, rövid, kis energiájú feszültségtüskék ellen.
 
 %----------------------------------------------------------------------------
 \subsection{Bemeneti áramkör - Feszültség bemenet}
@@ -314,8 +388,26 @@ Generic rizsa, mi miért mennyi, opciók, méretezés, sávszél, torzítás akár szimul
 \caption{A feszültségméréshez tartozó bemeneti áramkör}
 \end{figure}
 
-TODO
-Generic rizsa, mi miért mennyi, opciók, méretezés, sávszél, torzítás akár szimuláció is
+A feszültségmérõ bemenetek kialakításukat tekintve naqyban hasonlítanak az áramméréshez használtakhoz. 
+
+Nagyfrekvenciás zavarok ellen ugyanolyan ferritek, valamint ugyanakkora töréspontú RC szûrõk kaptak helyet a bemeneten, a túlfeszültségek korlátozásáról pedig itt is a diódás védõ áramkör gondoskodik.
+
+TODO ESETLEG KÉPLET ITT LENTEBBIT SZÁMOLNI
+
+A hálózati feszültség mérésitartományra való transzformálását egy egyszerû ellenállásosztó biztosítja, melyben 0.1$\%$-os precizitású alkatrészeket használtam. Ez az ADE7933 $\pm$0.5V-os névleges bemenetitartományra a $\pm$500.5V-ot képezi, ami effektív feszültségben 353.9VAC, így megfelelõ tartalékkal tudjuk mérni a névleges 230VAC hálózatokat. 
+
+A feszültség bemenetnek az áramméréssel ellentétben nagy energiájú túlfeszültségeket is el kell viselnie, gondoljunk itt induktív kapcsolási jelenségekre a hálózaton, villámcsapások másodlagos hatásaira, vagy bármilyen egyéb, a készülék bemeneteire csatolódott zavaró jelre. Ezen zavarok ellen túlfeszültség védelmet kell implementálni:
+
+TODO CITÁCIÓ KÉSZÜLÉKTERVEZÉS JEGYZETRE BME AUT	
+
+\begin{enumerate}
+\item\emph{Szikraköz} A túlfeszültség védelmek közül ez a legegyszerûbb, itt az átütés jelenségét használjuk fel védelmi célokra, amelynek kritikus feszültsége viszont a környezeti körülményektõl erõsen függ. A szikraközt mindenképpen áramkorlátozó eszközzel (Kismegszakító, olvadóbiztosító) együtt kell alkalmazni, anélkül még nagyon kis áramok esetén is megmaradhat az ív, az pedig tûzveszélyes.
+\item\emph{Nemesgáz töltésû szikraköz (GDT)} A szikraközhöz hasonló, azonban itt egy hermetikusan lezárt eszközben alakul ki a kontrollált ív, amely biztonságosabb mûködést eredményez.
+\item\emph{Fémoxid varisztor} Egy nemlineáris ellenállásként viselkedõ eszköz, mely a szikraközzel ellentétben a túlfeszültség megszûnésekor, amennyiben a varisztor nem hibásodott meg, normál mûködésbe tér vissza, csak szivárgási árama lesz.
+\item\emph{Transient voltage supressor} Hasonló karakterisztikájú egy Zéner diódához, gyors nyitási idõvel, azonban kisebb szivárgási árammal, nagyobb impulzus teljesítménnyel. Hosszabb idejú túlfeszültség korlátozására alkalmatlan.
+\item\emph{Tirisztoros vágó áramkör} Ez egy gyors mûködésû védelem, azonban gondoskodni kell a zárlati áram megszakításáról. A túlfeszültség és áramkorlátozás megszüntetése után az áramkör alapállapotba kerül. Hátránya, hogy rövid idejû feszültségtüske esetén feleslegesen korlátozhatja a kimenetén a feszültséget. 
+
+\end{enumerate}
 
 \begin{figure*}[t!]
     \centering
@@ -335,9 +427,6 @@ Generic rizsa, mi miért mennyi, opciók, méretezés, sávszél, torzítás akár szimul
 
 TODO
 Todo citáció, innen a képek: % https://www.electronics-tutorials.ws/resistor/varistor.html 
-
-Diódás kis dolog (hasonlóan az áramhoz...),
-Varisztoros rész, ketté rizsázva, akár mûködésrõl is kicsit.
 
 %----------------------------------------------------------------------------
 \section{NYÁK terv}
