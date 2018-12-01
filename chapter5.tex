@@ -24,7 +24,7 @@ A maximális órajel 72MHz, ehhez 90 DMIPS számítási teljesítmény társul. Tartalma
 \section{Emulált EEPROM}
 %----------------------------------------------------------------------------
 
-Számos beágyazott rendszerben van szükség nem felejtõ memória használatára. Ezek leggyakrabban külsõ flash, vagy EEPROM típusúak, újabban pedig már az MRAM magnetorezisztív adattárolók szerepe is növekszik. Ezek a nem felejtõ memóriák viszonylag alacsony plusz költséget jelentenek, a hely igényük a nyomtatott áramkörön 1cm\textsuperscript{2} alatti, ez a legtöbb alkalmazásban nem jelent szûk keresztemetszetet.
+Számos beágyazott rendszerben van szükség nem felejtõ memória használatára, a CR-PM3 esetében például a kalibrációs adatokat mindenképpen el kell tárolni, ezek pedig legyártott készülékenként változni fognak, amely az alkatrészek szórásából következik. Ezek a nem felejtõ memóriák leggyakrabban külsõ flash, vagy EEPROM típusúak, újabban pedig már az MRAM magnetorezisztív adattárolók szerepe is növekszik. Ezek a nem felejtõ memóriák viszonylag alacsony plusz költséget jelentenek, a hely igényük a nyomtatott áramkörön 1cm\textsuperscript{2} alatti, ez pedig a legtöbb alkalmazásban nem jelent szûk keresztemetszetet.
 
 Mindezek ellenére, érdemes gondolni arra, hogy a mai mikrokontrollerek programmemóriája flash, amit menet közben is tudunk page-enként törölni, illetve szavanként írni. Miért kellene külön alkatrészeket beletervezni az áramkörbe, kommunikációs interfészeket használni, ha a beépített flashben néhány lap kijelölésével ugyanúgy egy nem felejtõ memóriát tudunk létrehozni?
 
@@ -134,11 +134,21 @@ A program reset után, még a hardver inicializáció elõtt a különbözõ mérést leíró
 
 Ezt követõen a flash memóriából, az emulált EEPROM-ból kiolvassa a kalibrációs adatokat, ezeket hozzárendeli a megfelelõ változókhoz.
 
-A C-RTU kötelezõ funkcióinak inicializációja ezután kezdõdik, meghívódik a CR-BASE és C-CAN init függvény, majd a LED-ek, a CAN, a mérési paraméterek, figyelt adatok, verziók beállítása. Ezek helyes lefutása után jönnek a modul specifikus függvényhívások, a különbözõ perifériák, felparaméterezése. A CR-PM3-ban a GPIO, Timer, SPI, DMA, ADC és NVIC perifériák vannak használatban a feladatok ellátására.
+A C-RTU kötelezõ funkcióinak inicializációja ezután kezdõdik, meghívódik a CR-BASE és C-CAN init függvény, majd a LED-ek, a CAN, a mérési paraméterek, figyelt adatok, verziók beállítása. Ezek helyes lefutása után jönnek a modul specifikus függvényhívások, a különbözõ perifériák, felparaméterezése. A CR-PM3-ban a különbözõ feladatokat a következõ perifériák látják el:
+
+\begin{enumerate}
+\item\emph{GPIO} A külvilággal az MCU természetesen a be- és kimeneteit használva kommunikál, ezért ennek a perifériának a használata elengedhetetlen.
+\item\emph{Timer} Egy belsõ idõzítõhöz használtam, amellyel rövid, a CR-BASE-ben nem implementált, $\mu$s-es delay függvényt készítettem.
+\item\emph{SPI} Az MCU és az ADE7978 közötti kommunikáció kétirányú SPI.
+\item\emph{DMA} Az analóg-digitális átalakító kimenetét kezelem DMA-val, így a processzor számára overhead nélkül szolgáltat információt az analóg értékekrõl.
+\item\emph{ADC} A buszfeszültséget, 3.3V-os tápfeszültséget és az integrált hõmérõt mérem vele.
+\item\emph{NVIC, EXTI} Az external interrupt-ok kezeléséhez szükséges, melyeket az ADE7978 ad ki. 
+\item\emph{UART} Hibakeresés során használtam fejlesztéshez egy könnyen kezelhetõ interfészként.
+\end{enumerate}
 
 Az inicializációk után még a CR-BASE segítségével létrejön egy-egy 1000, 500 és 100ms-es taszk, amelybe a különbözõ, nem idõkritikus ciklikus feladatok hajthatóak végre.
 
-Ez után bekerül a program futása a main-ben található végtelen ciklusba, amelyben a CR-BASE crBaseHandler() függvényét hívja.
+Ez után bekerül a program futása a main-ben található végtelen ciklusba, amelyben a CR-BASE crBaseHandler() függvényét hívja. Ez kezeli a C-CAN üzenetek interruptos fogadását bufferelve, illetve a CR-BASE összes idõzítéssel kapcsolatos funkcióját, mint például a LED-ek villogtatását, vagy bármilyen elõre regisztrált függvény meghívását.
 
 A modul mûködése során a három regisztrált ciklikus taszk-ban, interruptokban, illetve DMA segítségével történnek a különbözõ funkciók.
 

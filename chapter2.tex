@@ -34,7 +34,22 @@ A kiegészítõ modulok adják a C-RTU rendszerek flexibilitását, az alapkészülék me
 
 A kommunikáció az alapkészülék és modulok között egy CAN alapú, belsõ fejlesztésû C-CAN elnevezésû kommunikációval történik, ez speciális címzéseket és csomag típusokat definiál, egy masteres topológiával.
 
-A modulok elõlapján kötelezõ elhelyezni egy címbeállító dil switchet, amely segítségével a C-CAN címét tudjuk beállítani a modulnak, indulás után ez alapján tudja a modul, hogy mely üzenetek vonatkoznak rá. Az összes kiegészítõ készülék, amely valamilyen mikrokontrollert tartalmaz, egy bootloader futtatásával indul, az alapkészülék ezen keresztül tudja akár távolról is frissíteni a firmware-t.
+A modulok elõlapján egységesen egy címbeállító dil switch kap helyet, amely segítségével a C-CAN címét tudjuk beállítani a modulnak, indulás után ez alapján tudja a modul, hogy mely üzenetek vonatkoznak rá. Az összes kiegészítõ készülék, amely valamilyen mikrokontrollert tartalmaz, egy bootloader futtatásával indul, az alapkészülék ezen keresztül tudja akár távolról is frissíteni a firmware-t.
+
+Minden modul elõlapján helyet kapnak a következõ LED-ek, elõírt színnel, funkcióval:
+
+\begin{enumerate}
+\item\emph{PWR LED:} Színe zöld, a modulban elõállított egyik tápfeszültségrõl kell járatni.
+\item\emph{STAT LED:} Színe zöld, egy processzor GPIO-nak kell vezérlenie.
+\item\emph{FAULT LED:} Színe piros, egy processzor GPIO-nak kell vezérlenie.
+\item\emph{BUS LED:} Színe citromsárga, egy processzor GPIO-nak kell vezérlenie.
+\end{enumerate}
+
+Ezeken felül minden további, modul specifikus kommunikációnak citromsárga LED-et kell mûködtetni, minden digitális bemenetnek narancssárgát, kimenetnek citromsárgát. Az összes LED-nek 3mm-es, víztiszta típusúnak kell lenni.
+
+A CR-PM3 sajnos nem ezek az elõírások alapján készült, mivel a prototípus az ezeket leíró dokumentum elkészülte elõtt már be lett ültetve, így az a korábban tervezett állapotnak felel meg, ahol azonos funkciójú LED-ek kaptak helyet, de néhányuk más színnel volt elõírva.
+
+Az elõlapon ezeken felül még egy reset nyomógombot kell elhelyezni, amellyel a modul processzorát kell tudni újraindítani.
 
 A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a futásukhoz szükséges adatokat átadja. Ezt követõen a kiegészítõ készülékek életjelet küldenek, valamint a paramétereknek megfelelõen adatokat. A különbözõ adatokat kétféleképpen küldhetik fel az alapkészüléknek:
 
@@ -45,12 +60,10 @@ A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a
 
 A két változás figyelési módszer egyszerre is alkalmazható, ilyenkor mindig az éppen hamarabb bekövetkezõ kritérium alapján történik a felküldés.
 
-TODO LEDEK, KÖZÖS KÖTELEZÕ FUNKCIÓK 
-
 %----------------------------------------------------------------------------
 \section{Mechanikai kialakítás}
 %----------------------------------------------------------------------------
 
-A C-RTU család eszközeit a Phoenix Contact BC moduláris készülékházait használják. Ezek kalapsínre szerelhetõk, illetve több méretben is elérhetõk.  A nyomtatott áramköri lapok elhelyezése számos módon történhet, az megoldható akár vízszintesen, akár függõlegesen. A sok rögzítési pont következtében kis kiterjedésû modulokat lehet létrehozni az úgynevezett ''szendvics panel'' kialakítással. A C-RTU családban modulonként általában 2 emelet van, illetve ezen felül egy, ami a készülék elõlapját valósítja meg. Az elõlap NYÁK-ból való megvalósítása elõször pazarlónak gondolhatnánk, azonban nagy gyártási darabszámnál nem emeli jelentõs mértékben a költségeket, emellett könnyû gyártani, konzisztens és szép eredményt nyújt a sztenderd 0.15/0.15mm-es vezetõ/szigetelõ technológiával. További elõnye a megoldásnak, hogy a felhasználó által nem látható, belsõ oldalra alkatrészek ültethetõek. Ez például a C-RTU alapkészüléknél ki van használva, ott két antennacsatlakozó kerül beültetésre igény szerint, amelyek mögött a réz rajzolaton egy-egy NYÁK antenna került elhelyezésre, így amennyiben a felhasználsái területre elég egy kisebb nyereségû antenna, a felhasználók plusz költség nélkül hozzáférnek ezekhez.
+A C-RTU család eszközeit a Phoenix Contact BC moduláris készülékházait használják. Ezek kalapsínre szerelhetõk, illetve több méretben is elérhetõk.  A nyomtatott áramköri lapok elhelyezése számos módon történhet, az megoldható akár vízszintesen, akár függõlegesen. A sok rögzítési pont következtében kis kiterjedésû modulokat lehet létrehozni az úgynevezett ''szendvics panel'' kialakítással. A C-RTU családban modulonként általában 2 emelet van, illetve ezen felül egy, ami a készülék elõlapját valósítja meg. Az elõlap NYÁK-ból való megvalósítása elõször pazarlónak gondolhatnánk, azonban közepes gyártási darabszámnál, ahol elõlapot marni, vagy szerszámmal gyártatni még túl drága lenne, nem emeli jelentõs mértékben a költségeket, emellett könnyû gyártani, konzisztens és szép eredményt nyújt a sztenderd 0.15/0.15mm-es vezetõ/szigetelõ technológiával. További elõnye a megoldásnak, hogy a felhasználó által nem látható, belsõ oldalra alkatrészek ültethetõek. Ez például a C-RTU alapkészüléknél ki van használva, ott két antennacsatlakozó kerül beültetésre igény szerint, amelyek mögött a réz rajzolaton egy-egy NYÁK antenna került elhelyezésre, így amennyiben a felhasználsái területre elég egy kisebb nyereségû antenna, a felhasználók plusz költség nélkül hozzáférnek ezekhez.
 
 TODO
