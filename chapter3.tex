@@ -74,6 +74,30 @@ TODO CITÁCIÓ AUT-BME-KÉSZÜLÉK-ÉRZÉKELÉS
 Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell leképezni az ADC mérési tartományára a feszültséget, majd az átalakítást követõen a digitális kommunikációt kell leválasztani. A digitális kommunikáció leválasztására számos izolátor és optocsatoló típus áll rendelkezésre, melyek költsége alacsonyabb, mint az analóg izolációs erõsítõké.
 
 %----------------------------------------------------------------------------
+\subsection{Feszültségmérési megoldások összehasonlítása}
+%----------------------------------------------------------------------------
+
+Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jelemzõik alapján:
+
+TODOTODOTDOTODO
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Szempont} & \textbf{Áramváltó} & \textbf{Rogowski-tek.} & \textbf{Sönt} & \textbf{Hall-szenzor}\\ \hline
+Elérhetõ pontosság & Közepes & Alacsony & Magas & Közepes\\ \hline
+AC/DC mérés & AC & AC & AC és DC  & AC és DC  \\ \hline
+Feldolgozás & Egyszerû & Bonyolult & Egyszerû & Egyszerû\\ \hline
+Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
+Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
+Inherens leválasztás & Van & Van & Nincs & Van\\ \hline
+\end{tabular}
+\caption{TODOTODOTDOTODO megoldások}
+\label{current_meas_comp}
+\end{table}
+
+%----------------------------------------------------------------------------
 \section{Árammérés}
 %----------------------------------------------------------------------------
 
@@ -97,23 +121,103 @@ A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldha
 
 Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kivitelû. Ez lehetõvé teszi az üzem közbeni felszerelését a mérõnek, nem kell az áramszolgáltatást szüneteltetni. A tekercs közepén átfolyó áram változásával arányos feszültség indukálódik, azt integrálva az áram értékét nagy pontossággal meg tudjuk határozni. Magas frekvenciákig, nagy áramok esetében is használható, például tranziensek vizsgálatához. Ma már tisztán nyomtatott áramkörön is kialakítható, azonban ezek pontossága még nem éri el a tekercselt kivitelûekét. A pontosabb kivitelû típusok ára magas.
 
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=75mm]{figures/3_2_4_rogo_sema.png}
+        \caption{Rogowski-tekercs sematikusan}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=75mm]{figures/3_2_3_rogo_real.png}
+        \caption{Rogowski-tekercs a valóságban}
+    \end{subfigure}
+    \caption{Rogowski-tekercs}
+\end{figure*}
+
+%Citáció képre: https://www.janitza.com/rogowski-coils-janitza.html
+%Citáció képre: https://www.janitza.com/rogowski-coils-janitza.html
+
 %----------------------------------------------------------------------------
 \subsection{Sönt ellenállás és izolációs erõsítõ}
 %----------------------------------------------------------------------------
 
-Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció.
+Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció. A mérési pontosság növelésének érdekében érdemes Kelvnin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn jutassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 terminális ellenállásokat is, melyekkel tovább növelhetõ a pontosság.
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=50mm, keepaspectratio]{figures/3_2_5_shunt.png}
+\caption{Négy kivezetéses árammérõ sönt}
+\end{figure}
+%http://www.vishay.com/ppg?30132 citáció
 %----------------------------------------------------------------------------
 \subsection{Hall-szenzoros árammérõ}
 %----------------------------------------------------------------------------
 
-A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokba integrálva is be lehet szerezni, kitûnõ dinamikus tulajdonságokkal rendelkeznek, alkalmasak DC áramok mérésére, a mérendõ áramot nem szükséges egy ellenálláson keresztül vezetni és így feszültséget ejtetni, az áram nagysága az általa keltett mágneses mezõn keresztül van mérve, a Hall-effektust kihasználva, így a leválasztás a mágneses téren keresztül valósul meg. Pontos mérésekhez a külsõ mágneses tér zavaró hatása ellen speciális mérési eljárásokkal lehet védekezni, mely során több, egymás mellett elhelyezett Hall-szenzor kimenetét kell mérni, azok segítségével pedig kiszûrhetõ a külsõ tér zavaró hatása. Pontosabb típusok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján azonban ezeknek a szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
+A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokba integrálva is be lehet szerezni, kitûnõ dinamikus tulajdonságokkal rendelkeznek, alkalmasak DC áramok mérésére, a mérendõ áramot nem szükséges egy ellenálláson keresztül vezetni és így feszültséget ejtetni, az áram nagysága az általa keltett mágneses mezõn keresztül van mérve, a Hall-effektust kihasználva, így a leválasztás a mágneses téren keresztül valósul meg. Pontos mérésekhez a külsõ mágneses tér zavaró hatása ellen speciális mérési eljárásokkal lehet védekezni, mely során több, egymás mellett elhelyezett Hall-szenzor kimenetét kell mérni, azok segítségével pedig kiszûrhetõ a külsõ tér zavaró hatása. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/3_2_2_hall_comp.PNG}
+\caption{Kompenzált Hall-szenzoros árammérõ fluxus koncentrátorral}
+\label{hall_comp}
+\end{figure}
+% TODO CITÁCIÓ  https://www.infineon.com/dgdl/Current_Sensing_Rev.1.1.pdf?fileId=db3a304332d040720132d939503e5f17
+
+Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, amely a mérendõ vezetõ körüli mágneses hurkot a Hall-szenzorhoz vezeti. A mágneses koncentrátorok a nulla térerõsség körül mûködnek a legpontosabban, így egy további mûveletierõsítõs áramkörrel ezt kompenzálhatjuk, mint például a \ref{hall_comp}-as ábrán. A pontosabb szenzorok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján az integrált szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
+
+%----------------------------------------------------------------------------
+\subsection{Árammérési megoldások összehasonlítása}
+%----------------------------------------------------------------------------
+
+Most vessük össze a fõbb szempontok alapján a felsorolt megoldásokat, hogy egy helyen tudjuk összehasonlítani a különbözõ áramérzékelési módok tulajdonságait:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Szempont} & \textbf{Áramváltó} & \textbf{Rogowski-tek.} & \textbf{Sönt} & \textbf{Hall-szenzor}\\ \hline
+Elérhetõ pontosság & Közepes & Alacsony & Magas & Közepes\\ \hline
+AC/DC mérés & AC & AC & AC és DC  & AC és DC  \\ \hline
+Feldolgozás & Egyszerû & Bonyolult & Egyszerû & Egyszerû\\ \hline
+Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
+Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
+Inherens leválasztás & Van & Van & Nincs & Van\\ \hline
+\end{tabular}
+\caption{Árammérési megoldások}
+\label{current_meas_comp}
+\end{table}
+
+%CITÁCIÓ https://e2e.ti.com/blogs_/archives/b/precisionhub/archive/2015/07/10/six-ways-to-sense-current-and-how-to-decide-which-to-use
 
 %----------------------------------------------------------------------------
 \section{Adatfeldolgozás}
 %----------------------------------------------------------------------------
 
-A lehetséges szenzor megoldások megismerése után nézzük milyen lehetséges jelfeldolgozók közül választhatunk.
+A lehetséges szenzor megoldások megismerése után nézzük milyen lehetséges jelfeldolgozók közül választhatunk. Az adatok feldolgozása itt a következõ mûveletsort jelenti:
+
+\begin{enumerate}
+\item\emph{AD értékek kiolvasása}
+\item\emph{Fázis kompenzáció}
+\item\emph{AD értékek leképezése valós mennyiségekre}
+\item\emph{Offset eliminálása}
+\item\emph{Hõmérséklet kompenzáció}
+\item\emph{RMS értékek elõállítása}
+\item\emph{Hatásos és meddõ teljesítmények számolása}
+\item\emph{Energiák akkumulálása}
+\item\emph{THD számítása}
+\item\emph{Hálózati események figyelése és rögzítése}
+\item\emph{Adatok biztosítása egy kommunikációs interfészen}
+\end{enumerate}
+
+Az AD értékek kiolvasását nagyobb gyakorisággal kell végrehajtani, illetve ezt átlagolni, a mûveletsor maradékát pedig hálózati periódusonként (20ms) végrehajtani fázisonként. A feladatok jellegüket tekintve az egyes fázisokon belül sorosak, végig kell számolni a feszültség és áramértékektõl az energiákig mindent, de a fázisok között párhuzamos végrehajtás is megengedhetõ, habár idõben egymástól egyenletesen vannak eltolva a periódusok, így az soros végrehajtással is megoldható, amennyiben $\frac{20}{3}ms$ alatt lefut egy fázis feldolgozása.
+%----------------------------------------------------------------------------
+\subsection{Mikrokontroller}
+%----------------------------------------------------------------------------
+
+A mikrokontrollerek gyártónként és családonként is nagyon széles palettán mozognak, a DSP-k és egyszerû MCU-k határvonala összefolyik. Az egyszerûség kedvéért gondoljunk itt egy 32 bites példányra, amelyben nincs lebegõpontos segédprocesszor (FPU). Ez utóbbi az egyszerû mikrokontrolleres megoldást sajnos használhatatlanná teszi, mivel minden lebegõpontos számítást szoftverbõl kell megoldania, az pedig többszörös végrahajtási idõt jelent mûveletenként. Ezt a megvalósítást akkor választhatjuk, ha a feldolgozás egy jelentõs részét átadjuk a rendszer magasabb szintjeinek.
 
 %----------------------------------------------------------------------------
 \subsection{Digitális Jelfeldolgozó Processzor}

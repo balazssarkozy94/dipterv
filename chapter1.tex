@@ -6,7 +6,18 @@
 \section{Feszültségminõség}
 %----------------------------------------------------------------------------
 
-Teljesítményminõségen, vagy helyesebben feszültségminõségen a hálózati feszültség paramétereit értjük, illetve azok megfelelését a névleges értékekhez, mely Magyarországon 230Veff, 50Hz, szinuszos fázis feszültségnek felel meg, fázisonként 120 fokkal eltolva háromfázisú rendszer esetében. A magyar hálózati feszültségek szabályozását az MSZ 1:2002-es szabvány írja le, ebben találhatóak meg a legkisebb, legnagyobb, valamint a névleges feszültség értékek, melyeket az áramszolgáltató köteles biztosítani a csatlakozási pontokon. A hálózati paraméterek természetesen ezektõl az értékektõl bizonyos mértékben eltérhetnek, az nem okoz a fogyasztóknál problémát, azonban túlságosan nagy eltérés esetén a hálózati feszültségrõl üzemelõ berendezések károsodása következhet be, továbbá jelentõs veszteségek léphetnek fel a villamosenergia-hálózatban, valamint a feszültségkimaradások, feszültségletörések, jelentõs kieséseket, leállásokat, így többlet költségeket róhatnak a fogyasztókra. A hálózatra csatlakoztatott, fázisonként legfeljebb 16A fogyasztású eszközök áramfelvételének harmonikus tartalmát az IEC 61000-3-2 korlátozza, azonban ennek szabvány a bevezetése elõtt forgalomba került berendezésekre ez a szabvány nem vonatkozik, azok tovább üzemeltethetõk élettartamuk végéig, annak ellenére, hogy leggyakrabban a hálózati áramfelvételük felharmonikus tartalma magas, emellett teljesítmény tényezõjük alacsony. A hálózatra csatlakoztatott tápegységek, például az igen nagy darabszámban gyártott kompakt 5V-os telefontöltõk leggyakrabban egyenirányítás után egy elektrolit kondenzátorral állítanak elõ egyenfeszültséget, majd egy flyback konverterrel 5V-ot biztosítanak a kimeneten. A magas THD tartalom egyik lehetséges hatása a primer oldali szûrõkondenzátor korai tönkremenetele, mivel azon a tervezett alapharmonikus áramösszetevõ mellett további komponensek is megjelennek, azok pedig a soros ellenálláson disszipációt okoznak, mellyel magasabb hõmérséklet, rövidebb élettartam jár együtt. Egy további komoly probléma a hálózati harmonikus tartalom miatt bekövetkezõ többszörös, vagy idõben nem állandó periódusú nullátmenet. Ez a hálózathoz szinkronizált berendezések, például inverterek, szinkron egyenirányítók helytelen, vagy rossz hatásfokú mûködését eredményezheti.
+Teljesítményminõségen, vagy helyesebben feszültségminõségen a hálózati feszültség paramétereit értjük, illetve azok megfelelését a névleges értékekhez, mely Magyarországon 230Veff, 50Hz, szinuszos fázis feszültségnek felel meg, fázisonként 120 fokkal eltolva háromfázisú rendszer esetében. A magyar hálózati feszültségek szabályozását az MSZ 1:2002-es szabvány írja le, ebben találhatóak meg a legkisebb, legnagyobb, valamint a névleges feszültség értékek, melyeket az áramszolgáltató köteles biztosítani a csatlakozási pontokon. A hálózati paraméterek természetesen ezektõl az értékektõl bizonyos mértékben eltérhetnek, az nem okoz a fogyasztóknál problémát, azonban túlságosan nagy eltérés esetén a hálózati feszültségrõl üzemelõ berendezések károsodása következhet be, továbbá jelentõs veszteségek léphetnek fel a villamosenergia-hálózatban, valamint a feszültségkimaradások, feszültségletörések, jelentõs kieséseket, leállásokat, így többlet költségeket róhatnak a fogyasztókra. 
+
+A hálózatra csatlakoztatott, fázisonként legfeljebb 16A fogyasztású eszközök áramfelvételének harmonikus tartalmát az IEC 61000-3-2 korlátozza, azonban ennek szabvány a bevezetése elõtt forgalomba került berendezésekre ez a szabvány nem vonatkozik, azok tovább üzemeltethetõk élettartamuk végéig, annak ellenére, hogy leggyakrabban a hálózati áramfelvételük felharmonikus tartalma magas, emellett teljesítmény tényezõjük alacsony. Pontosan ez utóbbi két tulajdonság miatt került bevezetésre a harmonikus kibocsájtást korlátozó szabvány. A szabvány betartásának érdekében manapság leggyakrabban aktív PFC-t használnak, ennek egyszerûsített kapcsolása a \ref{active_pfc}-es ábrán látható.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=100mm, keepaspectratio]{figures/1_1_1_active_pfc.png}
+\caption{Aktív PFC felépítése}
+\label{active_pfc}
+\end{figure}
+
+A különbözõ fogyasztói elektronikai eszközök egyre inkább törpefeszültségû (<50V) DC tápot használnak, így a 230V-os feszültséget költséghatékony módon kell átalakítani az eszköznek megfelelõre. A hálózatra csatlakoztatott tápegységek, például az igen nagy darabszámban gyártott kompakt 5V-os telefontöltõk leggyakrabban egyenirányítás után egy elektrolit kondenzátorral állítanak elõ egyenfeszültséget, majd egy flyback konverterrel 5V-ot biztosítanak a kimeneten. A magas THD tartalom egyik lehetséges hatása a primer oldali szûrõkondenzátor korai tönkremenetele, mivel azon a tervezett alapharmonikus áramösszetevõ mellett további komponensek is megjelennek, azok pedig a soros ellenálláson disszipációt okoznak, mellyel magasabb hõmérséklet, rövidebb élettartam jár együtt. Egy további komoly probléma a hálózati harmonikus tartalom miatt bekövetkezõ többszörös, vagy idõben nem állandó periódusú nullátmenet. Ez a hálózathoz szinkronizált berendezések, például inverterek, szinkron egyenirányítók helytelen, vagy rossz hatásfokú mûködését eredményezheti.
 
 %----------------------------------------------------------------------------
 \section{CEER Benchmarking}
@@ -17,7 +28,7 @@ A legutóbbi ilyen összehasonlítás, a 6th CEER Benchmarking Report on all the Qua
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=130mm, keepaspectratio]{figures/1_2_1_ceer_eves.png}
+\includegraphics[width=150mm, keepaspectratio]{figures/1_2_1_ceer_eves.png}
 \caption{Hosszú kimaradások ideje évente}
 \end{figure}
 
