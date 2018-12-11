@@ -4,17 +4,17 @@
 {MSZ EN 60664-1:2008, Kisfeszültségû rendszerek villamos szerkezeteinek
   szigeteléskoordinációja. 1. rész: Alapelvek, követelmények és vizsgálatok
   (IEC 60664-1:2007)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2008.
+\newblock Szabvány, Magyar Szabványügyi Testület, 05 2008.
 
 \bibitem{MSZ_EN_62052-11_2003}
 {MSZ EN 62052-11:2003, Váltakozó áramú villamos fogyasztásmérõ berendezések.
   Általános követelmények, vizsgálatok és vizsgálati feltételek. 11. rész:
   Fogyasztásmérõ berendezések (IEC 62052-11:2003)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2003.
+\newblock Szabvány, Magyar Szabványügyi Testület, 05 2003.
 
 \bibitem{CEER_BENCHMARK_6TH}
 {CEER 6th Benchmarking Report on the Quality of Electricity and Gas Supply}.
-\newblock Jelentés, Council of European Energy Regulators (CEER), 2016.
+\newblock Jelentés, Council of European Energy Regulators (CEER), 09 2016.
 
 \bibitem{emtest_what_is_standards}
 {EM TEST (Switzerland) GmbH}.
@@ -25,36 +25,36 @@
 {Elektromágneses összeférhetõség (EMC). 6-1. rész: Általános szabványok.
   Zavartûrés a lakóhelyi, a kereskedelmi és az enyhén ipari környezetekre (IEC
   61000-6-1:2005)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2007.
+\newblock Szabvány, Magyar Szabványügyi Testület, 07 2007.
 
 \bibitem{MSZ_EN_55014-1_2007}
 {Elektromágneses összeférhetõség. Háztartási készülékek, villamos szerszámok és
   hasonló eszközök követelményei. 1. rész: Zavarkibocsátás (CISPR 14-1:2005)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2007.
+\newblock Szabvány, Magyar Szabványügyi Testület, 04 2007.
 
 \bibitem{MSZ_EN_61000-4-2_2009}
 {Elektromágneses összeférhetõség (EMC). 4-2. rész: Vizsgálati és mérési
   módszerek. Elektrosztatikus kisüléssel szembeni zavartûrési vizsgálat (IEC
   61000-4-2:2008)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2009.
+\newblock Szabvány, Magyar Szabványügyi Testület, 09 2009.
 
 \bibitem{MSZ_EN_61000-4-4_2011}
 {Elektromágneses összeférhetõség (EMC). 4-4. rész: Vizsgálati és mérési
   módszerek. Gyors villamos tranziens/burst jelenségekkel szembeni zavartûrési
   vizsgálat (IEC 61000-4-4:2012)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2011.
+\newblock Szabvány, Magyar Szabványügyi Testület, 03 2011.
 
 \bibitem{MSZ_EN_61000-4-5_2014}
 {Elektromágneses összeférhetõség (EMC). 4-5. rész: Vizsgálati és mérési
   módszerek. Lökõhullámmal szembeni zavartûrési vizsgálat (IEC
   61000-4-5:2014)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2014.
+\newblock Szabvány, Magyar Szabványügyi Testület, 12 2014.
 
 \bibitem{MSZ_EN_61000-4-6_2014}
 {Elektromágneses összeférhetõség (EMC). 4-6. rész: Vizsgálati és mérési
   módszerek. Rádiófrekvenciás terek által keltett, vezetett zavarokkal szembeni
   zavartûrés vizsgálata (IEC 61000-4-6:2013)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 2014.
+\newblock Szabvány, Magyar Szabványügyi Testület, 05 2014.
 
 \bibitem{schneider_16451}
 {Schneider Electric}.
@@ -64,25 +64,25 @@
 
 \bibitem{ST_UM0892}
 {UM0892, STM32 ST-LINK utility software description}.
-\newblock User manual, STMicroelectronics, 2018.
+\newblock User manual, STMicroelectronics, 10 2018.
 
 \bibitem{ST_AN4056}
 {AN4056, EEPROM emulation in STM32F30x/STM32F31x/STM32F37x/STM32F38x
   microcontrollers}.
-\newblock Application note, STMicroelectronics, 2012.
+\newblock Application note, STMicroelectronics, 09 2012.
 
 \bibitem{ST_UM1718}
 {UM1718, STM32CubeMX for STM32 configuration and initialization C code
   generation}.
-\newblock User manual, STMicroelectronics, 2018.
+\newblock User manual, STMicroelectronics, 11 2018.
 
 \bibitem{ST_DS9118}
 {DS9118, STM32F303xB STM32F303xC datasheet}.
-\newblock Datasheet, STMicroelectronics, 2018.
+\newblock Datasheet, STMicroelectronics, 10 2018.
 
 \bibitem{ADE_7978/ADE_7933/ADE_7932/ADE_7923}
 {ADE7978/ADE7933/ADE7932/ADE7923}.
-\newblock Datasheet, Analog Devices, November 2018.
+\newblock Datasheet, Analog Devices, 11 2018.
 
 \bibitem{AN-1259}
 {AN-1259, Calibrating the ADE7978 and ADE7932/ADE7933 Isolated Metering
@@ -97,7 +97,7 @@
 \bibitem{VIA_STICH_STUDY}
 {The EMI benefits of ground plane stitching in multi-layer power bus stacks}.
 \newblock Tanulmány, Xiaoning Ye, D.M. Hockanson, Min Li, Wei Cui, S. Radu,
-  J.L. Drewniak, T.P. VanDoren, T.H. Hubing, R.E. DuBroff, 2000.
+  J.L. Drewniak, T.P. VanDoren, T.H. Hubing, R.E. DuBroff, 08 2000.
 
 \bibitem{EDN_ISOLATION_FILTER}
 {Anand Reghunathan, Koteshwar Rao, Anant Kamath}.
@@ -116,5 +116,22 @@
 \newblock Cmc 356 universal relay test set and commissioning tool (2018.
   november 25.).
 \newblock \url{https://www.omicronenergy.com/en/products/cmc-356/}.
+
+\bibitem{KESZULEK_FESZ}
+{Dr. Balogh Attila (BME-AUT)}.
+\newblock Készüléktervezés jegyzet: 9. túlfeszültség védelem.
+\newblock
+  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%balfesz%c3%bclts%c3%a9g_v%c3%a9delem.pdf}.
+
+\bibitem{KESZULEK_ARAM}
+{Dr. Balogh Attila (BME-AUT)}.
+\newblock Készüléktervezés jegyzet: 8. túláramvédelem.
+\newblock
+  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%bal%c3%a1ram_v%c3%a9delem.pdf}.
+
+\bibitem{VARISTOR}
+{ElectronicsTutorials}.
+\newblock Varistor tutorial (2018.12.11.).
+\newblock \url{https://www.electronics-tutorials.ws/resistor/varistor.html}.
 
 \end{thebibliography}

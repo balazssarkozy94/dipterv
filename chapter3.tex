@@ -2,13 +2,13 @@
 \chapter{Rendszer jellemzõk}
 %----------------------------------------------------------------------------
 
-A tervezendõ adatgyûjtõ rendszer a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségeihez közvetlenül, vagy feszültségváltókon, az áramaihoz közvetlen söntön, vagy áramváltókon keresztül csatlakozik. Minden mérési megoldásnál egyformán elvárás a legalább 2.5kVeff izoláció. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
+A tervezendõ adatgyûjtõ rendszer a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségeihez közvetlenül, vagy feszültségváltókon, az áramaihoz közvetlen söntön, vagy áramváltókon keresztül csatlakozik. Minden megoldásnál egyformán elvárás a szabványoknak való megfelelés és az ezzel járó szükséges feszültségtûrésû szigetelések. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
 
 %----------------------------------------------------------------------------
 \section{Specifikáció}
 %----------------------------------------------------------------------------
 
-A CR-PM3 egyik lehetséges felhasználása egy másik, a szintén Prolan által gyártott ProField mezõgép AF500-as moduljának kiváltása. Mivel ez a készülék nagyobb darabszámban eladott, így ennek a specifikációját vettem alapul tervezéshez. A modul precíz feszültség és áram mérések elvégzésre alkalmas, áram- és feszültségváltó transzformátorokon keresztül. Maga a ProField rendszer rack-es kivitelû, így helyigénye is nagyobb, mint egy C-RTU-val megvalósított alkalmazás. A hivatalos specifikációja a modulnak:
+A CR-PM3 egyik lehetséges felhasználása egy másik, a szintén Prolan által gyártott ProField mezõgép AF500-as moduljának kiváltása bizonyos alkalmazásokban. A ProField mezõgépet számos területen használják a hozzá kapcsolt technológiai folyamat jeleinek érzékelésére, illetve beavatkozási parancsok végrehajtására, például transzformátor alállomások és az energiaelosztó hálózatok különbözõ pontjain. Az AF500-as modul ezen a rendszeren belül precíz feszültség és áram mérések elvégzésre alkalmas, áram- és feszültségváltó transzformátorokon keresztül. Maga a ProField rendszer rack-es kivitelû, így helyigénye is nagyobb, mint egy C-RTU-val megvalósított alkalmazás. A hivatalos specifikációja a modulnak:
 
 \begin{table}[h]
 \centering
@@ -79,22 +79,18 @@ Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell leképezni az ADC mé
 
 Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jelemzõik alapján:
 
-TODOTODOTDOTODO
-
 \begin{table}[h]
 \centering
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|m{3.3cm}|m{3.3cm}|m{3.3cm}|m{3.3cm}|}
 \hline
-\textbf{Szempont} & \textbf{Áramváltó} & \textbf{Rogowski-tek.} & \textbf{Sönt} & \textbf{Hall-szenzor}\\ \hline
-Elérhetõ pontosság & Közepes & Alacsony & Magas & Közepes\\ \hline
-AC/DC mérés & AC & AC & AC és DC  & AC és DC  \\ \hline
-Feldolgozás & Egyszerû & Bonyolult & Egyszerû & Egyszerû\\ \hline
-Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
-Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
-Inherens leválasztás & Van & Van & Nincs & Van\\ \hline
+\textbf{Szempont} & \textbf{Feszültségváltó} & \textbf{Ellenállásosztó és izolációs erõsítõ} & \textbf{Ellenállásosztó és leválasztott ADC}\\ \hline
+Elérhetõ pontosság & Alacsony & Magas & Magas\\ \hline
+AC/DC mérés & AC & AC és DC & AC és DC\\ \hline
+Frekvencia tartomány & Kicsi & Közepes & Nagy\\ \hline
+Galvanikus leválasztás & Inherens & Analóg szükséges & Digitális szükséges\\ \hline
 \end{tabular}
-\caption{TODOTODOTDOTODO megoldások}
-\label{current_meas_comp}
+\caption{Feszültségmérési megoldások}
+\label{voltage_meas_comp}
 \end{table}
 
 %----------------------------------------------------------------------------
@@ -176,15 +172,15 @@ Most vessük össze a fõbb szempontok alapján a felsorolt megoldásokat, hogy egy h
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|m{2.5cm}|m{2.5cm}|m{2.5cm}|m{2.5cm}|m{2.5cm}|}
 \hline
-\textbf{Szempont} & \textbf{Áramváltó} & \textbf{Rogowski-tek.} & \textbf{Sönt} & \textbf{Hall-szenzor}\\ \hline
+\textbf{Szempont} & \textbf{Áramváltó} & \textbf{Rogowski-tekercs} & \textbf{Sönt} & \textbf{Hall-szenzor}\\ \hline
 Elérhetõ pontosság & Közepes & Alacsony & Magas & Közepes\\ \hline
 AC/DC mérés & AC & AC & AC és DC  & AC és DC  \\ \hline
 Feldolgozás & Egyszerû & Bonyolult & Egyszerû & Egyszerû\\ \hline
 Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
 Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
-Inherens leválasztás & Van & Van & Nincs & Van\\ \hline
+Galvanikus leválasztás & Inherens & Inherens & Analóg szükséges & Inherens\\ \hline
 \end{tabular}
 \caption{Árammérési megoldások}
 \label{current_meas_comp}

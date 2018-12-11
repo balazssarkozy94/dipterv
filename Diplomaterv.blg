@@ -14,38 +14,6 @@ A level-1 auxiliary file: acknowledgement.aux
 The style file: unsrt.bst
 A level-1 auxiliary file: appendices.aux
 Database file #1: mybib.bib
-Warning--string name "szeptember" is undefined
---line 4 of file mybib.bib
-Warning--string name "majus" is undefined
---line 15 of file mybib.bib
-Warning--string name "majus" is undefined
---line 25 of file mybib.bib
-Warning--string name "oktober" is undefined
---line 47 of file mybib.bib
-Warning--string name "november" is undefined
---line 57 of file mybib.bib
-Warning--string name "szeptember" is undefined
---line 67 of file mybib.bib
-Warning--string name "oktober" is undefined
---line 77 of file mybib.bib
-Warning--string name "unknown" is undefined
---line 97 of file mybib.bib
-Warning--string name "unknown" is undefined
---line 107 of file mybib.bib
-Warning--string name "julius" is undefined
---line 117 of file mybib.bib
-Warning--string name "aprilis" is undefined
---line 127 of file mybib.bib
-Warning--string name "szeptember" is undefined
---line 137 of file mybib.bib
-Warning--string name "marcius" is undefined
---line 147 of file mybib.bib
-Warning--string name "december" is undefined
---line 157 of file mybib.bib
-Warning--string name "majus" is undefined
---line 167 of file mybib.bib
-Warning--string name "augusztus" is undefined
---line 177 of file mybib.bib
 Warning--empty author in MSZ_EN_60664-1_2008
 Warning--empty author in MSZ_EN_62052-11_2003
 Warning--empty author in CEER_BENCHMARK_6TH
@@ -63,4 +31,4 @@ Warning--empty author in ADE_7978/ADE_7933/ADE_7932/ADE_7923
 Warning--empty author in AN-1259
 Warning--empty author in AN-1333
 Warning--empty author in VIA_STICH_STUDY
-(There were 33 warnings)
+(There were 17 warnings)
