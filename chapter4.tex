@@ -222,8 +222,49 @@ Elsõ lépésként a készülékház gyártója által szolgáltatott 3D modellbõl indultam 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=150mm, keepaspectratio]{figures/4_4_1_CRPM3_PCB.png}
-\caption{CR-PM3A és CR-PM3C}
+\caption{CR-PM3A és CR-PM3C beültetési rajzai}
 \end{figure}
+
+%----------------------------------------------------------------------------
+\subsection{Tápegység NYÁK terve}
+%----------------------------------------------------------------------------
+\begin{figure*}[!h]
+    \centering
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=70mm]{figures/4_4_3_RT7285_RECOM.PNG}
+        \caption{RT7285 ajánlott elrendezése, huzalozása \cite{RT7285A}}
+        \label{rt7285_ref}
+    \end{subfigure}%
+    ~ 
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=70mm]{figures/4_4_2_CRPM3_C_TAP.PNG}
+        \caption{Kapcsolóüzemû tápegység NYÁK terve}
+        \label{tapegyseg_nyak}
+    \end{subfigure}
+    \caption{RT7285 alapú tápegység NYÁK terve}
+\end{figure*}
+
+A kapcsolóüzemû tápegység NYÁK terve legalább olyan fontos szereppel bír, mint az alkatrészek értékeinek meghatározása, mivel ha az alkatrészek elrendezése, vagy a vezetékezés nem megfelelõ, akkor a táp mûködésében rengeteg féle módon alakulhat ki rendellenes mûködés. A kialakított terveket a \ref{tapegyseg_nyak} ábrán láthatjuk.
+
+Az egyik nagyon fontos szempont, hogy a lehetõ legrövidebbek legyenek a kapcsolófrekvenciás áramhurkok. Ezt a bemeneti hidegítés táp bemenetekhez való minél közelebbi elhelyezésével, illetve a kimeneti fojtó tekercs és a szûrõ kondenzátorok kapcsoló kimenethez helyezésével érhetõ el. Minden tápegység tervezésénél kitûnõ kiindulási alapot adhat az adott alkatrész adatlapja, mivel azok általában közölnek ajánlott kapcsolást, amelyen magyarázatokkal közlik, hogy melyik alkatrész elhelyezésénél és vezetékezésénél mire kell ügyelni, ez látható a \ref{rt7285_ref}-es ábrán. 
+
+%----------------------------------------------------------------------------
+\subsection{Mérõ bemenetek kialakítása}
+%----------------------------------------------------------------------------
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=100mm, keepaspectratio]{figures/4_4_4_CRPM3A_PCB.PNG}
+\caption{CR-PM3 mérõ bemeneteinek NYÁK terve}
+\end{figure}
+
+A mérõbemeneteknek kell a legnagyobb igénybevételt kibírniuk, így két fõ szempont volt szemelõtt a NYÁK kialakításánál:
+
+\begin{enumerate}
+\item\emph{Feszültség bemenet:} Ezeknek jelentõs differenciális és közösmódusú feszültségtüskéket kell kibírnia anélkül, hogy akár az áramcsatornába, akár az áramkör érzékenyebb részeibe azok átjussanak. Ezt megfelelõ szigetelési távolságokkal, illetve a varisztor feszültségkorlátozó hatásával értem el.
+\item\emph{Áram bemenet:} Ezeknek a bemeneteknek kevesebb zavart kell elviselni, itt inkább a túláramtûrés, valamint a termikus viszonyok a kritikusak. Ezeket az alacsony ellenállású sönt, illetve a megfelelõ vastagságú vezetékezés biztosítja.
+\end{enumerate}
 
 %----------------------------------------------------------------------------
 \section{Szabványosság}
@@ -246,6 +287,17 @@ Az egyik betartandó szabvány az IEC 60664-1, ''Kifeszültségû rendszerek villamos
     \label{szig_koord}
 \end{figure}
 \end{landscape}
+
+A szabvány számszerûen figyelembe veszi a környezeti jellemzõket a felhasználás helyén, mint például a tengerszint feletti magasságot, vagy a szennyezettség mértékét (PD1...PD4). A páratartalmat, hõmérsékletet, illetve egyéb paramétereket a szabvány egy másik fejezetében írja le pontos a szabványcsalád.
+
+Ez a szabvány megadja a kúszóáramutak minimális hosszát, illetve a minimális légközök nagyságát.
+
+\begin{enumerate}
+\item\emph{Felületi kúszás:} A szilárd szigetelések felületén, hosszabb ideig fenálló feszültség hatására létrejövõ vezetés. Függ többek között a felület szennyezettségétõl, a szigetelõtõl, a feszültségtõl.
+\item\emph{Átívelés:} A gáz szigetelõn keresztül létrejövõ vezetés, mely általában rövid túlfeszültség hatására jön létre.
+\end{enumerate}
+
+Általában az átívelés megakadályozásához szükséges légköz nagyobb, mint a minimális kúszóút. Amennyiben ez így van, a szabvány alapján a minimálisan szükséges szigetelési távolság két vezetõ között a minimális légköz hossza. Itt példaképpen a CR-PM3A nyákján 2mm-es kúszóutat, 5mm-es légközt ír elõ a szabvány a hálózati feszültségû rész és a feldolgozó elektronika oldala között, így a minimális szigetelési távolság 5mm.
 
 %----------------------------------------------------------------------------
 \subsection{EMC}

@@ -106,11 +106,9 @@ A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam,
 %----------------------------------------------------------------------------
 \subsection{Program felépítése}
 %----------------------------------------------------------------------------
-TODO ÁBRA ESETLEG?
 
 A program reset után, még a hardver inicializáció elõtt a különbözõ mérést leíró struktúrák inicializációjával kezd, az ezekben található pointerek megfelelõ értékének beállításával, és listák feltöltésével. Ezen a ponton kell megadni az eszköznek, hogy pontosan melyik vizsgált paramétereket kívánjuk kiolvasni a DSP-bõl.
 
-\begin{absolutelynopagebreak}
 	\begin{lstlisting}
   struct meas_register reg_list_L1[MAX_NO_OF_REGS_TO_READ/3];
   struct calib_data calibration_data_l1;
@@ -129,8 +127,6 @@ A program reset után, még a hardver inicializáció elõtt a különbözõ mérést leíró
   addToRegsOfInterest(&regs_of_interest_L1, "L1 REACTIVE ENERGY", AVARHR, 4, _signed, energy, 1);
   addToRegsOfInterest(&regs_of_interest_L1, "L1 TEMP", ATEMP, 4, _signed, temperature, 1);
 	\end{lstlisting}
-
-\end{absolutelynopagebreak}
 
 Ezt követõen a flash memóriából, az emulált EEPROM-ból kiolvassa a kalibrációs adatokat, ezeket hozzárendeli a megfelelõ változókhoz.
 
@@ -281,7 +277,7 @@ A fejlesztés támogatásához a készülékben helyet kapott egy kivezetett UART port.
 A fejlesztés során többször fordult elõ, hogy valamilyen hibás konfigurálás következtében már az inicializáció során elakadt a program futása, ezek forrását a debug interfész segítségével rendkívül egyszerûen, egy-egy sor vagy változó kiíratásával meg lehetett találni.
 
 %----------------------------------------------------------------------------
-\section{Linux oldali szoftver <- ide csak a crweb}
+\section{CR-WEB}
 %----------------------------------------------------------------------------
 
 TODO 
@@ -308,6 +304,11 @@ Egy gyártott terméknek elengedhetetlen a tesztelése mielõtt azt eladásra szánja 
 
 A végmérés és kalibráció a CR-PM3 esetében gyakorlatilag szétválaszthatatlan, mivel a külvilág felé a kimenetei mindössze az elõlapon található LED-ek, az összes csatlakozón mérõbemenet található, ezeknek pedig elengedhetetlen a kalibrációja, e közben pedig meggyõzõdhetünk a helyes mûködésrõl.
 
+%----------------------------------------------------------------------------
+\subsubsection{Mérési környezet}
+%----------------------------------------------------------------------------
+
+
 A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosítota. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban:
 
 \begin{table}[]
@@ -329,5 +330,90 @@ Teljes frekvenciatartomány & 10...3000Hz	\\ \hline
 \label{OmicronCMC356spec}
 \end{table}
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/5_4_1_omicron_harmonics.png}
+\caption{OMICRON Harmonics felhasználói felülete}
+\end{figure}
 
-TODOTODTODO
+A CMC 356 kezelése történhet egy, a gyártó által szolgáltatott, Omicron Harmonics segédprogrammal, vagy pedig vezérelhetõ távolról, szkriptek futtatásával, melyeket a mûszerbe integrált Linux-os számítógép hajt végre a vezérlõ utasítások hatására. Sajnos utóbbi implementálására nem volt idõm, így csak a valamivel lassabb és nehézkesebb megoldást alkalmaztam, és a segédprogramban írtam át egyesével a feszültség és áramértékeket a kalibrációhoz.
+
+%----------------------------------------------------------------------------
+\subsubsection{STM32 mikrokontrolleren futó szoftver}
+%----------------------------------------------------------------------------
+
+A mikrokontroller indulás után kétféle inicializációból tud választani, az egyik a normál futáshoz tartozik, míg a másik a kalibrációhoz szükséges inicializációkat végzi el. Ennek a választásnak a megvalósítása a prototípuson a címbeállító kapcsoló egyikének állása alapján volt, azonban a végleges termékben valamilyen kevésbé hozzáférhetõ megoldást kell majd alkalmazni, hogy normális mûködés közben semmilyen esetre se lehessen kalibrálást indítani.
+
+A kalibráció különbözõ lépéseit C-CAN üzenetek hatására végzi el a CR-PM3, majd az eredményeket letárolja az emulált EEPROM-ba. Normál futás inicializációjakor az EEPROM-ból olvassa ki, és ellenõrzés után tölti be a kalibrációs értékeket.
+
+A C-CAN üzenetek vizsgálata egy beregisztrált kezelõ függvényben történik, amely egy dedikált C-CAN csatornára érkezõ üzenet esetén hívódik meg:
+
+\begin{lstlisting}
+CHANNEL_ERR_e calibrateHandler(uint16_t channel, uint8_t* data, uint16_t length)
+{
+    switch(channel)
+    {
+        case 300: //312C
+        {
+            // BEFORE ENTERING THIS SUPPLY 230V, 8A, cosPhi= 1
+            calibrateMeteringIC_VIGainMatching();           
+            calibrateMeteringIC_VILSBCalib();
+            break;
+        }
+        case 301: //312D
+        {
+            // BEFORE ENTERING THIS SUPPLY 23V, 0.4A, cosPhi= 1
+            calibrateMeteringIC_VIOSMatching();
+            break;
+        }
+        case 302: //312E
+        {
+            // BEFORE ENTERING THIS SUPPLY 230V, 8A, cosPhi= 0.5 inductive
+            calibrateMeteringIC_PhaseCalib();
+            calibrateMeteringIC_WhLSBCalc();
+            break;
+        }
+        case 303: //312F
+        {
+            // BEFORE ENTERING THIS SUPPLY 230Vrms, 0.4Arms, cosPhi= 1
+            calibrateMeteringIC_WattOSCalib();
+            calibrateMeteringIC_VAROSCalib();
+            break;
+        }
+        case 304: //3130
+        {
+            NVIC_SystemReset();
+            break;
+        }
+        default:
+            break;
+    }
+    return CHANNEL_ERROR_NONE;
+}
+\end{lstlisting}
+
+Az egyes függvényekben a különbözõ hibák, illetve azok kompenzációjának kiszámolása és letárolása történik.
+
+%----------------------------------------------------------------------------
+\subsubsection{Alapkészüléken futó szoftver}
+%----------------------------------------------------------------------------
+
+A kontrolleren implementált kalibrációs függvények meghívását kiváltó C-CAN üzeneteket az alapkészülék adja ki. A kalibráció és végmérés elvégzéséhez egy egyszerû program fut Linux alól, amely egy primitív, de jól átlátható felületet biztosít az összes C-RTU modulhoz, amelynek fõmenüje \ref{crtu_calib_main} ábrán látható. Az egyes menüpontok kiválasztása esetén egy bash script hívódik meg, ebben kell implementálni a további almenüket, üzenetküldéseket és minden további számítást, tárolást.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/5_4_2_kalibracio_1.PNG}
+\caption{Végmérõ és kalibráló szoftver fõmenüje}
+\label{crtu_calib_main}
+\end{figure}
+
+Egy-egy új modul komponenseinek implementálása egyszerû, a már meglévõ részegységek újrafelhasználhatók, mint például a LED-ek, nyomógombok, kapcsolók teszteji.
+
+A modulhoz tartozó almenüben a végmérés és kalibráció lépéseit egymás után hajthatjuk végre, illetve rögzíthetjük a különbözõ készülék paramétereket, mérési adatokat. A modul specifikus almenünek a felépítése a \ref{crtu_calib_crpm} ábrán láhtható.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/5_4_3_kalibracio_2.PNG}
+\caption{Végmérõ és kalibráló szoftver CR-PM3 specifikus menüje}
+\label{crtu_calib_crpm}
+\end{figure}

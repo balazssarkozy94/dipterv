@@ -38,27 +38,28 @@
 \BOOKMARK [2][-]{subsection.4.2.3}{Bemeneti \341ramk\366r - \301ram bemenet}{section.4.2}% 38
 \BOOKMARK [2][-]{subsection.4.2.4}{Bemeneti \341ramk\366r - Fesz\374lts\351g bemenet}{section.4.2}% 39
 \BOOKMARK [1][-]{section.4.3}{NY\301K terv}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.4}{Szabv\341nyoss\341g}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.4.1}{Szigetel\351skoordin\341ci\363}{section.4.4}% 42
-\BOOKMARK [2][-]{subsection.4.4.2}{EMC}{section.4.4}% 43
-\BOOKMARK [2][-]{subsection.4.4.3}{EMC tesztek}{section.4.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.4}{Jav\355t\341si tervek}{section.4.4}% 45
-\BOOKMARK [1][-]{section.4.5}{Mechanika}{chapter.4}% 46
-\BOOKMARK [0][-]{chapter.5}{Szoftveres komponensek}{}% 47
-\BOOKMARK [1][-]{section.5.1}{Mikrokontroller}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.2}{Emul\341lt EEPROM}{chapter.5}% 49
-\BOOKMARK [1][-]{section.5.3}{Firmware}{chapter.5}% 50
-\BOOKMARK [2][-]{subsection.5.3.1}{Program fel\351p\355t\351se}{section.5.3}% 51
-\BOOKMARK [2][-]{subsection.5.3.2}{M\351ro IC-t kezelo f\374ggv\351nyek, strukt\372r\341k}{section.5.3}% 52
-\BOOKMARK [2][-]{subsection.5.3.3}{Debug UART}{section.5.3}% 53
-\BOOKMARK [1][-]{section.5.4}{Linux oldali szoftver <- ide csak a crweb}{chapter.5}% 54
-\BOOKMARK [1][-]{section.5.5}{Gy\341rt\341s t\341mogat\341s}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.5.1}{V\351gm\351r\351s \351s kalibr\341ci\363}{section.5.5}% 56
-\BOOKMARK [0][-]{chapter.6}{P\351ldaalkalmaz\341s}{}% 57
-\BOOKMARK [0][-]{chapter*.55}{\326sszefoglal\341s}{}% 58
-\BOOKMARK [0][-]{chapter*.56}{K\366sz\366netnyilv\341n\355t\341s}{}% 59
-\BOOKMARK [0][-]{chapter*.57}{\301br\341k jegyz\351ke}{}% 60
-\BOOKMARK [0][-]{chapter*.58}{T\341bl\341zatok jegyz\351ke}{}% 61
-\BOOKMARK [0][-]{chapter*.59}{Irodalomjegyz\351k}{}% 62
-\BOOKMARK [0][-]{appendix*.60}{F\374ggel\351k}{}% 63
-\BOOKMARK [1][-]{section.F.1}{F\374ggel\351k 1}{appendix*.60}% 64
+\BOOKMARK [2][-]{subsection.4.3.1}{T\341pegys\351g NY\301K terve}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.2}{M\351ro bemenetek kialak\355t\341sa}{section.4.3}% 42
+\BOOKMARK [1][-]{section.4.4}{Szabv\341nyoss\341g}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.1}{Szigetel\351skoordin\341ci\363}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.2}{EMC}{section.4.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.3}{EMC tesztek}{section.4.4}% 46
+\BOOKMARK [2][-]{subsection.4.4.4}{Jav\355t\341si tervek}{section.4.4}% 47
+\BOOKMARK [1][-]{section.4.5}{Mechanika}{chapter.4}% 48
+\BOOKMARK [0][-]{chapter.5}{Szoftveres komponensek}{}% 49
+\BOOKMARK [1][-]{section.5.1}{Mikrokontroller}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.2}{Emul\341lt EEPROM}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.3}{Firmware}{chapter.5}% 52
+\BOOKMARK [2][-]{subsection.5.3.1}{Program fel\351p\355t\351se}{section.5.3}% 53
+\BOOKMARK [2][-]{subsection.5.3.2}{M\351ro IC-t kezelo f\374ggv\351nyek, strukt\372r\341k}{section.5.3}% 54
+\BOOKMARK [2][-]{subsection.5.3.3}{Debug UART}{section.5.3}% 55
+\BOOKMARK [1][-]{section.5.4}{CR-WEB}{chapter.5}% 56
+\BOOKMARK [1][-]{section.5.5}{Gy\341rt\341s t\341mogat\341s}{chapter.5}% 57
+\BOOKMARK [2][-]{subsection.5.5.1}{V\351gm\351r\351s \351s kalibr\341ci\363}{section.5.5}% 58
+\BOOKMARK [0][-]{chapter.6}{P\351ldaalkalmaz\341s}{}% 59
+\BOOKMARK [0][-]{chapter*.64}{\326sszefoglal\341s}{}% 60
+\BOOKMARK [0][-]{chapter*.65}{K\366sz\366netnyilv\341n\355t\341s}{}% 61
+\BOOKMARK [0][-]{chapter*.66}{\301br\341k jegyz\351ke}{}% 62
+\BOOKMARK [0][-]{chapter*.67}{T\341bl\341zatok jegyz\351ke}{}% 63
+\BOOKMARK [0][-]{chapter*.68}{Irodalomjegyz\351k}{}% 64
+\BOOKMARK [0][-]{appendix*.69}{F\374ggel\351k}{}% 65

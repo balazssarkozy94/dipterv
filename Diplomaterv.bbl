@@ -134,4 +134,8 @@
 \newblock Varistor tutorial (2018.12.11.).
 \newblock \url{https://www.electronics-tutorials.ws/resistor/varistor.html}.
 
+\bibitem{RT7285A}
+{RT7285 Datasheet}.
+\newblock Datasheet, Richtek, 10 2014.
+
 \end{thebibliography}
