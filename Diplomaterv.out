@@ -2,64 +2,66 @@
 \BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
 \BOOKMARK [0][-]{chapter*.4}{Bevezeto}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Energetikai \341ttekint\351s}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Fesz\374lts\351gminos\351g}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.2}{CEER Benchmarking}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{C-RTU csal\341d}{}% 7
-\BOOKMARK [1][-]{section.2.1}{Alapk\351sz\374l\351k}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{Kieg\351sz\355to modulok}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.1}{Egys\351ges funkci\363k}{section.2.2}% 10
-\BOOKMARK [1][-]{section.2.3}{C-CAN protokoll}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.4}{Mechanikai kialak\355t\341s}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Rendszer jellemzok}{}% 13
-\BOOKMARK [1][-]{section.3.1}{Specifik\341ci\363}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{Fesz\374lts\351gm\351r\351s}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.2.1}{Fesz\374lts\351gv\341lt\363 transzform\341tor}{section.3.2}% 16
-\BOOKMARK [2][-]{subsection.3.2.2}{Ellen\341ll\341soszt\363 \351s izol\341ci\363s eros\355to}{section.3.2}% 17
-\BOOKMARK [2][-]{subsection.3.2.3}{Ellen\341ll\341soszt\363 \351s lev\341lasztott ADC}{section.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.2.4}{Fesz\374lts\351gm\351r\351si megold\341sok \366sszehasonl\355t\341sa}{section.3.2}% 19
-\BOOKMARK [1][-]{section.3.3}{\301ramm\351r\351s}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.3.1}{\301ramv\341lt\363 transzform\341tor}{section.3.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.2}{Rogowski-tekercs}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.3}{S\366nt ellen\341ll\341s \351s izol\341ci\363s eros\355to}{section.3.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.4}{Hall-szenzoros \341ramm\351ro}{section.3.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.5}{\301ramm\351r\351si megold\341sok \366sszehasonl\355t\341sa}{section.3.3}% 25
-\BOOKMARK [1][-]{section.3.4}{Adatfeldolgoz\341s}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.4.1}{Mikrokontroller}{section.3.4}% 27
-\BOOKMARK [2][-]{subsection.3.4.2}{Digit\341lis Jelfeldolgoz\363 Processzor}{section.3.4}% 28
-\BOOKMARK [2][-]{subsection.3.4.3}{Programozhat\363 Logika}{section.3.4}% 29
-\BOOKMARK [2][-]{subsection.3.4.4}{M\351ro IC, be\351getett DSP k\363ddal}{section.3.4}% 30
-\BOOKMARK [1][-]{section.3.5}{V\341lasztott megold\341s}{chapter.3}% 31
-\BOOKMARK [2][-]{subsection.3.5.1}{Elm\351leti specifik\341ci\363, funkcionalit\341s}{section.3.5}% 32
-\BOOKMARK [0][-]{chapter.4}{Hardver konstrukci\363}{}% 33
-\BOOKMARK [1][-]{section.4.1}{K\366vetelm\351nyek}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.2}{Kapcsol\341si rajz}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.2.1}{Kapcsol\363\374zemu t\341pegys\351g}{section.4.2}% 36
-\BOOKMARK [2][-]{subsection.4.2.2}{MCU \351s k\366rnyezete}{section.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.2.3}{Bemeneti \341ramk\366r - \301ram bemenet}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.4}{Bemeneti \341ramk\366r - Fesz\374lts\351g bemenet}{section.4.2}% 39
-\BOOKMARK [1][-]{section.4.3}{NY\301K terv}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.3.1}{T\341pegys\351g NY\301K terve}{section.4.3}% 41
-\BOOKMARK [2][-]{subsection.4.3.2}{M\351ro bemenetek kialak\355t\341sa}{section.4.3}% 42
-\BOOKMARK [1][-]{section.4.4}{Szabv\341nyoss\341g}{chapter.4}% 43
-\BOOKMARK [2][-]{subsection.4.4.1}{Szigetel\351skoordin\341ci\363}{section.4.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.2}{EMC}{section.4.4}% 45
-\BOOKMARK [2][-]{subsection.4.4.3}{EMC tesztek}{section.4.4}% 46
-\BOOKMARK [2][-]{subsection.4.4.4}{Jav\355t\341si tervek}{section.4.4}% 47
-\BOOKMARK [1][-]{section.4.5}{Mechanika}{chapter.4}% 48
-\BOOKMARK [0][-]{chapter.5}{Szoftveres komponensek}{}% 49
-\BOOKMARK [1][-]{section.5.1}{Mikrokontroller}{chapter.5}% 50
-\BOOKMARK [1][-]{section.5.2}{Emul\341lt EEPROM}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.3}{Firmware}{chapter.5}% 52
-\BOOKMARK [2][-]{subsection.5.3.1}{Program fel\351p\355t\351se}{section.5.3}% 53
-\BOOKMARK [2][-]{subsection.5.3.2}{M\351ro IC-t kezelo f\374ggv\351nyek, strukt\372r\341k}{section.5.3}% 54
-\BOOKMARK [2][-]{subsection.5.3.3}{Debug UART}{section.5.3}% 55
-\BOOKMARK [1][-]{section.5.4}{CR-WEB}{chapter.5}% 56
-\BOOKMARK [1][-]{section.5.5}{Gy\341rt\341s t\341mogat\341s}{chapter.5}% 57
-\BOOKMARK [2][-]{subsection.5.5.1}{V\351gm\351r\351s \351s kalibr\341ci\363}{section.5.5}% 58
-\BOOKMARK [0][-]{chapter.6}{P\351ldaalkalmaz\341s}{}% 59
-\BOOKMARK [0][-]{chapter*.64}{\326sszefoglal\341s}{}% 60
-\BOOKMARK [0][-]{chapter*.65}{K\366sz\366netnyilv\341n\355t\341s}{}% 61
-\BOOKMARK [0][-]{chapter*.66}{\301br\341k jegyz\351ke}{}% 62
-\BOOKMARK [0][-]{chapter*.67}{T\341bl\341zatok jegyz\351ke}{}% 63
-\BOOKMARK [0][-]{chapter*.68}{Irodalomjegyz\351k}{}% 64
-\BOOKMARK [0][-]{appendix*.69}{F\374ggel\351k}{}% 65
+\BOOKMARK [1][-]{section.1.1}{Teljes\355tm\351nyminos\351g}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.1}{Teljes\355tm\351nyminos\351g \366sszetevoi}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.2}{MSZ EN 61000-4-30 k\366vetelm\351nyei}{section.1.1}% 7
+\BOOKMARK [1][-]{section.1.2}{CEER Benchmarking}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{C-RTU csal\341d}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Alapk\351sz\374l\351k}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Kieg\351sz\355to modulok}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Egys\351ges funkci\363k}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{C-CAN protokoll}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Mechanikai kialak\355t\341s}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Rendszer jellemzok}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Specifik\341ci\363}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Fesz\374lts\351gm\351r\351s}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{Fesz\374lts\351gv\341lt\363 transzform\341tor}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Ellen\341ll\341soszt\363 \351s izol\341ci\363s eros\355to}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.3}{Ellen\341ll\341soszt\363 \351s lev\341lasztott ADC}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.4}{Fesz\374lts\351gm\351r\351si megold\341sok \366sszehasonl\355t\341sa}{section.3.2}% 21
+\BOOKMARK [1][-]{section.3.3}{\301ramm\351r\351s}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.1}{\301ramv\341lt\363 transzform\341tor}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.2}{Rogowski-tekercs}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.3}{S\366nt ellen\341ll\341s \351s izol\341ci\363s eros\355to}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.4}{Hall-szenzoros \341ramm\351ro}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.5}{\301ramm\351r\351si megold\341sok \366sszehasonl\355t\341sa}{section.3.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Adatfeldolgoz\341s}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.4.1}{Mikrokontroller}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.2}{Digit\341lis Jelfeldolgoz\363 Processzor}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.3}{Programozhat\363 Logika}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.4}{M\351ro IC, be\351getett DSP k\363ddal}{section.3.4}% 32
+\BOOKMARK [1][-]{section.3.5}{V\341lasztott megold\341s}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.5.1}{Elm\351leti specifik\341ci\363, funkcionalit\341s}{section.3.5}% 34
+\BOOKMARK [0][-]{chapter.4}{Hardver konstrukci\363}{}% 35
+\BOOKMARK [1][-]{section.4.1}{K\366vetelm\351nyek}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.2}{Kapcsol\341si rajz}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.2.1}{Kapcsol\363\374zemu t\341pegys\351g}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.2}{MCU \351s k\366rnyezete}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.3}{Bemeneti \341ramk\366r - \301ram bemenet}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.4}{Bemeneti \341ramk\366r - Fesz\374lts\351g bemenet}{section.4.2}% 41
+\BOOKMARK [1][-]{section.4.3}{NY\301K terv}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.3.1}{T\341pegys\351g NY\301K terve}{section.4.3}% 43
+\BOOKMARK [2][-]{subsection.4.3.2}{M\351ro bemenetek kialak\355t\341sa}{section.4.3}% 44
+\BOOKMARK [1][-]{section.4.4}{Szabv\341nyoss\341g}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.1}{Szigetel\351skoordin\341ci\363}{section.4.4}% 46
+\BOOKMARK [2][-]{subsection.4.4.2}{EMC}{section.4.4}% 47
+\BOOKMARK [2][-]{subsection.4.4.3}{EMC tesztek}{section.4.4}% 48
+\BOOKMARK [2][-]{subsection.4.4.4}{Jav\355t\341si tervek}{section.4.4}% 49
+\BOOKMARK [1][-]{section.4.5}{Mechanika}{chapter.4}% 50
+\BOOKMARK [0][-]{chapter.5}{Szoftveres komponensek}{}% 51
+\BOOKMARK [1][-]{section.5.1}{Mikrokontroller}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.2}{Emul\341lt EEPROM}{chapter.5}% 53
+\BOOKMARK [1][-]{section.5.3}{Firmware}{chapter.5}% 54
+\BOOKMARK [2][-]{subsection.5.3.1}{Program fel\351p\355t\351se}{section.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.3.2}{M\351ro IC-t kezelo f\374ggv\351nyek, strukt\372r\341k}{section.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.3.3}{Debug UART}{section.5.3}% 57
+\BOOKMARK [1][-]{section.5.4}{CR-WEB}{chapter.5}% 58
+\BOOKMARK [1][-]{section.5.5}{Gy\341rt\341s t\341mogat\341s}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.5.1}{V\351gm\351r\351s \351s kalibr\341ci\363}{section.5.5}% 60
+\BOOKMARK [0][-]{chapter.6}{P\351ldaalkalmaz\341s}{}% 61
+\BOOKMARK [0][-]{chapter*.66}{\326sszefoglal\341s}{}% 62
+\BOOKMARK [0][-]{chapter*.67}{K\366sz\366netnyilv\341n\355t\341s}{}% 63
+\BOOKMARK [0][-]{chapter*.68}{\301br\341k jegyz\351ke}{}% 64
+\BOOKMARK [0][-]{chapter*.69}{T\341bl\341zatok jegyz\351ke}{}% 65
+\BOOKMARK [0][-]{chapter*.70}{Irodalomjegyz\351k}{}% 66
+\BOOKMARK [0][-]{appendix*.71}{F\374ggel\351k}{}% 67

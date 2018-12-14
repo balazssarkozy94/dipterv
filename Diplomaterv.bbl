@@ -117,6 +117,17 @@
   november 25.).
 \newblock \url{https://www.omicronenergy.com/en/products/cmc-356/}.
 
+\bibitem{MSZ_EN_61000-4-30_2015}
+{Elektromágneses összeférhetõség (EMC). 4-30. rész: Vizsgálati és mérési
+  módszerek. A hálózati feszültség minõségének mérési módszerei (IEC
+  61000-4-30:2015)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 08 2015.
+
+\bibitem{ENTSO_E}
+{ENTSO-E}.
+\newblock Our members (2018.12.14.).
+\newblock \url{https://docstore.entsoe.eu/Pages/default.aspx}.
+
 \bibitem{KESZULEK_FESZ}
 {Dr. Balogh Attila (BME-AUT)}.
 \newblock Készüléktervezés jegyzet: 9. túlfeszültség védelem.

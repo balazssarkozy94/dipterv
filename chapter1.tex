@@ -3,12 +3,12 @@
 %----------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------
-\section{Feszültségminõség}
+\section{Teljesítményminõség}
 %----------------------------------------------------------------------------
 
-Feszültségminõségen a hálózati feszültség paramétereit értjük, illetve azok megfelelését a névleges értékekhez, mely Magyarországon 230Veff, 50Hz, szinuszos fázis feszültségnek felel meg, fázisonként 120 fokkal eltolva háromfázisú rendszer esetében. Amennyiben a fázisokhoz tartozó áramok tulajdonságait is vizsgálat alá vonjuk, beszélhetünk teljesítményminõségrõl. A magyar hálózati feszültségek szabályozását az MSZ 1:2002-es szabvány írja le, ebben találhatóak meg a legkisebb, legnagyobb, valamint a névleges feszültség értékek, melyeket az áramszolgáltató köteles biztosítani a csatlakozási pontokon. A hálózati paraméterek természetesen ezektõl az értékektõl bizonyos mértékben eltérhetnek, az nem okoz a fogyasztóknál problémát, azonban túlságosan nagy eltérés esetén a hálózati feszültségrõl üzemelõ berendezések károsodása következhet be, továbbá jelentõs veszteségek léphetnek fel a villamosenergia-hálózatban, valamint a feszültségkimaradások, feszültségletörések, jelentõs kieséseket, leállásokat, így többlet költségeket róhatnak a fogyasztókra. 
+Feszültségminõségen a hálózati feszültség paramétereit értjük, illetve azok megfelelését a névleges értékekhez, mely Magyarországon 230Veff, 50Hz, szinuszos fázis feszültségnek felel meg, fázisonként 120 fokkal eltolva háromfázisú rendszer esetében. Amennyiben a fázisokhoz tartozó áramok tulajdonságait is vizsgálat alá vonjuk, beszélhetünk teljesítményminõségrõl. A magyar hálózati feszültségek szabályozását az MSZ 1:2002-es szabvány írja le, ebben találhatóak meg a legkisebb, legnagyobb, valamint a névleges feszültség értékek, melyeket az áramszolgáltató köteles biztosítani a csatlakozási pontokon. A hálózati paraméterek természetesen ezektõl az értékektõl bizonyos mértékben eltérhetnek, az nem okoz a fogyasztóknál problémát, azonban túlságosan nagy eltérés esetén a hálózati feszültségrõl üzemelõ berendezések károsodása következhet be, továbbá jelentõs veszteségek léphetnek fel a villamosenergia-hálózatban, valamint a feszültségkimaradások, feszültségletörések lehetnek, jelentõs kieséseket, leállásokat, így többlet költségeket róhatnak a fogyasztókra. 
 
-A hálózatra csatlakoztatott, fázisonként legfeljebb 16A fogyasztású eszközök áramfelvételének harmonikus tartalmát az IEC 61000-3-2 korlátozza, azonban ennek szabvány a bevezetése elõtt forgalomba került berendezésekre ez a szabvány nem vonatkozik, azok tovább üzemeltethetõk élettartamuk végéig, annak ellenére, hogy leggyakrabban a hálózati áramfelvételük felharmonikus tartalma magas, emellett teljesítmény tényezõjük alacsony. Pontosan ez utóbbi két tulajdonság miatt került bevezetésre a harmonikus kibocsájtást korlátozó szabvány. A szabvány betartásának érdekében manapság leggyakrabban aktív PFC-t használnak, ennek egyszerûsített kapcsolása a \ref{active_pfc}-es ábrán látható.
+A hálózatra csatlakoztatott, fázisonként legfeljebb 16A fogyasztású eszközök áramfelvételének harmonikus tartalmát az IEC 61000-3-2 korlátozza, azonban ennek szabvány a bevezetése elõtt forgalomba került berendezésekre ez a szabvány nem vonatkozik, azok tovább üzemeltethetõk élettartamuk végéig, annak ellenére, hogy leggyakrabban a hálózati áramfelvételük felharmonikus tartalma igen magas, emellett teljesítmény tényezõjük alacsony. Pontosan ez utóbbi két tulajdonság miatt került bevezetésre a harmonikus kibocsájtást korlátozó szabvány. A szabvány betartásának érdekében manapság leggyakrabban aktív PFC-t használnak, ennek egyszerûsített kapcsolása a \ref{active_pfc} ábrán látható. Ez az áramkör a hálózati feszültségre szinkronizálja az áramfelvételt, így a teljesítménytényezõje 1-hez tart.
 
 \begin{figure}[!ht]
 \centering
@@ -20,10 +20,69 @@ A hálózatra csatlakoztatott, fázisonként legfeljebb 16A fogyasztású eszközök ára
 A különbözõ fogyasztói elektronikai eszközök egyre inkább törpefeszültségû (<50V) DC tápot használnak, így a 230V-os feszültséget költséghatékony módon kell átalakítani az eszköznek megfelelõre. A hálózatra csatlakoztatott tápegységek, például az igen nagy darabszámban gyártott kompakt 5V-os telefontöltõk leggyakrabban egyenirányítás után egy elektrolit kondenzátorral állítanak elõ egyenfeszültséget, majd egy flyback konverterrel 5V-ot biztosítanak a kimeneten. A magas THD tartalom egyik lehetséges hatása a primer oldali szûrõkondenzátor korai tönkremenetele, mivel azon a tervezett alapharmonikus áramösszetevõ mellett további komponensek is megjelennek, azok pedig a soros ellenálláson disszipációt okoznak, mellyel magasabb hõmérséklet, rövidebb élettartam jár együtt. Egy további komoly probléma a hálózati harmonikus tartalom miatt bekövetkezõ többszörös, vagy idõben nem állandó periódusú nullátmenet. Ez a hálózathoz szinkronizált berendezések, például inverterek, szinkron egyenirányítók helytelen, vagy rossz hatásfokú mûködését eredményezheti.
 
 %----------------------------------------------------------------------------
+\subsection{Teljesítményminõség összetevõi}
+%----------------------------------------------------------------------------
+
+Az 50Hz-es villamoshálózatok teljesítményminõség mérését az MSZ EN 61000-4-30 szabvány fogalmazza meg. \cite{MSZ_EN_61000-4-30_2015} A szabvány olyan eljárásokat és követelményeket ír le, amelyeket betartva a teljesítményminõség összetevõit megbízhatóan, megismételhetõen tudjuk mérni, a konkrét mérõeszköztõl függetlenül. A mérendõ paraméterek ajánlott listája a következõ:
+
+\begin{enumerate}
+\item\emph{Hálózati frekvencia:} Szigorú elõírások vannak erre a paraméterre, hiszen amennyiben nem ugyanolyan a frekvenciája két villamoshálózatnak, vagy más a fázisuk, speciális berendezéseket kell alkalmazni, hogy egyik rendszerbõl a másikba energiát vihessünk át. Éppen emiatt nagyobb hálózatok, mint például az Európai Villamosenergia Átviteli Hálózat (ENTSO-E) az \ref{entso_e} ábrán látható országok generátorait tartja szinkronban normális mûködés közben, biztosítva ezzel villamosenergia áramlást a résztvevõ országok között.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=100mm, keepaspectratio]{figures/1_1_2_entsoe.png}
+\caption{ENTSO-E tagállamok \cite{ENTSO_E}}
+\label{entso_e}
+\end{figure}
+\item\emph{Feszültség amplitúdó:} A hálózati feszültség amplitúdójának stabilitása szükséges a rákötött eszközök megfelelõ mûködéséhez. Amennyiben gyakran fordulnak elõ túlfeszültségek, az a készülékek öregedéséhez vezethet, míg a gyakori feszültség beesések, vagy kimaradások a villamosberendezések használatát akadályozzák.
+\item\emph{Áram amplitúdó:} Az áram amplitúdója már a fogyasztáshoz kapcsolódik, éppen emiatt ez már a teljesítményminõség méréséhez szükséges. Az áramfelvétel visszahathat a feszültségre, mivel a villamoshálózat az ideálistól eltér.
+\item\emph{Feszültség- és áramharmonikusok:} Az ideális szinusz helyett a valóságban torzult, harmonikusokkal terhelt feszültség mérhetõ a hálózaton. Ennek oka, hogy a fogyasztók nem tisztán rezisztív jellegûek, fogyasztásuk nagyon gyakran nemlineáris, ezért áramfelvételükban felharmonikusok jelennek meg. A torzult áramfelvétel pedig visszahat a feszültségre, mivel a hálózat impedanciája nem nulla.
+\end{enumerate}
+
+A szabványban különbözõ hálózati események is felsorolásra kerülnek, melyek vizsgálata fontos információkkal szolgálhat az energetikusoknak:
+
+\begin{enumerate}
+\item\emph{Villogás:} A hálózati feszültség amplitúdójának periodikus változása. Ezt a jelenséget leggyakrabban világítástechnikai eszközök fényén lehet észrevenni, innen is kapta a nevét.
+\item\emph{Feszültségcsökkenés:} Hosszabb ideig tartó esemény, mely során a névleges feszültség alá kerül a hálózat.
+\item\emph{Feszültségletörés:} Rövid idõre fenálló feszültség csökkenés, mely során a hálózati feszültség a névleges feszültség 90\%-a alá esik.
+\item\emph{Feszültségnövekedés:} Rövid ideig tartó jelenség, mely során a hálózati feszültség a névleges 110\%-a felé emelkedik.
+\item\emph{Feszültségkiesés:} A hálózati feszültség 10\% alá esik a feszültség, több részre osztják az alapján, hogy mennyi ideig áll fent: Lehet pillanatnyi, rövid, hosszú.
+\item\emph{Tranziensek:} Fél hálózati periódusnál rövidebb ideig tartó események tartoznak ide, legyen az akár túlfeszültség, vagy feszültségbeesés.
+\item\emph{Aszimmetria:} Amennyiben egy háromfázisú rendszerben a fázisfeszültségek nem egyenlõek, asszimetriáról beszélhetünk, amely például a rákapcsolt fogyasztók károsodásához vezethet.
+\end{enumerate}
+
+%----------------------------------------------------------------------------
+\subsection{MSZ EN 61000-4-30 követelményei}
+%----------------------------------------------------------------------------
+
+A szabvány a mérési követelményeket két csoportra bontja, ezek az ''A'' és ''B'' osztályba vannak sorolva.
+
+\begin{enumerate}
+\item\emph{A osztály:} Az olyan helyeken használandó, ahol precíz mérések szükségesek, például szabványoknak való megfelelés vizsgálatánál, vagy valamilyen vitatott szituáció szakszerû rendezésénél. Két különbözõ A osztályú mûszerrel végzett bármely teljesítményminõségi értéknek a specifikált tolerancián belül kell lennie.
+\item\emph{B osztály:} Ahol csak statisztikai információk gyûjtése a cél, hibák felderítése több mérési pont alapján, ott használható az ebbe az osztályba tartozó mûszer.
+\end{enumerate}
+
+A osztály esetén a mért értékeket három különbözõ átlagolási intervallumon kell kiértékelni: 3 másodpercenként, 10 percenként, 2 óránként. B osztályú eszköznél a gyártóra van bízva a döntés, a választott megoldást közölnie kell a felhasználóval.
+
+A mérendõ paraméterek, illetve az ahhoz tartozó pontosságkritériumok a \ref{MSZ_EN_61000-4-30} táblázatban láthatók. A kihúzott részen a gyártóra van bízva, hogy megadjon egy specifikált értéket.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Paraméter} & \textbf{A osztály} & \textbf{B osztály} \\ \hline
+Frekvencia & <$\pm$0.01Hz & - \\ \hline
+Feszültség & <$\pm$0.1\% & <$\pm$0.5\%	\\ \hline
+Áram & <$\pm$0.1\% & <$\pm$2\%	\\ \hline
+\end{tabular}
+\caption{MSZ EN 61000-4-30 által támasztott követelmények \cite{MSZ_EN_61000-4-30_2015}}
+\label{MSZ_EN_61000-4-30}
+\end{table}
+
+%----------------------------------------------------------------------------
 \section{CEER Benchmarking}
 %----------------------------------------------------------------------------
 
-Az Európai Energia Szabályozók Tanácsa (CEER) rendszeresen hasonlítja össze és publikálja különbözõ országok feszültségminõség adatait, ezzel is ösztönözve az egységes, minõségi szolgáltatás biztosítását.
+Az Európai Energia Szabályozók Tanácsa (CEER) rendszeresen hasonlítja össze és publikálja különbözõ országok feszültségminõség adatait, ezzel is ösztönözve az egységes, minõségi szolgáltatás biztosítását Európán belül.
 A legutóbbi ilyen összehasonlítás, a 6th CEER Benchmarking Report on all the Quality of Electricity and Gas Supply 2016 volt, mely immár a 6. ilyen kiadvány. Az ebben feltüntetett adatok jól szemléltetik a különbözõ fejlesztési lehetõségeket.
 
 \begin{figure}[!ht]
@@ -32,4 +91,8 @@ A legutóbbi ilyen összehasonlítás, a 6th CEER Benchmarking Report on all the Qua
 \caption{Hosszú kimaradások ideje évente}
 \end{figure}
 
-A fenti ábrából jól látszik, hogy Magyarországon (Narancssárga trendvonal) összességében javuló tendencia mutatkozik a hosszú kimaradások tekintetében, azok száma 2002-höz viszonyítva 30-40\%-kal csökkent. Fontos megjegyezni, hogy országok közötti összehasonlítás szempontjából csak hozzávetõleges információtartalommal bír a grafikon, mivel a hosszú kimaradások definíciója, vizsgálata országonként eltérhet. Különbség lehet abban például, hogy a  kisfeszültségû (rövidítve KIF vagy angolul LV), középfeszültségû (KÖF vagy MV) vagy nagyfeszültségû (NAF vagy HV) hálózaton lévõ kimaradásokat vizsgálják-e, ugyanakkor már a feszültségszintek felosztásában is lehet eltérés országok között. A jelentés több ajánlást is tesz a jövõbeni szolgáltatásminõség javításához, ezekben elsõsorban arra ösztönzi az áramszolgáltatókat, hogy növeljék a megfigyelési pontok számát, a minõséginformációk legyenek egységesek a vizsgált országokon belül. Az említett összehasonlítás nem egyedülálló, több szervezet is foglalkozik a villamos szolgáltatás minõségének javításával. Az elektronika fejlõdésével, a félvezetõk árának csökkenésével a 21. században a villamosenergia-hálózat fejlõdése egyértelmûen a ''Smart Grid'', vagyis okoshálózat irányába mutat, ahol a különbözõ hálózati paramétereket az energetikai szakemberek országos szinten, nagy részletességgel tudják elemezni, ezek alapján pedig növelni tudják a megbízhatóságot, hatásfokot. Ez a feladat egy pontos, megbízható, alacsony költségû kihelyezett adatgyûjtõ eszközt igényel. Diplomamunkám keretében ennek az eszköznek a fejlesztését mutatom be.
+A fenti ábrából jól látszik, hogy Magyarországon (Narancssárga trendvonal) összességében javuló tendencia mutatkozik a hosszú kimaradások tekintetében, azok száma 2002-höz viszonyítva 30-40\%-kal csökkent, habár összevetve a vizsgált országokkal látható, hogy a mutató viszonylag magas összességében. Fontos megjegyezni, hogy országok közötti összehasonlítás szempontjából csak hozzávetõleges információtartalommal bír a grafikon, mivel a hosszú kimaradások definíciója, vizsgálata országonként eltérhet. Különbség lehet abban például, hogy a  kisfeszültségû (rövidítve KIF vagy angolul LV), középfeszültségû (KÖF vagy MV) vagy nagyfeszültségû (NAF vagy HV) hálózaton lévõ kimaradásokat vizsgálják-e, ugyanakkor már a feszültségszintek felosztásában is lehet eltérés országok között. 
+
+A jelentés több ajánlást is tesz a jövõbeni szolgáltatásminõség javításához, ezekben elsõsorban arra ösztönzi az áramszolgáltatókat, hogy növeljék a megfigyelési pontok számát, a minõséginformációk legyenek egységesek a vizsgált országokon belül. 
+
+Az említett összehasonlítás nem egyedülálló, több szervezet is foglalkozik a villamos szolgáltatás minõségének javításával. Az elektronika fejlõdésével, a félvezetõk árának csökkenésével a 21. században a villamosenergia-hálózat fejlõdése egyértelmûen a ''Smart Grid'', vagyis okoshálózat irányába mutat, ahol a különbözõ hálózati paramétereket az energetikai szakemberek országos szinten, nagy részletességgel tudják elemezni, ezek alapján pedig növelni tudják a megbízhatóságot, hatásfokot. Ez a feladat egy pontos, megbízható, alacsony költségû kihelyezett adatgyûjtõ eszközt igényel. Diplomamunkám keretében ennek az eszköznek a fejlesztését mutatom be.

@@ -280,10 +280,11 @@ A fejlesztés során többször fordult elõ, hogy valamilyen hibás konfigurálás köve
 \section{CR-WEB}
 %----------------------------------------------------------------------------
 
-TODO 
+Az alapkészülékben a csomagok megjelenítését, a paraméterezést viszonylag egyszerûen, egy SQL adatbázis megfelelõ kitöltésével lehet megvalósítani. Ezután egy CR-WEB elnevezésû, HTML alapú felületen követhetjük az adatok, paraméterek aktuális értékét, kiegészítve olyan, fejlesztéshez és hibakereséshez hasznos információkkal, mint például az adat utolsó keletkezési ideje, illetve beérkezési ideje. 
 
-Az alapkészülékben a csomagok fogadását, a paraméterezést viszonylag kevés munkával, egy SQL adatbázis ..........
+Egy külön fülön a modul állapotát is nyomonkövethetjük, valamint kiolvashatjuk a C-CAN-en bekövetkezett hibákat, a kiegészítõ modul slave processzorának utolsó resetelésének okát.
 
+Ezek a funkciók fejlesztéshez, mérésekhez rendkívül kényelmesek, az alapkészülék hálózatra való csatlakoztatásával a tényleges kialakítás helyétõl távol is figyelemmel követhetjük és vizsgálhatjuk a C-RTU alapú rendszereket. 
 
 \begin{figure}[!ht]
 \centering
@@ -291,7 +292,17 @@ Az alapkészülékben a csomagok fogadását, a paraméterezést viszonylag kevés munká
 \caption{CR-WEB fejlesztõi felület}
 \end{figure}
 
+Egy adat adatbázisba való felvétele az alábbi néhány SQL mûvelet elvégzésével történik:
 
+\begin{lstlisting}[language = SQL]
+insert into CRModuleDatas ( moduleTypeId, dataType,ccanChannel,description,tag, siUnit) VALUES ('CR-PM3','MEASURE',401,'L1 fázis feszültség', 'L1_VRMS', 'V');
+
+insert into CRModuleParams (moduleTypeId, ccanChannel, paramId, paramType, paramValue, description, siUnit) VALUES ('CR-PM3', 299,  3, 'uint32', 500,   'L1 fázis feszültség küdési ciklusidõ (>0 küld)', 'ms');
+
+insert into CRModuleParams (moduleTypeId, ccanChannel, paramId, paramType, paramValue, description, siUnit) VALUES ('CR-PM3', 299,  4, 'float',  0.1, 'L1 fázis feszültség küdés szignifikancia (>0 küld)', '');
+\end{lstlisting}
+
+Az elsõ mûvelet magát a mérendõ adat felvételét végzi el típussal, mértékegységgel, leírással, C-CAN csatorna hozzárendeléssel együtt. A második és harmadik SQL utasítás az elõbb felvett adathoz tartozó idõzítési kritérium és szignifikancia felvételét végzi el, szintén a megfelelõ C-CAN csatorna lefoglalásával. Ezt követõen a C-RTU alapkészülék már minden szükséges információval rendelkezik az adatok lekérdezéséhez és folyamatos frissítésére.
 %----------------------------------------------------------------------------
 \section{Gyártás támogatás}
 %----------------------------------------------------------------------------
