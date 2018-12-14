@@ -21,6 +21,12 @@
 \newblock {{The structure of {EMC} standards (2018. november 12.)}}.
 \newblock \url{http://www.emtest.com/what_is/standards.php}.
 
+\bibitem{MSZ_EN_61000-6-1_2007}
+{Elektromágneses összeférhetõség (EMC). 6-1. rész: Általános szabványok.
+  Zavartûrés a lakóhelyi, a kereskedelmi és az enyhén ipari környezetekre (IEC
+  61000-6-1:2005)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 07 2007.
+
 \bibitem{MSZ_EN_55014-1_2007}
 {Elektromágneses összeférhetõség. Háztartási készülékek, villamos szerszámok és
   hasonló eszközök követelményei. 1. rész: Zavarkibocsátás (CISPR 14-1:2005)}.
@@ -203,12 +209,12 @@
 
 \bibitem{SAMTEC_DW}
 {Samtec}.
-\newblock {{DW .100" Flex Stack, Flexible Board Stacker, .110" Tail }}.
+\newblock {{DW .100 Flex Stack, Flexible Board Stacker}}.
 \newblock \url{https://www.samtec.com/products/dw}.
 
 \bibitem{SAMTEC_HLE}
 {Samtec}.
-\newblock {{HLE .100" Tiger Beam™ Cost-effective Single Beam Socket Strip}}.
+\newblock {{HLE .100 Tiger Beam Cost-effective Single Beam Socket Strip}}.
 \newblock \url{https://www.samtec.com/products/hle}.
 
 \bibitem{BIVAR}
