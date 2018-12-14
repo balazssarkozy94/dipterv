@@ -56,9 +56,9 @@ A 12V-os hátlapi buszfeszültségrõl elõ kell állítani a készülék mûködéséhez szük
 
 Az IC fontosabb jellemzõi a \ref{RT7285_spec}-es táblázatban láthatóak.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabularx}{\textwidth}{|X|X|}
 \hline
 \textbf{Paraméter} & \textbf{Érték} \\ \hline
 Bemeneti feszültségtartomány & 4.3...18V	\\ \hline
@@ -66,21 +66,21 @@ Kimeneti feszültségtartomány & 0.6...8V	\\ \hline
 Maximális konstans kimeneti áram & 1.5A	\\ \hline
 Kapcsolási frekvencia & 500kHz (fix)	\\ \hline
 Maximális kitöltési tényezõ & 90$\%$	\\ \hline
-Mûködési hõmérséklettartomány & -40...85C$\textdegree$	\\ \hline
+Mûködési hõmérséklettartomány & -40...85C$^{\circ}$	\\ \hline
 Tokozás & SOT-23-6	\\ \hline
-\end{tabular}
+\end{tabularx}
 \caption{RT7285/A fontosabb jellemzõi}
 \label{RT7285_spec}
 \end{table}
 
-Kapcsolóüzemû tápegységek tervezésénél gyakran ökölszabályokból indulunk ki, vagy már meglévõ kapcsolásokból épitkezünk. A következõkben bemutatom a tápegység méretezését.
+Kapcsolóüzemû tápegységek tervezésénél gyakran ökölszabályokból indulunk ki, vagy már meglévõ kapcsolásokból építkezünk. A következõkben bemutatom a tápegység méretezését.
 
 Elõször is sorra kell vennünk a ''fix'' paramétereket, melyek a következõk:
 \[ V_{IN} = 12V \]
 \[ V_{OUT} = 3.3V \]
 \[ f_{SW} = 500kHz \]
 \[ I_{OUT(MAX)} = 1.5A \]
-Ezek után meghatározzuk a megengedhetõ áramhullámosságot. Ezt egyszerûen ökölszabály alapján tesszük, általában a maximális áram 20...50$\%$-a közé szokás választani, az alkatrész méret illetve a kimeneti feszültséghullámosság kompromisszumos megválasztásával. Jelen alkalmazásban, mivel a fontos analóg mérések csak az izolált oldalon vannak, amellyek maguknak egy külön leválasztott táppal állítják elõ a feszültséget, nem kritikus az alacsony hullámosság, legyen  
+Ezek után meghatározzuk a megengedhetõ áramhullámosságot. Ezt egyszerûen ökölszabály alapján tesszük, általában a maximális áram 20...50$\%$-a közé szokás választani, az alkatrész méret illetve a kimeneti feszültséghullámosság kompromisszumos megválasztásával. Jelen alkalmazásban, mivel a fontos analóg mérések csak az izolált oldalon vannak, amelyek maguknak egy külön leválasztott táppal állítják elõ a feszültséget, nem kritikus az alacsony hullámosság, legyen  
 \[ \Delta I_L = 0.75A \]
 Ezután már a szükséges induktivitás értéke számolható:
 \[L = \frac{V_{OUT}*(V_{IN}-V_{OUT})}{V_{IN}*f_{SW}* \Delta I_L} = \frac{3.3V*(12V-3.3V)}{12V*500kHz*0.75A } = 6.38\mu H\]
@@ -182,8 +182,7 @@ Az egyszerûség kedvéért, mivel az árambemeneteken 1k$\Omega$, 33nF-os RC szûrõt 
 \[ R_1 = \frac{R_5}{0.0012}-R_5 = \frac{1k\Omega}{0.0012}-1k\Omega \approx 832k\Omega \]
 Az ellenállás értéke mellett ebben a felhasználásban rendkívül fontos paraméter a feszültségtûrés, hiszen erre az alkatrészre fog esni a bemenetre kapcsolt feszültség döntõ része. Ehhez a számolt értékhez legközelebbi ami beszerezhetõ és megfelel a feszültségterhelésnek, az a Vishay TNPV e3 sorozatú, 1206-os tokozású, 1M$\Omega$-os ellenállása. Az alkatrész túlfeszültségtûrése kitûnõ, rövid idõtartamra ($ t \leq 1s $) paraméterromlás nélkül képes 2kV-ot elviselni. Ezzel az ellenállással a készülék bemeneti tartománya a következõképpen változik:
 \[ V_{IN(CR-PM3)} = \pm 0.5V * \frac{1k\Omega+1M\Omega}{1k\Omega} = \pm 500.5V \approx 354V_{RMS}\]
-ESETLEG INNEN ÚJ SUBSECTION?
-
+%ESETLEG INNEN ÚJ SUBSECTION?
 A feszültség bemenetnek az áramméréssel ellentétben nagy energiájú túlfeszültségeket is el kell viselnie, gondoljunk itt induktív kapcsolási jelenségekre a hálózaton, villámcsapások másodlagos hatásaira, vagy bármilyen egyéb, a készülék bemeneteire csatolódott zavaró jelre. Ezt a különbséget pedig a szabványok is figyelembe veszik, például a CR-PM3-ra vonatkozó IEC 62052-11:2003 termékszabvány azt írja elõ, hogy az EMC immunitási vizsgálatok egy részében csak a feszültség bemeneteket terheli, az árambemeneteket üresen kell hagyni. A feszültségbemeneteket érõ zavarok ellen túlfeszültség védelmet kell implementálni a biztonságos, stabil mûködés érdekében. Ezekre a leggyakrabban alkalmazott megoldások \cite{KESZULEK_FESZ}:	
 
 \begin{enumerate}
@@ -197,13 +196,13 @@ A feszültség bemenetnek az áramméréssel ellentétben nagy energiájú túlfeszültség
 
 \begin{figure*}[t!]
     \centering
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[height=40mm]{figures/4_3_1_tipik_varistor.png}
         \caption{Tipikus varisztor}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[height=40mm]{figures/4_3_2_varistor_inside.png}
         \caption{Varisztor belsõ felépítése}
@@ -228,16 +227,16 @@ Elsõ lépésként a készülékház gyártója által szolgáltatott 3D modellbõl indultam 
 %----------------------------------------------------------------------------
 \subsection{Tápegység NYÁK terve}
 %----------------------------------------------------------------------------
-\begin{figure*}[!h]
+\begin{figure*}[!ht]
     \centering
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=70mm]{figures/4_4_3_RT7285_RECOM.PNG}
         \caption{RT7285 ajánlott elrendezése, huzalozása \cite{RT7285A}}
         \label{rt7285_ref}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=70mm]{figures/4_4_2_CRPM3_C_TAP.PNG}
         \caption{Kapcsolóüzemû tápegység NYÁK terve}
@@ -279,7 +278,7 @@ Egy eladásra szánt terméknél elengedhetetlen a szabványoknak való megfelelés, az
 Az egyik betartandó szabvány az IEC 60664-1, ''Kifeszültségû rendszerek villamos szerkezeteinek szigeteléskoordinációja''. Ez a dokumentum írja le az eljárást, amely alapján meg kell határozni a szigeteléshez szükséges légközöket, kúszóutakat. A dokumentum értelmezése a termékek és felhasználási helyének sokfélesége miatt idõintenzív, éppen ezért egy segítõ folyamatábrát készítettem, amivel egyszerûbb a szükséges minimális távolságok meghatározása.
 
 \begin{landscape}
-\begin{figure}[!h]
+\begin{figure}[!ht]
    \centering
     %\includegraphics[width=1.0\textwidth]{figures/4_1_1_1_szigkoord.png}
     \includegraphics[height=0.9\textheight]{figures/4_1_1_1_szigkoord.png}
@@ -391,7 +390,7 @@ Mivel a CR-PM3 a diplomaterv írásának idején még csak prototípus fázisban volt, 
 
 A CR-PM3 teszteji során az IEC 62052-11:2003 termékszabványban találhatóak a szükséges mérési szintek, illetve speciális mérési elõírások. Az szabvány által elvárt értékek a \ref{IEC_62052_11:2003_req}-es táblázatban láthatók.
 
-\begin{table}[h]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -419,13 +418,13 @@ Mivel a CR-PM3 semmilyen vezetõ felülete nem érinthetõ a felhasználó által, így 
 
 \begin{figure*}[t!]
     \centering
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[height=60mm]{figures/4_1_3_5_ESD_V.png}
         \caption{Zavarás vertikális csatolósíkkal}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[height=60mm]{figures/4_1_3_6_ESD_H.png}
         \caption{Zavarás horizontális csatolósíkkal}
@@ -522,6 +521,6 @@ A készüléken 4 csatlakozó található, ezek a 3 fázis, valamint a nulla vezetõhöz 
 \caption{CR-PM3 a készülékházban}
 \end{figure}
 
-A két elektronikát tartalmazó emelet közötti kapcsolatot a Samtec által gyártott speciális, DW családba tartozó tûsorával, és HLE családba tartozó hüvelysorával valósítottam meg. A DW tûsorok a szokványos társaiktól eltérõen egy további mûanyag távtartóval rendelkeznek, amely magasságát 5mil felbontással lehet megválasztani rendelés során. Ezzel a távtartóval egyszerûen be lehet állítani a két NYÁK távolságát, az összeszerelést jelentõsen egyszerûsíti. A HLE hüvelysor pedig egy ''Pass-through'' típusú csatlakozó, vagyis akár alulról, akár felülrõl is képes fogadni az ellenpárját. Ez utóbbi tulajdonságát kihasználva tudtam a CR-PM3C-t egyoldalas szerelésûre kialakítani, mivel a NYÁK-on a csatlakozó felül helyezkedett el, alatta pedig fémezetlen furatok lettek kialakítva, így alulról akadálymentesen tudott a tûsor kontaktus kialakítani.
+A két elektronikát tartalmazó emelet közötti kapcsolatot a Samtec által gyártott speciális, DW \cite{SAMTEC_DW} családba tartozó tûsorával, és HLE \cite{SAMTEC_HLE} családba tartozó hüvelysorával valósítottam meg. A DW tûsorok a szokványos társaiktól eltérõen egy további mûanyag távtartóval rendelkeznek, amely magasságát 5mil felbontással lehet megválasztani rendelés során. Ezzel a távtartóval egyszerûen be lehet állítani a két NYÁK távolságát, az összeszerelést jelentõsen egyszerûsíti. A HLE hüvelysor pedig egy ''Pass-through'' típusú csatlakozó, vagyis akár alulról, akár felülrõl is képes fogadni az ellenpárját. Ez utóbbi tulajdonságát kihasználva tudtam a CR-PM3C-t egyoldalas szerelésûre kialakítani, mivel a NYÁK-on a csatlakozó felül helyezkedett el, alatta pedig fémezetlen furatok lettek kialakítva, így alulról akadálymentesen tudott a tûsor kontaktus kialakítani.
 
-Az elõlapon a C-RTU család minden tagján kötelezõ bizonyos állapotokat LED-del megjeleníteni. A tervezés fázisában a tényleges megoldásra nem volt teljes elõírás, ezért a modulon egy addig nem használt megvalósítást próbálhattam ki. SMD LED-eket helyeztem el a CR-PM3C-n, majd a CR-PM3P elõlapi NYÁK-ra bepréselhetõ Bivar PLP2-215 polikarbonátból készült, 3mm-es fényvezetõit terveztem. Ezzel a megoldással a furatszerelt LED-ek beültetését váltottam ki, amely során nehézkes az alkatrész magasságának a pontos beállítása, ellenben egy fényvezetõ bepréselésének eredménye kellõen konzisztens eredményt tud adni. A polikarbonátból készült átlátszó fényvezetõk a különbözõ törésmutatójú közegek határán fellépõ fényvisszaverõdés jelenségét használják ki, az SMD LED-ek fényét az elõlapig vezeti, akár több tíz mm-en keresztül.
+Az elõlapon a C-RTU család minden tagján kötelezõ bizonyos állapotokat LED-del megjeleníteni. A tervezés fázisában a tényleges megoldásra nem volt teljes elõírás, ezért a modulon egy addig nem használt megvalósítást próbálhattam ki. SMD LED-eket helyeztem el a CR-PM3C-n, majd a CR-PM3P elõlapi NYÁK-ra bepréselhetõ Bivar PLP2-215 \cite{BIVAR} polikarbonátból készült, 3mm-es fényvezetõit terveztem. Ezzel a megoldással a furatszerelt LED-ek beültetését váltottam ki, amely során nehézkes az alkatrész magasságának a pontos beállítása, ellenben egy fényvezetõ bepréselésének eredménye kellõen konzisztens eredményt tud adni. A polikarbonátból készült átlátszó fényvezetõk a különbözõ törésmutatójú közegek határán fellépõ fényvisszaverõdés jelenségét használják ki, az SMD LED-ek fényét az elõlapig vezeti, akár több tíz mm-en keresztül.

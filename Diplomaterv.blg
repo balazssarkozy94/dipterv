@@ -14,10 +14,11 @@ A level-1 auxiliary file: acknowledgement.aux
 The style file: unsrt.bst
 A level-1 auxiliary file: appendices.aux
 Database file #1: mybib.bib
+Warning--I didn't find a database entry for "MSZ_EN_6100-6-1_2007"
+Warning--I didn't find a database entry for "MSZ_EN_61000_4_30_2015"
 Warning--empty author in MSZ_EN_60664-1_2008
 Warning--empty author in MSZ_EN_62052-11_2003
 Warning--empty author in CEER_BENCHMARK_6TH
-Warning--empty author in MSZ_EN_6100-6-1_2007
 Warning--empty author in MSZ_EN_55014-1_2007
 Warning--empty author in MSZ_EN_61000-4-2_2009
 Warning--empty author in MSZ_EN_61000-4-4_2011
@@ -31,6 +32,9 @@ Warning--empty author in ADE_7978/ADE_7933/ADE_7932/ADE_7923
 Warning--empty author in AN-1259
 Warning--empty author in AN-1333
 Warning--empty author in VIA_STICH_STUDY
-Warning--empty author in MSZ_EN_61000-4-30_2015
+Warning--empty author in MSZ_EN_1_2002
+Warning--empty author in VISHAY_RESISTOR
 Warning--empty author in RT7285A
-(There were 19 warnings)
+Warning--empty author in MSZ_EN_61000_3_2
+Warning--empty author in MSZ_EN_61000-4-30_2015
+(There were 23 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  14 DEC 2018 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  14 DEC 2018 21:47
 entering extended mode
 **./Diplomaterv.tex
 (Diplomaterv.tex
@@ -416,6 +416,14 @@ Now handling font encoding PD1 ...
 .cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `unicode' set `true' on input line 4409.
+
+("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\puenc.de
+f"
+File: puenc.def 2018/09/30 v6.88a Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
 Package hyperref Info: Hyper figures OFF on input line 4535.
 Package hyperref Info: Link nesting OFF on input line 4540.
 Package hyperref Info: Hyper index ON on input line 4543.
@@ -533,21 +541,19 @@ File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count138
 \AM@templatesizebox=\box37
 )
-
-Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 83.
-
-Package hyperref Info: Option `unicode' set `false' on input line 83.
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 83.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 83.
-
-Package hyperref Info: Option `pdfnewwindow' set `true' on input line 83.
-Package hyperref Info: Option `colorlinks' set `true' on input line 83.
+("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.st
+y"
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+\TX@col@width=\dimen148
+\TX@old@table=\dimen149
+\TX@old@col=\dimen150
+\TX@target=\dimen151
+\TX@delta=\dimen152
+\TX@cols=\count139
+\TX@ftn=\toks46
+)
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 84.
+Package hyperref Info: Option `colorlinks' set `true' on input line 84.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
 .sty"
@@ -558,35 +564,37 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 (appendices.aux))
 \openout1 = `Diplomaterv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.m
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
-\scratchdimen=\dimen148
+\scratchcounter=\count140
+\scratchdimen=\dimen153
 \scratchbox=\box38
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count142
-\MPscratchDim=\dimen149
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
-\everyMPtoPDFconversion=\toks47
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen154
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks48
 )
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf
 -base.sty"
@@ -603,10 +611,10 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count145
+\c@lstlisting=\count146
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 190.
+(lastpage)             ! on input line 191.
 
 
 LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
@@ -622,7 +630,7 @@ Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 190.
+Package hyperref Info: Link coloring ON on input line 191.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.
 sty"
@@ -632,11 +640,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 lestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count146
+\c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 190.
-LaTeX Info: Redefining \pageref on input line 190.
-LaTeX Info: Redefining \nameref on input line 190.
+LaTeX Info: Redefining \ref on input line 191.
+LaTeX Info: Redefining \pageref on input line 191.
+LaTeX Info: Redefining \nameref on input line 191.
  (Diplomaterv.out) (Diplomaterv.out)
 \@outlinefile=\write3
 \openout3 = `Diplomaterv.out'.
@@ -677,7 +685,7 @@ BMElogo.png>]) (Diplomaterv.tocpdfTeX warning (ext4): destination with the same
  identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...gramozhat\'o Logika}{24}{subsection.3.4.3}
+l.31 ...gramozhat\'o Logika}{23}{subsection.3.4.3}
                                                    [1
 
 
@@ -706,113 +714,80 @@ l.31 ...gramozhat\'o Logika}{24}{subsection.3.4.3}
 
  (introduction.tex
 
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 2.
+LaTeX Warning: Citation `MSZ_EN_61000-6-1_2007' on page 7 undefined on input li
+ne 13.
 
-) [7
+[7
 
 
 
 ]
+
+LaTeX Warning: Citation `MSZ_EN_61000_4_30_2015' on page 8 undefined on input l
+ine 81.
+
+) [8]
 \openout2 = `chapter1.aux'.
 
  (chapter1.tex
 1. fejezet.
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 6.
-
-<figures/1_1_1_active_pfc.png, id=426, 268.6035pt x 115.632pt>
+<figures/1_1_1_active_pfc.png, id=461, 268.6035pt x 115.632pt>
 File: figures/1_1_1_active_pfc.png Graphic file (type png)
 <use figures/1_1_1_active_pfc.png>
 Package pdftex.def Info: figures/1_1_1_active_pfc.png  used on input line 15.
 (pdftex.def)             Requested size: 284.52756pt x 122.48993pt.
-[8
+[9
 
 
 
 ]
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 23.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 23.
-
-<figures/1_1_2_entsoe.png, id=435, 414.1071pt x 425.9112pt>
+<figures/1_1_2_entsoe.png, id=470, 414.1071pt x 425.9112pt>
 File: figures/1_1_2_entsoe.png Graphic file (type png)
 <use figures/1_1_2_entsoe.png>
 Package pdftex.def Info: figures/1_1_2_entsoe.png  used on input line 32.
 (pdftex.def)             Requested size: 284.52756pt x 292.64424pt.
-[9 <./figures/1_1_1_active_pfc.png>] [10 <./figures/1_1_2_entsoe.png>]
+ [10 <./figures/1_1_1_active_pfc.png>] [11 <./figures/1_1_2_entsoe.png>]
 Overfull \hbox (6.14578pt too wide) in paragraph at lines 50--51
 []\T1/cmr/m/it/10.95 Aszimmetria: \T1/cmr/m/n/10.95 Amennyi-ben egy há-rom-fá-z
 i-sú rend-szer-ben a fá-zis-fe-szült-sé-gek nem egyen-
  []
 
-<figures/1_2_1_ceer_eves.png, id=464, 804.00375pt x 423.08063pt>
+<figures/1_2_1_ceer_eves.png, id=499, 804.00375pt x 423.08063pt>
 File: figures/1_2_1_ceer_eves.png Graphic file (type png)
 <use figures/1_2_1_ceer_eves.png>
 Package pdftex.def Info: figures/1_2_1_ceer_eves.png  used on input line 90.
 (pdftex.def)             Requested size: 426.79134pt x 224.58026pt.
-[11]) [12 <./figures/1_2_1_ceer_eves.png>]
+[12]) [13 <./figures/1_2_1_ceer_eves.png>]
 \openout2 = `chapter2.aux'.
 
  (chapter2.tex
 2. fejezet.
-<figures/2_1_0_CRTU_FAMILY.png, id=481, 1003.75pt x 669.50125pt>
+<figures/2_1_0_CRTU_FAMILY.png, id=518, 1003.75pt x 669.50125pt>
 File: figures/2_1_0_CRTU_FAMILY.png Graphic file (type png)
 <use figures/2_1_0_CRTU_FAMILY.png>
 Package pdftex.def Info: figures/2_1_0_CRTU_FAMILY.png  used on input line 7.
 (pdftex.def)             Requested size: 284.52756pt x 189.77805pt.
-<figures/2_1_1_crtu_alap.png, id=482, 240.462pt x 232.2495pt>
+<figures/2_1_1_crtu_alap.png, id=521, 240.462pt x 232.2495pt>
 File: figures/2_1_1_crtu_alap.png Graphic file (type png)
 <use figures/2_1_1_crtu_alap.png>
 Package pdftex.def Info: figures/2_1_1_crtu_alap.png  used on input line 21.
 (pdftex.def)             Requested size: 284.52756pt x 274.8352pt.
-[13
+[14
 
 
 
- <./figures/2_1_0_CRTU_FAMILY.png>]
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 29.
-
-[14 <./figures/2_1_1_crtu_alap.png>] [15]) [16]
+ <./figures/2_1_0_CRTU_FAMILY.png>] [15 <./figures/2_1_1_crtu_alap.png>]
+[16]) [17]
 \openout2 = `chapter3.aux'.
 
  (chapter3.tex
 3. fejezet.
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 2.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 22.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 23.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 23.
-
-[17
+[18
 
 
 
-]
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 57.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 57.
-
-[18]
-<figures/3_2_0_linear_opto.PNG, id=527, 665.48625pt x 395.22656pt>
+] [19]
+<figures/3_2_0_linear_opto.PNG, id=570, 665.48625pt x 395.22656pt>
 File: figures/3_2_0_linear_opto.PNG Graphic file (type png)
 <use figures/3_2_0_linear_opto.PNG>
 Package pdftex.def Info: figures/3_2_0_linear_opto.PNG  used on input line 64.
@@ -823,300 +798,239 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--89
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 []|\T1/cmr/m/n/10.95 Galvanikus le-vá-
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/3_2_1_aram_valto.png, id=528, 302.63063pt x 191.9672pt>
+<figures/3_2_1_aram_valto.png, id=573, 302.63063pt x 191.9672pt>
 File: figures/3_2_1_aram_valto.png Graphic file (type png)
 <use figures/3_2_1_aram_valto.png>
-Package pdftex.def Info: figures/3_2_1_aram_valto.png  used on input line 108.
+Package pdftex.def Info: figures/3_2_1_aram_valto.png  used on input line 106.
 (pdftex.def)             Requested size: 284.52756pt x 180.48433pt.
-[19 <./figures/3_2_0_linear_opto.PNG>] [20 <./figures/3_2_1_aram_valto.png>]
-<figures/3_2_4_rogo_sema.png, id=541, 582.175pt x 243.91125pt>
+[20 <./figures/3_2_0_linear_opto.PNG>] [21 <./figures/3_2_1_aram_valto.png>]
+<figures/3_2_4_rogo_sema.png, id=587, 582.175pt x 243.91125pt>
 File: figures/3_2_4_rogo_sema.png Graphic file (type png)
 <use figures/3_2_4_rogo_sema.png>
-Package pdftex.def Info: figures/3_2_4_rogo_sema.png  used on input line 124.
-(pdftex.def)             Requested size: 213.39566pt x 89.40462pt.
-<figures/3_2_3_rogo_real.png, id=542, 903.375pt x 461.47406pt>
+Package pdftex.def Info: figures/3_2_4_rogo_sema.png  used on input line 122.
+(pdftex.def)             Requested size: 199.16928pt x 83.44232pt.
+<figures/3_2_3_rogo_real.png, id=588, 903.375pt x 461.47406pt>
 File: figures/3_2_3_rogo_real.png Graphic file (type png)
 <use figures/3_2_3_rogo_real.png>
-Package pdftex.def Info: figures/3_2_3_rogo_real.png  used on input line 130.
-(pdftex.def)             Requested size: 213.39566pt x 109.00974pt.
-
-Overfull \hbox (4.84323pt too wide) in paragraph at lines 122--133
- [][]  [] 
- []
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 140.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 140.
-
-<figures/3_2_5_shunt.png, id=543, 36.135pt x 21.4401pt>
+Package pdftex.def Info: figures/3_2_3_rogo_real.png  used on input line 128.
+(pdftex.def)             Requested size: 199.16928pt x 101.74289pt.
+<figures/3_2_5_shunt.png, id=589, 36.135pt x 21.4401pt>
 File: figures/3_2_5_shunt.png Graphic file (type png)
 <use figures/3_2_5_shunt.png>
-Package pdftex.def Info: figures/3_2_5_shunt.png  used on input line 147.
+Package pdftex.def Info: figures/3_2_5_shunt.png  used on input line 145.
 (pdftex.def)             Requested size: 142.26378pt x 84.43288pt.
 
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 152.
-
-[21 <./figures/3_2_4_rogo_sema.png (PNG copy)> <./figures/3_2_3_rogo_real.png> 
+[22 <./figures/3_2_4_rogo_sema.png (PNG copy)> <./figures/3_2_3_rogo_real.png> 
 <./figures/3_2_5_shunt.png>]
-<figures/3_2_2_hall_comp.PNG, id=553, 953.81343pt x 316.18124pt>
+<figures/3_2_2_hall_comp.PNG, id=599, 953.81343pt x 316.18124pt>
 File: figures/3_2_2_hall_comp.PNG Graphic file (type png)
 <use figures/3_2_2_hall_comp.PNG>
-Package pdftex.def Info: figures/3_2_2_hall_comp.PNG  used on input line 159.
+Package pdftex.def Info: figures/3_2_2_hall_comp.PNG  used on input line 157.
 (pdftex.def)             Requested size: 426.79134pt x 141.47937pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\T1/cmr/bx/n/10.95 Rogowski-
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 178--178
+Underfull \hbox (badness 3536) in paragraph at lines 176--176
 []|\T1/cmr/m/n/10.95 Elérhet® pon-
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 181--181
+Underfull \hbox (badness 2351) in paragraph at lines 179--179
 []|\T1/cmr/m/n/10.95 Túláram to-le-
  []
 
-[22 <./figures/3_2_2_hall_comp.PNG>] [23]
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 231.
-
-[24]
-<figures/3_4_1_rendszer.png, id=584, 684.30656pt x 514.92375pt>
+[23 <./figures/3_2_2_hall_comp.PNG>] [24] [25]
+<figures/3_4_1_rendszer.png, id=634, 684.30656pt x 514.92375pt>
 File: figures/3_4_1_rendszer.png Graphic file (type png)
 <use figures/3_4_1_rendszer.png>
-Package pdftex.def Info: figures/3_4_1_rendszer.png  used on input line 244.
+Package pdftex.def Info: figures/3_4_1_rendszer.png  used on input line 240.
 (pdftex.def)             Requested size: 369.88582pt x 278.33754pt.
-<figures/3_4_2_rendszer_sontos.png, id=585, 509.65407pt x 509.65407pt>
+<figures/3_4_2_rendszer_sontos.png, id=637, 509.65407pt x 509.65407pt>
 File: figures/3_4_2_rendszer_sontos.png Graphic file (type png)
 <use figures/3_4_2_rendszer_sontos.png>
 Package pdftex.def Info: figures/3_4_2_rendszer_sontos.png  used on input line 
-267.
+263.
 (pdftex.def)             Requested size: 369.88582pt x 369.90578pt.
- [25 <./figures/3_4_1_rendszer.png>]
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 290.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[26 <./figures/3_4_2_rendszer_sontos.png>]) [27] [28]
+ [26 <./figures/3_4_1_rendszer.png>] [27 <./figures/3_4_2_rendszer_sontos.png>]
+) [28] [29]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 4. fejezet.
-[29
+[30
 
 
 
 ]
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 46.
-
-<figures/4_3_0_DC_DC.png, id=640, 984.67876pt x 332.74312pt>
+<figures/4_3_0_DC_DC.png, id=693, 984.67876pt x 332.74312pt>
 File: figures/4_3_0_DC_DC.png Graphic file (type png)
 <use figures/4_3_0_DC_DC.png>
 Package pdftex.def Info: figures/4_3_0_DC_DC.png  used on input line 51.
 (pdftex.def)             Requested size: 426.79134pt x 144.2242pt.
-[30]
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 69.
-
-[31 <./figures/4_3_0_DC_DC.png>] [32]
-<figures/4_3_2_MCU.PNG, id=671, 642.14906pt x 366.61969pt>
+ [31] [32 <./figures/4_3_0_DC_DC.png>] [33]
+<figures/4_3_2_MCU.PNG, id=723, 642.14906pt x 366.61969pt>
 File: figures/4_3_2_MCU.PNG Graphic file (type png)
 <use figures/4_3_2_MCU.PNG>
 Package pdftex.def Info: figures/4_3_2_MCU.PNG  used on input line 113.
 (pdftex.def)             Requested size: 426.79134pt x 243.67036pt.
-<figures/4_3_1_MCU_FILT.PNG, id=672, 729.47531pt x 339.51843pt>
+<figures/4_3_1_MCU_FILT.PNG, id=724, 729.47531pt x 339.51843pt>
 File: figures/4_3_1_MCU_FILT.PNG Graphic file (type png)
 <use figures/4_3_1_MCU_FILT.PNG>
 Package pdftex.def Info: figures/4_3_1_MCU_FILT.PNG  used on input line 121.
 (pdftex.def)             Requested size: 241.84842pt x 112.55948pt.
- [33 <./figures/4_3_2_MCU.PNG>]
-<figures/4_3_5_CURR_INPUT.PNG, id=679, 608.2725pt x 187.45032pt>
+ [34 <./figures/4_3_2_MCU.PNG>]
+<figures/4_3_5_CURR_INPUT.PNG, id=731, 608.2725pt x 187.45032pt>
 File: figures/4_3_5_CURR_INPUT.PNG Graphic file (type png)
 <use figures/4_3_5_CURR_INPUT.PNG>
 Package pdftex.def Info: figures/4_3_5_CURR_INPUT.PNG  used on input line 137.
 (pdftex.def)             Requested size: 426.79134pt x 131.52608pt.
- [34 <./figures/4_3_1_MCU_FILT.PNG> <./figures/4_3_5_CURR_INPUT.PNG>]
-<figures/4_3_3_ALIASING.PNG, id=688, 387.69844pt x 187.45032pt>
+
+[35 <./figures/4_3_1_MCU_FILT.PNG> <./figures/4_3_5_CURR_INPUT.PNG>]
+<figures/4_3_3_ALIASING.PNG, id=740, 387.69844pt x 187.45032pt>
 File: figures/4_3_3_ALIASING.PNG Graphic file (type png)
 <use figures/4_3_3_ALIASING.PNG>
 Package pdftex.def Info: figures/4_3_3_ALIASING.PNG  used on input line 157.
 (pdftex.def)             Requested size: 284.52756pt x 137.56981pt.
- [35 <./figures/4_3_3_ALIASING.PNG>]
-<figures/4_3_4_VOLT_INPUT.PNG, id=696, 596.2275pt x 192.72pt>
+ [36 <./figures/4_3_3_ALIASING.PNG>]
+<figures/4_3_4_VOLT_INPUT.PNG, id=749, 596.2275pt x 192.72pt>
 File: figures/4_3_4_VOLT_INPUT.PNG Graphic file (type png)
 <use figures/4_3_4_VOLT_INPUT.PNG>
 Package pdftex.def Info: figures/4_3_4_VOLT_INPUT.PNG  used on input line 169.
 (pdftex.def)             Requested size: 426.79134pt x 137.95253pt.
- [36 <./figures/4_3_4_VOLT_INPUT.PNG>]
-<figures/4_3_1_tipik_varistor.png, id=705, 76.78688pt x 114.4275pt>
+ [37 <./figures/4_3_4_VOLT_INPUT.PNG>]
+<figures/4_3_1_tipik_varistor.png, id=757, 76.78688pt x 114.4275pt>
 File: figures/4_3_1_tipik_varistor.png Graphic file (type png)
 <use figures/4_3_1_tipik_varistor.png>
 Package pdftex.def Info: figures/4_3_1_tipik_varistor.png  used on input line 2
-02.
+01.
 (pdftex.def)             Requested size: 76.37659pt x 113.81102pt.
-<figures/4_3_2_varistor_inside.png, id=706, 322.95656pt x 176.91093pt>
+<figures/4_3_2_varistor_inside.png, id=758, 322.95656pt x 176.91093pt>
 File: figures/4_3_2_varistor_inside.png Graphic file (type png)
 <use figures/4_3_2_varistor_inside.png>
 Package pdftex.def Info: figures/4_3_2_varistor_inside.png  used on input line 
-208.
+207.
 (pdftex.def)             Requested size: 207.76576pt x 113.81102pt.
-
-Overfull \hbox (4.84323pt too wide) in paragraph at lines 200--211
- [][]  [] 
- []
-
-[37]
-<figures/4_4_1_CRPM3_PCB.png, id=720, 1148.79187pt x 603.75563pt>
+ [38]
+<figures/4_4_1_CRPM3_PCB.png, id=770, 1148.79187pt x 603.75563pt>
 File: figures/4_4_1_CRPM3_PCB.png Graphic file (type png)
 <use figures/4_4_1_CRPM3_PCB.png>
-Package pdftex.def Info: figures/4_4_1_CRPM3_PCB.png  used on input line 224.
+Package pdftex.def Info: figures/4_4_1_CRPM3_PCB.png  used on input line 223.
 (pdftex.def)             Requested size: 426.79134pt x 224.29813pt.
-<figures/4_4_3_RT7285_RECOM.PNG, id=721, 796.47563pt x 469.755pt>
+<figures/4_4_3_RT7285_RECOM.PNG, id=771, 796.47563pt x 469.755pt>
 File: figures/4_4_3_RT7285_RECOM.PNG Graphic file (type png)
 <use figures/4_4_3_RT7285_RECOM.PNG>
-Package pdftex.def Info: figures/4_4_3_RT7285_RECOM.PNG  used on input line 235
+Package pdftex.def Info: figures/4_4_3_RT7285_RECOM.PNG  used on input line 234
 .
 (pdftex.def)             Requested size: 199.16928pt x 117.46713pt.
-<figures/4_4_2_CRPM3_C_TAP.PNG, id=724, 710.655pt x 359.84438pt>
+<figures/4_4_2_CRPM3_C_TAP.PNG, id=774, 710.655pt x 359.84438pt>
 File: figures/4_4_2_CRPM3_C_TAP.PNG Graphic file (type png)
 <use figures/4_4_2_CRPM3_C_TAP.PNG>
-Package pdftex.def Info: figures/4_4_2_CRPM3_C_TAP.PNG  used on input line 242.
+Package pdftex.def Info: figures/4_4_2_CRPM3_C_TAP.PNG  used on input line 241.
 
 (pdftex.def)             Requested size: 199.16928pt x 100.84908pt.
-
-Overfull \hbox (4.84323pt too wide) in paragraph at lines 233--246
- [][]  [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 254.
-
-<figures/4_4_4_CRPM3A_PCB.PNG, id=727, 604.50844pt x 618.05907pt>
+<figures/4_4_4_CRPM3A_PCB.PNG, id=777, 604.50844pt x 618.05907pt>
 File: figures/4_4_4_CRPM3A_PCB.PNG Graphic file (type png)
 <use figures/4_4_4_CRPM3A_PCB.PNG>
-Package pdftex.def Info: figures/4_4_4_CRPM3A_PCB.PNG  used on input line 258.
+Package pdftex.def Info: figures/4_4_4_CRPM3A_PCB.PNG  used on input line 257.
 (pdftex.def)             Requested size: 284.52756pt x 290.90276pt.
-[38 <./figures/4_3_1_tipik_varistor.png> <./figures/4_3_2_varistor_inside.png>]
-[39 <./figures/4_4_1_CRPM3_PCB.png> <./figures/4_4_3_RT7285_RECOM.PNG> <./figur
-es/4_4_2_CRPM3_C_TAP.PNG>] [40 <./figures/4_4_4_CRPM3A_PCB.PNG>]
-<figures/4_1_1_1_szigkoord.png, id=753, 2393.94376pt x 1333.98375pt>
+ [39 <./figures/4_3_1_tipik_varistor.png> <./figures/4_3_2_varistor_inside.png>
+] [40 <./figures/4_4_1_CRPM3_PCB.png> <./figures/4_4_3_RT7285_RECOM.PNG> <./fig
+ures/4_4_2_CRPM3_C_TAP.PNG>] [41 <./figures/4_4_4_CRPM3A_PCB.PNG>]
+<figures/4_1_1_1_szigkoord.png, id=801, 2393.94376pt x 1333.98375pt>
 File: figures/4_1_1_1_szigkoord.png Graphic file (type png)
 <use figures/4_1_1_1_szigkoord.png>
-Package pdftex.def Info: figures/4_1_1_1_szigkoord.png  used on input line 285.
+Package pdftex.def Info: figures/4_1_1_1_szigkoord.png  used on input line 284.
 
 (pdftex.def)             Requested size: 689.29456pt x 384.1096pt.
- [41
+ [42
 
- <./figures/4_1_1_1_szigkoord.png>] [42
+ <./figures/4_1_1_1_szigkoord.png>] [43
 
 ]
-<figures/4_1_2_emc_fa.png, id=770, 402.50375pt x 221.82875pt>
+<figures/4_1_2_emc_fa.png, id=818, 402.50375pt x 221.82875pt>
 File: figures/4_1_2_emc_fa.png Graphic file (type png)
 <use figures/4_1_2_emc_fa.png>
-Package pdftex.def Info: figures/4_1_2_emc_fa.png  used on input line 336.
+Package pdftex.def Info: figures/4_1_2_emc_fa.png  used on input line 335.
 (pdftex.def)             Requested size: 284.52756pt x 156.80899pt.
- [43] [44 <./figures/4_1_2_emc_fa.png>]
-<figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG, id=793, 446.41782pt x 313.922
+ [44] [45 <./figures/4_1_2_emc_fa.png>]
+<figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG, id=841, 446.41782pt x 313.922
 8pt>
 File: figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG Graphic file (type png)
 <use figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG>
 Package pdftex.def Info: figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG  used 
-on input line 365.
+on input line 364.
 (pdftex.def)             Requested size: 426.79134pt x 300.12662pt.
-<figures/4_1_2_3_Stitching.PNG, id=798, 459.96844pt x 212.29312pt>
+<figures/4_1_2_3_Stitching.PNG, id=846, 459.96844pt x 212.29312pt>
 File: figures/4_1_2_3_Stitching.PNG Graphic file (type png)
 <use figures/4_1_2_3_Stitching.PNG>
-Package pdftex.def Info: figures/4_1_2_3_Stitching.PNG  used on input line 373.
+Package pdftex.def Info: figures/4_1_2_3_Stitching.PNG  used on input line 372.
 
 (pdftex.def)             Requested size: 426.79134pt x 196.99326pt.
- [45 <./figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[46 <./figures/4_1_2_3_Stitching.PNG>]
-<figures/4_1_3_4_ESD_SETUP.png, id=821, 397.485pt x 365.11406pt>
+ [46 <./figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG>] [47 <./figures/4_1_2_
+3_Stitching.PNG>]
+<figures/4_1_3_4_ESD_SETUP.png, id=869, 397.485pt x 365.11406pt>
 File: figures/4_1_3_4_ESD_SETUP.png Graphic file (type png)
 <use figures/4_1_3_4_ESD_SETUP.png>
-Package pdftex.def Info: figures/4_1_3_4_ESD_SETUP.png  used on input line 416.
+Package pdftex.def Info: figures/4_1_3_4_ESD_SETUP.png  used on input line 415.
 
 (pdftex.def)             Requested size: 426.79134pt x 392.04427pt.
-<figures/4_1_3_5_ESD_V.png, id=822, 1919.17pt x 1742.51pt>
+<figures/4_1_3_5_ESD_V.png, id=870, 1919.17pt x 1742.51pt>
 File: figures/4_1_3_5_ESD_V.png Graphic file (type png)
 <use figures/4_1_3_5_ESD_V.png>
-Package pdftex.def Info: figures/4_1_3_5_ESD_V.png  used on input line 424.
+Package pdftex.def Info: figures/4_1_3_5_ESD_V.png  used on input line 423.
 (pdftex.def)             Requested size: 188.00417pt x 170.71652pt.
-<figures/4_1_3_6_ESD_H.png, id=823, 2256.43pt x 2003.485pt>
+<figures/4_1_3_6_ESD_H.png, id=871, 2256.43pt x 2003.485pt>
 File: figures/4_1_3_6_ESD_H.png Graphic file (type png)
 <use figures/4_1_3_6_ESD_H.png>
-Package pdftex.def Info: figures/4_1_3_6_ESD_H.png  used on input line 430.
+Package pdftex.def Info: figures/4_1_3_6_ESD_H.png  used on input line 429.
 (pdftex.def)             Requested size: 192.25882pt x 170.71652pt.
 
-Overfull \hbox (4.84323pt too wide) in paragraph at lines 422--433
- [][]  [] 
- []
-
-[47 <./figures/4_1_3_4_ESD_SETUP.png>]
-<figures/4_1_3_1_BURSTSURGE_SETUP.png, id=830, 4015.0pt x 3011.25pt>
+[48 <./figures/4_1_3_4_ESD_SETUP.png>]
+<figures/4_1_3_1_BURSTSURGE_SETUP.png, id=879, 4015.0pt x 3011.25pt>
 File: figures/4_1_3_1_BURSTSURGE_SETUP.png Graphic file (type png)
 <use figures/4_1_3_1_BURSTSURGE_SETUP.png>
 Package pdftex.def Info: figures/4_1_3_1_BURSTSURGE_SETUP.png  used on input li
-ne 446.
+ne 445.
 (pdftex.def)             Requested size: 426.79134pt x 320.07318pt.
-<figures/4_1_3_2_BURST_SIM.png, id=831, 4015.0pt x 3011.25pt>
+<figures/4_1_3_2_BURST_SIM.png, id=880, 4015.0pt x 3011.25pt>
 File: figures/4_1_3_2_BURST_SIM.png Graphic file (type png)
 <use figures/4_1_3_2_BURST_SIM.png>
-Package pdftex.def Info: figures/4_1_3_2_BURST_SIM.png  used on input line 452.
+Package pdftex.def Info: figures/4_1_3_2_BURST_SIM.png  used on input line 451.
 
 (pdftex.def)             Requested size: 426.79134pt x 320.07318pt.
-<figures/4_1_3_3_SURGE.png, id=832, 2135.98pt x 590.205pt>
+<figures/4_1_3_3_SURGE.png, id=881, 2135.98pt x 590.205pt>
 File: figures/4_1_3_3_SURGE.png Graphic file (type png)
 <use figures/4_1_3_3_SURGE.png>
-Package pdftex.def Info: figures/4_1_3_3_SURGE.png  used on input line 468.
+Package pdftex.def Info: figures/4_1_3_3_SURGE.png  used on input line 467.
 (pdftex.def)             Requested size: 426.79134pt x 117.92183pt.
-<figures/4_1_3_7_RF.png, id=833, 3075.49pt x 2537.48pt>
+<figures/4_1_3_7_RF.png, id=882, 3075.49pt x 2537.48pt>
 File: figures/4_1_3_7_RF.png Graphic file (type png)
 <use figures/4_1_3_7_RF.png>
-Package pdftex.def Info: figures/4_1_3_7_RF.png  used on input line 482.
+Package pdftex.def Info: figures/4_1_3_7_RF.png  used on input line 481.
 (pdftex.def)             Requested size: 426.79134pt x 352.10857pt.
- [48 <./figures/4_1_3_5_ESD_V.png> <./figures/4_1_3_6_ESD_H.png>] [49 <./figure
-s/4_1_3_1_BURSTSURGE_SETUP.png>] [50 <./figures/4_1_3_2_BURST_SIM.png> <./figur
+ [49 <./figures/4_1_3_5_ESD_V.png> <./figures/4_1_3_6_ESD_H.png>] [50 <./figure
+s/4_1_3_1_BURSTSURGE_SETUP.png>] [51 <./figures/4_1_3_2_BURST_SIM.png> <./figur
 es/4_1_3_3_SURGE.png>]
-<figures/4_2_1_konstr_expl.png, id=863, 1003.75pt x 752.8125pt>
+<figures/4_2_1_konstr_expl.png, id=911, 1003.75pt x 752.8125pt>
 File: figures/4_2_1_konstr_expl.png Graphic file (type png)
 <use figures/4_2_1_konstr_expl.png>
-Package pdftex.def Info: figures/4_2_1_konstr_expl.png  used on input line 513.
+Package pdftex.def Info: figures/4_2_1_konstr_expl.png  used on input line 512.
 
 (pdftex.def)             Requested size: 426.79134pt x 320.09615pt.
-<figures/4_2_2_konstr_compl.png, id=864, 800.9925pt x 601.24625pt>
+<figures/4_2_2_konstr_compl.png, id=912, 800.9925pt x 601.24625pt>
 File: figures/4_2_2_konstr_compl.png Graphic file (type png)
 <use figures/4_2_2_konstr_compl.png>
-Package pdftex.def Info: figures/4_2_2_konstr_compl.png  used on input line 521
+Package pdftex.def Info: figures/4_2_2_konstr_compl.png  used on input line 520
 .
 (pdftex.def)             Requested size: 426.79134pt x 320.3654pt.
- [51 <./figures/4_1_3_7_RF.png>]) [52 <./figures/4_2_1_konstr_expl.png>] [53 <.
+ [52 <./figures/4_1_3_7_RF.png>]) [53 <./figures/4_2_1_konstr_expl.png>] [54 <.
 /figures/4_2_2_konstr_compl.png>]
 \openout2 = `chapter5.aux'.
 
@@ -1130,12 +1044,7 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.
 sty"
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-)
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 31.
-
-[54
+) [55
 
 
 
@@ -1148,96 +1057,79 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 49.
 
-[55]
-<figures/5_1_0_emul_eeprom.PNG, id=903, 618.81187pt x 445.665pt>
+[56]
+<figures/5_1_0_emul_eeprom.PNG, id=957, 618.81187pt x 445.665pt>
 File: figures/5_1_0_emul_eeprom.PNG Graphic file (type png)
 <use figures/5_1_0_emul_eeprom.PNG>
 Package pdftex.def Info: figures/5_1_0_emul_eeprom.PNG  used on input line 90.
 (pdftex.def)             Requested size: 426.79134pt x 307.38678pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/5_1_0_CUBEMX.png, id=904, 950.04938pt x 843.15pt>
+<figures/5_1_0_CUBEMX.png, id=958, 950.04938pt x 843.15pt>
 File: figures/5_1_0_CUBEMX.png Graphic file (type png)
 <use figures/5_1_0_CUBEMX.png>
 Package pdftex.def Info: figures/5_1_0_CUBEMX.png  used on input line 100.
-(pdftex.def)             Requested size: 426.79134pt x 378.77072pt.
+(pdftex.def)             Requested size: 412.56496pt x 366.13689pt.
 
 Overfull \hbox (4.92308pt too wide) in paragraph at lines 104--105
 \T1/cmr/m/n/10.95 A be-ágya-zott szoft-vert az STM32F303-as kont-rol-ler-re KDe
 -ve-lop kör-nye-zet-ben ír-tam, STM32
  []
 
-[56] [57 <./figures/5_1_0_emul_eeprom.PNG>] [58 <./figures/5_1_0_CUBEMX.png>]
-[59]
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 179.
-
-
-Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\H' on input line 179.
-
-[60] [61] [62]
-<figures/5_1_1_dbg_serial.png, id=1055, 292.09125pt x 505.89pt>
+[57] [58 <./figures/5_1_0_emul_eeprom.PNG>] [59 <./figures/5_1_0_CUBEMX.png>]
+[60] [61] [62] [63]
+<figures/5_1_1_dbg_serial.png, id=1109, 292.09125pt x 505.89pt>
 File: figures/5_1_1_dbg_serial.png Graphic file (type png)
 <use figures/5_1_1_dbg_serial.png>
-Package pdftex.def Info: figures/5_1_1_dbg_serial.png  used on input line 273.
+Package pdftex.def Info: figures/5_1_1_dbg_serial.png  used on input line 275.
 (pdftex.def)             Requested size: 142.26378pt x 246.39844pt.
- [63 <./figures/5_1_1_dbg_serial.png>]
-<figures/5_3_1_CRWEB.png, id=1071, 1024.57782pt x 683.55376pt>
+ [64 <./figures/5_1_1_dbg_serial.png>]
+<figures/5_3_1_CRWEB.png, id=1125, 1024.57782pt x 683.55376pt>
 File: figures/5_3_1_CRWEB.png Graphic file (type png)
 <use figures/5_3_1_CRWEB.png>
-Package pdftex.def Info: figures/5_3_1_CRWEB.png  used on input line 291.
+Package pdftex.def Info: figures/5_3_1_CRWEB.png  used on input line 293.
 (pdftex.def)             Requested size: 426.79134pt x 284.7334pt.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
 .sty"
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-) [64 <./figures/5_3_1_CRWEB.png>] [65]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 325.
-
-<figures/5_4_1_omicron_harmonics.png, id=1088, 878.28125pt x 652.4375pt>
+) [65 <./figures/5_3_1_CRWEB.png>] [66]
+<figures/5_4_1_omicron_harmonics.png, id=1143, 878.28125pt x 652.4375pt>
 File: figures/5_4_1_omicron_harmonics.png Graphic file (type png)
 <use figures/5_4_1_omicron_harmonics.png>
 Package pdftex.def Info: figures/5_4_1_omicron_harmonics.png  used on input lin
-e 346.
+e 348.
 (pdftex.def)             Requested size: 426.79134pt x 317.04904pt.
-[66 <./figures/5_4_1_omicron_harmonics.png>] [67]
-<figures/5_4_2_kalibracio_1.PNG, id=1132, 510.40688pt x 331.2375pt>
+ [67 <./figures/5_4_1_omicron_harmonics.png>] [68]
+<figures/5_4_2_kalibracio_1.PNG, id=1187, 510.40688pt x 331.2375pt>
 File: figures/5_4_2_kalibracio_1.PNG Graphic file (type png)
 <use figures/5_4_2_kalibracio_1.PNG>
-Package pdftex.def Info: figures/5_4_2_kalibracio_1.PNG  used on input line 416
+Package pdftex.def Info: figures/5_4_2_kalibracio_1.PNG  used on input line 418
 .
 (pdftex.def)             Requested size: 426.79134pt x 276.98918pt.
-<figures/5_4_3_kalibracio_2.PNG, id=1134, 512.66531pt x 332.74312pt>
+<figures/5_4_3_kalibracio_2.PNG, id=1189, 512.66531pt x 332.74312pt>
 File: figures/5_4_3_kalibracio_2.PNG Graphic file (type png)
 <use figures/5_4_3_kalibracio_2.PNG>
-Package pdftex.def Info: figures/5_4_3_kalibracio_2.PNG  used on input line 427
+Package pdftex.def Info: figures/5_4_3_kalibracio_2.PNG  used on input line 429
 .
 (pdftex.def)             Requested size: 426.79134pt x 277.00937pt.
-) [68] [69 <./figures/5_4_2_kalibracio_1.PNG> <./figures/5_4_3_kalibracio_2.PNG
+) [69] [70 <./figures/5_4_2_kalibracio_1.PNG> <./figures/5_4_3_kalibracio_2.PNG
 >]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 6. fejezet.
-<figures/6_0_0_CRPM_SEM_1.png, id=1162, 3011.25pt x 4015.0pt>
+<figures/6_0_0_CRPM_SEM_1.png, id=1216, 3011.25pt x 4015.0pt>
 File: figures/6_0_0_CRPM_SEM_1.png Graphic file (type png)
 <use figures/6_0_0_CRPM_SEM_1.png>
 Package pdftex.def Info: figures/6_0_0_CRPM_SEM_1.png  used on input line 11.
 (pdftex.def)             Requested size: 426.79134pt x 569.019pt.
-[70
+[71
 
 
 
-]) [71 <./figures/6_0_0_CRPM_SEM_1.png>] [72]
+]) [72 <./figures/6_0_0_CRPM_SEM_1.png>] [73]
 \openout2 = `overall.aux'.
 
- (overall.tex) [73
+ (overall.tex) [74
 
 
 
@@ -1245,64 +1137,120 @@ Package pdftex.def Info: figures/6_0_0_CRPM_SEM_1.png  used on input line 11.
 \openout2 = `acknowledgement.aux'.
 
 
-(acknowledgement.tex) [74
+(acknowledgement.tex) [75
 
 
 
-] (Diplomaterv.lof [75
+] (Diplomaterv.lof [76
 
 
 ])
 \tf@lof=\write5
 \openout5 = `Diplomaterv.lof'.
 
- [76] (Diplomaterv.lot)
+ [77] (Diplomaterv.lot)
 \tf@lot=\write6
 \openout6 = `Diplomaterv.lot'.
 
 
-(Diplomaterv.bbl [77
+(Diplomaterv.bbl [78
 
 ]
-Underfull \hbox (badness 8113) in paragraph at lines 60--64
-[]\T1/cmr/m/n/10.95 Schneider El-ectric.  Sch-ne-i-der leg-acy pro-ducts - 1645
+Underfull \hbox (badness 6625) in paragraph at lines 54--58
+[]\T1/cmr/m/n/10.95 Schneider El-ectric.  Sch-ne-i-der Leg-acy Pro-ducts - 1645
 1 (2018. no-vem-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 \T1/cmr/m/n/10.95 ber 21.).  [][]$\T1/cmtt/m/n/10.95 https : / / www . schneide
 r-[]electric . com . au / en / product / 16451 /
  []
 
-[78
+[79
 
 ]
-Overfull \hbox (1.13582pt too wide) in paragraph at lines 70--73
+Overfull \hbox (1.13582pt too wide) in paragraph at lines 64--67
 []\T1/cmr/m/n/10.95 AN4056, EEP-ROM emu-la-ti-on in STM32F30x/STM32F31x/STM32F3
 7x/STM32F38x
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 138--142
-[]\T1/cmr/m/n/10.95 Dr. Ba-logh At-ti-la (BME-AUT).  Ké-szü-lék-ter-ve-zés jegy
--zet: 8. túl-áram-vé-de-
+Underfull \hbox (badness 10000) in paragraph at lines 139--143
+[]\T1/cmr/m/n/10.95 Phoenix Con-tact.  BC mo-du-lá-ris ké-szü-lék-há-zak.  [][]
+$\T1/cmtt/m/n/10.95 https : / / www .
  []
 
-[79]
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
-[]\T1/cmr/m/n/10.95 ElectronicsTutorials.  Va-ris-tor tuto-ri-al (2018.12.11.).
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--143
+\T1/cmtt/m/n/10.95 phoenixcontact . com / online / portal / hu ? 1dmy & urile =
+ wcm : path : /huhu / web /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--143
+\T1/cmtt/m/n/10.95 main / products / subcategory _ pages / Modular _ housings _
+ BC _ P-[]01-[]12-[]02 /
+ []
+
+[80]
+Underfull \hbox (badness 2409) in paragraph at lines 155--159
+[]\T1/cmr/m/n/10.95 Dr. Ba-logh At-ti-la (BME-AUT).  Ké-szü-lék-ter-ve-zés jegy
+-zet: 8. Túl-áram-vé-de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
+[]\T1/cmr/m/n/10.95 ElectronicsTutorials.  Va-ris-tor Tuto-ri-al (2018.12.11.).
   [][]$\T1/cmtt/m/n/10.95 https : / / www .
  []
 
-) [80]
+
+Underfull \hbox (badness 1107) in paragraph at lines 188--191
+[]\T1/cmr/m/n/10.95 Prolan Zrt.  RTU (Pro-field) (2018. de-cem-ber 14.).  [][]$
+\T1/cmtt/m/n/10.95 http : / / www . prolan . hu /
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 193--197
+[]\T1/cmr/m/n/10.95 Dr. Var-ja-si Ist-ván (BME-AUT).  Ké-szü-lék-ter-ve-zés jeg
+y-zet: 11. Ér-zé-ke-l®k.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
+[][]$\T1/cmtt/m/n/10.95 https : / / www . aut . bme . hu / Upload / Course / VI
+AUMA14 / hallgatoi _ segedletek /
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 199--203
+[]\T1/cmr/m/n/10.95 Arek Kac-pr-zak.  Six ways to sen-se cur-rent and how to de
+-ci-de which to
+ []
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin2'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.211 \newblock {{HLE .100" Tiger Beam™
+                                        Cost-effective Single Beam Socket St...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) [81] [82]
 \openout2 = `appendices.aux'.
 
  (appendices.tex
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1289, 597.55246pt x 845.19763pt>
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1373, 597.55246pt x 845.19763pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf  used on input l
@@ -1325,7 +1273,7 @@ clusion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1292, page=1, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1376, page=1, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
@@ -1337,7 +1285,7 @@ File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
 input line 7.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-[81
+[83
 
 
 ]
@@ -1356,11 +1304,11 @@ File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
 input line 7.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
- [82 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
+ [84 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1353, page=2, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1438, page=2, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 2>
@@ -1377,11 +1325,11 @@ File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page2 used on 
 input line 7.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-[83 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
+[85 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1359, page=3, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1444, page=3, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 3>
@@ -1398,33 +1346,40 @@ File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page3 used on 
 input line 7.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-[84 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>])
+[86 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>])
 \tf@thm=\write7
 \openout7 = `Diplomaterv.thm'.
 
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
 (Diplomaterv.aux (titlepage.aux) (declaration.aux) (abstract.aux)
 (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
 (chapter5.aux) (chapter6.aux) (overall.aux) (acknowledgement.aux)
 (appendices.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
 Package rerunfilecheck Info: File `Diplomaterv.out' has not changed.
-(rerunfilecheck)             Checksum: E75399CFB59CC646F17900E5EB9950CE;5041.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+(rerunfilecheck)             Checksum: A70FD5C4ED0B798EDC04B1EA300EB49C;11033.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
  ) 
 Here is how much of TeX's memory you used:
- 13464 strings out of 492970
- 208340 string characters out of 3126149
- 598640 words of memory out of 3000000
- 16448 multiletter control sequences out of 15000+200000
+ 16851 strings out of 492970
+ 251133 string characters out of 3126149
+ 632173 words of memory out of 3000000
+ 19814 multiletter control sequences out of 15000+200000
  27084 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,18n,51p,1593b,2114s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,18n,51p,1593b,2120s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1095.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecit0900.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
@@ -1454,9 +1409,9 @@ msfonts/cm/cmr8.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmr9.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Balazs/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Diplomaterv.pdf (85 pages, 27769677 bytes).
+Output written on Diplomaterv.pdf (87 pages, 27795713 bytes).
 PDF statistics:
- 2297 PDF objects out of 2487 (max. 8388607)
- 532 named destinations out of 1000 (max. 500000)
+ 2390 PDF objects out of 2487 (max. 8388607)
+ 547 named destinations out of 1000 (max. 500000)
  802 words of extra memory for PDF output out of 10000 (max. 10000000)
 

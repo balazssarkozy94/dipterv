@@ -4,7 +4,7 @@
 
 Õsz végére a termék elérte azt a készségi szintet, hogy azt egy példaalkalmazásban kipróbálhassuk, hogy ott minél több tapasztalatot szerezzünk, az esetleges hardver vagy szoftver hibák napvilágot láthassanak. 
 
-A CR-PM3-at a Schönherz Zoltán Kollégium Scönherz Eleketronikai Mûhely (SEM) öntevékeny körének mûhelyében szereltem fel, mivel itt található egy CNC marógép, amelynek a marómotorja egy olyan inverterrõl van járatva, amely képes egy- és háromfázisú mûködésre is.
+A CR-PM3-at a Schönherz Zoltán Kollégium Schönherz Elektronikai Mûhely (SEM) öntevékeny körének mûhelyében szereltem fel, mivel itt található egy CNC marógép, amelynek a marómotorja egy olyan inverterrõl van járatva, amely képes egy- és háromfázisú mûködésre is.
 
 \begin{figure}[!ht]
 \centering
@@ -21,6 +21,6 @@ A rendszert egy fém készülékszekrényben építettem össze, ügyelve az életvédelmi 
 \item\emph{C-RTU rendszer:} Egy C-RTU alapkészülék, valamint egy CR-PM3-as modulból álló rendszer, mely a mért adatokat rezes Etherneten továbbítja a mûhely szervere felé.
 \end{enumerate}
 
-Miután táp alá helyeztük a rendszert, illetve a vészleállító oldásával engedélyeztük az inverter tápellátását, a meghajtó jelentõs füst kieresztése mellett megszûnt mûködni. Rövid szerelés után két mûhelytársammal a hiba forrását lokalizáltuk, az a háromutas egyenirányítás után elhelyezett 400V-os szûrõkondenzátorok tönkremenetele volt. Miután a kondenzátorokat megfelelõ értékûre cseréltük, a meghajtó továbbra sem volt hajlandó mûködni, bemeneti túlfeszültségre hivatkozva. Az egyfázisra visszakötve az inverter újra mûködõképes állapotba került. Sajnos a kínában gyártott, olcsó inverter így nem volt alkalmas a háromfázisú terhelésre, a tényleges mûködést csak egy fázisú teljesítmény méréssel, háromfázisú feszültségméréssel tudtam ellenõrizni.
+Miután táp alá helyeztük a rendszert, illetve a vészleállító oldásával engedélyeztük az inverter tápellátását, a meghajtó jelentõs füst kieresztése mellett megszûnt mûködni. Rövid szerelés után két mûhelytársammal a hiba forrását lokalizáltuk, az a háromutas egyenirányítás után elhelyezett 400V-os szûrõkondenzátorok tönkremenetele volt. Miután a kondenzátorokat megfelelõ értékûre cseréltük, a meghajtó továbbra sem volt hajlandó mûködni, bemeneti túlfeszültségre hivatkozva. Az egy fázisra visszakötve az inverter újra mûködõképes állapotba került. Sajnos a Kínában gyártott, olcsó inverter így nem volt alkalmas a háromfázisú terhelésre, a tényleges mûködést csak egy fázisú teljesítmény méréssel, háromfázisú feszültségméréssel tudtam ellenõrizni.
 
 Az inverter indítása után, valamint megvárva a stacioner állapot elérését a fázisfeszültség 232.5V, az áram pedig 0.817A lett. A CR-PM3 által mért értékek a CR-WEB felületen keresztül egyszerûen kiolvashatóak voltak, azonban egy tényleges felhasználáshoz a mérési adatok valamilyen naplózásának implementálása szükséges. 

@@ -8,9 +8,9 @@ A tervezendõ adatgyûjtõ rendszer a kihelyezett mérõpontokon a KIF és KÖF rendsze
 \section{Specifikáció}
 %----------------------------------------------------------------------------
 
-A CR-PM3 egyik lehetséges felhasználása egy másik, a szintén Prolan által gyártott ProField mezõgép AF500-as moduljának kiváltása bizonyos alkalmazásokban. A ProField mezõgépet számos területen használják a hozzá kapcsolt technológiai folyamat jeleinek érzékelésére, illetve beavatkozási parancsok végrehajtására, például transzformátor alállomások és az energiaelosztó hálózatok különbözõ pontjain. Az AF500-as modul ezen a rendszeren belül precíz feszültség és áram mérések elvégzésre alkalmas, áram- és feszültségváltó transzformátorokon keresztül. Maga a ProField rendszer rack-es kivitelû, így helyigénye is nagyobb, mint egy C-RTU-val megvalósított alkalmazás. A hivatalos specifikációja a modulnak:
+A CR-PM3 egyik lehetséges felhasználása egy másik, a szintén Prolan által gyártott ProField mezõgép \cite{PROLAN_PROFIELD} AF500-as moduljának kiváltása bizonyos alkalmazásokban. A ProField mezõgépet számos területen használják a hozzá kapcsolt technológiai folyamat jeleinek érzékelésére, illetve beavatkozási parancsok végrehajtására, például transzformátor alállomások és az energiaelosztó hálózatok különbözõ pontjain. Az AF500-as modul ezen a rendszeren belül precíz feszültség és áram mérések elvégzésre alkalmas, áram- és feszültségváltó transzformátorokon keresztül. Maga a ProField rendszer rack-es kivitelû, így helyigénye is nagyobb, mint egy C-RTU-val megvalósított alkalmazás. A hivatalos specifikációja a modulnak:
 
-\begin{table}[h]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -19,8 +19,8 @@ Névleges fázisfeszültség-tartomány & 0-200VAC (RMS)	\\ \hline
 Teljes fázisfeszültség-tartomány & 0-450VAC (Peak)	\\ \hline
 Névleges áramtartomány & 0-1AAC / 0-5AAC (konfiguráció függõ)	\\ \hline
 Névleges frekvenciatartomány & 45-55Hz	\\ \hline
-Névleges fázismérés-tartomány & $\pm$180$\textdegree$	\\ \hline
-Mûködési hõmérséklettartomány & 0...+55C$\textdegree$ / -20...+70C$\textdegree$ (verzió függõ)	\\ \hline
+Névleges fázismérés-tartomány & $\pm$180$^{\circ}$	\\ \hline
+Mûködési hõmérséklettartomány & 0...+55C$^{\circ}$ / -20...+70C$^{\circ}$ (verzió függõ)	\\ \hline
 Pontosság & 0.5$\%$ 	\\ \hline
 \end{tabular}
 \caption{AF500 ProField modul specifikációja}
@@ -30,7 +30,7 @@ Pontosság & 0.5$\%$ 	\\ \hline
 Az AF500 a következõ adatokat szolgáltatja a ProField rendszerben:
 
 \begin{enumerate}
-	\item \emph{Vonalifeszültségek}
+	\item \emph{Vonali feszültségek}
 	\item \emph{Fázisfeszültségek}
 	\item \emph{Fázisszögek}
 	\item \emph{Fázisteljesítmények (P, Q, S)}
@@ -45,7 +45,7 @@ A tervezendõ modulnak a fenti tulajdonságokat, illetve funkciókat kell tudnia, v
 \section{Feszültségmérés}
 %----------------------------------------------------------------------------
 
-A hálózati feszültség mérése egy alapvetõ feladata lesz a tervezendõ készüléknek, az optimális mérési elv kiválasztása meghatározó fontossággú. Vegyük számításba a lehetséges megoldásokat.
+A hálózati feszültség mérése egy alapvetõ feladata lesz a tervezendõ készüléknek, az optimális mérési elv kiválasztása meghatározó fontosságú. Vegyük számításba a lehetséges megoldásokat.
 
 %----------------------------------------------------------------------------
 \subsection{Feszültségváltó transzformátor}
@@ -57,15 +57,13 @@ Egy precízen tekercselt mérõtranszformátor segítségével az 50Hz-es váltakozó fes
 \subsection{Ellenállásosztó és izolációs erõsítõ}
 %----------------------------------------------------------------------------
 
-A készülék bemeneti feszültségét egy nagy impedanciás ellenállás osztón keresztül leképezhetjük egy izolációs erõsítõ bemeneti tartományára, majd egy izolációs erõsítõvel elérhetjük a megfelelõ szigetelési szilárdságú galvanikus leválasztást. Az izolációs erõsítõ mûködhet optikai, induktív vagy kapacitív elven. Az induktív elvûek esetében az analóg bemeneti jelet digitálissá alakítják, majd a tokozáson belül kialakított légmagos transzformátorok segítségével, a mágneses téren keresztül választják le a jelet, majd alakítják vissza analóggá. Ez a megoldás akár kis teljesítményû leválasztott tápok kialakítását is lehetõvé teszi a digitális jelek átvitele mellett. A kapacitív elven mûködõ izolátorok szintén digitalizálják a bemeneti jelet, majd a szilícium lapkákon kialakított nagyfeszültségû kondenzátorok segítségével, az elektromos téren keresztül juttatják át a a jelet a fogadó oldalra, ahol visszaalakítják analóg jellé. Az induktív és kapacitív izolátorok digitális átviteli megoldása kiküszöböli az optikai izolációs erõsítõk legfõbb problémáját, az öregedés következtében fellépõ paraméter változásokat. Az optikai elvû analóg leválasztók egyik speciális típusa a lineáris optocsatoló, amelyben egy tokozáson belül egy infra LED-hez két fotodióda tartozik. Ezt az alkatrészt egy mûveleti erõsítõs szabályzókörrel kiegészítve mind a két oldalon egy olyan megoldást kapunk, amelynek az átvitelét az öregedés nem befolyásolja jelentõsen, azt a mûveletierõsítõk kikompenzálják.
+A készülék bemeneti feszültségét egy nagy impedanciás ellenállás osztón keresztül leképezhetjük egy izolációs erõsítõ bemeneti tartományára, majd egy izolációs erõsítõvel elérhetjük a megfelelõ szigetelési szilárdságú galvanikus leválasztást. Az izolációs erõsítõ mûködhet optikai, induktív vagy kapacitív elven. Az induktív elvûek esetében az analóg bemeneti jelet digitálissá alakítják, majd a tokozáson belül kialakított légmagos transzformátorok segítségével, a mágneses téren keresztül választják le a jelet, majd alakítják vissza analóggá. Ez a megoldás akár kis teljesítményû leválasztott tápok kialakítását is lehetõvé teszi a digitális jelek átvitele mellett. A kapacitív elven mûködõ izolátorok szintén digitalizálják a bemeneti jelet, majd a szilícium lapkákon kialakított nagyfeszültségû kondenzátorok segítségével, az elektromos téren keresztül juttatják át a a jelet a fogadó oldalra, ahol visszaalakítják analóg jellé. Az induktív és kapacitív izolátorok digitális átviteli megoldása kiküszöböli az optikai izolációs erõsítõk legfõbb problémáját, az öregedés következtében fellépõ paraméter változásokat. Az optikai elvû analóg leválasztók egyik speciális típusa a lineáris optocsatoló, amelyben egy tokozáson belül egy infra LED-hez két fotodióda tartozik. Ezt az alkatrészt egy mûveleti erõsítõs szabályzókörrel kiegészítve mind a két oldalon egy olyan megoldást kapunk, amelynek az átvitelét az öregedés nem befolyásolja jelentõsen, azt a mûveleti erõsítõk kikompenzálják.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=100mm, keepaspectratio]{figures/3_2_0_linear_opto.PNG}
-\caption{Lineáris optocsatolós analóg jel leválasztás}
+\caption{Lineáris optocsatolós analóg jel leválasztás \cite{KESZULEK_ERZ}}
 \end{figure}
-
-TODO CITÁCIÓ AUT-BME-KÉSZÜLÉK-ÉRZÉKELÉS
 
 %----------------------------------------------------------------------------
 \subsection{Ellenállásosztó és leválasztott ADC}
@@ -77,18 +75,18 @@ Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell leképezni az ADC mé
 \subsection{Feszültségmérési megoldások összehasonlítása}
 %----------------------------------------------------------------------------
 
-Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jelemzõik alapján:
+Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jellemzõik alapján:
 
-\begin{table}[h]
+\begin{table}[!ht]
 \centering
-\begin{tabular}{|m{3.3cm}|m{3.3cm}|m{3.3cm}|m{3.3cm}|}
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
 \hline
 \textbf{Szempont} & \textbf{Feszültségváltó} & \textbf{Ellenállásosztó és izolációs erõsítõ} & \textbf{Ellenállásosztó és leválasztott ADC}\\ \hline
 Elérhetõ pontosság & Alacsony & Magas & Magas\\ \hline
 AC/DC mérés & AC & AC és DC & AC és DC\\ \hline
 Frekvencia tartomány & Kicsi & Közepes & Nagy\\ \hline
 Galvanikus leválasztás & Inherens & Analóg szükséges & Digitális szükséges\\ \hline
-\end{tabular}
+\end{tabularx}
 \caption{Feszültségmérési megoldások}
 \label{voltage_meas_comp}
 \end{table}
@@ -117,17 +115,17 @@ A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldha
 
 Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kivitelû. Ez lehetõvé teszi az üzem közbeni felszerelését a mérõnek, nem kell az áramszolgáltatást szüneteltetni. A tekercs közepén átfolyó áram változásával arányos feszültség indukálódik, azt integrálva az áram értékét nagy pontossággal meg tudjuk határozni. Magas frekvenciákig, nagy áramok esetében is használható, például tranziensek vizsgálatához. Ma már tisztán nyomtatott áramkörön is kialakítható, azonban ezek pontossága még nem éri el a tekercselt kivitelûekét. A pontosabb kivitelû típusok ára magas.
 
-\begin{figure*}[t!]
+\begin{figure*}[!ht]
     \centering
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=75mm]{figures/3_2_4_rogo_sema.png}
+        \includegraphics[width=70mm]{figures/3_2_4_rogo_sema.png}
         \caption{Rogowski-tekercs sematikusan}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=75mm]{figures/3_2_3_rogo_real.png}
+        \includegraphics[width=70mm]{figures/3_2_3_rogo_real.png}
         \caption{Rogowski-tekercs a valóságban}
     \end{subfigure}
     \caption{Rogowski-tekercs}
@@ -140,9 +138,9 @@ Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kiv
 \subsection{Sönt ellenállás és izolációs erõsítõ}
 %----------------------------------------------------------------------------
 
-Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció. A mérési pontosság növelésének érdekében érdemes Kelvnin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn jutassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 terminális ellenállásokat is, melyekkel tovább növelhetõ a pontosság.
+Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció. A mérési pontosság növelésének érdekében érdemes Kelvnin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn juttassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 terminális ellenállásokat is, melyekkel tovább növelhetõ a pontosság.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=50mm, keepaspectratio]{figures/3_2_5_shunt.png}
 \caption{Négy kivezetéses árammérõ sönt}
@@ -154,7 +152,7 @@ Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen,
 
 A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokba integrálva is be lehet szerezni, kitûnõ dinamikus tulajdonságokkal rendelkeznek, alkalmasak DC áramok mérésére, a mérendõ áramot nem szükséges egy ellenálláson keresztül vezetni és így feszültséget ejtetni, az áram nagysága az általa keltett mágneses mezõn keresztül van mérve, a Hall-effektust kihasználva, így a leválasztás a mágneses téren keresztül valósul meg. Pontos mérésekhez a külsõ mágneses tér zavaró hatása ellen speciális mérési eljárásokkal lehet védekezni, mely során több, egymás mellett elhelyezett Hall-szenzor kimenetét kell mérni, azok segítségével pedig kiszûrhetõ a külsõ tér zavaró hatása. 
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=150mm, keepaspectratio]{figures/3_2_2_hall_comp.PNG}
 \caption{Kompenzált Hall-szenzoros árammérõ fluxus koncentrátorral}
@@ -162,7 +160,7 @@ A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokb
 \end{figure}
 % TODO CITÁCIÓ  https://www.infineon.com/dgdl/Current_Sensing_Rev.1.1.pdf?fileId=db3a304332d040720132d939503e5f17
 
-Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, amely a mérendõ vezetõ körüli mágneses hurkot a Hall-szenzorhoz vezeti. A mágneses koncentrátorok a nulla térerõsség körül mûködnek a legpontosabban, így egy további mûveletierõsítõs áramkörrel ezt kompenzálhatjuk, mint például a \ref{hall_comp}-as ábrán. A pontosabb szenzorok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján az integrált szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
+Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, amely a mérendõ vezetõ körüli mágneses hurkot a Hall-szenzorhoz vezeti. A mágneses koncentrátorok a nulla térerõsség körül mûködnek a legpontosabban, így egy további mûveleti erõsítõs áramkörrel ezt kompenzálhatjuk, mint például a \ref{hall_comp}-as ábrán. A pontosabb szenzorok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján az integrált szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
 
 %----------------------------------------------------------------------------
 \subsection{Árammérési megoldások összehasonlítása}
@@ -170,7 +168,7 @@ Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, a
 
 Most vessük össze a fõbb szempontok alapján a felsorolt megoldásokat, hogy egy helyen tudjuk összehasonlítani a különbözõ áramérzékelési módok tulajdonságait:
 
-\begin{table}[h]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|m{2.5cm}|m{2.5cm}|m{2.5cm}|m{2.5cm}|m{2.5cm}|}
 \hline
@@ -182,11 +180,9 @@ Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
 Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
 Galvanikus leválasztás & Inherens & Inherens & Analóg szükséges & Inherens\\ \hline
 \end{tabular}
-\caption{Árammérési megoldások}
+\caption{Árammérési megoldások \cite{TI_CUR_COMP}}
 \label{current_meas_comp}
 \end{table}
-
-%CITÁCIÓ https://e2e.ti.com/blogs_/archives/b/precisionhub/archive/2015/07/10/six-ways-to-sense-current-and-how-to-decide-which-to-use
 
 %----------------------------------------------------------------------------
 \section{Adatfeldolgozás}
@@ -213,7 +209,7 @@ Az AD értékek kiolvasását nagyobb gyakorisággal kell végrehajtani, illetve ezt á
 \subsection{Mikrokontroller}
 %----------------------------------------------------------------------------
 
-A mikrokontrollerek gyártónként és családonként is nagyon széles palettán mozognak, a DSP-k és egyszerû MCU-k határvonala összefolyik. Az egyszerûség kedvéért gondoljunk itt egy 32 bites példányra, amelyben nincs lebegõpontos segédprocesszor (FPU). Ez utóbbi az egyszerû mikrokontrolleres megoldást sajnos használhatatlanná teszi, mivel minden lebegõpontos számítást szoftverbõl kell megoldania, az pedig többszörös végrahajtási idõt jelent mûveletenként. Ezt a megvalósítást akkor választhatjuk, ha a feldolgozás egy jelentõs részét átadjuk a rendszer magasabb szintjeinek.
+A mikrokontrollerek gyártónként és családonként is nagyon széles palettán mozognak, a DSP-k és egyszerû MCU-k határvonala összefolyik. Az egyszerûség kedvéért gondoljunk itt egy 32 bites példányra, amelyben nincs lebegõpontos segédprocesszor (FPU). Ez utóbbi az egyszerû mikrokontrolleres megoldást sajnos használhatatlanná teszi, mivel minden lebegõpontos számítást szoftverbõl kell megoldania, az pedig többszörös végrehajtási idõt jelent mûveletenként. Ezt a megvalósítást akkor választhatjuk, ha a feldolgozás egy jelentõs részét átadjuk a rendszer magasabb szintjeinek.
 
 %----------------------------------------------------------------------------
 \subsection{Digitális Jelfeldolgozó Processzor}
@@ -231,13 +227,13 @@ Az alkalmazás megvalósítható konfigurálható logikai eszközökkel is, például FPGA
 \subsection{Mérõ IC, beégetett DSP kóddal}
 %----------------------------------------------------------------------------
 
-Több gyártó kínál komplett megoldásokat egy tokban realizálva. Ezek tartalmazzák az analóg front-end-et, nagy felbontású analóg-digitális átalakítót, valamint egy elõre felprogramozott digitális jelfeldolgozó processzort. Az Analog Devices egyik termékcsaládja még 5kV RMS izolációt is biztosít a digitális interfészéhez egy tokban, illetve ugyanitt leválasztott segéd tápot is elõállít a mérõ oldalnak. Ezeknek a megoldásoknak elõnye a remek pontosság, jó paraméterezhetõség, illetve a sokkal rövidebb fejlesztési idõ. A különbözõ kompenzációs algoritmusok mind implementálva vannak, a fejlesztõnek az alkalmazáshoz megfelelõen fel kell konfigurálnia a mérõt, majd a kész adatokat kell kiolvasnia és felhasználnia. Közös hátrány azonban, hogy a gyártó bármikor kivonhatja az adott típust a forgalomból, így a fejlesztõnek át kell terveznie a terméket, új szoftvert kell fejleszteni, újra bevizsgáltatnia, ami költséges és idõigényes lehet, ezért ennél a megoldásnál elengedhetetlen utánanézni az adott alkatrész beszerezhetõségének.
+Több gyártó kínál komplett megoldásokat egy tokban realizálva. Ezek tartalmazzák az analóg front-end-et, nagy felbontású analóg-digitális átalakítót, valamint egy elõre felprogramozott digitális jelfeldolgozó processzort. Az Analog Devices egyik termékcsaládja még 5kV RMS izolációt is biztosít a digitális interfészéhez egy tokban, illetve ugyanitt leválasztott segéd tápot is elõállít a mérõ oldalnak \cite{ADE_7978/ADE_7933/ADE_7932/ADE_7923}. Ezeknek a megoldásoknak elõnye a remek pontosság, jó paraméterezhetõség, illetve a sokkal rövidebb fejlesztési idõ. A különbözõ kompenzációs algoritmusok mind implementálva vannak, a fejlesztõnek az alkalmazáshoz megfelelõen fel kell konfigurálnia a mérõt, majd a kész adatokat kell kiolvasnia és felhasználnia. Közös hátrány azonban, hogy a gyártó bármikor kivonhatja az adott típust a forgalomból, így a fejlesztõnek át kell terveznie a terméket, új szoftvert kell fejleszteni, újra bevizsgáltatnia, ami költséges és idõigényes lehet, ezért ennél a megoldásnál elengedhetetlen utánanézni az adott alkatrész beszerezhetõségének.
 
 %----------------------------------------------------------------------------
 \section{Választott megoldás}
 %----------------------------------------------------------------------------
 
-A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint, feszültségméréshez az Analog Devices ADE7978 beégetett kódú DSP-jét, illetve az ehhez a családhoz tartozó ADE7933-as, 3 analóg-digitális átalakítót, 5kV-os digitális izolációt, illetve tápleválasztást tartalmazó mérõ IC-t választottam. Ez a típus elsõsorban sönt ellenállásos árammérést támogat. Ezekkel az alkatrészekkel a specifikáció kielégítéséhez szükséges pontosságú, kis méretû megoldást lehet kialakítani. A választott megoldás ugyan áramméréshez sönt ellenállást használ, azonban ennek értéke rendkívül alacsony, mivel az ADE7933 árammérõ bemenetén a feszültség +-31.25mV, amennyiben ehhez a 6mOhmos tervezett mérõsöntöt vesszük, a maximális disszipáció nem haladja meg a 100mW-ot sem, így a választott mérési elv nem jár jelentõs hõfejlõdéssel.
+A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint, feszültségméréshez az Analog Devices ADE7978 beégetett kódú DSP-jét, illetve az ehhez a családhoz tartozó ADE7933-as, 3 analóg-digitális átalakítót, 5kV-os digitális izolációt, illetve tápleválasztást tartalmazó mérõ IC-t választottam. Ez a típus elsõsorban sönt ellenállásos árammérést támogat. Ezekkel az alkatrészekkel a specifikáció kielégítéséhez szükséges pontosságú, kis méretû megoldást lehet kialakítani. A választott megoldás ugyan áramméréshez sönt ellenállást használ, azonban ennek értéke rendkívül alacsony, mivel az ADE7933 árammérõ bemenetén a feszültség $\pm$31.25mV, amennyiben ehhez a 5m$\Omega$-os tervezett mérõsöntöt vesszük, a maximális disszipáció nem haladja meg a 100mW-ot sem, így a választott mérési elv nem jár jelentõs hõfejlõdéssel, a mûködési hõmérséklet a környezetitõl nem fog jelentõsen eltérni.
 
 \begin{figure}[!ht]
 \centering
@@ -245,9 +241,9 @@ A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint
 \caption{Rendszer felépítése}
 \end{figure}
 
-Egy használható áramváltó, melyet késõbb a tesztalkalmazásban is válaszottam, a Schneider Electric 16451-es 50/5-ös áramváltó transzformátora. Ezzel a 32A-re biztosított vonalak árama jól fedi a tervezett mérési tartományt. Az áramváltó primer vezetékének átmérõje maximálisan 21mm, a szekunder oldali kivezetésre villás sarukkal lehet csatlakozni. A transzformátor pontossági osztálya a terhelés nagyságától függ, a TODO TODO táblázat mutatja a garantált értékeket.
+Egy használható áramváltó, melyet késõbb a tesztalkalmazásban is választottam, a Schneider Electric 16451-es 50/5-ös áramváltó transzformátora \cite{schneider_16451}. Ezzel a 32A-re biztosított vonalak árama jól fedi a tervezett mérési tartományt. Az áramváltó primer vezetékének átmérõje maximálisan 21mm, a szekunder oldali kivezetésre villás sarukkal lehet csatlakozni. A transzformátor pontossági osztálya a terhelés nagyságától függ, a \ref{16451_ct_spec} táblázat mutatja a garantált értékeket.
 
-\begin{table}[h]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -260,7 +256,7 @@ VA &     & 1,25 & 1,5 \\ \hline
 
 Mivel a mérõ az árammérõ csatornán kevesebb mint 100mW-ot disszipál el, így legalább 1\%-os pontossággal számolhatunk kalibráció nélkül.
 
-Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltûntetik.
+Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltüntetik.
 
 \begin{figure}[!ht]
 \centering
@@ -276,7 +272,7 @@ A rendszer felépítésének megtervezése után vessük össze az elméleti pontosságoka
 
 0.1$\%$-os alkatrészek alkalmazásával az ADE7978 adatlapja a következõ tipikus pontossági értékeket adja meg:
 
-\begin{table}[h]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -287,7 +283,7 @@ Mérési sávszélesség & 3.3kHz	\\ \hline
 Effektív feszültség & 0.1$\%$	\\ \hline
 Effektív áram & 0.25$\%$	\\ \hline
 Névleges frekvenciatartomány & 45-65Hz	\\ \hline
-Mûködési hõmérséklettartomány & -40...+85C$\textdegree$	\\ \hline
+Mûködési hõmérséklet-tartomány & -40...+85C$^{\circ}$	\\ \hline
 \end{tabular}
 \caption{ADE7978 tipikus pontossági értékei 0.1$\%$-os alkatrészek alkatrészek alkalmazásával}
 \label{ade7978_spec}

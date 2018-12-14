@@ -24,11 +24,11 @@ A maximális órajel 72MHz, ehhez 90 DMIPS számítási teljesítmény társul. Tartalma
 \section{Emulált EEPROM}
 %----------------------------------------------------------------------------
 
-Számos beágyazott rendszerben van szükség nem felejtõ memória használatára, a CR-PM3 esetében például a kalibrációs adatokat mindenképpen el kell tárolni, ezek pedig legyártott készülékenként változni fognak, amely az alkatrészek szórásából következik. Ezek a nem felejtõ memóriák leggyakrabban külsõ flash, vagy EEPROM típusúak, újabban pedig már az MRAM magnetorezisztív adattárolók szerepe is növekszik. Ezek a nem felejtõ memóriák viszonylag alacsony plusz költséget jelentenek, a hely igényük a nyomtatott áramkörön 1cm\textsuperscript{2} alatti, ez pedig a legtöbb alkalmazásban nem jelent szûk keresztemetszetet.
+Számos beágyazott rendszerben van szükség nem felejtõ memória használatára, a CR-PM3 esetében például a kalibrációs adatokat mindenképpen el kell tárolni, ezek pedig legyártott készülékenként változni fognak, amely az alkatrészek szórásából következik. Ezek a nem felejtõ memóriák leggyakrabban külsõ flash, vagy EEPROM típusúak, újabban pedig már az MRAM magnetorezisztív adattárolók szerepe is növekszik. Ezek a nem felejtõ memóriák viszonylag alacsony plusz költséget jelentenek, a hely igényük a nyomtatott áramkörön 1cm\textsuperscript{2} alatti, ez pedig a legtöbb alkalmazásban nem jelent szûk keresztmetszetet.
 
-Mindezek ellenére, érdemes gondolni arra, hogy a mai mikrokontrollerek programmemóriája flash, amit menet közben is tudunk page-enként törölni, illetve szavanként írni. Miért kellene külön alkatrészeket beletervezni az áramkörbe, kommunikációs interfészeket használni, ha a beépített flashben néhány lap kijelölésével ugyanúgy egy nem felejtõ memóriát tudunk létrehozni?
+Mindezek ellenére, érdemes gondolni arra, hogy a mai mikrokontrollerek programmemóriája flash, amit menet közben is tudunk page-enként törölni, illetve szavanként írni. Miért kellene külön alkatrészeket beletervezni az áramkörbe, kommunikációs interfészeket használni, ha a beépített flash-ben néhány lap kijelölésével ugyanúgy egy nem felejtõ memóriát tudunk létrehozni?
 
-\begin{table}[]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|l|l|l|}
 \hline
@@ -85,7 +85,7 @@ void eeReadFloat(volatile float* calib_address, uint16_t ee_address)
 
 Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM32 ST-LINK Utility használata, melyben implementálva van a ''LiveUpdate'' funkció, mellyel futás közben monitorozhatjuk a flash memória tartalmát. Ezzel a kalibrációs függvények fejlesztése nagyban egyszerûsödött, az esetleges hibákat az elsõ futásnál fel lehetett ismerni. 
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=150mm, keepaspectratio]{figures/5_1_0_emul_eeprom.PNG}
 \caption{STM32 ST-LINK Utility LiveUpdate opcióval}
@@ -97,11 +97,13 @@ Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM3
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=150mm, keepaspectratio]{figures/5_1_0_CUBEMX.png}
+\includegraphics[width=145mm, keepaspectratio]{figures/5_1_0_CUBEMX.png}
 \caption{STM32CubeMX konfigurációs felülete}
 \end{figure}
 
-A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett CR-BASE szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifjezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. Már az áramkörtervezés folyamatában használtam az STM32CubeMX programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert. Mivel a cégen belül Standard Peripheral Libraries-t (SPL) alkalmazunk, a segédprogramot elsõsorban nem kódgenerálásra, hanem a különbözõ perifériák kiosztásának ellenõrzéséhez, az ütközések elkerülésére alkalmaztam. Az SPL az STMicroelectronics által fejlesztett szoftverréteg, amely a fejlesztõ elõl elfedi a regiszterszintû mûveleteket, azonban alacsonyabb szintû mint a szintén gyártó által fejlesztett Hardware Abstraction Layer (HAL), amely például már az interruptokat is elfedi, a fejlesztõnek pedig csak callback függvényeket szolgáltat az interruptból.
+A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett CR-BASE szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifejezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. Már az áramkörtervezés folyamatában használtam az STM32CubeMX programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert. 
+
+Mivel a cégen belül Standard Peripheral Libraries-t (SPL) alkalmazunk, a segédprogramot elsõsorban nem kódgenerálásra, hanem a különbözõ perifériák kiosztásának ellenõrzéséhez, az ütközések elkerülésére alkalmaztam. Az SPL az STMicroelectronics által fejlesztett szoftverréteg, amely a fejlesztõ elõl elfedi a regiszterszintû mûveleteket, azonban alacsonyabb szintû mint a szintén gyártó által fejlesztett Hardware Abstraction Layer (HAL), amely például már az interruptokat is elfedi, a fejlesztõnek pedig csak callback függvényeket szolgáltat az interruptból.
 
 %----------------------------------------------------------------------------
 \subsection{Program felépítése}
@@ -282,7 +284,7 @@ A fejlesztés során többször fordult elõ, hogy valamilyen hibás konfigurálás köve
 
 Az alapkészülékben a csomagok megjelenítését, a paraméterezést viszonylag egyszerûen, egy SQL adatbázis megfelelõ kitöltésével lehet megvalósítani. Ezután egy CR-WEB elnevezésû, HTML alapú felületen követhetjük az adatok, paraméterek aktuális értékét, kiegészítve olyan, fejlesztéshez és hibakereséshez hasznos információkkal, mint például az adat utolsó keletkezési ideje, illetve beérkezési ideje. 
 
-Egy külön fülön a modul állapotát is nyomonkövethetjük, valamint kiolvashatjuk a C-CAN-en bekövetkezett hibákat, a kiegészítõ modul slave processzorának utolsó resetelésének okát.
+Egy külön fülön a modul állapotát is nyomon követhetjük, valamint kiolvashatjuk a C-CAN-en bekövetkezett hibákat, a kiegészítõ modul slave processzorának utolsó resetelésének okát.
 
 Ezek a funkciók fejlesztéshez, mérésekhez rendkívül kényelmesek, az alapkészülék hálózatra való csatlakoztatásával a tényleges kialakítás helyétõl távol is figyelemmel követhetjük és vizsgálhatjuk a C-RTU alapú rendszereket. 
 
@@ -320,9 +322,9 @@ A végmérés és kalibráció a CR-PM3 esetében gyakorlatilag szétválaszthatatlan, mi
 %----------------------------------------------------------------------------
 
 
-A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosítota. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban:
+A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosította. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban:
 
-\begin{table}[]
+\begin{table}[!ht]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -418,9 +420,9 @@ A kontrolleren implementált kalibrációs függvények meghívását kiváltó C-CAN üzen
 \label{crtu_calib_main}
 \end{figure}
 
-Egy-egy új modul komponenseinek implementálása egyszerû, a már meglévõ részegységek újrafelhasználhatók, mint például a LED-ek, nyomógombok, kapcsolók teszteji.
+Egy-egy új modul komponenseinek implementálása egyszerû, a már meglévõ részegységek újrafelhasználhatók, mint például a LED-ek, nyomógombok, kapcsolók tesztjei.
 
-A modulhoz tartozó almenüben a végmérés és kalibráció lépéseit egymás után hajthatjuk végre, illetve rögzíthetjük a különbözõ készülék paramétereket, mérési adatokat. A modul specifikus almenünek a felépítése a \ref{crtu_calib_crpm} ábrán láhtható.
+A modulhoz tartozó almenüben a végmérés és kalibráció lépéseit egymás után hajthatjuk végre, illetve rögzíthetjük a különbözõ készülék paramétereket, mérési adatokat. A modul specifikus almenünek a felépítése a \ref{crtu_calib_crpm} ábrán látható.
 
 \begin{figure}[!ht]
 \centering

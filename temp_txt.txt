@@ -31,13 +31,13 @@ institution = {Magyar Szabványügyi Testület}
 
 @MISC{emtest_what_is_standards,
   author="{EM TEST (Switzerland) GmbH}",
-  title="{{The structure of {EMC} standards (2018. november 12.)}}",
+  title="The structure of {EMC} standards (2018. november 12.)",
   howpublished="\url{http://www.emtest.com/what_is/standards.php}",
 }
 
 @MISC{schneider_16451,
   author="{Schneider Electric}",
-  title="{{Schneider Legacy Products - 16451 (2018. november 21.)}}",
+  title="Schneider Legacy Products - 16451 (2018. november 21.)",
   howpublished="\url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}",
 }
 
@@ -109,7 +109,7 @@ volume = {2014},
 institution = {Analog Devices}
 }
 
-@techreport{MSZ_EN_61000-6-1_2007,
+@techreport{MSZ_EN_6100-6-1_2007,
 type = {Szabvány},
 key = {MSZ EN 61000-6-1:2007},
 month = {07},
@@ -191,49 +191,37 @@ institution = {Xiaoning Ye, D.M. Hockanson, Min Li, Wei Cui, S. Radu, J.L. Drewn
 
 @MISC{EDN_ISOLATION_FILTER,
   author="{Anand Reghunathan, Koteshwar Rao, Anant Kamath}",
-  title="{{How to achieve low radiated emissions with fully integrated data and power isolation (2018. november 25.)}}",
+  title="How to achieve low radiated emissions with fully integrated data and power isolation (2018. november 25.)",
   howpublished="\url{https://www.edn.com/Home/PrintView?contentItemId=4458172}",
 }
 
 @MISC{PROLAN_CRTU,
   author="{Prolan Zrt.}",
-  title="{{Kompakt mérésadatgyûjtõ, vezérlõ rendszer (C-RTU) (2018. november 25.)}}",
+  title="Kompakt mérésadatgyûjtõ, vezérlõ rendszer (C-RTU) (2018. november 25.)",
   howpublished="\url{http://www.prolan.hu/hu/megoldasok/CRTU}",
-}
-
-@MISC{PROLAN_PROFIELD,
-  author="{Prolan Zrt.}",
-  title="{{RTU (Profield) (2018. december 14.)}}",
-  howpublished="\url{http://www.prolan.hu/megoldasok/ProField-RTU}",
 }
 
 @MISC{OMRON_CMC_356,
   author="{OMICRON electronics GmbH}",
-  title="{{CMC 356 Universal relay test set and commissioning tool (2018. november 25.)}}",
+  title="CMC 356 Universal relay test set and commissioning tool (2018. november 25.)",
   howpublished="\url{https://www.omicronenergy.com/en/products/cmc-356/}",
 }
 
 @MISC{KESZULEK_FESZ,
   author="{Dr. Balogh Attila (BME-AUT)}",
-  title="{{Készüléktervezés jegyzet: 9. Túlfeszültség védelem}}",
+  title="Készüléktervezés jegyzet: 9. Túlfeszültség védelem",
   howpublished="\url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%balfesz%c3%bclts%c3%a9g_v%c3%a9delem.pdf}",
 }
 
 @MISC{KESZULEK_ARAM,
   author="{Dr. Balogh Attila (BME-AUT)}",
-  title="{{Készüléktervezés jegyzet: 8. Túláramvédelem}}",
+  title="Készüléktervezés jegyzet: 8. Túláramvédelem",
   howpublished="\url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%bal%c3%a1ram_v%c3%a9delem.pdf}",
-}
-
-@MISC{KESZULEK_ERZ,
-  author="{Dr. Varjasi István (BME-AUT)}",
-  title="{{Készüléktervezés jegyzet: 11. Érzékelõk}}",
-  howpublished="\url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/K%C3%A9sz%C3%BCl%C3%A9ktervez%C3%A9s_%C3%89rz%C3%A9kel%C3%A9s.pdf}",
 }
 
 @MISC{VARISTOR,
   author="{ElectronicsTutorials}",
-  title="{{Varistor Tutorial (2018.12.11.)}}",
+  title="Varistor Tutorial (2018.12.11.)",
   howpublished="\url{https://www.electronics-tutorials.ws/resistor/varistor.html}",
 }
 
@@ -249,31 +237,31 @@ institution = {Richtek}
 
 @MISC{ENTSO_E,
   author="{ENTSO-E}",
-  title="{{Our Members (2018.12.14.)}}",
+  title="Our Members (2018.12.14.)",
   howpublished="\url{https://docstore.entsoe.eu/Pages/default.aspx}",
 }
 
 @MISC{EM_TEST_UCS_500,
   author="{EM TEST}",
-  title="{{EM TEST UCS 500 Product page}}",
+  title="EM TEST UCS 500 Product page",
   howpublished="\url{http://www.emtest.com/products/overview_ucs500m.php}",
 }
 
 @MISC{PMM_3000,
   author="{Advanced Test Equipment Rentals}",
-  title="{{PMM 3000 RF Generator 10 KHz - 1 GHz Product page}}",
+  title="PMM 3000 RF Generator 10 KHz - 1 GHz Product page",
   howpublished="\url{https://www.atecorp.com/products/pmm/pmm-3000}",
 }
 
 @MISC{PMM_6000N,
   author="{Advanced Test Equipment Rentals}",
-  title="{{PMM 6000N RF Power Amplifier Product page}}",
+  title="PMM 6000N RF Power Amplifier Product page",
   howpublished="\url{https://www.atecorp.com/products/pmm/6000n}",
 }
 
 @MISC{PHOENIX_BC,
   author="{Phoenix Contact}",
-  title="{{BC moduláris készülékházak}}",
+  title="BC moduláris készülékházak",
   howpublished="\url{https://www.phoenixcontact.com/online/portal/hu?1dmy&urile=wcm:path:/huhu/web/main/products/subcategory_pages/Modular_housings_BC_P-01-12-02/3a371abc-34e5-438f-a723-d2ab8e20eaa1}",
 }
 
@@ -297,42 +285,12 @@ volume = {2018},
 institution = {Vishay}
 }
 
-@techreport{MSZ_EN_61000_3_2,
+@techreport{MSZ_EN_61000_4_30_2015,
 type = {Szabvány},
-key = {MSZ EN 61000-3-2:2014},
-month = {12},
-year = {2014},
-title = {{Elektromágneses összeférhetõség (EMC). 3-2. rész: Határértékek. A felharmonikus áramok kibocsátási határértékei (fázisonként legfeljebb 16 A bemenõáramú berendezésekre) (IEC 61000-3-2:2014)}},
-volume = {2014},
+key = {MSZ EN 61000-4-30:2015},
+month = {08},
+year = {2015},
+title = {{Elektromágneses összeférhetõség (EMC). 4-30. rész: Vizsgálati és mérési módszerek. A hálózati feszültség minõségének mérési módszerei (IEC 61000-4-30:2015)}},
+volume = {2015},
 institution = {Magyar Szabványügyi Testület}
-}
-
-@MISC{TAG_CON,
-  author="{Tag-Connect}",
-  title="{{TC2030-MCP 6-Pin Cable with RJ12 Modular Plug (for Microchip ICD)}}",
-  howpublished="\url{http://www.tag-connect.com/TC2030-MCP}",
-}
-
-@MISC{BIVAR,
-  author="{Bivar}",
-  title="{{Bivar PLP2 light pipe}}",
-  howpublished="\url{https://www.bivar.com/portals/0/products/PLP2-XXX.pdf}",
-}
-
-@MISC{TI_CUR_COMP,
-  author="{Arek Kacprzak}",
-  title="{{Six ways to sense current and how to decide which to use}}",
-  howpublished="\url{https://e2e.ti.com/blogs_/archives/b/precisionhub/archive/2015/07/10/six-ways-to-sense-current-and-how-to-decide-which-to-use}",
-}
-
-@MISC{SAMTEC_HLE,
-  author="{Samtec}",
-  title="{{HLE .100 Tiger Beam Cost-effective Single Beam Socket Strip}}",
-  howpublished="\url{https://www.samtec.com/products/hle}",
-}
-
-@MISC{SAMTEC_DW,
-  author="{Samtec}",
-  title="{{DW .100 Flex Stack, Flexible Board Stacker}}",
-  howpublished="\url{https://www.samtec.com/products/dw}",
 }

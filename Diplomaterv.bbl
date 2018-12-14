@@ -18,14 +18,8 @@
 
 \bibitem{emtest_what_is_standards}
 {EM TEST (Switzerland) GmbH}.
-\newblock The structure of {EMC} standards (2018. november 12.).
+\newblock {{The structure of {EMC} standards (2018. november 12.)}}.
 \newblock \url{http://www.emtest.com/what_is/standards.php}.
-
-\bibitem{MSZ_EN_6100-6-1_2007}
-{Elektromágneses összeférhetõség (EMC). 6-1. rész: Általános szabványok.
-  Zavartûrés a lakóhelyi, a kereskedelmi és az enyhén ipari környezetekre (IEC
-  61000-6-1:2005)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 07 2007.
 
 \bibitem{MSZ_EN_55014-1_2007}
 {Elektromágneses összeférhetõség. Háztartási készülékek, villamos szerszámok és
@@ -58,7 +52,7 @@
 
 \bibitem{schneider_16451}
 {Schneider Electric}.
-\newblock Schneider legacy products - 16451 (2018. november 21.).
+\newblock {{Schneider Legacy Products - 16451 (2018. november 21.)}}.
 \newblock
   \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
 
@@ -101,21 +95,88 @@
 
 \bibitem{EDN_ISOLATION_FILTER}
 {Anand Reghunathan, Koteshwar Rao, Anant Kamath}.
-\newblock How to achieve low radiated emissions with fully integrated data and
-  power isolation (2018. november 25.).
+\newblock {{How to achieve low radiated emissions with fully integrated data
+  and power isolation (2018. november 25.)}}.
 \newblock \url{https://www.edn.com/Home/PrintView?contentItemId=4458172}.
 
 \bibitem{PROLAN_CRTU}
 {Prolan Zrt.}
-\newblock Kompakt mérésadatgyûjtõ, vezérlõ rendszer (c-rtu) (2018. november
-  25.).
+\newblock {{Kompakt mérésadatgyûjtõ, vezérlõ rendszer (C-RTU) (2018. november
+  25.)}}.
 \newblock \url{http://www.prolan.hu/hu/megoldasok/CRTU}.
 
 \bibitem{OMRON_CMC_356}
 {OMICRON electronics GmbH}.
-\newblock Cmc 356 universal relay test set and commissioning tool (2018.
-  november 25.).
+\newblock {{CMC 356 Universal relay test set and commissioning tool (2018.
+  november 25.)}}.
 \newblock \url{https://www.omicronenergy.com/en/products/cmc-356/}.
+
+\bibitem{ENTSO_E}
+{ENTSO-E}.
+\newblock {{Our Members (2018.12.14.)}}.
+\newblock \url{https://docstore.entsoe.eu/Pages/default.aspx}.
+
+\bibitem{EM_TEST_UCS_500}
+{EM TEST}.
+\newblock {{EM TEST UCS 500 Product page}}.
+\newblock \url{http://www.emtest.com/products/overview_ucs500m.php}.
+
+\bibitem{PMM_3000}
+{Advanced Test Equipment Rentals}.
+\newblock {{PMM 3000 RF Generator 10 KHz - 1 GHz Product page}}.
+\newblock \url{https://www.atecorp.com/products/pmm/pmm-3000}.
+
+\bibitem{PMM_6000N}
+{Advanced Test Equipment Rentals}.
+\newblock {{PMM 6000N RF Power Amplifier Product page}}.
+\newblock \url{https://www.atecorp.com/products/pmm/6000n}.
+
+\bibitem{MSZ_EN_1_2002}
+{MSZ EN 1:2002, Szabványos villamos feszültségek}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 01 2002.
+
+\bibitem{PHOENIX_BC}
+{Phoenix Contact}.
+\newblock {{BC moduláris készülékházak}}.
+\newblock
+  \url{https://www.phoenixcontact.com/online/portal/hu?1dmy&urile=wcm:path:/huhu/web/main/products/subcategory_pages/Modular_housings_BC_P-01-12-02/3a371abc-34e5-438f-a723-d2ab8e20eaa1}.
+
+\bibitem{VISHAY_RESISTOR}
+{High Voltage Thin Film Flat Chip Resistors Datasheet}.
+\newblock Datasheet, Vishay, 04 2018.
+
+\bibitem{KESZULEK_FESZ}
+{Dr. Balogh Attila (BME-AUT)}.
+\newblock {{Készüléktervezés jegyzet: 9. Túlfeszültség védelem}}.
+\newblock
+  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%balfesz%c3%bclts%c3%a9g_v%c3%a9delem.pdf}.
+
+\bibitem{KESZULEK_ARAM}
+{Dr. Balogh Attila (BME-AUT)}.
+\newblock {{Készüléktervezés jegyzet: 8. Túláramvédelem}}.
+\newblock
+  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%bal%c3%a1ram_v%c3%a9delem.pdf}.
+
+\bibitem{VARISTOR}
+{ElectronicsTutorials}.
+\newblock {{Varistor Tutorial (2018.12.11.)}}.
+\newblock \url{https://www.electronics-tutorials.ws/resistor/varistor.html}.
+
+\bibitem{RT7285A}
+{RT7285 Datasheet}.
+\newblock Datasheet, Richtek, 10 2014.
+
+\bibitem{MSZ_EN_61000_3_2}
+{Elektromágneses összeférhetõség (EMC). 3-2. rész: Határértékek. A
+  felharmonikus áramok kibocsátási határértékei (fázisonként legfeljebb 16 A
+  bemenõáramú berendezésekre) (IEC 61000-3-2:2014)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 12 2014.
+
+\bibitem{TAG_CON}
+{Tag-Connect}.
+\newblock {{TC2030-MCP 6-Pin Cable with RJ12 Modular Plug (for Microchip
+  ICD)}}.
+\newblock \url{http://www.tag-connect.com/TC2030-MCP}.
 
 \bibitem{MSZ_EN_61000-4-30_2015}
 {Elektromágneses összeférhetõség (EMC). 4-30. rész: Vizsgálati és mérési
@@ -123,30 +184,36 @@
   61000-4-30:2015)}.
 \newblock Szabvány, Magyar Szabványügyi Testület, 08 2015.
 
-\bibitem{ENTSO_E}
-{ENTSO-E}.
-\newblock Our members (2018.12.14.).
-\newblock \url{https://docstore.entsoe.eu/Pages/default.aspx}.
+\bibitem{PROLAN_PROFIELD}
+{Prolan Zrt.}
+\newblock {{RTU (Profield) (2018. december 14.)}}.
+\newblock \url{http://www.prolan.hu/megoldasok/ProField-RTU}.
 
-\bibitem{KESZULEK_FESZ}
-{Dr. Balogh Attila (BME-AUT)}.
-\newblock Készüléktervezés jegyzet: 9. túlfeszültség védelem.
+\bibitem{KESZULEK_ERZ}
+{Dr. Varjasi István (BME-AUT)}.
+\newblock {{Készüléktervezés jegyzet: 11. Érzékelõk}}.
 \newblock
-  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%balfesz%c3%bclts%c3%a9g_v%c3%a9delem.pdf}.
+  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/K%C3%A9sz%C3%BCl%C3%A9ktervez%C3%A9s_%C3%89rz%C3%A9kel%C3%A9s.pdf}.
 
-\bibitem{KESZULEK_ARAM}
-{Dr. Balogh Attila (BME-AUT)}.
-\newblock Készüléktervezés jegyzet: 8. túláramvédelem.
+\bibitem{TI_CUR_COMP}
+{Arek Kacprzak}.
+\newblock {{Six ways to sense current and how to decide which to use}}.
 \newblock
-  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%bal%c3%a1ram_v%c3%a9delem.pdf}.
+  \url{https://e2e.ti.com/blogs_/archives/b/precisionhub/archive/2015/07/10/six-ways-to-sense-current-and-how-to-decide-which-to-use}.
 
-\bibitem{VARISTOR}
-{ElectronicsTutorials}.
-\newblock Varistor tutorial (2018.12.11.).
-\newblock \url{https://www.electronics-tutorials.ws/resistor/varistor.html}.
+\bibitem{SAMTEC_DW}
+{Samtec}.
+\newblock {{DW .100" Flex Stack, Flexible Board Stacker, .110" Tail }}.
+\newblock \url{https://www.samtec.com/products/dw}.
 
-\bibitem{RT7285A}
-{RT7285 Datasheet}.
-\newblock Datasheet, Richtek, 10 2014.
+\bibitem{SAMTEC_HLE}
+{Samtec}.
+\newblock {{HLE .100" Tiger Beam™ Cost-effective Single Beam Socket Strip}}.
+\newblock \url{https://www.samtec.com/products/hle}.
+
+\bibitem{BIVAR}
+{Bivar}.
+\newblock {{Bivar PLP2 light pipe}}.
+\newblock \url{https://www.bivar.com/portals/0/products/PLP2-XXX.pdf}.
 
 \end{thebibliography}
