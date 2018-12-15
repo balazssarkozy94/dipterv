@@ -257,6 +257,7 @@ Mivel a mérõ az árammérõ csatornán kevesebb mint 100mW-ot disszipál el, így lega
 
 Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltüntetik. Ebben a konfigurációba arra kell figyelni, hogy az árammérõ valamint a feszültségmérõ bemenetek bekötésénél a fázisfeszültség ne kerüljön a mérõ IC bemenetei közé, csak a nagyfeszültségû ellenállásosztón keresztül. Ez vagy úgy érhetõ el, hogy a nullvezetõ áramát mérjük a sönttel, és ekkor a nagyfeszültségû ellenálláság a fázisra van kötve, vagy pedig a fázisvezetõ áramát nézzük, ilyen bekötésnél pedig a nullvezetõt kötjük a nagyfeszültségû ellenállásosztóra.
 
+Az adatok kiolvasását az ADE7978-bõl egy STM32F303-as mikrokontrollerrel valósítom meg, mivel az F3-as sorozaton belül ez már használva van más modulokban, teljesítménye pedig bõven elegendõ a tervezett számítási feladatok ellátásához.
 %----------------------------------------------------------------------------
 \subsection{Elméleti specifikáció, funkcionalitás}
 %----------------------------------------------------------------------------

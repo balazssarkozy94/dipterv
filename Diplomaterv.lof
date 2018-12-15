@@ -13,21 +13,21 @@
 \select@language {magyar} \contentsline {figure}{\numberline {3.5.}{\ignorespaces Kompenz\'alt Hall-szenzoros \'aramm\'er\H o fluxus koncentr\'atorral \cite {Infineon_hall}\relax }}{23}{figure.caption.17}
 \select@language {magyar} \contentsline {figure}{\numberline {3.6.}{\ignorespaces Rendszer fel\'ep\IeC {\'\i }t\'ese\relax }}{26}{figure.caption.19}
 \select@language {magyar} \addvspace {10\p@ }
-\select@language {magyar} \contentsline {figure}{\numberline {4.1.}{\ignorespaces RT7285/A alap\'u kapcsol\'o\"uzem\H u t\'apegys\'eg\relax }}{31}{figure.caption.22}
-\select@language {magyar} \contentsline {figure}{\numberline {4.2.}{\ignorespaces Az \'aramm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{34}{figure.caption.24}
-\select@language {magyar} \contentsline {figure}{\numberline {4.3.}{\ignorespaces \'Atlapol\'od\'as jelens\'ege az ADC bemenet\'en \cite {ADE_7978/ADE_7933/ADE_7932/ADE_7923}\relax }}{35}{figure.caption.25}
-\select@language {magyar} \contentsline {figure}{\numberline {4.4.}{\ignorespaces A fesz\"ults\'egm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{35}{figure.caption.26}
-\select@language {magyar} \contentsline {figure}{\numberline {4.5.}{\ignorespaces RT7285 alap\'u t\'apegys\'eg NY\'AK terve\relax }}{38}{figure.caption.28}
-\select@language {magyar} \contentsline {figure}{\numberline {4.6.}{\ignorespaces CR-PM3 m\'er\H o bemeneteinek NY\'AK terve\relax }}{38}{figure.caption.29}
-\select@language {magyar} \contentsline {figure}{\numberline {4.7.}{\ignorespaces Szigetel\'eskoordin\'aci\'o MSZ EN 60664-1 alapj\'an \cite {MSZ_EN_60664-1_2008}\relax }}{40}{figure.caption.30}
-\select@language {magyar} \contentsline {figure}{\numberline {4.8.}{\ignorespaces EMC vizsg\'alatok oszt\'alyz\'asa\relax }}{41}{figure.caption.31}
-\select@language {magyar} \contentsline {figure}{\numberline {4.9.}{\ignorespaces Emisszi\'o cs\"okkent\'ese integr\'alt izol\'alt t\'ap eset\'en \cite {EDN_ISOLATION_FILTER}\relax }}{44}{figure.caption.34}
-\select@language {magyar} \contentsline {figure}{\numberline {4.10.}{\ignorespaces ESD teszt csatol\'o s\IeC {\'\i }kokkal\relax }}{45}{figure.caption.37}
-\select@language {magyar} \contentsline {figure}{\numberline {4.11.}{\ignorespaces Burst \'es surge teszt m\'er\'esi \"ossze\'all\IeC {\'\i }t\'asa\relax }}{46}{figure.caption.39}
-\select@language {magyar} \contentsline {figure}{\numberline {4.12.}{\ignorespaces Szimul\'ator be\'all\IeC {\'\i }t\'asai \'es m\'ert \'ert\'ekei surge teszt alatt\relax }}{47}{figure.caption.41}
-\select@language {magyar} \contentsline {figure}{\numberline {4.13.}{\ignorespaces Vezetett RF zavarok m\'er\'eseihez haszn\'alt eszk\"oz\"ok\relax }}{47}{figure.caption.43}
-\select@language {magyar} \contentsline {figure}{\numberline {4.14.}{\ignorespaces CR-PM3 \"ossze\'all\IeC {\'\i }t\'asa\relax }}{49}{figure.caption.44}
-\select@language {magyar} \contentsline {figure}{\numberline {4.15.}{\ignorespaces CR-PM3 a k\'esz\"ul\'ekh\'azban\relax }}{50}{figure.caption.45}
+\select@language {magyar} \contentsline {figure}{\numberline {4.1.}{\ignorespaces CR-PM3 \"ossze\'all\IeC {\'\i }t\'asa\relax }}{30}{figure.caption.22}
+\select@language {magyar} \contentsline {figure}{\numberline {4.2.}{\ignorespaces CR-PM3 a k\'esz\"ul\'ekh\'azban\relax }}{31}{figure.caption.23}
+\select@language {magyar} \contentsline {figure}{\numberline {4.3.}{\ignorespaces RT7285/A alap\'u kapcsol\'o\"uzem\H u t\'apegys\'eg\relax }}{33}{figure.caption.24}
+\select@language {magyar} \contentsline {figure}{\numberline {4.4.}{\ignorespaces Az \'aramm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{36}{figure.caption.26}
+\select@language {magyar} \contentsline {figure}{\numberline {4.5.}{\ignorespaces \'Atlapol\'od\'as jelens\'ege az ADC bemenet\'en \cite {ADE_7978/ADE_7933/ADE_7932/ADE_7923}\relax }}{37}{figure.caption.27}
+\select@language {magyar} \contentsline {figure}{\numberline {4.6.}{\ignorespaces A fesz\"ults\'egm\'er\'eshez tartoz\'o bemeneti \'aramk\"or\relax }}{37}{figure.caption.28}
+\select@language {magyar} \contentsline {figure}{\numberline {4.7.}{\ignorespaces RT7285 alap\'u t\'apegys\'eg NY\'AK terve\relax }}{39}{figure.caption.30}
+\select@language {magyar} \contentsline {figure}{\numberline {4.8.}{\ignorespaces CR-PM3 m\'er\H o bemeneteinek NY\'AK terve\relax }}{40}{figure.caption.31}
+\select@language {magyar} \contentsline {figure}{\numberline {4.9.}{\ignorespaces Szigetel\'eskoordin\'aci\'o MSZ EN 60664-1 alapj\'an \cite {MSZ_EN_60664-1_2008}\relax }}{42}{figure.caption.32}
+\select@language {magyar} \contentsline {figure}{\numberline {4.10.}{\ignorespaces EMC vizsg\'alatok oszt\'alyz\'asa\relax }}{43}{figure.caption.33}
+\select@language {magyar} \contentsline {figure}{\numberline {4.11.}{\ignorespaces Emisszi\'o cs\"okkent\'ese integr\'alt izol\'alt t\'ap eset\'en \cite {EDN_ISOLATION_FILTER}\relax }}{46}{figure.caption.36}
+\select@language {magyar} \contentsline {figure}{\numberline {4.12.}{\ignorespaces ESD teszt csatol\'o s\IeC {\'\i }kokkal\relax }}{47}{figure.caption.39}
+\select@language {magyar} \contentsline {figure}{\numberline {4.13.}{\ignorespaces Burst \'es surge teszt m\'er\'esi \"ossze\'all\IeC {\'\i }t\'asa\relax }}{48}{figure.caption.41}
+\select@language {magyar} \contentsline {figure}{\numberline {4.14.}{\ignorespaces Szimul\'ator be\'all\IeC {\'\i }t\'asai \'es m\'ert \'ert\'ekei surge teszt alatt\relax }}{49}{figure.caption.43}
+\select@language {magyar} \contentsline {figure}{\numberline {4.15.}{\ignorespaces Vezetett RF zavarok m\'er\'eseihez haszn\'alt eszk\"oz\"ok\relax }}{49}{figure.caption.45}
 \select@language {magyar} \addvspace {10\p@ }
 \select@language {magyar} \contentsline {figure}{\numberline {5.1.}{\ignorespaces STM32 ST-LINK Utility LiveUpdate opci\'oval\relax }}{53}{figure.caption.47}
 \select@language {magyar} \contentsline {figure}{\numberline {5.2.}{\ignorespaces Debug soros port kimenete\relax }}{58}{figure.caption.48}

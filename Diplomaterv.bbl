@@ -86,6 +86,21 @@
 \newblock
   \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
 
+\bibitem{SAMTEC_DW}
+{Samtec}.
+\newblock {{DW .100 Flex Stack, Flexible Board Stacker}}.
+\newblock \url{https://www.samtec.com/products/dw}.
+
+\bibitem{SAMTEC_HLE}
+{Samtec}.
+\newblock {{HLE .100 Tiger Beam Cost-effective Single Beam Socket Strip}}.
+\newblock \url{https://www.samtec.com/products/hle}.
+
+\bibitem{BIVAR}
+{Bivar}.
+\newblock {{Bivar PLP2 light pipe}}.
+\newblock \url{https://www.bivar.com/portals/0/products/PLP2-XXX.pdf}.
+
 \bibitem{KESZULEK_FESZ}
 {Dr. Balogh Attila (BME-AUT)}.
 \newblock {{Készüléktervezés jegyzet: 9. Túlfeszültség védelem}}.
@@ -147,20 +162,5 @@
   módszerek. Rádiófrekvenciás terek által keltett, vezetett zavarokkal szembeni
   zavartûrés vizsgálata (IEC 61000-4-6:2013)}.
 \newblock Szabvány, Magyar Szabványügyi Testület, 05 2014.
-
-\bibitem{SAMTEC_DW}
-{Samtec}.
-\newblock {{DW .100 Flex Stack, Flexible Board Stacker}}.
-\newblock \url{https://www.samtec.com/products/dw}.
-
-\bibitem{SAMTEC_HLE}
-{Samtec}.
-\newblock {{HLE .100 Tiger Beam Cost-effective Single Beam Socket Strip}}.
-\newblock \url{https://www.samtec.com/products/hle}.
-
-\bibitem{BIVAR}
-{Bivar}.
-\newblock {{Bivar PLP2 light pipe}}.
-\newblock \url{https://www.bivar.com/portals/0/products/PLP2-XXX.pdf}.
 
 \end{thebibliography}

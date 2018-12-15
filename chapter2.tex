@@ -8,9 +8,9 @@
 \caption{C-RTU család moduljai}
 \end{figure}
 
-A PROLAN Zrt. C-RTU családjával kisméretû, moduláris adatgyûjtõ és vezérlõ rendszereket lehet kialakítani, melyben egy alapkészülék, és egy, vagy több kiegészítõ modul kap helyet. \cite{PROLAN_CRTU} Az alapkészülék, amelyben egy Linux operációs rendszert futtató processzor kártya van, végzi el a különbözõ távoli és közeli kommunikációs feladatokat, valósítja meg a magasabb szintû logikát és feldolgozást, a kiegészítõ modulok konfigurálását és menedzselését. Számos kiegészítõ modul áll rendelkezésre, melyek CAN kommunikációval kapcsolódnak az alapkészülékhez egy moduláris hátlapi buszon keresztül. Ezek a modulok lehetnek például: digitális be- és kimenetek (CR-DIO), feszültség és árammérõk (CR-MM4, CR-VM12, CR-PM12), tápkimaradás áthidaló okos tápegységek (CR-PS), különbözõ kommunikációs interfészt biztosító kiegészítõk (CR-OE) vagy akár elektromos jármû töltés vezérlõk (CR-CC). A legtöbb kiegészítõ modulban lévõ, helyi mikrokontroller a C-RTU alapkészülékkel a hátlapi CAN buszon kommunikál. A kontroller látja el a modul specifikus feladatokat, az alapkészüléknek már csak a magasabb szintû logikát, feldolgozást kell megvalósítania Linux operációs rendszer alól.
+A PROLAN Zrt. C-RTU családjával kisméretû, moduláris adatgyûjtõ és vezérlõ rendszereket lehet kialakítani, melyben egy alapkészülék, és egy, vagy több kiegészítõmodul kap helyet. \cite{PROLAN_CRTU} Az alapkészülék, amelyben egy Linux operációs rendszert futtató processzor kártya van, végzi el a különbözõ távoli és közeli kommunikációs feladatokat, valósítja meg a magasabb szintû logikát és feldolgozást, a kiegészítõmodulok konfigurálását és menedzselését. Számos bõvítõmodul áll rendelkezésre, melyek leggyakrabban CAN kommunikációval, ritkább esetben, amennyiben nagy adatátviteli sebesség szükséges, nagy sebességû USB-vel kapcsolódnak az alapkészülékhez egy moduláris hátlapi buszon keresztül. A hátlapi buszon +12V-os tápfeszültség is végig van vezetve, ezt minden rácsatlakozó eszköz áramkorlátozó eszközön keresztül használhatja, hogy egy meghibásodás esetén a buszt ne ültethesse le. A kiegészítõmodulok lehetnek például: digitális be- és kimenetek (CR-DIO), feszültség és árammérõk (CR-MM4, CR-VM12, CR-PM12), tápkimaradás áthidaló okos tápegységek (CR-PS), különbözõ kommunikációs interfészt biztosító kiegészítõk (CR-OE) vagy akár elektromos jármû töltés vezérlõk (CR-CC). A legtöbb kiegészítõ modulban lévõ, helyi mikrokontroller a C-RTU alapkészülékkel a hátlapi CAN buszon kommunikál, egy magasabb kommunikációs réteget használva, a belsõ fejlesztésû C-CAN-t. A kontroller látja el a modul specifikus feladatokat, az alapkészüléknek már csak a magasabb szintû logikát, feldolgozást kell megvalósítania Linux operációs rendszer alól.
 
-Az általam tervezendõ háromfázisú mérõmodul neve a családon belül CR-PM3.
+Az általam tervezendõ háromfázisú mérõmodul neve a családon belül CR-PM3, utalva a háromfázisú teljesítménymérésre. Ugyan a termékcsaládban található egy CR-PM12 12 csatornás teljesítmény mérõmodul, azonban az teljesítményminõség mérésekre kevésbé alkalmas, áramméréshez Rogowski-tekercseket használ, melyek kevésbé pontosak, illetve a 12 csatorna sok alkalmazásban feleslegesen sok, így indokolt lehet az új modul bevezetése a termékcsaládba.
 
 %----------------------------------------------------------------------------
 \section{Alapkészülék}
@@ -35,7 +35,7 @@ A kiegészítõ modulok adják a C-RTU rendszerek flexibilitását, az alapkészülék me
 \subsection{Egységes funkciók}
 %----------------------------------------------------------------------------
 
-Majdnem az összes modul STM32F303 alapú, az egyetlen kivétel ezalól a CR-OE modul, mivel azon nincs programozható mikrokontroller.
+Majdnem az összes modul STM32F3 alapú, az egyetlen kivétel ezalól a CR-OE modul, mivel azon nincs programozható mikrokontroller.
 
 A modulok elõlapján egységesen egy címbeállító dil switch kap helyet, amely segítségével a C-CAN címét tudjuk beállítani a modulnak, indulás után ez alapján tudja a modul, hogy mely üzenetek vonatkoznak rá. Az összes kiegészítõ készülék, amely valamilyen mikrokontrollert tartalmaz, egy bootloader futtatásával indul, az alapkészülék ezen keresztül tudja akár távolról is frissíteni a firmware-t.
 
@@ -43,8 +43,8 @@ Minden modul elõlapján helyet kapnak a következõ LED-ek, elõírt színnel, funkció
 
 \begin{enumerate}
 \item\emph{PWR LED:} Színe zöld, a modulban elõállított egyik tápfeszültségrõl kell járatni.
-\item\emph{STAT LED:} Színe zöld, egy processzor GPIO-nak kell vezérlenie.
-\item\emph{FAULT LED:} Színe piros, egy processzor GPIO-nak kell vezérlenie.
+\item\emph{STAT LED:} Színe zöld, egy processzor GPIO-nak kell vezérelnie.
+\item\emph{FAULT LED:} Színe piros, egy processzor GPIO-nak kell vezérelnie.
 \item\emph{BUS LED:} Színe citromsárga, egy processzor GPIO-nak kell vezérelnie.
 \end{enumerate}
 
@@ -52,11 +52,11 @@ Ezeken felül minden további, modul specifikus kommunikációnak citromsárga LED-et
 
 A CR-PM3 sajnos nem ezek az elõírások alapján készült, mivel a prototípus az ezeket leíró dokumentum elkészülte elõtt már meg lett tervezve és be lett ültetve, így az a korábbi elõírásnak felel meg, ahol azonos funkciójú LED-ek kaptak helyet, de néhányuk más színnel volt elõírva.
 
-A modulok a hátlapon keresztül egy differenciális PPS (Pulse Per Second) jelet kapnak normál mûködés közben, ennek a megszûnésére hardveresen újra kell indítani a modulban található processzort. A modulok elõlapján található még egy reset nyomógomb, amely rövid idejû lenyomásával szintén a processzor újraindítása érhetõ el.
+A modulok a hátlapon keresztül egy differenciális PPS (Pulse Per Second) jelet kapnak normál mûködés közben, ennek konstans ''1''-ben tartására hardveresen újra kell indítani a modulban található processzort. A PPS jel azoknál a moduloknál fontos, ahol pontos idõszinkront kell elérni, egyéb esetben csak a reset logikát kell megvalósítani. Az elõbbi alkalmazásokban egy C-CAN üzenetben megkapja az eszköz az abszolút idõt, majd a PPS jellel kiegészítve szinkronban tartja. A modulok elõlapján található még egy reset nyomógomb, amely két másodperces lenyomásával szintén a processzor újraindítása érhetõ el.
 
-A modulokon programozáshoz Tag-Connect típusú csatlakozók \cite{TAG_CON} vannak elhelyezve, melyek alkatrész beültetése nélkül, egyszerûen NYÁK rajzolat kialakításával használhatók. Ez nem csak költséghatékony, de kisebb területet is foglal el az áramkör maradékától.
+A modulokon programozáshoz Tag-Connect típusú csatlakozók \cite{TAG_CON} vannak elhelyezve, melyek alkatrész beültetése nélkül, egyszerûen NYÁK rajzolat kialakításával használhatók. Ez nem csak költséghatékony, de kisebb területet is foglal el az áramkör többi részétõl.
 
-A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a futásukhoz szükséges adatokat átadja. Ezt követõen a kiegészítõ készülékek életjelet küldenek, valamint a paramétereknek megfelelõen adatokat. A különbözõ adatokat kétféleképpen küldhetik fel az alapkészüléknek:
+A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a futásukhoz szükséges adatokat átadja. Ezt követõen a kiegészítõ készülékek életjelet küldenek, valamint a paramétereknek megfelelõen adatokat. A különbözõ adatokat a C-CAN protokollban kétféleképpen küldhetik fel az alapkészüléknek:
 
 \begin{enumerate}
 \item\emph{Ciklusidõ alapján:} Elõre beállított idõnként a modul elküldi a figyelt változót, annak értékének változásától függetlenül. 

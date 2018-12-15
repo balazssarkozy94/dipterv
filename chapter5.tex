@@ -42,7 +42,7 @@ Olvasási idõ &  92$\mu$s  & 10...300$\mu$s\\ \hline
 \label{st_emulated_eeprom_compare}
 \end{table}
 
-A CR-PM3-ban a legtöbb kalibrációs változó  típusa egyszeres-precizitású lebegõpontos, ezek letárolása és visszaolvasása 16 bites regiszterekkel némi bit manipulációt igényel, az ezeket megvalósító függvények:
+A CR-PM3-ban a legtöbb kalibrációs változó  típusa egyszeres-precizitású lebegõpontos, ezek letárolása és visszaolvasása 16 bites regiszterekkel némi bit manipulációt igényel, az ezeket megvalósító függvényeket az ST által szolgáltatott függvénykönyvtár nem tartalmazza, azokkal nekem kellett kiegészíteni a programot:
 
 \begin{lstlisting}
 void eeStoreFloat(float data, uint16_t ee_address);
@@ -102,7 +102,7 @@ Az inicializációk után még a CR-BASE segítségével létrejön egy-egy 1000, 500 és 
 
 Ez után bekerül a program futása a main-ben található végtelen ciklusba, amelyben a CR-BASE crBaseHandler() függvényét hívja. Ez kezeli a C-CAN üzenetek interruptos fogadását bufferelve, illetve a CR-BASE összes idõzítéssel kapcsolatos funkcióját, mint például a LED-ek villogtatását, vagy bármilyen elõre regisztrált függvény meghívását.
 
-A modul mûködése során a három regisztrált ciklikus taszk-ban, interruptokban, illetve DMA segítségével történnek a különbözõ funkciók.
+A modul mûködése során a három regisztrált ciklikus taszkban, interruptokban, illetve DMA segítségével történnek a különbözõ funkciók.
 
 \begin{enumerate}
 	\item \emph{tickHandler1000():} Elsõsorban debug funkciók megvalósítására volt használva, a különbözõ gyors események láthatóvá tételéhez, lassításához, például, hogy valamilyen hiba bekövetkezte után csak néhány másodperc után kapcsoljon le a hiba LED. 
@@ -279,7 +279,7 @@ A CMC 356 kezelése történhet egy, a gyártó által szolgáltatott, Omicron Harmonic
 \subsubsection{STM32 mikrokontrolleren futó szoftver}
 %----------------------------------------------------------------------------
 
-A mikrokontroller indulás után kétféle inicializációból tud választani, az egyik a normál futáshoz tartozik, míg a másik a kalibrációhoz szükséges inicializációkat végzi el. Ennek a választásnak a megvalósítása a prototípuson a címbeállító kapcsoló egyikének állása alapján volt, azonban a végleges termékben valamilyen kevésbé hozzáférhetõ megoldást kell majd alkalmazni, hogy normális mûködés közben semmilyen esetre se lehessen kalibrálást indítani.
+A mikrokontroller indulás után kétféle inicializációból tud választani, az egyik a normál futáshoz tartozik, míg a másik a kalibrációhoz szükséges inicializációkat végzi el. Ennek a választásnak a megvalósítása a prototípuson a címbeállító kapcsoló egyikének állása alapján volt, azonban a végleges termékben valamilyen kevésbé hozzáférhetõ megoldást kell majd alkalmazni, hogy normális mûködés közben semmilyen esetre se lehessen kalibrálást indítani. Erre egy kézenfekvõ megoldás a C-CAN-en keresztül végrehajtott, valamilyen biztonságos és ellenõrzött engedélyezõ üzenet használata.
 
 A kalibráció különbözõ lépéseit C-CAN üzenetek hatására végzi el a CR-PM3, majd az eredményeket letárolja az emulált EEPROM-ba. Normál futás inicializációjakor az EEPROM-ból olvassa ki, és ellenõrzés után tölti be a kalibrációs értékeket.
 
