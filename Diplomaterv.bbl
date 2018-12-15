@@ -1,109 +1,29 @@
 \begin{thebibliography}{10}
 
-\bibitem{MSZ_EN_60664-1_2008}
-{MSZ EN 60664-1:2008, Kisfeszültségû rendszerek villamos szerkezeteinek
-  szigeteléskoordinációja. 1. rész: Alapelvek, követelmények és vizsgálatok
-  (IEC 60664-1:2007)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 05 2008.
+\bibitem{MSZ_EN_1_2002}
+{MSZ EN 1:2002, Szabványos villamos feszültségek}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 01 2002.
 
-\bibitem{MSZ_EN_62052-11_2003}
-{MSZ EN 62052-11:2003, Váltakozó áramú villamos fogyasztásmérõ berendezések.
-  Általános követelmények, vizsgálatok és vizsgálati feltételek. 11. rész:
-  Fogyasztásmérõ berendezések (IEC 62052-11:2003)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 05 2003.
+\bibitem{MSZ_EN_61000_3_2}
+{Elektromágneses összeférhetõség (EMC). 3-2. rész: Határértékek. A
+  felharmonikus áramok kibocsátási határértékei (fázisonként legfeljebb 16 A
+  bemenõáramú berendezésekre) (IEC 61000-3-2:2014)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 12 2014.
+
+\bibitem{MSZ_EN_61000-4-30_2015}
+{Elektromágneses összeférhetõség (EMC). 4-30. rész: Vizsgálati és mérési
+  módszerek. A hálózati feszültség minõségének mérési módszerei (IEC
+  61000-4-30:2015)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 08 2015.
+
+\bibitem{ENTSO_E}
+{ENTSO-E}.
+\newblock {{Our Members (2018.12.14.)}}.
+\newblock \url{https://docstore.entsoe.eu/Pages/default.aspx}.
 
 \bibitem{CEER_BENCHMARK_6TH}
 {CEER 6th Benchmarking Report on the Quality of Electricity and Gas Supply}.
 \newblock Jelentés, Council of European Energy Regulators (CEER), 09 2016.
-
-\bibitem{emtest_what_is_standards}
-{EM TEST (Switzerland) GmbH}.
-\newblock {{The structure of {EMC} standards (2018. november 12.)}}.
-\newblock \url{http://www.emtest.com/what_is/standards.php}.
-
-\bibitem{MSZ_EN_61000-6-1_2007}
-{Elektromágneses összeférhetõség (EMC). 6-1. rész: Általános szabványok.
-  Zavartûrés a lakóhelyi, a kereskedelmi és az enyhén ipari környezetekre (IEC
-  61000-6-1:2005)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 07 2007.
-
-\bibitem{MSZ_EN_55014-1_2007}
-{Elektromágneses összeférhetõség. Háztartási készülékek, villamos szerszámok és
-  hasonló eszközök követelményei. 1. rész: Zavarkibocsátás (CISPR 14-1:2005)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 04 2007.
-
-\bibitem{MSZ_EN_61000-4-2_2009}
-{Elektromágneses összeférhetõség (EMC). 4-2. rész: Vizsgálati és mérési
-  módszerek. Elektrosztatikus kisüléssel szembeni zavartûrési vizsgálat (IEC
-  61000-4-2:2008)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 09 2009.
-
-\bibitem{MSZ_EN_61000-4-4_2011}
-{Elektromágneses összeférhetõség (EMC). 4-4. rész: Vizsgálati és mérési
-  módszerek. Gyors villamos tranziens/burst jelenségekkel szembeni zavartûrési
-  vizsgálat (IEC 61000-4-4:2012)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 03 2011.
-
-\bibitem{MSZ_EN_61000-4-5_2014}
-{Elektromágneses összeférhetõség (EMC). 4-5. rész: Vizsgálati és mérési
-  módszerek. Lökõhullámmal szembeni zavartûrési vizsgálat (IEC
-  61000-4-5:2014)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 12 2014.
-
-\bibitem{MSZ_EN_61000-4-6_2014}
-{Elektromágneses összeférhetõség (EMC). 4-6. rész: Vizsgálati és mérési
-  módszerek. Rádiófrekvenciás terek által keltett, vezetett zavarokkal szembeni
-  zavartûrés vizsgálata (IEC 61000-4-6:2013)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 05 2014.
-
-\bibitem{schneider_16451}
-{Schneider Electric}.
-\newblock {{Schneider Legacy Products - 16451 (2018. november 21.)}}.
-\newblock
-  \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
-
-\bibitem{ST_UM0892}
-{UM0892, STM32 ST-LINK utility software description}.
-\newblock User manual, STMicroelectronics, 10 2018.
-
-\bibitem{ST_AN4056}
-{AN4056, EEPROM emulation in STM32F30x/STM32F31x/STM32F37x/STM32F38x
-  microcontrollers}.
-\newblock Application note, STMicroelectronics, 09 2012.
-
-\bibitem{ST_UM1718}
-{UM1718, STM32CubeMX for STM32 configuration and initialization C code
-  generation}.
-\newblock User manual, STMicroelectronics, 11 2018.
-
-\bibitem{ST_DS9118}
-{DS9118, STM32F303xB STM32F303xC datasheet}.
-\newblock Datasheet, STMicroelectronics, 10 2018.
-
-\bibitem{ADE_7978/ADE_7933/ADE_7932/ADE_7923}
-{ADE7978/ADE7933/ADE7932/ADE7923}.
-\newblock Datasheet, Analog Devices, 11 2018.
-
-\bibitem{AN-1259}
-{AN-1259, Calibrating the ADE7978 and ADE7932/ADE7933 Isolated Metering
-  Chipset}.
-\newblock Application note, Analog Devices, 2013.
-
-\bibitem{AN-1333}
-{AN-1333, Architecting a Direct, 3-Phase Energy Meter with Shunts Using the
-  ADE7932/ADE7933/ADE7978}.
-\newblock Application note, Analog Devices, 2014.
-
-\bibitem{VIA_STICH_STUDY}
-{The EMI benefits of ground plane stitching in multi-layer power bus stacks}.
-\newblock Tanulmány, Xiaoning Ye, D.M. Hockanson, Min Li, Wei Cui, S. Radu,
-  J.L. Drewniak, T.P. VanDoren, T.H. Hubing, R.E. DuBroff, 08 2000.
-
-\bibitem{EDN_ISOLATION_FILTER}
-{Anand Reghunathan, Koteshwar Rao, Anant Kamath}.
-\newblock {{How to achieve low radiated emissions with fully integrated data
-  and power isolation (2018. november 25.)}}.
-\newblock \url{https://www.edn.com/Home/PrintView?contentItemId=4458172}.
 
 \bibitem{PROLAN_CRTU}
 {Prolan Zrt.}
@@ -111,35 +31,11 @@
   25.)}}.
 \newblock \url{http://www.prolan.hu/hu/megoldasok/CRTU}.
 
-\bibitem{OMRON_CMC_356}
-{OMICRON electronics GmbH}.
-\newblock {{CMC 356 Universal relay test set and commissioning tool (2018.
-  november 25.)}}.
-\newblock \url{https://www.omicronenergy.com/en/products/cmc-356/}.
-
-\bibitem{ENTSO_E}
-{ENTSO-E}.
-\newblock {{Our Members (2018.12.14.)}}.
-\newblock \url{https://docstore.entsoe.eu/Pages/default.aspx}.
-
-\bibitem{EM_TEST_UCS_500}
-{EM TEST}.
-\newblock {{EM TEST UCS 500 Product page}}.
-\newblock \url{http://www.emtest.com/products/overview_ucs500m.php}.
-
-\bibitem{PMM_3000}
-{Advanced Test Equipment Rentals}.
-\newblock {{PMM 3000 RF Generator 10 KHz - 1 GHz Product page}}.
-\newblock \url{https://www.atecorp.com/products/pmm/pmm-3000}.
-
-\bibitem{PMM_6000N}
-{Advanced Test Equipment Rentals}.
-\newblock {{PMM 6000N RF Power Amplifier Product page}}.
-\newblock \url{https://www.atecorp.com/products/pmm/6000n}.
-
-\bibitem{MSZ_EN_1_2002}
-{MSZ EN 1:2002, Szabványos villamos feszültségek}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 01 2002.
+\bibitem{TAG_CON}
+{Tag-Connect}.
+\newblock {{TC2030-MCP 6-Pin Cable with RJ12 Modular Plug (for Microchip
+  ICD)}}.
+\newblock \url{http://www.tag-connect.com/TC2030-MCP}.
 
 \bibitem{PHOENIX_BC}
 {Phoenix Contact}.
@@ -147,9 +43,48 @@
 \newblock
   \url{https://www.phoenixcontact.com/online/portal/hu?1dmy&urile=wcm:path:/huhu/web/main/products/subcategory_pages/Modular_housings_BC_P-01-12-02/3a371abc-34e5-438f-a723-d2ab8e20eaa1}.
 
-\bibitem{VISHAY_RESISTOR}
-{High Voltage Thin Film Flat Chip Resistors Datasheet}.
-\newblock Datasheet, Vishay, 04 2018.
+\bibitem{PROLAN_PROFIELD}
+{Prolan Zrt.}
+\newblock {{RTU (Profield) (2018. december 14.)}}.
+\newblock \url{http://www.prolan.hu/megoldasok/ProField-RTU}.
+
+\bibitem{KESZULEK_ERZ}
+{Dr. Varjasi István (BME-AUT)}.
+\newblock {{Készüléktervezés jegyzet: 11. Érzékelõk}}.
+\newblock
+  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/K%C3%A9sz%C3%BCl%C3%A9ktervez%C3%A9s_%C3%89rz%C3%A9kel%C3%A9s.pdf}.
+
+\bibitem{janitza}
+{Janitza}.
+\newblock {{Rogowski coils}}.
+\newblock \url{https://www.janitza.com/rogowski-coils-janitza.html}.
+
+\bibitem{vishay_shunt}
+{Vishay}.
+\newblock {{WSL4026 PRODUCT INFORMATION}}.
+\newblock \url{http://www.vishay.com/ppg?30132}.
+
+\bibitem{Infineon_hall}
+{Infineon}.
+\newblock {{Current Sensing Using Linear Hall Sensors}}.
+\newblock
+  \url{https://www.infineon.com/dgdl/Current_Sensing_Rev.1.1.pdf?fileId=db3a304332d040720132d939503e5f17}.
+
+\bibitem{TI_CUR_COMP}
+{Arek Kacprzak}.
+\newblock {{Six ways to sense current and how to decide which to use}}.
+\newblock
+  \url{https://e2e.ti.com/blogs_/archives/b/precisionhub/archive/2015/07/10/six-ways-to-sense-current-and-how-to-decide-which-to-use}.
+
+\bibitem{ADE_7978/ADE_7933/ADE_7932/ADE_7923}
+{ADE7978/ADE7933/ADE7932/ADE7923}.
+\newblock Datasheet, Analog Devices, 11 2018.
+
+\bibitem{schneider_16451}
+{Schneider Electric}.
+\newblock {{Schneider Legacy Products - 16451 (2018. november 21.)}}.
+\newblock
+  \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
 
 \bibitem{KESZULEK_FESZ}
 {Dr. Balogh Attila (BME-AUT)}.
@@ -163,49 +98,55 @@
 \newblock
   \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/T%c3%bal%c3%a1ram_v%c3%a9delem.pdf}.
 
-\bibitem{VARISTOR}
-{ElectronicsTutorials}.
-\newblock {{Varistor Tutorial (2018.12.11.)}}.
-\newblock \url{https://www.electronics-tutorials.ws/resistor/varistor.html}.
-
 \bibitem{RT7285A}
 {RT7285 Datasheet}.
 \newblock Datasheet, Richtek, 10 2014.
 
-\bibitem{MSZ_EN_61000_3_2}
-{Elektromágneses összeférhetõség (EMC). 3-2. rész: Határértékek. A
-  felharmonikus áramok kibocsátási határértékei (fázisonként legfeljebb 16 A
-  bemenõáramú berendezésekre) (IEC 61000-3-2:2014)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 12 2014.
+\bibitem{MSZ_EN_60664-1_2008}
+{MSZ EN 60664-1:2008, Kisfeszültségû rendszerek villamos szerkezeteinek
+  szigeteléskoordinációja. 1. rész: Alapelvek, követelmények és vizsgálatok
+  (IEC 60664-1:2007)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 05 2008.
 
-\bibitem{TAG_CON}
-{Tag-Connect}.
-\newblock {{TC2030-MCP 6-Pin Cable with RJ12 Modular Plug (for Microchip
-  ICD)}}.
-\newblock \url{http://www.tag-connect.com/TC2030-MCP}.
+\bibitem{emtest_what_is_standards}
+{EM TEST (Switzerland) GmbH}.
+\newblock {{The structure of {EMC} standards (2018. november 12.)}}.
+\newblock \url{http://www.emtest.com/what_is/standards.php}.
 
-\bibitem{MSZ_EN_61000-4-30_2015}
-{Elektromágneses összeférhetõség (EMC). 4-30. rész: Vizsgálati és mérési
-  módszerek. A hálózati feszültség minõségének mérési módszerei (IEC
-  61000-4-30:2015)}.
-\newblock Szabvány, Magyar Szabványügyi Testület, 08 2015.
+\bibitem{EDN_ISOLATION_FILTER}
+{Anand Reghunathan, Koteshwar Rao, Anant Kamath}.
+\newblock {{How to achieve low radiated emissions with fully integrated data
+  and power isolation (2018. november 25.)}}.
+\newblock \url{https://www.edn.com/Home/PrintView?contentItemId=4458172}.
 
-\bibitem{PROLAN_PROFIELD}
-{Prolan Zrt.}
-\newblock {{RTU (Profield) (2018. december 14.)}}.
-\newblock \url{http://www.prolan.hu/megoldasok/ProField-RTU}.
+\bibitem{AN-1333}
+{AN-1333, Architecting a Direct, 3-Phase Energy Meter with Shunts Using the
+  ADE7932/ADE7933/ADE7978}.
+\newblock Application note, Analog Devices, 2014.
 
-\bibitem{KESZULEK_ERZ}
-{Dr. Varjasi István (BME-AUT)}.
-\newblock {{Készüléktervezés jegyzet: 11. Érzékelõk}}.
-\newblock
-  \url{https://www.aut.bme.hu/Upload/Course/VIAUMA14/hallgatoi_segedletek/K%C3%A9sz%C3%BCl%C3%A9ktervez%C3%A9s_%C3%89rz%C3%A9kel%C3%A9s.pdf}.
+\bibitem{MSZ_EN_62052_11_2003}
+{Váltakozó áramú villamos fogyasztásmérõ berendezések. Általános követelmények,
+  vizsgálatok és vizsgálati feltételek. 11. rész: Fogyasztásmérõ berendezések
+  (IEC 62052-11:2003)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 09 2003.
 
-\bibitem{TI_CUR_COMP}
-{Arek Kacprzak}.
-\newblock {{Six ways to sense current and how to decide which to use}}.
-\newblock
-  \url{https://e2e.ti.com/blogs_/archives/b/precisionhub/archive/2015/07/10/six-ways-to-sense-current-and-how-to-decide-which-to-use}.
+\bibitem{MSZ_EN_61000-4-2_2009}
+{Elektromágneses összeférhetõség (EMC). 4-2. rész: Vizsgálati és mérési
+  módszerek. Elektrosztatikus kisüléssel szembeni zavartûrési vizsgálat (IEC
+  61000-4-2:2008)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 09 2009.
+
+\bibitem{MSZ_EN_61000-4-4_2011}
+{Elektromágneses összeférhetõség (EMC). 4-4. rész: Vizsgálati és mérési
+  módszerek. Gyors villamos tranziens/burst jelenségekkel szembeni zavartûrési
+  vizsgálat (IEC 61000-4-4:2012)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 03 2011.
+
+\bibitem{MSZ_EN_61000-4-6_2014}
+{Elektromágneses összeférhetõség (EMC). 4-6. rész: Vizsgálati és mérési
+  módszerek. Rádiófrekvenciás terek által keltett, vezetett zavarokkal szembeni
+  zavartûrés vizsgálata (IEC 61000-4-6:2013)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 05 2014.
 
 \bibitem{SAMTEC_DW}
 {Samtec}.

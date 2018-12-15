@@ -12,7 +12,7 @@ A CR-PM3 egyik lehetséges felhasználása egy másik, a szintén Prolan által gyárto
 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabularx}{\textwidth}{|X|X|}
 \hline
 \textbf{Paraméter} & \textbf{Érték} \\ \hline
 Névleges fázisfeszültség-tartomány & 0-200VAC (RMS)	\\ \hline
@@ -22,7 +22,7 @@ Névleges frekvenciatartomány & 45-55Hz	\\ \hline
 Névleges fázismérés-tartomány & $\pm$180$^{\circ}$	\\ \hline
 Mûködési hõmérséklettartomány & 0...+55C$^{\circ}$ / -20...+70C$^{\circ}$ (verzió függõ)	\\ \hline
 Pontosság & 0.5$\%$ 	\\ \hline
-\end{tabular}
+\end{tabularx}
 \caption{AF500 ProField modul specifikációja}
 \label{AF500_spec}
 \end{table}
@@ -128,11 +128,8 @@ Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kiv
         \includegraphics[width=70mm]{figures/3_2_3_rogo_real.png}
         \caption{Rogowski-tekercs a valóságban}
     \end{subfigure}
-    \caption{Rogowski-tekercs}
+    \caption{Rogowski-tekercs \cite{janitza}}
 \end{figure*}
-
-%Citáció képre: https://www.janitza.com/rogowski-coils-janitza.html
-%Citáció képre: https://www.janitza.com/rogowski-coils-janitza.html
 
 %----------------------------------------------------------------------------
 \subsection{Sönt ellenállás és izolációs erõsítõ}
@@ -143,9 +140,9 @@ Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen,
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=50mm, keepaspectratio]{figures/3_2_5_shunt.png}
-\caption{Négy kivezetéses árammérõ sönt}
+\caption{Négy kivezetéses árammérõ sönt \cite{vishay_shunt}}
 \end{figure}
-%http://www.vishay.com/ppg?30132 citáció
+
 %----------------------------------------------------------------------------
 \subsection{Hall-szenzoros árammérõ}
 %----------------------------------------------------------------------------
@@ -155,10 +152,9 @@ A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokb
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=150mm, keepaspectratio]{figures/3_2_2_hall_comp.PNG}
-\caption{Kompenzált Hall-szenzoros árammérõ fluxus koncentrátorral}
+\caption{Kompenzált Hall-szenzoros árammérõ fluxus koncentrátorral \cite{Infineon_hall}}
 \label{hall_comp}
 \end{figure}
-% TODO CITÁCIÓ  https://www.infineon.com/dgdl/Current_Sensing_Rev.1.1.pdf?fileId=db3a304332d040720132d939503e5f17
 
 Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, amely a mérendõ vezetõ körüli mágneses hurkot a Hall-szenzorhoz vezeti. A mágneses koncentrátorok a nulla térerõsség körül mûködnek a legpontosabban, így egy további mûveleti erõsítõs áramkörrel ezt kompenzálhatjuk, mint például a \ref{hall_comp}-as ábrán. A pontosabb szenzorok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján az integrált szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
 
@@ -170,7 +166,7 @@ Most vessük össze a fõbb szempontok alapján a felsorolt megoldásokat, hogy egy h
 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{|m{2.5cm}|m{2.5cm}|m{2.5cm}|m{2.5cm}|m{2.5cm}|}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
 \hline
 \textbf{Szempont} & \textbf{Áramváltó} & \textbf{Rogowski-tekercs} & \textbf{Sönt} & \textbf{Hall-szenzor}\\ \hline
 Elérhetõ pontosság & Közepes & Alacsony & Magas & Közepes\\ \hline
@@ -179,7 +175,7 @@ Feldolgozás & Egyszerû & Bonyolult & Egyszerû & Egyszerû\\ \hline
 Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
 Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
 Galvanikus leválasztás & Inherens & Inherens & Analóg szükséges & Inherens\\ \hline
-\end{tabular}
+\end{tabularx}
 \caption{Árammérési megoldások \cite{TI_CUR_COMP}}
 \label{current_meas_comp}
 \end{table}
@@ -235,34 +231,31 @@ Több gyártó kínál komplett megoldásokat egy tokban realizálva. Ezek tartalmazzák
 
 A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint, feszültségméréshez az Analog Devices ADE7978 beégetett kódú DSP-jét, illetve az ehhez a családhoz tartozó ADE7933-as, 3 analóg-digitális átalakítót, 5kV-os digitális izolációt, illetve tápleválasztást tartalmazó mérõ IC-t választottam. Ez a típus elsõsorban sönt ellenállásos árammérést támogat. Ezekkel az alkatrészekkel a specifikáció kielégítéséhez szükséges pontosságú, kis méretû megoldást lehet kialakítani. A választott megoldás ugyan áramméréshez sönt ellenállást használ, azonban ennek értéke rendkívül alacsony, mivel az ADE7933 árammérõ bemenetén a feszültség $\pm$31.25mV, amennyiben ehhez a 5m$\Omega$-os tervezett mérõsöntöt vesszük, a maximális disszipáció nem haladja meg a 100mW-ot sem, így a választott mérési elv nem jár jelentõs hõfejlõdéssel, a mûködési hõmérséklet a környezetitõl nem fog jelentõsen eltérni.
 
+Ezen döntések után kialakított rendszer felépítése a \ref{CRPM3SYS} ábrán látható
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=130mm, keepaspectratio]{figures/3_4_1_rendszer.png}
 \caption{Rendszer felépítése}
+\label{CRPM3SYS}
 \end{figure}
 
 Egy használható áramváltó, melyet késõbb a tesztalkalmazásban is választottam, a Schneider Electric 16451-es 50/5-ös áramváltó transzformátora \cite{schneider_16451}. Ezzel a 32A-re biztosított vonalak árama jól fedi a tervezett mérési tartományt. Az áramváltó primer vezetékének átmérõje maximálisan 21mm, a szekunder oldali kivezetésre villás sarukkal lehet csatlakozni. A transzformátor pontossági osztálya a terhelés nagyságától függ, a \ref{16451_ct_spec} táblázat mutatja a garantált értékeket.
 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{|l|l|l|l|}
+\begin{tabularx}{0.5\textwidth}{|X|X|X|X|}
 \hline
 CI & 0,5 & 1    & 3   \\ \hline
-VA &     & 1,25 & 1,5 \\ \hline
-\end{tabular}
+VA &  -  & 1,25 & 1,5 \\ \hline
+\end{tabularx}
 \caption{16451-es áramváltó transzformátor pontossága terhelés függvényében}
 \label{16451_ct_spec}
 \end{table}
 
-Mivel a mérõ az árammérõ csatornán kevesebb mint 100mW-ot disszipál el, így legalább 1\%-os pontossággal számolhatunk kalibráció nélkül.
+Mivel a mérõ az árammérõ csatornán kevesebb mint 100mW-ot disszipál el, így legalább 1\%-os pontossággal számolhatunk az áramváltóval kalibráció nélkül is.
 
-Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltüntetik.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=130mm, keepaspectratio]{figures/3_4_2_rendszer_sontos.png}
-\caption{Áramváltó nélküli mérési elrendezés}
-\end{figure}
+Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltüntetik. Ebben a konfigurációba arra kell figyelni, hogy az árammérõ valamint a feszültségmérõ bemenetek bekötésénél a fázisfeszültség ne kerüljön a mérõ IC bemenetei közé, csak a nagyfeszültségû ellenállásosztón keresztül. Ez vagy úgy érhetõ el, hogy a nullvezetõ áramát mérjük a sönttel, és ekkor a nagyfeszültségû ellenálláság a fázisra van kötve, vagy pedig a fázisvezetõ áramát nézzük, ilyen bekötésnél pedig a nullvezetõt kötjük a nagyfeszültségû ellenállásosztóra.
 
 %----------------------------------------------------------------------------
 \subsection{Elméleti specifikáció, funkcionalitás}

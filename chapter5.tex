@@ -3,15 +3,6 @@
 %----------------------------------------------------------------------------
 \lstset{language=C, style=customc}
 
-%--------------------------------------------------------------------------------------
-% Unbreakable unit
-%--------------------------------------------------------------------------------------
-\newenvironment{absolutelynopagebreak}
-  {\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup}
-  {\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
-
 %----------------------------------------------------------------------------
 \section{Mikrokontroller}
 %----------------------------------------------------------------------------
@@ -28,80 +19,50 @@ Számos beágyazott rendszerben van szükség nem felejtõ memória használatára, a CR
 
 Mindezek ellenére, érdemes gondolni arra, hogy a mai mikrokontrollerek programmemóriája flash, amit menet közben is tudunk page-enként törölni, illetve szavanként írni. Miért kellene külön alkatrészeket beletervezni az áramkörbe, kommunikációs interfészeket használni, ha a beépített flash-ben néhány lap kijelölésével ugyanúgy egy nem felejtõ memóriát tudunk létrehozni?
 
+Az STMicroelectronics által kiadott emulált EEPROM driverek segítségével könnyen megvalósíthatjuk a nemfelejtõ memóriát, a fejlesztõnek mindössze néhány definiált konstans értékét kell megadni, majd néhány függvény használatával egyszerûen írni és olvasni a változókat. Mivel a flash memória egyik sajátossága, hogy már egyszer írt memória területet csak törlés után lehet újra írni, illetve törölni csak egész lapokat lehet, így az emulált EEPROM megvalósításához legalább két lapra van szükség. Az emulált EEPROM-ban 16 bites adatregiszterek vannak, ezekhez pedig 16 bites virtuális címek tartoznak. A driver beírás esetén a lista legvégére írja a virtuális címet és az adatot. A flash memóriában törlés után minden bit 1-es értéket vesz fel, ezt használja ki  az olvasás függvény, ami az emulált EEPROM memória végét a 0xFFFF virtuális címû regiszterrel detektálja. Az olvasás, amennyiben több azonos címet is talál a memóriában, mindig a legutolsó értékét adja vissza, hiszen ezt írtuk be legutoljára. Amennyiben a kijelölt lap betelne, a driver a változók legutolsó értékeit átmenti egy másik lapra, majd törli a betelt lapot. A driver publikus függvényei:
+
+\begin{lstlisting}
+uint16_t EE_Init(void);
+uint16_t EE_ReadVariable(uint16_t VirtAddress, uint16_t* Data);
+uint16_t EE_WriteVariable(uint16_t VirtAddress, uint16_t Data);
+\end{lstlisting}
+Az \ref{st_emulated_eeprom_compare} táblázatban látható a külsõ EEPROM illetve a flash alapú, emulált EEPROM paramétereinek összehasonlítása.
+
 \begin{table}[!ht]
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabularx}{\textwidth}{|X|X|X|}
 \hline
 \textbf{Jellemzõ} & \textbf{Külsõ EEPROM} & \textbf{Emulált EEPROM} \\ \hline
 Írási idõ &  20ms  &  244$\mu$s...82ms  \\ \hline
 Törlési idõ &  5ms/bájt  & 20...40ms/page \\ \hline
 Olvasási idõ &  92$\mu$s  & 10...300$\mu$s\\ \hline
 Írási/Törlési ciklus szám &  1 millió  & 10 ezer/page \\ \hline
-\end{tabular}
+\end{tabularx}
 \caption{EEPROM és emulált EEPROM összehasonlítása 32 bites adatokon}
 \label{st_emulated_eeprom_compare}
 \end{table}
 
-Az STMicroelectronics által kiadott emulált EEPROM driverek segítségével könnyen megvalósíthatjuk a nemfelejtõ memóriát, a fejlesztõnek mindössze néhány definiált konstans értékét kell megadni, majd néhány függvény használatával egyszerûen írni és olvasni a változókat. Mivel a flash memória egyik sajátossága, hogy már egyszer írt memória területet csak törlés után lehet újra írni, illetve törölni csak egész lapokat lehet, így az emulált EEPROM megvalósításához legalább két lapra van szükség. Az emulált EEPROM-ban 16 bites adatregiszterek vannak, ezekhez pedig 16 bites virtuális címek tartoznak. A driver beírás esetén a lista legvégére írja a virtuális címet és az adatot. A flash memóriában törlés után minden bit 1-es értéket vesz fel, ezt használja ki  az olvasás függvény, ami az emulált EEPROM memória végét a 0xFFFF virtuális címû regiszterrel detektálja. Az olvasás, amennyiben több azonos címet is talál a memóriában, mindig a legutolsó értékét adja vissza, hiszen ezt írtuk be legutoljára. Amennyiben a kijelölt lap betelne, a driver a változók legutolsó értékeit átmenti egy másik lapra, majd törli a betelt lapot. A driver publikus függvényei:
-
-\begin{absolutelynopagebreak}
-\begin{lstlisting}
-uint16_t EE_Init(void);
-uint16_t EE_ReadVariable(uint16_t VirtAddress, uint16_t* Data);
-uint16_t EE_WriteVariable(uint16_t VirtAddress, uint16_t Data);
-\end{lstlisting}
-\end{absolutelynopagebreak}
-
 A CR-PM3-ban a legtöbb kalibrációs változó  típusa egyszeres-precizitású lebegõpontos, ezek letárolása és visszaolvasása 16 bites regiszterekkel némi bit manipulációt igényel, az ezeket megvalósító függvények:
 
-\begin{absolutelynopagebreak}
 \begin{lstlisting}
-void eeStoreFloat(float data, uint16_t ee_address)
-{
-    uint16_t ee_reg_buffer;
-    uint32_t uint32buffer;
-    float floatbuffer = data;
-    memcpy(&uint32buffer, &floatbuffer, sizeof(float));
-    
-    ee_reg_buffer = (uint16_t)(((uint32buffer)>>16)&0x0000FFFF);
-    EE_WriteVariable(VirtAddVarTab[ee_address], ee_reg_buffer);
-    ee_reg_buffer = (uint16_t)((uint32buffer)&0x0000FFFF);
-    EE_WriteVariable(VirtAddVarTab[ee_address+1], ee_reg_buffer);
-}
-
-void eeReadFloat(volatile float* calib_address, uint16_t ee_address)
-{
-    uint16_t buffer1, buffer2;
-    uint32_t float_buffer;
-    
-    EE_ReadVariable(VirtAddVarTab[ee_address], &buffer1);
-    EE_ReadVariable(VirtAddVarTab[ee_address+1], &buffer2);
-    float_buffer = (uint32_t)(buffer1 << 16);
-    float_buffer |= (uint32_t)(buffer2&0x0000FFFF);
-    memcpy((void*)calib_address, &float_buffer, sizeof(float));
-}
+void eeStoreFloat(float data, uint16_t ee_address);
+void eeReadFloat(volatile float* calib_address, uint16_t ee_address);
 \end{lstlisting}
-\end{absolutelynopagebreak}
 
-Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM32 ST-LINK Utility használata, melyben implementálva van a ''LiveUpdate'' funkció, mellyel futás közben monitorozhatjuk a flash memória tartalmát. Ezzel a kalibrációs függvények fejlesztése nagyban egyszerûsödött, az esetleges hibákat az elsõ futásnál fel lehetett ismerni. 
+Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM32 ST-LINK Utility használata, melyben implementálva van a ''LiveUpdate'' funkció, mellyel futás közben monitorozhatjuk a flash memória tartalmát, ennek egy képernyõképét láthatjuk az \ref{STLINK_LIVE} ábrán. Ezzel a kalibrációs függvények fejlesztése nagyban egyszerûsödött, az esetleges hibákat az elsõ futásnál fel lehetett ismerni. 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
-\includegraphics[width=150mm, keepaspectratio]{figures/5_1_0_emul_eeprom.PNG}
+\includegraphics[width=120mm, keepaspectratio]{figures/5_1_0_emul_eeprom.PNG}
 \caption{STM32 ST-LINK Utility LiveUpdate opcióval}
+\label{STLINK_LIVE}
 \end{figure}
 
 %----------------------------------------------------------------------------
 \section{Firmware}
 %----------------------------------------------------------------------------
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=145mm, keepaspectratio]{figures/5_1_0_CUBEMX.png}
-\caption{STM32CubeMX konfigurációs felülete}
-\end{figure}
-
-A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett CR-BASE szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifejezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. Már az áramkörtervezés folyamatában használtam az STM32CubeMX programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert. 
+A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett CR-BASE szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifejezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. Már az áramkörtervezés folyamatában használtam az STM32CubeMX programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert egy grafikus felületen keresztül. 
 
 Mivel a cégen belül Standard Peripheral Libraries-t (SPL) alkalmazunk, a segédprogramot elsõsorban nem kódgenerálásra, hanem a különbözõ perifériák kiosztásának ellenõrzéséhez, az ütközések elkerülésére alkalmaztam. Az SPL az STMicroelectronics által fejlesztett szoftverréteg, amely a fejlesztõ elõl elfedi a regiszterszintû mûveleteket, azonban alacsonyabb szintû mint a szintén gyártó által fejlesztett Hardware Abstraction Layer (HAL), amely például már az interruptokat is elfedi, a fejlesztõnek pedig csak callback függvényeket szolgáltat az interruptból.
 
@@ -118,16 +79,9 @@ A program reset után, még a hardver inicializáció elõtt a különbözõ mérést leíró
   regs_of_interest_L1.no_of_regs = 0;
   regs_of_interest_L1.reg_array = reg_list_L1;
   
-  ...
-  
   addToRegsOfInterest(&regs_of_interest_L1, "L1 VRMS", AVRMS, 4, _signed, voltage, 50);
   addToRegsOfInterest(&regs_of_interest_L1, "L1 IRMS", AIRMS, 4, _signed, current, 50);
-  addToRegsOfInterest(&regs_of_interest_L1, "L1 FVRMS", AFVRMS, 4, _signed, voltage, 50);
-  addToRegsOfInterest(&regs_of_interest_L1, "L1 FIRMS", AFIRMS, 4, _signed, current, 50);
-  addToRegsOfInterest(&regs_of_interest_L1, "L1 POWER", AWATT, 4, _signed, power, 50);
-  addToRegsOfInterest(&regs_of_interest_L1, "L1 ENERGY", AWATTHR, 4, _signed, energy, 1);
-  addToRegsOfInterest(&regs_of_interest_L1, "L1 REACTIVE ENERGY", AVARHR, 4, _signed, energy, 1);
-  addToRegsOfInterest(&regs_of_interest_L1, "L1 TEMP", ATEMP, 4, _signed, temperature, 1);
+  ...
 	\end{lstlisting}
 
 Ezt követõen a flash memóriából, az emulált EEPROM-ból kiolvassa a kalibrációs adatokat, ezeket hozzárendeli a megfelelõ változókhoz.
@@ -151,21 +105,7 @@ Ez után bekerül a program futása a main-ben található végtelen ciklusba, amelybe
 A modul mûködése során a három regisztrált ciklikus taszk-ban, interruptokban, illetve DMA segítségével történnek a különbözõ funkciók.
 
 \begin{enumerate}
-	\item \emph{tickHandler1000():} Elsõsorban debug funkciók megvalósítására volt használva, a különbözõ gyors események láthatóvá tételéhez, például, hogy valamilyen hiba bekövetkezte után csak néhány másodperc után kapcsoljon le a hiba LED. 
-	
-	\begin{lstlisting}
-void tickHandler1000()
-{
-    if(metering_flt_cnt > 0)
-    {
-        metering_flt_cnt--;
-    }else
-    {
-        ledOffSys(LED_SYS_FLT);
-    }
-}
-	\end{lstlisting}
-	
+	\item \emph{tickHandler1000():} Elsõsorban debug funkciók megvalósítására volt használva, a különbözõ gyors események láthatóvá tételéhez, lassításához, például, hogy valamilyen hiba bekövetkezte után csak néhány másodperc után kapcsoljon le a hiba LED. 
 	\item \emph{tickHandler500():} A jelenlegi prototípuson itt történik a CR-BASE számára az értékek frissítése. Amennyiben a CR-BASE szignifikancia, vagy idõzítési kritériumai alapján szükséges, akkor ezután küldi fel az alapkészüléknek a mért adatokat.
 	
 	\item \emph{tickHandler100():} Mivel a nullvezetõt figyelõ bemenetre nem használható a nullátmenet interrupt, így az ehhez tartozó értékek frissítése ebben a taszkban történik.
@@ -183,7 +123,6 @@ void tickHandler1000()
 
 A firmware készítése során amennyire lehetett, az objektum orientáltságra törekedtem, így a mérési eredmények, kalibrációs adatok és beállítások struktúrákban vannak tárolva. Ahol csak lehetett a hibák elkerülésének érdekében enum típusokat vettem fel. 
 
-\begin{absolutelynopagebreak}
 \begin{lstlisting}
 enum issigned{
     _signed,
@@ -210,8 +149,16 @@ struct meas_register{
     enum issigned type;
     enum dimension dimension;
 };
+
+struct calib_data{
+    float v_lsb;
+    float i_lsb;
+    float wh_lsb;
+    int32_t vgain;
+    int32_t igain;
+    int32_t phcal;
+};
 \end{lstlisting}
-\end{absolutelynopagebreak}
 
 A meas\_register struktúra írja le az egyes mérendõ változókat, a mérési módjukat:
 
@@ -227,42 +174,25 @@ A meas\_register struktúra írja le az egyes mérendõ változókat, a mérési módjuka
 	\item \emph{dimension:} A mérendõ mennyiség dimenzióját adja meg, mely lehet feszültség, áram, teljesítmény, energia, hõmérséklet, vagy pedig skalár.
 \end{enumerate}
 
-\begin{absolutelynopagebreak}
-\begin{lstlisting}
-struct calib_data{
-    float v_lsb;
-    float i_lsb;
-    float wh_lsb;
-    int32_t vgain;
-    int32_t igain;
-    int32_t phcal;
-};
+A calib\_data struktúra tartalmazza az összes, valamilyen kompenzációhoz kapcsolódó értéket. A szeparált tárolás egyszerûvé tette ezeknek az értékeknek a letárolását nemfelejtõ memóriába, majd visszaolvasását, illetve fejlesztés alatt, a kalibráció kifejlesztése elõtt könnyen át lehetett hidalni, így pedig lehetett használni a kompenzálatlan értékeket.
 
+A meas\_register-eket regs\_of\_interest\_type struktúrák foglalják össze fázisonként. Ezekhez hozzá van rendelve továbbá a kalibrációs adatokat tartalmazó calib\_data struktúra egy-egy példánya, valamint egy változó tartalmazza a felvett meas\_register-ek számát.  
+
+\begin{lstlisting}
 struct regs_of_interest_type{
    struct meas_register* reg_array;
    struct calib_data* calibration_data;
    uint8_t no_of_regs;
 };
 \end{lstlisting}
-\end{absolutelynopagebreak}
-
-A meas\_register-eket regs\_of\_interest\_type struktúrák foglalják össze fázisonként. Ezekhez hozzá van rendelve továbbá a kalibrációs adatokat tartalmazó calib\_data struktúra egy-egy példánya, valamint egy változó tartalmazza a felvett meas\_register-ek számát.  
 
 A regs\_of\_interest\_type gyûjtõ objektumok kezelése egy hozzáadó, egy frissítõ, és egy kiolvasó függvénnyel történik.
 
-\begin{absolutelynopagebreak}
 \begin{lstlisting}
   addToRegsOfInterest(&regs_of_interest_L1, "L1 VRMS", AVRMS, 4, _signed, voltage, 50);
-  
-  ...
-  
   updateRegsOfInterest(regs_of_interest_L1);
-  
-  ...
-  
   output_buffer[1] = readRegsOfInterest(regs_of_interest_L1, "L1 VRMS"); 
 \end{lstlisting}
-\end{absolutelynopagebreak}
 
 %----------------------------------------------------------------------------
 \subsection{Debug UART}
@@ -272,7 +202,7 @@ A fejlesztés támogatásához a készülékben helyet kapott egy kivezetett UART port.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=50mm, keepaspectratio]{figures/5_1_1_dbg_serial.png}
+\includegraphics[width=60mm, keepaspectratio]{figures/5_1_1_dbg_serial.png}
 \caption{Debug soros port kimenete}
 \end{figure}
 
@@ -322,11 +252,11 @@ A végmérés és kalibráció a CR-PM3 esetében gyakorlatilag szétválaszthatatlan, mi
 %----------------------------------------------------------------------------
 
 
-A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosította. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban:
+A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosította. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban az \ref{OmicronCMC356spec} táblázatban látható.
 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabularx}{\textwidth}{|X|X|}
 \hline
 \textbf{Paraméter} & \textbf{Érték}\\ \hline
 Feszültségtartomány & 0...300VAC	\\ \hline
@@ -338,16 +268,10 @@ Feszültséggenerátor garantált pontossága & <0.08$\%$ reading + 0.02$\%$ range	\\
 Generátorok frekvencia pontossága & $\pm$0.5ppm	\\ \hline
 Névleges frekvenciatartomány & 10...1000Hz	\\ \hline
 Teljes frekvenciatartomány & 10...3000Hz	\\ \hline
-\end{tabular}
+\end{tabularx}
 \caption{Omicron CMC 356 specifikációja háromfázisú konfigurációban}
 \label{OmicronCMC356spec}
 \end{table}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=150mm, keepaspectratio]{figures/5_4_1_omicron_harmonics.png}
-\caption{OMICRON Harmonics felhasználói felülete}
-\end{figure}
 
 A CMC 356 kezelése történhet egy, a gyártó által szolgáltatott, Omicron Harmonics segédprogrammal, vagy pedig vezérelhetõ távolról, szkriptek futtatásával, melyeket a mûszerbe integrált Linux-os számítógép hajt végre a vezérlõ utasítások hatására. Sajnos utóbbi implementálására nem volt idõm, így csak a valamivel lassabb és nehézkesebb megoldást alkalmaztam, és a segédprogramban írtam át egyesével a feszültség és áramértékeket a kalibrációhoz.
 
@@ -379,29 +303,7 @@ CHANNEL_ERR_e calibrateHandler(uint16_t channel, uint8_t* data, uint16_t length)
             calibrateMeteringIC_VIOSMatching();
             break;
         }
-        case 302: //312E
-        {
-            // BEFORE ENTERING THIS SUPPLY 230V, 8A, cosPhi= 0.5 inductive
-            calibrateMeteringIC_PhaseCalib();
-            calibrateMeteringIC_WhLSBCalc();
-            break;
-        }
-        case 303: //312F
-        {
-            // BEFORE ENTERING THIS SUPPLY 230Vrms, 0.4Arms, cosPhi= 1
-            calibrateMeteringIC_WattOSCalib();
-            calibrateMeteringIC_VAROSCalib();
-            break;
-        }
-        case 304: //3130
-        {
-            NVIC_SystemReset();
-            break;
-        }
-        default:
-            break;
-    }
-    return CHANNEL_ERROR_NONE;
+        ...
 }
 \end{lstlisting}
 
@@ -411,22 +313,23 @@ Az egyes függvényekben a különbözõ hibák, illetve azok kompenzációjának kiszámol
 \subsubsection{Alapkészüléken futó szoftver}
 %----------------------------------------------------------------------------
 
-A kontrolleren implementált kalibrációs függvények meghívását kiváltó C-CAN üzeneteket az alapkészülék adja ki. A kalibráció és végmérés elvégzéséhez egy egyszerû program fut Linux alól, amely egy primitív, de jól átlátható felületet biztosít az összes C-RTU modulhoz, amelynek fõmenüje \ref{crtu_calib_main} ábrán látható. Az egyes menüpontok kiválasztása esetén egy bash script hívódik meg, ebben kell implementálni a további almenüket, üzenetküldéseket és minden további számítást, tárolást.
-
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=150mm, keepaspectratio]{figures/5_4_2_kalibracio_1.PNG}
+\includegraphics[width=120mm, keepaspectratio]{figures/5_4_2_kalibracio_1.PNG}
 \caption{Végmérõ és kalibráló szoftver fõmenüje}
 \label{crtu_calib_main}
 \end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=120mm, keepaspectratio]{figures/5_4_3_kalibracio_2.PNG}
+\caption{Végmérõ és kalibráló szoftver CR-PM3 specifikus menüje}
+\label{crtu_calib_crpm}
+\end{figure}
+
+A kontrolleren implementált kalibrációs függvények meghívását kiváltó C-CAN üzeneteket az alapkészülék adja ki. A kalibráció és végmérés elvégzéséhez egy egyszerû program fut Linux alól, amely egy primitív, de jól átlátható felületet biztosít az összes C-RTU modulhoz, amelynek fõmenüje \ref{crtu_calib_main} ábrán látható. Az egyes menüpontok kiválasztása esetén egy bash script hívódik meg, ebben kell implementálni a további almenüket, üzenetküldéseket és minden további számítást, tárolást.
 
 Egy-egy új modul komponenseinek implementálása egyszerû, a már meglévõ részegységek újrafelhasználhatók, mint például a LED-ek, nyomógombok, kapcsolók tesztjei.
 
 A modulhoz tartozó almenüben a végmérés és kalibráció lépéseit egymás után hajthatjuk végre, illetve rögzíthetjük a különbözõ készülék paramétereket, mérési adatokat. A modul specifikus almenünek a felépítése a \ref{crtu_calib_crpm} ábrán látható.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=150mm, keepaspectratio]{figures/5_4_3_kalibracio_2.PNG}
-\caption{Végmérõ és kalibráló szoftver CR-PM3 specifikus menüje}
-\label{crtu_calib_crpm}
-\end{figure}
