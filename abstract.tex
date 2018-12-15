@@ -3,7 +3,19 @@
 %----------------------------------------------------------------------------
 \chapter*{Kivonat}\addcontentsline{toc}{chapter}{Kivonat}
 
-TODO
+Diplomamunkám keretében egy olyan háromfázisú teljesítményminõség mérõmodul fejlesztését mutatom be, amely munkahelyem, a PROLAN Irányítástechnikai Zrt. által fejlesztett C-RTU családjába illeszkedik. A család moduljaival kisméretû, moduláris, alacsony költségû rendszerek alakíthatóak ki, így a tervezendõ készüléknél kiemelten fontos volt a minél kisebb és költséghatékonyabb kialakítás, a mérések pontossága.
+
+Elõször a feszültségminõség, illetve teljesítményminõség fogalmát ismertetem, az ehhez tartozó szabványokkal, mérési kritériumokkal, hálózati eseményekkel. Bemutatom a fejlesztési irányokat, kiemelve a jelenleg is épülõ ''Okos hálózatot'', amely a modern, egyre nagyobb számítási teljesítményû, elektronikák fejlõdésének eredményeképp jöhet létre.
+
+Ezt követõen a PROLAN Zrt. C-RTU családját mutatom be, az ezzel megvalósított rendszerek elõnyeit, sajátosságait. Ezután a rendszer elemeit, a Linux-ot futtató alapkészüléket és annak képességeit, valamint a kiegészítõ modulokat és azoknak a jelenlegi tagjait, valamint a közös jellemzõiket, megoldásaikat, funkcióikat tárgyalom.
+
+A tervezés elsõ lépéseként bemutatom a PROLAN Zrt. egy másik termékcsaládját, a ProField-et, illetve ennek egy háromfázisú feszültség- és árammérõmodulját, az AF500-at, majd ennek a specifikációját veszem kiindulási alapnak. A rendszer tervezése során ismertetem a különbözõ feszültség- és árammérési, valamint adatfeldolgozási megoldásokat, majd összehasonlítás után ismertetem a rendszertervét a mérõmodulnak.
+
+A hardvertervek elkészítésének lépéseit részletesen mutatom be, kitérve az alkatrészválasztásokra és méretezésekre, kapcsolási rajzok és NYÁK tervek elkészültére. Külön figyelmet fordítok a mechanikai tervek bemutatására a készülék speciális kialakítása miatt.
+
+A szoftveres komponenseit a modulnak a beágyazott szoftverben alkalmazott megoldások szemléltetésével kezdem, bemutatva a speciális struktúrákat, függvényeket amelyek speciálisan a modulhoz tartoznak. Szemléltetem, hogy a már megírt, C-RTU család specifikus szoftveres rétegét hogyan kell használni, a különbözõ, már megírt funkciókat hogyan érhetjük el. A fogadó oldali megjelenítést, annak egyszerû konfigurálását, valamint a kalibráció egyes lépéseit példákon keresztül mutatom be.
+
+Végezetül egy tényleges példaalkalmazást mutatok be, ezzel szemléltetve a rendszer, azon belül pedig a teljesítményminõség mérõmodul képességeit.
 \vfill
 
 %----------------------------------------------------------------------------
@@ -11,6 +23,18 @@ TODO
 %----------------------------------------------------------------------------
 \chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}
 
-TODO
+In my master's thesis I present the development of a three-phase power quality measuring module, that belongs to the C-RTU product family developed by PROLAN Zrt. Using this family yields in small, modular, low-cost solutions, so the device to be developed had to be compact, cost-effective, without compromising accuracy.
+
+First, I describe the concept of voltage and power quality, mentioning the relevant standards, measurement criteria and power events. I present the development trends in power delivery systems, highlighting the ''Smart Network'' concept, and the role of high performance electronics in it's evolution.
+
+I introduce the C-RTU product family made by PROLAN Zrt., the advantages and special functions of the system, then I discuss the elements of the system, the base module, running Linux, and its capabilities, and the expansion modules, as well as their common features, solutions and functions.
+
+As the first step in the product design, I present another device made by PROLAN Zrt., the ProField product family's three-phase voltage and current measurement module, AF500 as a reference for making the specification of the new module. During the design of the system, I present the different voltage and current measurement methods and data processing solutions, and then, after comparison, I present the system architecture of the measuring module.
+
+I describe the hardware design steps, including component selections and dimensioning, schematic and PCB design. I pay special attention to the mechanical designs due to the compactness of the module.
+
+Software components are demonstrated first in the embedded environment, showing the special structures and functions that are module specific. I show how the already written C-RTU specific software layer should be used, and how to access the various functions already developed. I show the capabilities of the host system's display, its simple configuration, and the steps of accurate calibration of the module through examples.
+
+Finally, I present an actual application, illustrating the capabilities of the system, in particular, the performance of the measurement module.
 \vfill
 
