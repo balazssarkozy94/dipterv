@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  16 DEC 2018 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  16 DEC 2018 22:26
 entering extended mode
 **./Diplomaterv.tex
 (Diplomaterv.tex
@@ -562,7 +562,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 Package hyperref Info: Option `pdfnewwindow' set `true' on input line 85.
 Package hyperref Info: Option `colorlinks' set `true' on input line 85.
-(Diplomaterv.aux (task.aux) (titlepage.aux) (declaration.aux) (abstract.aux)
+(Diplomaterv.aux (titlepage.aux) (declaration.aux) (abstract.aux)
 (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
 (chapter5.aux) (chapter6.aux) (overall.aux) (acknowledgement.aux)
 (appendices.aux))
@@ -664,69 +664,10 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 LaTeX Info: Redefining \cal on input line 576.
 LaTeX Info: Redefining \mit on input line 577.
 )
-\openout2 = `task.aux'.
-
-(task.tex
-<figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, id=271
-, 597.55246pt x 845.07718pt>
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf  used on input line 1.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf  used on input line 1.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, id=274
-, page=1, 597.55246pt x 845.07718pt>
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, pa
-ge 1>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf , page1 used on input line 1.
-(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, pa
-ge 1>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf , page1 used on input line 1.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, pa
-ge 1>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf , page1 used on input line 1.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, pa
-ge 1>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf , page1 used on input line 1.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-File: figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf Gr
-aphic file (type pdf)
-<use figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf, pa
-ge 1>
-Package pdftex.def Info: figures/Haromfazisu-merorendszer-villamos-halozati-Fel
-adatkiiras-1.pdf , page1 used on input line 1.
-(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [1
-
-
-
- <./figures/Haromfazisu-merorendszer-villamos-halozati-Feladatkiiras-1.pdf>])
 \openout2 = `titlepage.aux'.
 
- (titlepage.tex
-<figures/BMElogo.png, id=333, 975.645pt x 273.02pt>
+(titlepage.tex
+<figures/BMElogo.png, id=271, 975.645pt x 273.02pt>
 File: figures/BMElogo.png Graphic file (type png)
 <use figures/BMElogo.png>
 Package pdftex.def Info: figures/BMElogo.png  used on input line 6.
@@ -740,12 +681,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 18.
  ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.31 \end{titlepage}
-                     [1
+) [1
+
 
 
 {C:/Users/Balazs/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/
@@ -790,7 +727,7 @@ l.31 ...gramozhat\'o Logika}{25}{subsection.3.4.3}
 
 (chapter1.tex
 1. fejezet.
-<figures/1_1_1_active_pfc.png, id=443, 268.6035pt x 115.632pt>
+<figures/1_1_1_active_pfc.png, id=383, 268.6035pt x 115.632pt>
 File: figures/1_1_1_active_pfc.png Graphic file (type png)
 <use figures/1_1_1_active_pfc.png>
 Package pdftex.def Info: figures/1_1_1_active_pfc.png  used on input line 15.
@@ -800,14 +737,14 @@ Package pdftex.def Info: figures/1_1_1_active_pfc.png  used on input line 15.
 
 
 ]
-<figures/1_1_2_entsoe.png, id=454, 414.1071pt x 425.9112pt>
+<figures/1_1_2_entsoe.png, id=394, 414.1071pt x 425.9112pt>
 File: figures/1_1_2_entsoe.png Graphic file (type png)
 <use figures/1_1_2_entsoe.png>
 Package pdftex.def Info: figures/1_1_2_entsoe.png  used on input line 34.
 (pdftex.def)             Requested size: 284.52756pt x 292.64424pt.
  [9 <./figures/1_1_1_active_pfc.png>] [10 <./figures/1_1_2_entsoe.png>]
 [11]
-<figures/1_2_1_ceer_eves.png, id=496, 804.00375pt x 423.08063pt>
+<figures/1_2_1_ceer_eves.png, id=435, 804.00375pt x 423.08063pt>
 File: figures/1_2_1_ceer_eves.png Graphic file (type png)
 <use figures/1_2_1_ceer_eves.png>
 Package pdftex.def Info: figures/1_2_1_ceer_eves.png  used on input line 92.
@@ -817,7 +754,7 @@ Package pdftex.def Info: figures/1_2_1_ceer_eves.png  used on input line 92.
 
  (chapter2.tex
 2. fejezet.
-<figures/2_1_01_CRTU_MODULES.png, id=510, 752.8125pt x 502.12593pt>
+<figures/2_1_01_CRTU_MODULES.png, id=450, 752.8125pt x 502.12593pt>
 File: figures/2_1_01_CRTU_MODULES.png Graphic file (type png)
 <use figures/2_1_01_CRTU_MODULES.png>
 Package pdftex.def Info: figures/2_1_01_CRTU_MODULES.png  used on input line 7.
@@ -828,7 +765,7 @@ Package pdftex.def Info: figures/2_1_01_CRTU_MODULES.png  used on input line 7.
 
 
  <./figures/2_1_01_CRTU_MODULES.png>]
-<figures/2_1_1_crtu_alap.png, id=519, 240.462pt x 232.2495pt>
+<figures/2_1_1_crtu_alap.png, id=459, 240.462pt x 232.2495pt>
 File: figures/2_1_1_crtu_alap.png Graphic file (type png)
 <use figures/2_1_1_crtu_alap.png>
 Package pdftex.def Info: figures/2_1_1_crtu_alap.png  used on input line 21.
@@ -844,7 +781,7 @@ Package pdftex.def Info: figures/2_1_1_crtu_alap.png  used on input line 21.
 
 
 ] [19]
-<figures/3_2_0_linear_opto.PNG, id=564, 665.48625pt x 395.22656pt>
+<figures/3_2_0_linear_opto.PNG, id=504, 665.48625pt x 395.22656pt>
 File: figures/3_2_0_linear_opto.PNG Graphic file (type png)
 <use figures/3_2_0_linear_opto.PNG>
 Package pdftex.def Info: figures/3_2_0_linear_opto.PNG  used on input line 64.
@@ -865,18 +802,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--92
  []
 
 [20 <./figures/3_2_0_linear_opto.PNG>]
-<figures/3_2_1_aram_valto.png, id=576, 302.63063pt x 191.9672pt>
+<figures/3_2_1_aram_valto.png, id=516, 302.63063pt x 191.9672pt>
 File: figures/3_2_1_aram_valto.png Graphic file (type png)
 <use figures/3_2_1_aram_valto.png>
 Package pdftex.def Info: figures/3_2_1_aram_valto.png  used on input line 109.
 (pdftex.def)             Requested size: 284.52756pt x 180.48433pt.
  [21 <./figures/3_2_1_aram_valto.png>]
-<figures/3_2_4_rogo_sema.png, id=582, 582.175pt x 243.91125pt>
+<figures/3_2_4_rogo_sema.png, id=522, 582.175pt x 243.91125pt>
 File: figures/3_2_4_rogo_sema.png Graphic file (type png)
 <use figures/3_2_4_rogo_sema.png>
 Package pdftex.def Info: figures/3_2_4_rogo_sema.png  used on input line 125.
 (pdftex.def)             Requested size: 199.16928pt x 83.44232pt.
-<figures/3_2_3_rogo_real.png, id=583, 903.375pt x 461.47406pt>
+<figures/3_2_3_rogo_real.png, id=523, 903.375pt x 461.47406pt>
 File: figures/3_2_3_rogo_real.png Graphic file (type png)
 <use figures/3_2_3_rogo_real.png>
 Package pdftex.def Info: figures/3_2_3_rogo_real.png  used on input line 131.
@@ -887,12 +824,12 @@ Overfull \hbox (4.84323pt too wide) in paragraph at lines 123--134
  []
 
 [22 <./figures/3_2_4_rogo_sema.png (PNG copy)> <./figures/3_2_3_rogo_real.png>]
-<figures/3_2_5_shunt.png, id=594, 36.135pt x 21.4401pt>
+<figures/3_2_5_shunt.png, id=534, 36.135pt x 21.4401pt>
 File: figures/3_2_5_shunt.png Graphic file (type png)
 <use figures/3_2_5_shunt.png>
 Package pdftex.def Info: figures/3_2_5_shunt.png  used on input line 145.
 (pdftex.def)             Requested size: 142.26378pt x 84.43288pt.
-<figures/3_2_2_hall_comp.PNG, id=597, 953.81343pt x 316.18124pt>
+<figures/3_2_2_hall_comp.PNG, id=537, 953.81343pt x 316.18124pt>
 File: figures/3_2_2_hall_comp.PNG Graphic file (type png)
 <use figures/3_2_2_hall_comp.PNG>
 Package pdftex.def Info: figures/3_2_2_hall_comp.PNG  used on input line 157.
@@ -933,13 +870,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--184
  []
 
 [23 <./figures/3_2_5_shunt.png> <./figures/3_2_2_hall_comp.PNG>]
-<figures/3_4_0_DATA_PROC.png, id=615, 1632.0975pt x 1481.535pt>
+<figures/3_4_0_DATA_PROC.png, id=554, 1632.0975pt x 1481.535pt>
 File: figures/3_4_0_DATA_PROC.png Graphic file (type png)
 <use figures/3_4_0_DATA_PROC.png>
 Package pdftex.def Info: figures/3_4_0_DATA_PROC.png  used on input line 197.
 (pdftex.def)             Requested size: 369.88582pt x 335.74988pt.
  [24] [25 <./figures/3_4_0_DATA_PROC.png>]
-<figures/3_4_1_rendszer.png, id=635, 684.30656pt x 514.92375pt>
+<figures/3_4_1_rendszer.png, id=575, 684.30656pt x 514.92375pt>
 File: figures/3_4_1_rendszer.png Graphic file (type png)
 <use figures/3_4_1_rendszer.png>
 Package pdftex.def Info: figures/3_4_1_rendszer.png  used on input line 237.
@@ -955,57 +892,57 @@ Package pdftex.def Info: figures/3_4_1_rendszer.png  used on input line 237.
 
 
 ]
-<figures/4_2_1_konstr_expl.png, id=697, 1003.75pt x 752.8125pt>
+<figures/4_2_1_konstr_expl.png, id=637, 1003.75pt x 752.8125pt>
 File: figures/4_2_1_konstr_expl.png Graphic file (type png)
 <use figures/4_2_1_konstr_expl.png>
 Package pdftex.def Info: figures/4_2_1_konstr_expl.png  used on input line 34.
 (pdftex.def)             Requested size: 341.43306pt x 256.07921pt.
  [31 <./figures/4_2_1_konstr_expl.png>]
-<figures/4_3_0_DC_DC.png, id=711, 984.67876pt x 332.74312pt>
+<figures/4_3_0_DC_DC.png, id=651, 984.67876pt x 332.74312pt>
 File: figures/4_3_0_DC_DC.png Graphic file (type png)
 <use figures/4_3_0_DC_DC.png>
 Package pdftex.def Info: figures/4_3_0_DC_DC.png  used on input line 56.
 (pdftex.def)             Requested size: 369.88582pt x 124.9916pt.
  [32 <./figures/4_3_0_DC_DC.png>]
 [33] [34]
-<figures/4_3_5_CURR_INPUT.PNG, id=736, 608.2725pt x 187.45032pt>
+<figures/4_3_5_CURR_INPUT.PNG, id=676, 608.2725pt x 187.45032pt>
 File: figures/4_3_5_CURR_INPUT.PNG Graphic file (type png)
 <use figures/4_3_5_CURR_INPUT.PNG>
 Package pdftex.def Info: figures/4_3_5_CURR_INPUT.PNG  used on input line 129.
 (pdftex.def)             Requested size: 426.79134pt x 131.52608pt.
  [35 <./figures/4_3_5_CURR_INPUT.PNG>]
-<figures/4_3_3_ALIASING.PNG, id=746, 387.69844pt x 187.45032pt>
+<figures/4_3_3_ALIASING.PNG, id=685, 387.69844pt x 187.45032pt>
 File: figures/4_3_3_ALIASING.PNG Graphic file (type png)
 <use figures/4_3_3_ALIASING.PNG>
 Package pdftex.def Info: figures/4_3_3_ALIASING.PNG  used on input line 150.
 (pdftex.def)             Requested size: 284.52756pt x 137.56981pt.
  [36 <./figures/4_3_3_ALIASING.PNG>]
-<figures/4_3_4_VOLT_INPUT.PNG, id=756, 596.2275pt x 192.72pt>
+<figures/4_3_4_VOLT_INPUT.PNG, id=696, 596.2275pt x 192.72pt>
 File: figures/4_3_4_VOLT_INPUT.PNG Graphic file (type png)
 <use figures/4_3_4_VOLT_INPUT.PNG>
 Package pdftex.def Info: figures/4_3_4_VOLT_INPUT.PNG  used on input line 162.
 (pdftex.def)             Requested size: 426.79134pt x 137.95253pt.
  [37 <./figures/4_3_4_VOLT_INPUT.PNG>] [38]
-<figures/4_4_3_RT7285_RECOM.PNG, id=780, 796.47563pt x 469.755pt>
+<figures/4_4_3_RT7285_RECOM.PNG, id=720, 796.47563pt x 469.755pt>
 File: figures/4_4_3_RT7285_RECOM.PNG Graphic file (type png)
 <use figures/4_4_3_RT7285_RECOM.PNG>
 Package pdftex.def Info: figures/4_4_3_RT7285_RECOM.PNG  used on input line 209
 .
 (pdftex.def)             Requested size: 199.16928pt x 117.46713pt.
-<figures/4_4_2_CRPM3_C_TAP.PNG, id=783, 710.655pt x 359.84438pt>
+<figures/4_4_2_CRPM3_C_TAP.PNG, id=723, 710.655pt x 359.84438pt>
 File: figures/4_4_2_CRPM3_C_TAP.PNG Graphic file (type png)
 <use figures/4_4_2_CRPM3_C_TAP.PNG>
 Package pdftex.def Info: figures/4_4_2_CRPM3_C_TAP.PNG  used on input line 216.
 
 (pdftex.def)             Requested size: 199.16928pt x 100.84908pt.
  [39 <./figures/4_4_3_RT7285_RECOM.PNG> <./figures/4_4_2_CRPM3_C_TAP.PNG>]
-<figures/4_4_4_CRPM3A_PCB.PNG, id=793, 604.50844pt x 618.05907pt>
+<figures/4_4_4_CRPM3A_PCB.PNG, id=733, 604.50844pt x 618.05907pt>
 File: figures/4_4_4_CRPM3A_PCB.PNG Graphic file (type png)
 <use figures/4_4_4_CRPM3A_PCB.PNG>
 Package pdftex.def Info: figures/4_4_4_CRPM3A_PCB.PNG  used on input line 232.
 (pdftex.def)             Requested size: 199.16928pt x 203.63004pt.
  [40 <./figures/4_4_4_CRPM3A_PCB.PNG>] [41]
-<figures/4_1_1_1_szigkoord.png, id=811, 2393.94376pt x 1333.98375pt>
+<figures/4_1_1_1_szigkoord.png, id=750, 2393.94376pt x 1333.98375pt>
 File: figures/4_1_1_1_szigkoord.png Graphic file (type png)
 <use figures/4_1_1_1_szigkoord.png>
 Package pdftex.def Info: figures/4_1_1_1_szigkoord.png  used on input line 258.
@@ -1014,7 +951,7 @@ Package pdftex.def Info: figures/4_1_1_1_szigkoord.png  used on input line 258.
  [42
 
  <./figures/4_1_1_1_szigkoord.png>]
-<figures/4_1_2_emc_fa.png, id=820, 301.8778pt x 166.37157pt>
+<figures/4_1_2_emc_fa.png, id=760, 301.8778pt x 166.37157pt>
 File: figures/4_1_2_emc_fa.png Graphic file (type png)
 <use figures/4_1_2_emc_fa.png>
 Package pdftex.def Info: figures/4_1_2_emc_fa.png  used on input line 289.
@@ -1022,7 +959,7 @@ Package pdftex.def Info: figures/4_1_2_emc_fa.png  used on input line 289.
  [43
 
  <./figures/4_1_2_emc_fa.png>] [44] [45]
-<figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG, id=858, 446.41782pt x 313.922
+<figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG, id=798, 446.41782pt x 313.922
 8pt>
 File: figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG Graphic file (type png)
 <use figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG>
@@ -1030,18 +967,18 @@ Package pdftex.def Info: figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG  used
 on input line 342.
 (pdftex.def)             Requested size: 284.52756pt x 200.08122pt.
  [46 <./figures/4_1_2_2_ISOLATED_EMISSION_REDUCTION.PNG>]
-<figures/4_1_3_5_ESD_V.png, id=879, 1919.17pt x 1742.51pt>
+<figures/4_1_3_5_ESD_V.png, id=819, 1919.17pt x 1742.51pt>
 File: figures/4_1_3_5_ESD_V.png Graphic file (type png)
 <use figures/4_1_3_5_ESD_V.png>
 Package pdftex.def Info: figures/4_1_3_5_ESD_V.png  used on input line 388.
 (pdftex.def)             Requested size: 188.00417pt x 170.71652pt.
-<figures/4_1_3_6_ESD_H.png, id=880, 2256.43pt x 2003.485pt>
+<figures/4_1_3_6_ESD_H.png, id=820, 2256.43pt x 2003.485pt>
 File: figures/4_1_3_6_ESD_H.png Graphic file (type png)
 <use figures/4_1_3_6_ESD_H.png>
 Package pdftex.def Info: figures/4_1_3_6_ESD_H.png  used on input line 394.
 (pdftex.def)             Requested size: 192.25882pt x 170.71652pt.
  [47]
-<figures/4_1_3_1_BURSTSURGE_SETUP.jpg, id=901, 4015.0pt x 3011.25pt>
+<figures/4_1_3_1_BURSTSURGE_SETUP.jpg, id=840, 4015.0pt x 3011.25pt>
 File: figures/4_1_3_1_BURSTSURGE_SETUP.jpg Graphic file (type jpg)
 <use figures/4_1_3_1_BURSTSURGE_SETUP.jpg>
 Package pdftex.def Info: figures/4_1_3_1_BURSTSURGE_SETUP.jpg  used on input li
@@ -1049,12 +986,12 @@ ne 412.
 (pdftex.def)             Requested size: 341.43306pt x 256.06773pt.
 
 [48 <./figures/4_1_3_5_ESD_V.png> <./figures/4_1_3_6_ESD_H.png>]
-<figures/4_1_3_3_SURGE.png, id=913, 432.86719pt x 134.00063pt>
+<figures/4_1_3_3_SURGE.png, id=853, 432.86719pt x 134.00063pt>
 File: figures/4_1_3_3_SURGE.png Graphic file (type png)
 <use figures/4_1_3_3_SURGE.png>
 Package pdftex.def Info: figures/4_1_3_3_SURGE.png  used on input line 428.
 (pdftex.def)             Requested size: 341.43306pt x 105.69983pt.
-<figures/4_1_3_7_RF.png, id=916, 3075.49pt x 2537.48pt>
+<figures/4_1_3_7_RF.png, id=856, 3075.49pt x 2537.48pt>
 File: figures/4_1_3_7_RF.png Graphic file (type png)
 <use figures/4_1_3_7_RF.png>
 Package pdftex.def Info: figures/4_1_3_7_RF.png  used on input line 443.
@@ -1083,7 +1020,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 39.
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<figures/5_1_0_emul_eeprom.PNG, id=953, 618.81187pt x 445.665pt>
+<figures/5_1_0_emul_eeprom.PNG, id=893, 618.81187pt x 445.665pt>
 File: figures/5_1_0_emul_eeprom.PNG Graphic file (type png)
 <use figures/5_1_0_emul_eeprom.PNG>
 Package pdftex.def Info: figures/5_1_0_emul_eeprom.PNG  used on input line 71.
@@ -1096,13 +1033,13 @@ Overfull \hbox (4.92308pt too wide) in paragraph at lines 80--81
  []
 
 [54 <./figures/5_1_0_emul_eeprom.PNG>] [55] [56] [57] [58]
-<figures/5_1_1_dbg_serial.png, id=1069, 292.09125pt x 505.89pt>
+<figures/5_1_1_dbg_serial.png, id=1009, 292.09125pt x 505.89pt>
 File: figures/5_1_1_dbg_serial.png Graphic file (type png)
 <use figures/5_1_1_dbg_serial.png>
 Package pdftex.def Info: figures/5_1_1_dbg_serial.png  used on input line 221.
 (pdftex.def)             Requested size: 142.26378pt x 246.39844pt.
  [59 <./figures/5_1_1_dbg_serial.png>]
-<figures/5_3_1_CRWEB.png, id=1076, 1024.57782pt x 683.55376pt>
+<figures/5_3_1_CRWEB.png, id=1015, 1024.57782pt x 683.55376pt>
 File: figures/5_3_1_CRWEB.png Graphic file (type png)
 <use figures/5_3_1_CRWEB.png>
 Package pdftex.def Info: figures/5_3_1_CRWEB.png  used on input line 239.
@@ -1112,13 +1049,13 @@ Package pdftex.def Info: figures/5_3_1_CRWEB.png  used on input line 239.
 .sty"
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 ) [60 <./figures/5_3_1_CRWEB.png>] [61] [62]
-<figures/5_4_2_kalibracio_1.PNG, id=1122, 510.40688pt x 331.2375pt>
+<figures/5_4_2_kalibracio_1.PNG, id=1062, 510.40688pt x 331.2375pt>
 File: figures/5_4_2_kalibracio_1.PNG Graphic file (type png)
 <use figures/5_4_2_kalibracio_1.PNG>
 Package pdftex.def Info: figures/5_4_2_kalibracio_1.PNG  used on input line 333
 .
 (pdftex.def)             Requested size: 341.43306pt x 221.58932pt.
-<figures/5_4_3_kalibracio_2.PNG, id=1123, 512.66531pt x 332.74312pt>
+<figures/5_4_3_kalibracio_2.PNG, id=1063, 512.66531pt x 332.74312pt>
 File: figures/5_4_3_kalibracio_2.PNG Graphic file (type png)
 <use figures/5_4_3_kalibracio_2.PNG>
 Package pdftex.def Info: figures/5_4_3_kalibracio_2.PNG  used on input line 340
@@ -1130,7 +1067,7 @@ Package pdftex.def Info: figures/5_4_3_kalibracio_2.PNG  used on input line 340
 
  (chapter6.tex
 6. fejezet.
-<figures/6_0_0_CRPM_SEM_1.jpg, id=1139, 3011.25pt x 4015.0pt>
+<figures/6_0_0_CRPM_SEM_1.jpg, id=1079, 3011.25pt x 4015.0pt>
 File: figures/6_0_0_CRPM_SEM_1.jpg Graphic file (type jpg)
 <use figures/6_0_0_CRPM_SEM_1.jpg>
 Package pdftex.def Info: figures/6_0_0_CRPM_SEM_1.jpg  used on input line 11.
@@ -1269,7 +1206,7 @@ Overfull \hbox (1.13582pt too wide) in paragraph at lines 234--237
 
 
 ]
-<figures/4_4_1_CRPM3_PCB.png, id=1310, 1148.79187pt x 603.75563pt>
+<figures/4_4_1_CRPM3_PCB.png, id=1249, 1148.79187pt x 603.75563pt>
 File: figures/4_4_1_CRPM3_PCB.png Graphic file (type png)
 <use figures/4_4_1_CRPM3_PCB.png>
 Package pdftex.def Info: figures/4_4_1_CRPM3_PCB.png  used on input line 15.
@@ -1282,7 +1219,7 @@ Overfull \hbox (38.17094pt too wide) in paragraph at lines 15--16
 [78
 
  <./figures/4_4_1_CRPM3_PCB.png>]
-<figures/CRPM3_A_EGESZ.PNG, id=1315, 491.58656pt x 658.71094pt>
+<figures/CRPM3_A_EGESZ.PNG, id=1255, 491.58656pt x 658.71094pt>
 File: figures/CRPM3_A_EGESZ.PNG Graphic file (type png)
 <use figures/CRPM3_A_EGESZ.PNG>
 Package pdftex.def Info: figures/CRPM3_A_EGESZ.PNG  used on input line 22.
@@ -1290,7 +1227,7 @@ Package pdftex.def Info: figures/CRPM3_A_EGESZ.PNG  used on input line 22.
  [79
 
  <./figures/CRPM3_A_EGESZ.PNG>]
-<figures/CRPM3_C_EGESZ.PNG, id=1321, 812.28468pt x 661.72218pt>
+<figures/CRPM3_C_EGESZ.PNG, id=1261, 812.28468pt x 661.72218pt>
 File: figures/CRPM3_C_EGESZ.PNG Graphic file (type png)
 <use figures/CRPM3_C_EGESZ.PNG>
 Package pdftex.def Info: figures/CRPM3_C_EGESZ.PNG  used on input line 29.
@@ -1302,7 +1239,7 @@ Package pdftex.def Info: figures/CRPM3_C_EGESZ.PNG  used on input line 29.
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1327, 597.55246pt x 845.19763pt>
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1267, 597.55246pt x 845.19763pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf  used on input l
@@ -1325,7 +1262,7 @@ clusion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1330, page=1, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1270, page=1, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
@@ -1358,7 +1295,7 @@ input line 34.
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1387, page=2, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1327, page=2, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 2>
@@ -1379,7 +1316,7 @@ input line 34.
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1393, page=3, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1333, page=3, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 3>
@@ -1405,7 +1342,7 @@ input line 34.
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
-(Diplomaterv.aux (task.aux) (titlepage.aux) (declaration.aux) (abstract.aux)
+(Diplomaterv.aux (titlepage.aux) (declaration.aux) (abstract.aux)
 (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
 (chapter5.aux) (chapter6.aux) (overall.aux) (acknowledgement.aux)
 (appendices.aux))
@@ -1416,10 +1353,10 @@ Package rerunfilecheck Info: File `Diplomaterv.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 16727 strings out of 492970
- 249198 string characters out of 3126149
- 533690 words of memory out of 3000000
- 19784 multiletter control sequences out of 15000+200000
+ 16710 strings out of 492970
+ 248292 string characters out of 3126149
+ 533007 words of memory out of 3000000
+ 19776 multiletter control sequences out of 15000+200000
  26769 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,18n,51p,1857b,1417s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1451,9 +1388,9 @@ cmr8.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmr9.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Diplomaterv.pdf (85 pages, 14002318 bytes).
+Output written on Diplomaterv.pdf (84 pages, 13894100 bytes).
 PDF statistics:
- 2277 PDF objects out of 2487 (max. 8388607)
+ 2216 PDF objects out of 2487 (max. 8388607)
  450 named destinations out of 1000 (max. 500000)
- 782 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 762 words of extra memory for PDF output out of 10000 (max. 10000000)
 
