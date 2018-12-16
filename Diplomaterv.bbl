@@ -86,6 +86,12 @@
 \newblock
   \url{https://www.schneider-electric.com.au/en/product/16451/current-transformer-ti-50-5-a---for-cable-%C3%B8-21-mm/}.
 
+\bibitem{MSZ_EN_62052-11_2003}
+{MSZ EN 62052-11:2003, Váltakozó áramú villamos fogyasztásmérõ berendezések.
+  Általános követelmények, vizsgálatok és vizsgálati feltételek. 11. rész:
+  Fogyasztásmérõ berendezések (IEC 62052-11:2003)}.
+\newblock Szabvány, Magyar Szabványügyi Testület, 05 2003.
+
 \bibitem{SAMTEC_DW}
 {Samtec}.
 \newblock {{DW .100 Flex Stack, Flexible Board Stacker}}.

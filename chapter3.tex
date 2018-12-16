@@ -57,7 +57,7 @@ Egy precízen tekercselt mérõtranszformátor segítségével az 50Hz-es váltakozó fes
 \subsection{Ellenállásosztó és izolációs erõsítõ}
 %----------------------------------------------------------------------------
 
-A készülék bemeneti feszültségét egy nagy impedanciás ellenállás osztón keresztül leképezhetjük egy izolációs erõsítõ bemeneti tartományára, majd egy izolációs erõsítõvel elérhetjük a megfelelõ szigetelési szilárdságú galvanikus leválasztást. Az izolációs erõsítõ mûködhet optikai, induktív vagy kapacitív elven. Az induktív elvûek esetében az analóg bemeneti jelet digitálissá alakítják, majd a tokozáson belül kialakított légmagos transzformátorok segítségével, a mágneses téren keresztül választják le a jelet, majd alakítják vissza analóggá. Ez a megoldás akár kis teljesítményû leválasztott tápok kialakítását is lehetõvé teszi a digitális jelek átvitele mellett. A kapacitív elven mûködõ izolátorok szintén digitalizálják a bemeneti jelet, majd a szilícium lapkákon kialakított nagyfeszültségû kondenzátorok segítségével, az elektromos téren keresztül juttatják át a a jelet a fogadó oldalra, ahol visszaalakítják analóg jellé. Az induktív és kapacitív izolátorok digitális átviteli megoldása kiküszöböli az optikai izolációs erõsítõk legfõbb problémáját, az öregedés következtében fellépõ paraméter változásokat. Az optikai elvû analóg leválasztók egyik speciális típusa a lineáris optocsatoló, amelyben egy tokozáson belül egy infra LED-hez két fotodióda tartozik. Ezt az alkatrészt egy mûveleti erõsítõs szabályzókörrel kiegészítve mind a két oldalon egy olyan megoldást kapunk, amelynek az átvitelét az öregedés nem befolyásolja jelentõsen, azt a mûveleti erõsítõk kikompenzálják.
+A készülék bemeneti feszültségét egy nagy impedanciás ellenállás osztón keresztül leképezhetjük egy izolációs erõsítõ bemeneti tartományára, majd egy izolációs erõsítõvel elérhetjük a megfelelõ szigetelési szilárdságú galvanikus leválasztást. Az izolációs erõsítõ mûködhet optikai, induktív vagy kapacitív elven. Az induktív elvûek esetében az analóg bemeneti jelet digitálissá alakítják, majd a tokozáson belül kialakított légmagos transzformátorok segítségével, a mágneses téren keresztül választják le a jelet, majd alakítják vissza analóggá. Ez a megoldás akár kis teljesítményû leválasztott tápok kialakítását is lehetõvé teszi a digitális jelek átvitele mellett. A kapacitív elven mûködõ izolátorok szintén digitalizálják a bemeneti jelet, majd a szilícium lapkákon kialakított nagyfeszültségû kondenzátorok segítségével, az elektromos téren keresztül juttatják át a a jelet a fogadó oldalra, ahol visszaalakítják analóg jellé. Az induktív és kapacitív izolátorok digitális átviteli megoldása kiküszöböli az optikai izolációs erõsítõk legfõbb problémáját, az öregedés következtében fellépõ paraméter változásokat. Az optikai elvû analóg leválasztók egyik speciális típusa a lineáris optocsatoló, amelyben egy tokozáson belül egy infra LED-hez két fotodióda tartozik. Ezt az alkatrészt egy mûveleti erõsítõs szabályzókörrel kiegészítve mind a két oldalon egy olyan megoldást kapunk, amelynek az átvitelét az öregedés nem befolyásolja jelentõsen, azt a mûveleti erõsítõk kikompenzálják. Fontos megjegyezni, hogy a megoldáshoz szükséges egy leválasztott táp kialakítása az izolációs erõsítõ mûködéséhez, amely a megoldás költségét növeli.
 
 \begin{figure}[!ht]
 \centering
@@ -69,7 +69,7 @@ A készülék bemeneti feszültségét egy nagy impedanciás ellenállás osztón keresztü
 \subsection{Ellenállásosztó és leválasztott ADC}
 %----------------------------------------------------------------------------
 
-Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell leképezni az ADC mérési tartományára a feszültséget, majd az átalakítást követõen a digitális kommunikációt kell leválasztani. A digitális kommunikáció leválasztására számos izolátor és optocsatoló típus áll rendelkezésre, melyek költsége alacsonyabb, mint az analóg izolációs erõsítõké.
+Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell leképezni az ADC mérési tartományára a feszültséget, majd az átalakítást követõen a digitális kommunikációt kell leválasztani. A digitális kommunikáció leválasztására számos izolátor és optocsatoló típus áll rendelkezésre, melyek költsége alacsonyabb, mint az analóg izolációs erõsítõké. Hasonlóan az izolációs erõsítõs megoldáshoz, leválasztott táp használata szükséges.
 
 %----------------------------------------------------------------------------
 \subsection{Feszültségmérési megoldások összehasonlítása}
@@ -85,7 +85,10 @@ Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jellemzõik alap
 Elérhetõ pontosság & Alacsony & Magas & Magas\\ \hline
 AC/DC mérés & AC & AC és DC & AC és DC\\ \hline
 Frekvencia tartomány & Kicsi & Közepes & Nagy\\ \hline
+Fázistolás & Van & Elhanyagolható & Elhanyagolható\\ \hline
+Hibatûrés & Magas & Alacsony & Alacsony\\ \hline
 Galvanikus leválasztás & Inherens & Analóg szükséges & Digitális szükséges\\ \hline
+Leválasztott táp szükséges & Nem & Igen & Igen\\ \hline
 \end{tabularx}
 \caption{Feszültségmérési megoldások}
 \label{voltage_meas_comp}
@@ -107,13 +110,13 @@ Az árammérés eredményébõl következtethetünk a terhelés nagyságára, jellegére. Az
 \caption{Áramváltó transzformátor mûködési elve}
 \end{figure}
 
-A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldható. A transzformátor kialakítását tekintve a szekunder oldal fix menetszámmal rendelkezik, míg a primer oldalon az adott felhasználásnak megfelelõ menetszámban kell átfûzni egy nagyobb áramú vezetõt. Itt a menetszám tipikusan kevés, leggyakrabban 1-3 közötti. A szekunder oldalt egy minél alacsonyabb értékû sönt ellenállással zárjuk le, ezzel próbáljuk közelíteni a transzformátor rövidzárási állapotát. A szekunder oldali áramot mérve tudunk ezután következtetni a primer áramra, mivel az áttétel elõre ismert. A feszültségváltó transzformátorral hasonló módon méretét tekintve nagy, precízebb típusok költségesek. Gyártanak bontható típusúakat is, azonban ezek tovább emelik a szenzor transzformátor árát. Egy jelentõs hátrány, hogy lezáratlan állapotban életveszélyes feszültségek jelennek meg a szekunder oldalon már alacsonyabb primer áramoknál is. Ez utóbbi abból következik, hogy míg normális mûködés közben a primer és szekunder oldalon keletkezõ fluxus azonos nagyságú és ellentétes irányú, ezzel kioltva egymást, addig a szekunder oldali szakadás esetén a vasmagban kialakuló fluxus megnõ, a szekunder tekercselésben az feszültséget indukál, az pedig a transzformátor tönkremeneteléhez vezethet, vagy pedig a telepítõ szakembert veszélyeztetheti, ezért a telepítésénél kellõ figyelemmel kell eljárni, a szekunder oldalt rövidzárban kell tartani, vagy a primer oldali áramot 0-án kell tartani a szekunder lezárásáig.
+A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldható. A transzformátor kialakítását tekintve a szekunder oldal fix menetszámmal rendelkezik, míg a primer oldalon az adott felhasználásnak megfelelõ menetszámban kell átfûzni egy nagyobb áramú vezetõt. Itt a menetszám tipikusan kevés, leggyakrabban 1-3 közötti. A szekunder oldalt egy minél alacsonyabb értékû sönt ellenállással zárjuk le, ezzel próbáljuk közelíteni a transzformátor rövidzárási állapotát. A passzív lezárás mellett létezik úgynevezett aktív lezárás is, ekkor ellenállás helyett egy mûveleti erõsítõs áramkörrel biztosítunk gyakorlatilag rövidzárási állapotot. A szekunder oldali áramot mérve tudunk ezután következtetni a primer áramra, mivel az áttétel elõre ismert. A feszültségváltó transzformátorral hasonló módon méretét tekintve nagy, precízebb típusok költségesek. Gyártanak bontható típusúakat is, azonban ezek tovább emelik a szenzor transzformátor árát, ennek ellenére az iparban gyakran alkalmazzák, mivel a már meglévõ rendszerbe a szolgáltatás szüneteltetése nélkül telepíthetõ. Egy jelentõs hátrány, hogy lezáratlan állapotban életveszélyes feszültségek jelennek meg a szekunder oldalon már alacsonyabb primer áramoknál is. Ez utóbbi abból következik, hogy míg normális mûködés közben a primer és szekunder oldalon keletkezõ fluxus azonos nagyságú és ellentétes irányú, ezzel kioltva egymást, addig a szekunder oldali szakadás esetén a vasmagban kialakuló fluxus megnõ, a szekunder tekercselésben az feszültséget indukál, az pedig a transzformátor tönkremeneteléhez vezethet, vagy pedig a telepítõ szakembert veszélyeztetheti, ezért a telepítésénél kellõ figyelemmel kell eljárni, a szekunder oldalt rövidzárban kell tartani, vagy a primer oldali áramot 0-án kell tartani a szekunder lezárásáig.
 
 %----------------------------------------------------------------------------
 \subsection{Rogowski-tekercs}
 %----------------------------------------------------------------------------
 
-Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kivitelû. Ez lehetõvé teszi az üzem közbeni felszerelését a mérõnek, nem kell az áramszolgáltatást szüneteltetni. A tekercs közepén átfolyó áram változásával arányos feszültség indukálódik, azt integrálva az áram értékét nagy pontossággal meg tudjuk határozni. Magas frekvenciákig, nagy áramok esetében is használható, például tranziensek vizsgálatához. Ma már tisztán nyomtatott áramkörön is kialakítható, azonban ezek pontossága még nem éri el a tekercselt kivitelûekét. A pontosabb kivitelû típusok ára magas.
+Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kivitelû. Ez lehetõvé teszi az üzem közbeni felszerelését a mérõnek, nem kell az áramszolgáltatást szüneteltetni, emiatt a tulajdonsága miatt pedig ez egy gyakran alkalmazott szenzor az iparban. A tekercs közepén átfolyó áram változásával arányos feszültség indukálódik, azt integrálva az áram értékét nagy pontossággal meg tudjuk határozni. Magas frekvenciákig, nagy áramok esetében is használható, például tranziensek vizsgálatához. Ma már tisztán nyomtatott áramkörön is kialakítható, azonban ezek pontossága még nem éri el a tekercselt kivitelûekét. A pontosabb kivitelû típusok ára magas.
 
 \begin{figure*}[!ht]
     \centering
@@ -135,7 +138,7 @@ Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kiv
 \subsection{Sönt ellenállás és izolációs erõsítõ}
 %----------------------------------------------------------------------------
 
-Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció. A mérési pontosság növelésének érdekében érdemes Kelvnin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn juttassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 terminális ellenállásokat is, melyekkel tovább növelhetõ a pontosság.
+Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció, valamint az alacsony beiktatott ellenállás miatt a magas zárlati áram üzemzavar esetén, amely az árammérõ áramkör tönkremenetelét okozhatja. A mérési pontosság növelésének érdekében érdemes Kelvin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn juttassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 terminális ellenállásokat is, melyekkel tovább növelhetõ a pontosság. A feszültségméréssel hasonló módon, egy kis teljesítményû leválasztott táp szükséges az erõsítõ mûködtetéséhez.
 
 \begin{figure}[!ht]
 \centering
@@ -147,7 +150,7 @@ Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen,
 \subsection{Hall-szenzoros árammérõ}
 %----------------------------------------------------------------------------
 
-A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokba integrálva is be lehet szerezni, kitûnõ dinamikus tulajdonságokkal rendelkeznek, alkalmasak DC áramok mérésére, a mérendõ áramot nem szükséges egy ellenálláson keresztül vezetni és így feszültséget ejtetni, az áram nagysága az általa keltett mágneses mezõn keresztül van mérve, a Hall-effektust kihasználva, így a leválasztás a mágneses téren keresztül valósul meg. Pontos mérésekhez a külsõ mágneses tér zavaró hatása ellen speciális mérési eljárásokkal lehet védekezni, mely során több, egymás mellett elhelyezett Hall-szenzor kimenetét kell mérni, azok segítségével pedig kiszûrhetõ a külsõ tér zavaró hatása. 
+A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokba integrálva is be lehet szerezni, kitûnõ dinamikus tulajdonságokkal rendelkeznek, alkalmasak DC áramok mérésére, a mérendõ áramot nem szükséges egy ellenálláson keresztül vezetni és így feszültséget ejtetni, az áramot az általa keltett mágneses mezõn keresztül mérjük, a Hall-effektust kihasználva, így a leválasztás a mágneses téren keresztül valósul meg. Pontos mérésekhez a külsõ mágneses tér zavaró hatása ellen speciális mérési eljárásokkal lehet védekezni, mely során több, egymás mellett elhelyezett Hall-szenzor kimenetét kell mérni, azok segítségével pedig kiszûrhetõ a külsõ tér zavaró hatása. 
 
 \begin{figure}[!ht]
 \centering
@@ -174,7 +177,10 @@ AC/DC mérés & AC & AC & AC és DC  & AC és DC  \\ \hline
 Feldolgozás & Egyszerû & Bonyolult & Egyszerû & Egyszerû\\ \hline
 Túláram tolerancia & Magas & Magas & Alacsony & Magas \\ \hline
 Frekvencia tartomány & Kicsi & Nagy & Nagy & Közepes\\ \hline
+Fázistolás & Van & Van & Elhanyagolható & Elhanyagolható\\ \hline
+Hibatûrés & Magas & Magas & Alacsony & Magas\\ \hline
 Galvanikus leválasztás & Inherens & Inherens & Analóg szükséges & Inherens\\ \hline
+Leválasztott táp szükséges & Nem & Nem & Igen & Nem\\ \hline
 \end{tabularx}
 \caption{Árammérési megoldások \cite{TI_CUR_COMP}}
 \label{current_meas_comp}
@@ -184,23 +190,16 @@ Galvanikus leválasztás & Inherens & Inherens & Analóg szükséges & Inherens\\ \hl
 \section{Adatfeldolgozás}
 %----------------------------------------------------------------------------
 
-A lehetséges szenzor megoldások megismerése után nézzük milyen lehetséges jelfeldolgozók közül választhatunk. Az adatok feldolgozása itt a következõ mûveletsort jelenti:
+A lehetséges szenzor megoldások megismerése után nézzük milyen lehetséges jelfeldolgozók közül választhatunk. Az elvégzendõ mûveletsor a \ref{DAT_PROC} ábrán látható. Az AD értékek kiolvasását nagyobb gyakorisággal kell végrehajtani, illetve ezt átlagolni, a mûveletsor maradékát pedig legalább hálózati periódusonként (20ms) kell végrehajtani fázisonként. A feladatok jellegüket tekintve az egyes fázisokon belül sorosak, végig kell számolni a feszültség és áramértékektõl az energiákig mindent, de a fázisok között párhuzamos végrehajtás is megengedhetõ, habár idõben egymástól egyenletesen vannak eltolva a periódusok, így az soros végrehajtással is megoldható, amennyiben $\frac{20}{3}ms$ alatt lefut egy fázis feldolgozása.
 
-\begin{enumerate}
-\item\emph{AD értékek kiolvasása}
-\item\emph{Fázis kompenzáció}
-\item\emph{AD értékek leképezése valós mennyiségekre}
-\item\emph{Offset eliminálása}
-\item\emph{Hõmérséklet kompenzáció}
-\item\emph{RMS értékek elõállítása}
-\item\emph{Hatásos és meddõ teljesítmények számolása}
-\item\emph{Energiák akkumulálása}
-\item\emph{THD számítása}
-\item\emph{Hálózati események figyelése és rögzítése}
-\item\emph{Adatok biztosítása egy kommunikációs interfészen}
-\end{enumerate}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=130mm, keepaspectratio]{figures/3_4_0_DATA_PROC.png}
+\caption{Adatfeldolgozás menete}
+\label{DAT_PROC}
+\end{figure}
 
-Az AD értékek kiolvasását nagyobb gyakorisággal kell végrehajtani, illetve ezt átlagolni, a mûveletsor maradékát pedig hálózati periódusonként (20ms) végrehajtani fázisonként. A feladatok jellegüket tekintve az egyes fázisokon belül sorosak, végig kell számolni a feszültség és áramértékektõl az energiákig mindent, de a fázisok között párhuzamos végrehajtás is megengedhetõ, habár idõben egymástól egyenletesen vannak eltolva a periódusok, így az soros végrehajtással is megoldható, amennyiben $\frac{20}{3}ms$ alatt lefut egy fázis feldolgozása.
+
 %----------------------------------------------------------------------------
 \subsection{Mikrokontroller}
 %----------------------------------------------------------------------------
