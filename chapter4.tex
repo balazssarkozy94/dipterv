@@ -25,7 +25,7 @@ A CR-PM3 háromfázisú teljesítménymérõ modul három nyomtatott áramköri lapból épü
 
 \begin{enumerate}
 	\item \emph{CR-PM3A:} A ''front-end''-et valósítja meg, itt kapott helyet a 4 darab ADE7933 izolált mérõ IC, az ezekhez kapcsolódó elektronika, valamint a KIF csatlakozók.
-	\item \emph{CR-PM3C:} A mikrokontroller, illetve az ADE7978 égetett kódú DSP helyezkedik el ezen a szinten.
+	\item \emph{CR-PM3C:} A mikrokontroller, illetve az ADE7978 égetett kódú DSP helyezkedik el ezen a szinten, valamint az összes ezekhez kapcsolódó elektronika, mint például a CAN meghajtó, watchdog timer, kapcsolóüzemû tápegység, elõlapi LED-ek, címbeállító switch.
 	\item \emph{CR-PM3P:} Elektronikai funkciót nem lát el, csupán a termék elõlapja.
 \end{enumerate}
 
@@ -53,24 +53,7 @@ Az elõlapon a C-RTU család minden tagján kötelezõ bizonyos állapotokat LED-del m
 
 A kapcsolási rajzot OrCAD Capture CIS-ben hoztam létre, melynek számos funkciója segíti a tervezõ mérnökök, illetve a gyártás elõkészítés munkatársainak közös munkáját. A tervezõ az alkatrész lehelyezésekor láthatja, hogy az adott komponensbõl hány darab van raktáron, mennyi annak a beszerzési ára, így elkerülhetõek az olyan szituációk, hogy egy már nem beszerezhetõ, vagy feleslegesen drága alternatíva kerül egy új termékbe.
 
-A CR-PM3C-n egy 3.3V-os tápegységet és a hátlapi buszfeszültség visszaolvasását leszámítva tisztán digitális áramkörök helyezkednek el. Ezen a NYÁK-on a fõbb komponensek:
-
-\begin{enumerate}
-	\item \emph{C-CAN címbeállító switch:} Ez egy 4 karos kétállású kapcsoló, melynek az állását inicializáció során olvassa ki a kontroller, így a C-RTU rendszeren belül beállítható a címe a modulnak. Ez minden kiegészítõ modullal szemben elvárás.
-	\item \emph{3.3V-os tápegység:} Ez a Richtek RT7285/A kapcsolóüzemû tápegységén alapul, a hátlapi 12V-ból állítja elõ a modulnak szükséges tápfeszültséget.
-	\item \emph{Elõlapi LED-ek:} A C-RTU moduloknak elõírt színû LED-ek. Funkcióik sorban: státusz, busz kommunikáció, hiba, L1 fázis, L2 fázis, L3 fázis, illetve a DSP által vezérelt CF1 és CF2, konfigurálható jelentéssel, melyeket akár kalibrációra is lehet használni.
-	\item \emph{Mikrokontroller:} Az STM32F303-as mikrokontroller, illetve a mûködéséhez szükséges alkatrészek.
-	\item \emph{DSP:} Az ADE7978-as égetett kódú DSP. 
-	\item \emph{CAN meghajtás} 
-	\item \emph{Reset/PPS áramkör}
-	\item \emph{Reset gomb}
-	\item \emph{Debug UART csatlakozó:} A fejlesztéshez használható.
-	\item \emph{Programozó csatlakozó}
-	\item \emph{Busz és emelet csatlakozók:} Samtec ''Pass-Through'' keresztülmenõ hüvelysorok. 
-
-A CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrészek, az emeleti tûsor csatlakozó, továbbá a csatornák védelmei, a mérõ söntök, a nagyfeszültségû ellenállás osztók és a KIF csatlakozók találhatók.
-
-\end{enumerate}
+A CR-PM3C-n egy 3.3V-os tápegységet és a hátlapi buszfeszültség visszaolvasását leszámítva tisztán digitális áramkörök helyezkednek el, míg a CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrészek, az emeleti tûsor csatlakozó, továbbá a csatornák védelmei, a mérõ söntök, a nagyfeszültségû ellenállás osztók és a KIF csatlakozók találhatók. A két NYÁK szétválasztásánál elsõsorban a hálózati feszültségû rész és a feldolgozó elektronika szétválasztása volt a fõszempont.
 
 %----------------------------------------------------------------------------
 \subsection{Kapcsolóüzemû tápegység}
@@ -99,7 +82,7 @@ Maximális kitöltési tényezõ & 90$\%$	\\ \hline
 Mûködési hõmérséklet tartomány & -40...85C$^{\circ}$	\\ \hline
 Tokozás & SOT-23-6	\\ \hline
 \end{tabularx}
-\caption{RT7285/A fontosabb jellemzõi}
+\caption{RT7285/A fontosabb jellemzõi \cite{RT7285A}}
 \label{RT7285_spec}
 \end{table}
 
@@ -160,13 +143,13 @@ A CR-PM3 árammérõ bemeneteit elsõsorban árammérõ transzformátorok fogadására kel
 
 Áramváltó transzformátoros megoldás esetén a kis értékû sönt használata miatt egy lebegõ áramforrásként tekinthetünk a bemeneti jelforrásra, amely a mérõsöntön feszültséget ejt, ezt pedig a szûrõ- és védõáramkörökön keresztül az ADE7933 jelkondicionáló fokozatára, majd analóg digitális átalakítójára jut. 
 
-A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6m$\Omega$-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5m$\Omega$-os, négy vezetékes sönt, mely nagyobb költségû. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
+A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6m$\Omega$-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5m$\Omega$-os, négy vezetékes sönt \cite{vishay_shunt}, mely nagyobb költségû. A prototípus fejlesztése során végül csak a pontosabb, 4 vezetékes ellenállás lett beültetve. Ez a sönt konstans 1W maximális disszipációt visel el 70C$^{\circ}$-os környezeti hõmérsékletnél, amelyhez 14.14A-es áram társul, emellett legfeljebb 5 másodperces idõintervallumra 5W-ot, valamint az ehhez tartozó 31A-t is elvisel. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
 
 A söntöket ferrit szûrõk követik, melyek néhány 10kHz-es tartományig $\Omega$-os nagyságrend alatti impedanciát képviselnek, szûrõ hatásukat a 100MHz, illetve afeletti tartományban fejtik ki.
 
 Az RC aluláteresztõ tervezett töréspontja 
 \[\frac{1}{2*\pi*R*C} = \frac{1}{2*\pi*1000*33*10^{-9}} = 4823Hz\]
-ez pedig 10$\%$-os kondenzátor tûréssel, és 1$\%$-os ellenállás tûréssel számolva legrosszabb esetben 4337Hz-re csökken, amely még mindig jóval az ADE7933-ra specifikált 3.3kHz-es sávszélessége felett van. Mivel a mintavételi frekvenciája az ADC-nek 1.024MHz, így a hibát okozó, mintavételezésbõl keletkezõ tükörfrekvenciás komponenseket keltõ zavaró jelek szintén ezen frekvencia közelében lesznek. Ezeken a frekvenciákon az RC szûrõ átviteli karakterisztikája közelítõleg
+ez pedig 10$\%$-os kondenzátor tûréssel, és 1$\%$-os ellenállás tûréssel számolva legrosszabb esetben 4337Hz-re csökken, amely még mindig jóval az ADE7933-ra specifikált 3.3kHz-es sávszélessége felett van. Mivel a mintavételi frekvenciája a $\Sigma\Delta$ ADC-nek 1.024MHz, így a hibát okozó, mintavételezésbõl keletkezõ tükörfrekvenciás komponenseket keltõ zavaró jelek szintén ezen frekvencia közelében lesznek. Ezeken a frekvenciákon az RC szûrõ átviteli karakterisztikája közelítõleg
 \[ |A_{RC}|_{f = f_{sampl.}} = \frac{1}{\sqrt{1^2+(\omega_{sampl.} RC)^2}} = \frac{1}{\sqrt{1+(2 \pi f_{sampl.} RC)^2}} = 0.00471 = -46.5dB \]
 Ez pedig valószínûsíthetõleg megfelelõ elnyomást fog biztosítani a normális mûködéshez.
 
@@ -193,20 +176,20 @@ A feszültségmérõ bemenetek kialakításukat tekintve nagyban hasonlítanak az áramm
 
 Nagyfrekvenciás zavarok ellen ugyanolyan ferritek, valamint ugyanakkora töréspontú RC szûrõk kaptak helyet a bemeneten, a túlfeszültségek korlátozásáról pedig itt is a diódás védõ áramkör gondoskodik.
 
-A hálózati feszültség mérési tartományra való leképezését egy egyszerû ellenállásosztó biztosítja, melyben 0.1$\%$-os precizitású alkatrészeket használtam. Ez az ADE7933 $\pm$0.5V-os névleges bemeneti tartományra kell leképezni a névleges 230V-os effektív hálózati feszültséget, megfelelõ tartalékkal, hogy esetleges túlfeszültségeket is tudjunk még vizsgálni. Az MSZ-1:2002 \cite{MSZ_EN_1_2002} alapján, a 230V-os kisfeszültségû hálózaton a legnagyobb megengedett érték a 248V, így méretezzünk valamivel ezen érték felé, például 300V-ra.
+A hálózati feszültség mérési tartományra való leképezését egy egyszerû ellenállásosztó biztosítja, melyben 0.1$\%$-os precizitású alkatrészeket használtam. Ez az ADE7933 $\pm$0.5V-os névleges bemeneti tartományra kell leképezni a névleges 230V-os effektív hálózati feszültséget, megfelelõ tartalékkal, hogy esetleges túlfeszültségeket is tudjunk még vizsgálni. Az MSZ 1:2002 \cite{MSZ_1_2002} alapján, a 230V-os kisfeszültségû hálózaton a legnagyobb megengedett érték a 248V, így méretezzünk valamivel ezen érték felé, például 300V-ra.
 \[ V_{IN(ADE7933)} = V_{IN(CR-PM3)}*\frac{R_5}{R_5+R_1}\]
 Ebbõl egyszerû átrendezéssel megkaphatjuk az ellenállásosztó szükséges arányát:
 \[ \frac{R_5}{R_5+R_1} = \frac{V_{IN(ADE7933)}}{V_{IN(CR-PM3)}} = \frac{\pm0.5V}{\pm300*sqrt(2)} \approx 0.0012\]
 Az egyszerûség kedvéért, mivel az árambemeneteken 1k$\Omega$, 33nF-os RC szûrõt használtunk, itt válasszuk $R_5$ értékét ugyanúgy 1k$\Omega$-ra. Így $R_1$ értékére:
 \[ R_1 = \frac{R_5}{0.0012}-R_5 = \frac{1k\Omega}{0.0012}-1k\Omega \approx 832k\Omega \]
-Az ellenállás értéke mellett ebben a felhasználásban rendkívül fontos paraméter a feszültségtûrés, hiszen erre az alkatrészre fog esni a bemenetre kapcsolt feszültség döntõ része. Ehhez a számolt értékhez legközelebbi ami beszerezhetõ és megfelel a feszültségterhelésnek, az a Vishay TNPV e3 sorozatú, 1206-os tokozású, 1M$\Omega$-os ellenállása. Az alkatrész túlfeszültségtûrése kitûnõ, rövid idõtartamra ($ t \leq 1s $) paraméterromlás nélkül képes 2kV-ot elviselni, azonban ahhoz, hogy az esetleges túlfeszültségek ezt a maximumot ne léphessék túl, valamilyen feszültségkorlátozó elemmel kell ellátni a bemenetet. Ezzel az ellenállással a készülék bemeneti tartománya a következõképpen változik:
+Az ellenállás értéke mellett ebben a felhasználásban rendkívül fontos paraméter a feszültségtûrés, hiszen erre az alkatrészre fog esni a bemenetre kapcsolt feszültség döntõ része. Ehhez a számolt értékhez legközelebbi ami beszerezhetõ és megfelel a feszültségterhelésnek, az a Vishay TNPV e3 sorozatú, 1206-os tokozású, 1M$\Omega$-os ellenállása. \cite{VISHAY_RESISTOR} Az alkatrész túlfeszültségtûrése kitûnõ, rövid idõtartamra ($ t \leq 1s $) paraméterromlás nélkül képes 2kV-ot elviselni, azonban ahhoz, hogy az esetleges túlfeszültségek ezt a maximumot ne léphessék túl, valamilyen feszültségkorlátozó elemmel kell ellátni a bemenetet. Ezzel az ellenállással a készülék bemeneti tartománya a következõképpen változik:
 \[ V_{IN(CR-PM3)} = \pm 0.5V * \frac{1k\Omega+1M\Omega}{1k\Omega} = \pm 500.5V \approx 354V_{RMS}\]
 
 %----------------------------------------------------------------------------
 \subsubsection{Túlfeszültségvédelem}
 %----------------------------------------------------------------------------
 
-A feszültség bemenetnek az áramméréssel ellentétben nagy energiájú túlfeszültségeket is el kell viselnie, gondoljunk itt induktív kapcsolási jelenségekre a hálózaton, villámcsapások másodlagos hatásaira, vagy bármilyen egyéb, a készülék bemeneteire csatolódott zavaró jelre. Ezt a különbséget pedig a szabványok is figyelembe veszik, például a CR-PM3-ra vonatkozó IEC 62052-11:2003 termékszabvány azt írja elõ, hogy az EMC immunitási vizsgálatok egy részében csak a feszültség bemeneteket terheli, az árambemeneteket üresen kell hagyni. A feszültségbemeneteket érõ zavarok ellen túlfeszültség védelmet kell implementálni a biztonságos, stabil mûködés érdekében. Ezekre a leggyakrabban alkalmazott megoldások \cite{KESZULEK_FESZ}:	
+A feszültség bemenetnek nagy energiájú túlfeszültségeket is el kell viselnie, gondoljunk itt induktív kapcsolási jelenségekre a hálózaton, villámcsapások másodlagos hatásaira, vagy bármilyen egyéb, a készülék bemeneteire csatolódott zavaró jelre. Ezt a különbséget pedig a szabványok is figyelembe veszik, például a CR-PM3-ra vonatkozó IEC 62052-11:2003 termékszabvány azt írja elõ, hogy az EMC immunitási vizsgálatok egy részében csak a feszültség bemeneteket terheli, az árambemeneteket üresen kell hagyni. A feszültségbemeneteket érõ zavarok ellen túlfeszültség védelmet kell implementálni a biztonságos, stabil mûködés érdekében. Ezekre a leggyakrabban alkalmazott megoldások \cite{KESZULEK_FESZ}:	
 
 \begin{enumerate}
 \item\emph{Szikraköz} A túlfeszültség védelmek közül ez a legegyszerûbb, itt az átütés jelenségét használjuk fel védelmi célokra, amelynek kritikus feszültsége viszont a környezeti körülményektõl erõsen függ. A szikraközt mindenképpen áramkorlátozó eszközzel (Kismegszakító, olvadóbiztosító \cite{KESZULEK_ARAM}) együtt kell alkalmazni, anélkül még nagyon kis áramok esetén is megmaradhat az ív, az pedig tûzveszélyes.
@@ -295,7 +278,7 @@ Ez a szabvány megadja a kúszóáramutak minimális hosszát, illetve a minimális lég
 \item\emph{Átívelés:} A gáz szigetelõn keresztül létrejövõ vezetés, mely általában rövid túlfeszültség hatására jön létre.
 \end{enumerate}
 
-Általában az átívelés megakadályozásához szükséges légköz nagyobb, mint a minimális kúszóút. Amennyiben ez így van, a szabvány alapján a minimálisan szükséges szigetelési távolság két vezetõ között a minimális légköz hossza. Itt példaképpen a CR-PM3A nyákján 2mm-es kúszóutat, 5mm-es légközt ír elõ a szabvány a hálózati feszültségû rész és a feldolgozó elektronika oldala között, így a minimális szigetelési távolság 5mm.
+Általában az átívelés megakadályozásához szükséges légköz nagyobb, mint a minimális kúszóút. Amennyiben ez így van, a szabvány alapján a minimálisan szükséges szigetelési távolság két vezetõ között a minimális légköz hossza. Itt példaképpen a CR-PM3A nyákján 2mm-es kúszóutat, 5.5mm-es légközt ír elõ a szabvány a hálózati feszültségû rész és a feldolgozó elektronika oldala között, így a minimális szigetelési távolság 5.5mm.
 
 %----------------------------------------------------------------------------
 \subsection{EMC}
@@ -329,9 +312,9 @@ EMC követelmények számos szabványban szerepelnek, ezek struktúrája a következõ \
 Egy termék tesztelése esetén a fenti listán alulról felfelé haladva kell meghatározni a legszigorúbb szinteket. Egy háztartási vízforraló példáján keresztül nézzük a lépéseket:
 
 \begin{enumerate}
-	\item \emph{Alapszabvány:} IEC 61000-4-x sorozat, tartalmazza a különbözõ EMC jelenségek leírását, méréseket. 
-	\item \emph{Általános szabvány:} IEC 61000-6-1, lakossági felhasználású eszközök teszt szintjei.
-	\item \emph{Termékszabvány:} EN 55014-1, háztartási eszközök követelményei.
+	\item \emph{Alapszabvány:} MSZ EN 61000-4-x sorozat, tartalmazza a különbözõ EMC jelenségek leírását, méréseket 
+	\item \emph{Általános szabvány:} MSZ EN 61000-6-1, lakossági felhasználású eszközök teszt szintjei \cite{MSZ_EN_61000-6-1_2007}
+	\item \emph{Termékszabvány:} MSZ EN 55014-1, háztartási eszközök követelményei \cite{MSZ_EN_55014-1_2007}
 \end{enumerate}
 
 A fenti listából, mivel létezik termékszabvány, annak az értékeit vesszük, és az alapszabvány tesztjeit hajtjuk végre.
@@ -342,13 +325,13 @@ Egy elektronikus eszköz tervezése során nem elég a mérnököknek laborkörülmények 
 \subsubsection{Immunitás}
 %----------------------------------------------------------------------------
 
-A zavarérzékenység vizsgálatához különbözõ zavaró jeleket viszünk be a rendszerbe, melyek valamilyen ténylegesen elõforduló jelenséget hivatottak szimulálni.
+A zavarérzékenység vizsgálatához különbözõ zavaró jeleket viszünk be a rendszerbe, melyek valamilyen ténylegesen elõforduló jelenséget hivatottak szimulálni. A különbözõ szabványok leírják a zavarás jellegét, a rendszerbe való becsatolás pontját, nagyságát, illetve azt, hogy a készülék mûködésében milyen mértékû zavar keletkezhet.
 
 \begin{enumerate}
-	\item \emph{Burst:} Ez a zavar egy kontaktuson kialakult, prellegõ ív sorozat hatását utánozza. A hatását csökkenteni megfelelõ földeléssel, közösmódusú fojtó tekercsekkel lehet.
-	\item \emph{Surge:} Induktív terhelések kapcsolása, biztosítékok kiégése, illetve villámcsapások másodlagos hatásaként jönnek létre hasonló, nagy energiájú jelalakok. Különbözõ túlfeszültség levezetõk alkalmazásával, például varisztorokkal, TVS diódákkal lehet megvédeni a készüléket.
-	\item \emph{ESD:} A leggyakrabban elõforduló, hétköznapok során is megtapasztalt jelenség, mely gyakran a legnagyobb fejfájást okozza a fejlesztõnek, mivel nagyon rövid idejû a lefutása, széles a spektruma. Megfelelõ földeléssel, kondenzátorokkal, ellenállásokkal, ferritekkel és TVS diódákkal növelhetõ az ezek elleni immunitás.
-	\item \emph{Vezetett RF:} Ez a zavar közeli kábelek induktív és kapacitív egymásra hatását utánozza. Az AM modulált zavarjelet gyakran demodulálják a félvezetõk, ami hibás mûködéshez vezethet. A különbözõ csatlakozókon bejövõ jelek megfelelõ szûrésével, árnyékolt kábelek használatával lehet védekezni ellene.
+	\item \emph{Burst:} Ez a vezetett zavar egy kontaktuson kialakult, prellegõ ív sorozat hatását utánozza. A hatását csökkenteni megfelelõ földeléssel, közösmódusú fojtó tekercsekkel lehet.
+	\item \emph{Surge:} Induktív terhelések kapcsolása, biztosítékok kiégése, illetve villámcsapások másodlagos hatásaként jönnek létre hasonló, nagy energiájú vezetett jelalakok. Különbözõ túlfeszültség levezetõk alkalmazásával, például varisztorokkal, TVS diódákkal lehet megvédeni a készüléket.
+	\item \emph{ESD:} A leggyakrabban elõforduló vezetett zavar, hétköznapok során is megtapasztalt jelenség, mely gyakran a legnagyobb fejfájást okozza a fejlesztõnek, mivel nagyon rövid idejû a lefutása, széles a spektruma. Megfelelõ földeléssel, kondenzátorokkal, ellenállásokkal, ferritekkel és TVS diódákkal növelhetõ az ezek elleni immunitás.
+	\item \emph{Vezetett RF:} Ez a vezetett zavar közeli kábelek induktív és kapacitív egymásra hatását utánozza. Az AM modulált zavarjelet gyakran demodulálják a félvezetõk, ami hibás mûködéshez vezethet. A különbözõ csatlakozókon bejövõ jelek megfelelõ szûrésével, árnyékolt kábelek használatával lehet védekezni ellene.
 	\item \emph{Sugárzott RF:} Az egyere inkább vezeték nélküli technológiákat használó eszközök jelenlétét utánozza, gondoljunk itt mobiltelefonokra, IoT eszközökre, radarokra, különbözõ rádiótornyok jelenlétére.
 \end{enumerate}
 
@@ -369,9 +352,9 @@ A sugárzott zavarkibocsájtást nagy valószínûséggel a 180MHz-en mûködõ iCoupler a
 \label{REDUCE_CUR_LOOP}
 \end{figure}
 
-Az innen származó sugárzás csökkentésére az egymástól elszigetelt földeket érdemes egy nagyfeszültségû, kis értékû, néhány száz pF-os Y kondenzátorral összekötni, amely megfelelõ kapacitás érték választása esetén a zavart gyakorlatilag kisöntöli, amint azt a \ref{REDUCE_CUR_LOOP} ábra szemlélteti, a kialakuló áramhurkok sokkal kisebbek lesznek. Az Y osztályú kodnenzátorok megnövelt elektromos és mechanikai megbízhatósággal bírnak, amelyet kötelezõ tesztelni, továbbá számos szabványnak meg kell felelniük, hiszen ezek meghibásodása akár életvédelmi kockázattal is járhat. Az Y kondenzátorokat további alkategóriákba sorolják a névleges üzemifeszültségük, illetve az ehhez tartozó impulzus feszültség alapján. Y kondenzátort kell alkalmazni, amennyiben az alkatrészt L-PE, vagy N-PE közé helyezzük el, vagy bármilyen egyéb, ember által érinthetõ felülethez, így a mi alkalmazásunkban, a C-RTU belsõ földje és a nullvezetõ közé kerül. A tényleges megvalósítás esetén szembekerülhetünk azzal a problémával, hogy a választott nagyfeszültségû kondenzátor soros induktivitása dominál a szükséges frekvenciákon, ezzel jelentõsen csökkentve a zavarcsökkentõ hatását. Ezt elkerülendõ létrehozhatjuk a szükséges kapacitást a NYÁK-on is, a két oldal egymásra lapolásával. Ennél a módszernél figyelembe kell venni az FR4-es NYÁK dielektromos szilárdságát, illetve a szabványok által elõírt szükséges minimális szigetelési szilárdságot. \cite{AN-1333} \cite{EDN_ISOLATION_FILTER}
+Az innen származó sugárzás csökkentésére az egymástól elszigetelt földeket érdemes egy nagyfeszültségû, kis értékû, néhány száz pF-os Y kondenzátorral összekötni, amely megfelelõ kapacitás érték választása esetén a zavart gyakorlatilag kisöntöli, amint azt a \ref{REDUCE_CUR_LOOP} ábra szemlélteti, a kialakuló áramhurkok sokkal kisebbek lesznek. Az Y osztályú kodnenzátorok megnövelt elektromos és mechanikai megbízhatósággal bírnak, amelyet kötelezõ tesztelni, továbbá számos szabványnak meg kell felelniük, hiszen ezek meghibásodása akár életvédelmi kockázattal is járhat. Az Y kondenzátorokat további alkategóriákba sorolják a névleges üzemifeszültségük, illetve az ehhez tartozó impulzus feszültség alapján. Y kondenzátort kell alkalmazni, amennyiben az alkatrészt L-PE, vagy N-PE közé helyezzük el, vagy bármilyen egyéb, ember által érinthetõ felülethez, így a mi alkalmazásunkban, a C-RTU belsõ földje és a nullvezetõ közé kerül. A tényleges megvalósítás esetén szembekerülhetünk azzal a problémával, hogy a választott nagyfeszültségû kondenzátor soros induktivitása dominál a szükséges frekvenciákon, ezzel jelentõsen csökkentve a zavarcsökkentõ hatását. Ezt elkerülendõ létrehozhatjuk a szükséges kapacitást a NYÁK-on is, a két oldal egymásra lapolásával. Ennél a módszernél figyelembe kell venni az FR4-es NYÁK dielektromos szilárdságát, illetve a szabványok által elõírt szükséges minimális szigetelési szilárdságot. \cite{EDN_ISOLATION_FILTER}
 
-Az Analog Devices egy további megoldást is közöl, amely abban az esetben alkalmazandó, ha a szigetelési feltételek miatt nem tudjuk kialakítani a két oldal közötti kapacitást: használjunk földelt fém burkolatot. \cite{AN-1333}
+Az Analog Devices egy további megoldást is közöl, amely abban az esetben alkalmazandó, ha a szigetelési feltételek miatt nem tudjuk kialakítani a két oldal közötti kapacitást: használjunk földelt fém burkolatot. \cite{AN-1333} 
 
 %----------------------------------------------------------------------------
 \subsection{EMC tesztek}
@@ -380,13 +363,13 @@ Az Analog Devices egy további megoldást is közöl, amely abban az esetben alkalma
 Mivel a CR-PM3 a diplomaterv írásának idején még csak prototípus fázisban volt, nem vizsgáltattuk be azt külön hitelesített laborban, ahol az eszközpark bérlése jelentõs költségeket jelent, ehelyett a Prolan Zrt. saját laboratóriumában végeztünk el bizonyos immunitás teszteket. Az itt rendelkezésre álló speciális mûszerek:
 
 \begin{enumerate}
-	\item \emph{EM Test DITO:} IEC 61000-4-2-ben leírt tesztnek megfelelõ kézi elektrosztatikus kisülés generátor  
-	\item \emph{EM Test UCS 500 M:} Burst, surge, tápkimaradás szimulátor. 
-	\item \emph{PMM 3000:} 10kHz-1GHz átfogású jelgenerátor 
-	\item \emph{PMM 6000N:} 9kHz-230MHz átfogású erõsítõ
+	\item \emph{EM Test DITO:} IEC 61000-4-2-ben leírt tesztnek megfelelõ kézi elektrosztatikus kisülés generátor \cite{EM_TEST_DITO}
+	\item \emph{EM Test UCS 500 M:} Burst, surge, tápkimaradás szimulátor \cite{EM_TEST_UCS_500}
+	\item \emph{PMM 3000:} 10kHz-1GHz átfogású jelgenerátor \cite{PMM_3000}
+	\item \emph{PMM 6000N:} 9kHz-230MHz átfogású erõsítõ \cite{PMM_6000N}
 \end{enumerate}
 
-A CR-PM3 teszteji során az 	MSZ EN 62052-11:2003 termékszabványban találhatóak a szükséges mérési szintek, illetve speciális mérési elõírások. Az szabvány által elvárt értékek a \ref{MSZ_EN_62052_11:2003_req}-es táblázatban láthatók.
+A CR-PM3 teszteji során az 	MSZ EN 62052-11:2003 termékszabványban \cite{MSZ_EN_62052-11_2003} találhatóak a szükséges mérési szintek, illetve speciális mérési elõírások. Az szabvány által elvárt értékek a \ref{MSZ_EN_62052_11:2003_req}-es táblázatban láthatók.
 
 \begin{table}[!ht]
 \centering
@@ -406,7 +389,7 @@ Vezetett RF & 10V, 150kHz-tõl 80MHz-ig\\ \hline
 \subsubsection{ESD (MSZ EN 61000-4-2)}
 %----------------------------------------------------------------------------
 
-\begin{figure*}[!h]
+\begin{figure*}[!ht]
     \centering
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
@@ -446,7 +429,7 @@ A mérés során nem történt funkcióvesztés, a webes felületen keresztül folyamatos
 
 A mérési elrendezés nem változott a burst vizsgálathoz képest, mindössze a szimulátor beállításait kellett módosítani.
 
-A méréshez a szabvány 1/min minimális frekvenciát ír elõ, mivel a lehetséges védelmek (pl. varisztor) tulajdonságai melegedés hatására megváltozhatnak. Mi a házi laboratóriumban 15 másodperces gyakorisággal kapcsoltuk a zavaró jelet a készülékre. 
+A méréshez a szabvány 1/min minimális frekvenciát ír elõ, mivel a lehetséges védelmek (pl. varisztor) tulajdonságai melegedés hatására megváltozhatnak. Mi a házi laboratóriumban 15 másodperces gyakorisággal kapcsoltuk a zavaró jelet a készülékre. A vizsgálatot meg kell ismételni L-PE, N-PE és L-N konfigurációban, az összes bemeneti csatornára. Mivel esetemben egy elõmérésrõl van szó, illetve a csatornák alkatrészválasztás szempontjából teljesen identikusak, layout szempontjából pedig nagyon hasonlóak, csak egy csatornát vizsgáltam. Mivel se a készülékemben, se a C-RTU rendszerben nincs védõföld közvetlenül bekötve, az L-PE és N-PE csatolásokat csak néhány lökés erejéig vizsgáltam, ott áram nem folyt, zavaró hatása nem volt a rendszerre. Az L-N csatolási módnál volt kritikus a mûködés. \cite{MSZ_EN_61000-4-5_2014}
 
 \begin{figure}[!ht]
 \centering

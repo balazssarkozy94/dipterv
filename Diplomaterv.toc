@@ -24,27 +24,27 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {3.3.2}Rogowski-tekercs}{22}{subsection.3.3.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.3.3}S\"ont ellen\'all\'as \'es izol\'aci\'os er\H os\IeC {\'\i }t\H o}{22}{subsection.3.3.3}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.3.4}Hall-szenzoros \'aramm\'er\H o}{23}{subsection.3.3.4}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.3.5}\'Aramm\'er\'esi megold\'asok \"osszehasonl\IeC {\'\i }t\'asa}{23}{subsection.3.3.5}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.3.5}\'Aramm\'er\'esi megold\'asok \"osszehasonl\IeC {\'\i }t\'asa}{24}{subsection.3.3.5}
 \select@language {magyar} \contentsline {section}{\numberline {3.4}Adatfeldolgoz\'as}{24}{section.3.4}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Mikrokontroller}{24}{subsection.3.4.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Digit\'alis Jelfeldolgoz\'o Processzor}{24}{subsection.3.4.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Digit\'alis Jelfeldolgoz\'o Processzor}{25}{subsection.3.4.2}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}Programozhat\'o Logika}{25}{subsection.3.4.3}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}M\'er\H o IC, be\'egetett DSP k\'oddal}{26}{subsection.3.4.4}
 \select@language {magyar} \contentsline {section}{\numberline {3.5}V\'alasztott megold\'as}{26}{section.3.5}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.5.1}Elm\'eleti specifik\'aci\'o, funkcionalit\'as}{27}{subsection.3.5.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.5.1}Elm\'eleti specifik\'aci\'o, funkcionalit\'as}{28}{subsection.3.5.1}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}Hardver konstrukci\'o}{30}{chapter.4}
 \select@language {magyar} \contentsline {section}{\numberline {4.1}K\"ovetelm\'enyek}{30}{section.4.1}
 \select@language {magyar} \contentsline {section}{\numberline {4.2}Mechanika}{31}{section.4.2}
-\select@language {magyar} \contentsline {section}{\numberline {4.3}Kapcsol\'asi rajz}{33}{section.4.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Kapcsol\'o\"uzem\H u t\'apegys\'eg}{34}{subsection.4.3.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}MCU \'es k\"ornyezete}{36}{subsection.4.3.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Bemeneti \'aramk\"or - \'Aram bemenet}{37}{subsection.4.3.3}
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Kapcsol\'asi rajz}{32}{section.4.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Kapcsol\'o\"uzem\H u t\'apegys\'eg}{33}{subsection.4.3.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}MCU \'es k\"ornyezete}{35}{subsection.4.3.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.3}Bemeneti \'aramk\"or - \'Aram bemenet}{36}{subsection.4.3.3}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.3.4}Bemeneti \'aramk\"or - Fesz\"ults\'eg bemenet}{38}{subsection.4.3.4}
 \select@language {magyar} \contentsline {subsubsection}{T\'ulfesz\"ults\'egv\'edelem}{39}{section*.30}
-\select@language {magyar} \contentsline {section}{\numberline {4.4}NY\'AK terv}{40}{section.4.4}
+\select@language {magyar} \contentsline {section}{\numberline {4.4}NY\'AK terv}{39}{section.4.4}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.1}T\'apegys\'eg NY\'AK terve}{40}{subsection.4.4.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.2}M\'er\H o bemenetek kialak\IeC {\'\i }t\'asa}{41}{subsection.4.4.2}
-\select@language {magyar} \contentsline {section}{\numberline {4.5}Szabv\'anyoss\'ag}{42}{section.4.5}
+\select@language {magyar} \contentsline {section}{\numberline {4.5}Szabv\'anyoss\'ag}{41}{section.4.5}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.5.1}Szigetel\'eskoordin\'aci\'o}{42}{subsection.4.5.1}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.5.2}EMC}{44}{subsection.4.5.2}
 \select@language {magyar} \contentsline {subsubsection}{Immunit\'as}{46}{section*.35}
@@ -52,26 +52,26 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {4.5.3}EMC tesztek}{48}{subsection.4.5.3}
 \select@language {magyar} \contentsline {subsubsection}{ESD (MSZ EN 61000-4-2)}{48}{section*.39}
 \select@language {magyar} \contentsline {subsubsection}{Burst (MSZ EN 61000-4-4)}{49}{section*.41}
-\select@language {magyar} \contentsline {subsubsection}{Surge (MSZ EN 61000-4-5)}{50}{section*.43}
+\select@language {magyar} \contentsline {subsubsection}{Surge (MSZ EN 61000-4-5)}{49}{section*.43}
 \select@language {magyar} \contentsline {subsubsection}{Vezetett RF (MSZ EN 61000-4-6)}{50}{section*.45}
 \select@language {magyar} \contentsline {subsection}{\numberline {4.5.4}Jav\IeC {\'\i }t\'asi tervek}{51}{subsection.4.5.4}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}Szoftveres komponensek}{52}{chapter.5}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Mikrokontroller}{52}{section.5.1}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Emul\'alt EEPROM}{52}{section.5.2}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Firmware}{54}{section.5.3}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.3.1}Program fel\'ep\IeC {\'\i }t\'ese}{54}{subsection.5.3.1}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.3.2}M\'er\H o IC-t kezel\H o f\"uggv\'enyek, strukt\'ur\'ak}{57}{subsection.5.3.2}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.3.3}Debug UART}{59}{subsection.5.3.3}
-\select@language {magyar} \contentsline {section}{\numberline {5.4}CR-WEB}{59}{section.5.4}
-\select@language {magyar} \contentsline {section}{\numberline {5.5}Gy\'art\'as t\'amogat\'as}{61}{section.5.5}
-\select@language {magyar} \contentsline {subsection}{\numberline {5.5.1}V\'egm\'er\'es \'es kalibr\'aci\'o}{61}{subsection.5.5.1}
-\select@language {magyar} \contentsline {subsubsection}{M\'er\'esi k\"ornyezet}{61}{section*.51}
-\select@language {magyar} \contentsline {subsubsection}{STM32 mikrokontrolleren fut\'o szoftver}{62}{section*.53}
-\select@language {magyar} \contentsline {subsubsection}{Alapk\'esz\"ul\'eken fut\'o szoftver}{63}{section*.54}
-\select@language {magyar} \contentsline {chapter}{\numberline {6}P\'eldaalkalmaz\'as}{65}{chapter.6}
-\select@language {magyar} \contentsline {chapter}{\"Osszefoglal\'as}{68}{chapter*.58}
-\select@language {magyar} \contentsline {chapter}{K\"osz\"onetnyilv\'an\IeC {\'\i }t\'as}{69}{chapter*.59}
-\select@language {magyar} \contentsline {chapter}{\'Abr\'ak jegyz\'eke}{71}{chapter*.60}
-\select@language {magyar} \contentsline {chapter}{T\'abl\'azatok jegyz\'eke}{72}{chapter*.61}
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{75}{chapter*.62}
-\select@language {magyar} \contentsline {chapter}{F\"uggel\'ek}{76}{appendix*.63}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Szoftveres komponensek}{53}{chapter.5}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Mikrokontroller}{53}{section.5.1}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Emul\'alt EEPROM}{53}{section.5.2}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Firmware}{55}{section.5.3}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3.1}Program fel\'ep\IeC {\'\i }t\'ese}{55}{subsection.5.3.1}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3.2}M\'er\H o IC-t kezel\H o f\"uggv\'enyek, strukt\'ur\'ak}{58}{subsection.5.3.2}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.3.3}Debug UART}{60}{subsection.5.3.3}
+\select@language {magyar} \contentsline {section}{\numberline {5.4}CR-WEB}{61}{section.5.4}
+\select@language {magyar} \contentsline {section}{\numberline {5.5}Gy\'art\'as t\'amogat\'as}{62}{section.5.5}
+\select@language {magyar} \contentsline {subsection}{\numberline {5.5.1}V\'egm\'er\'es \'es kalibr\'aci\'o}{62}{subsection.5.5.1}
+\select@language {magyar} \contentsline {subsubsection}{M\'er\'esi k\"ornyezet}{62}{section*.51}
+\select@language {magyar} \contentsline {subsubsection}{STM32 mikrokontrolleren fut\'o szoftver}{63}{section*.53}
+\select@language {magyar} \contentsline {subsubsection}{Alapk\'esz\"ul\'eken fut\'o szoftver}{64}{section*.54}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}P\'eldaalkalmaz\'as}{66}{chapter.6}
+\select@language {magyar} \contentsline {chapter}{\"Osszefoglal\'as}{69}{chapter*.58}
+\select@language {magyar} \contentsline {chapter}{K\"osz\"onetnyilv\'an\IeC {\'\i }t\'as}{70}{chapter*.59}
+\select@language {magyar} \contentsline {chapter}{\'Abr\'ak jegyz\'eke}{72}{chapter*.60}
+\select@language {magyar} \contentsline {chapter}{T\'abl\'azatok jegyz\'eke}{73}{chapter*.61}
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{77}{chapter*.62}
+\select@language {magyar} \contentsline {chapter}{F\"uggel\'ek}{78}{appendix*.63}

@@ -7,7 +7,7 @@
 \section{Mikrokontroller}
 %----------------------------------------------------------------------------
 
-A C-RTU kiegészítõ moduljaiban leggyakrabban az STM32F303 mikrokontrollert használjuk, mivel ez a processzor már kellõen erõs az összes eddig felmerült feladat ellátására, ezek mellett viszont nagyobb darabszámnál viszonylag alacsony költségû.
+A C-RTU kiegészítõ moduljaiban leggyakrabban az STM32F303 \cite{ST_DS9118} mikrokontrollert használjuk, mivel ez a processzor már kellõen erõs az összes eddig felmerült feladat ellátására, ezek mellett viszont nagyobb darabszámnál viszonylag alacsony költségû.
 
 A maximális órajel 72MHz, ehhez 90 DMIPS számítási teljesítmény társul. Tartalmaz ezek mellett FPU-t, ami az analóg alkalmazások esetén rendkívül hasznos. Perifériák tekintetében is jól felszerelt a kontroller, rengeteg timer, ADC csatorna és kommunikációs interfész áll a fejlesztõ rendelkezésére.
 
@@ -19,7 +19,7 @@ Számos beágyazott rendszerben van szükség nem felejtõ memória használatára, a CR
 
 Mindezek ellenére, érdemes gondolni arra, hogy a mai mikrokontrollerek programmemóriája flash, amit menet közben is tudunk page-enként törölni, illetve szavanként írni. Miért kellene külön alkatrészeket beletervezni az áramkörbe, kommunikációs interfészeket használni, ha a beépített flash-ben néhány lap kijelölésével ugyanúgy egy nem felejtõ memóriát tudunk létrehozni?
 
-Az STMicroelectronics által kiadott emulált EEPROM driverek segítségével könnyen megvalósíthatjuk a nemfelejtõ memóriát, a fejlesztõnek mindössze néhány definiált konstans értékét kell megadni, majd néhány függvény használatával egyszerûen írni és olvasni a változókat. Mivel a flash memória egyik sajátossága, hogy már egyszer írt memória területet csak törlés után lehet újra írni, illetve törölni csak egész lapokat lehet, így az emulált EEPROM megvalósításához legalább két lapra van szükség. Az emulált EEPROM-ban 16 bites adatregiszterek vannak, ezekhez pedig 16 bites virtuális címek tartoznak. A driver beírás esetén a lista legvégére írja a virtuális címet és az adatot. A flash memóriában törlés után minden bit 1-es értéket vesz fel, ezt használja ki  az olvasás függvény, ami az emulált EEPROM memória végét a 0xFFFF virtuális címû regiszterrel detektálja. Az olvasás, amennyiben több azonos címet is talál a memóriában, mindig a legutolsó értékét adja vissza, hiszen ezt írtuk be legutoljára. Amennyiben a kijelölt lap betelne, a driver a változók legutolsó értékeit átmenti egy másik lapra, majd törli a betelt lapot. A driver publikus függvényei:
+Az STMicroelectronics által kiadott emulált EEPROM driverek \cite{ST_AN4056} segítségével könnyen megvalósíthatjuk a nemfelejtõ memóriát, a fejlesztõnek mindössze néhány definiált konstans értékét kell megadni, majd néhány függvény használatával egyszerûen írni és olvasni a változókat. Mivel a flash memória egyik sajátossága, hogy már egyszer írt memória területet csak törlés után lehet újra írni, illetve törölni csak egész lapokat lehet, így az emulált EEPROM megvalósításához legalább két lapra van szükség. Az emulált EEPROM-ban 16 bites adatregiszterek vannak, ezekhez pedig 16 bites virtuális címek tartoznak. A driver beírás esetén a lista legvégére írja a virtuális címet és az adatot. A flash memóriában törlés után minden bit 1-es értéket vesz fel, ezt használja ki  az olvasás függvény, ami az emulált EEPROM memória végét a 0xFFFF virtuális címû regiszterrel detektálja. Az olvasás, amennyiben több azonos címet is talál a memóriában, mindig a legutolsó értékét adja vissza, hiszen ezt írtuk be legutoljára. Amennyiben a kijelölt lap betelne, a driver a változók legutolsó értékeit átmenti egy másik lapra, majd törli a betelt lapot. A driver publikus függvényei:
 
 \begin{lstlisting}
 uint16_t EE_Init(void);
@@ -49,7 +49,7 @@ void eeStoreFloat(float data, uint16_t ee_address);
 void eeReadFloat(volatile float* calib_address, uint16_t ee_address);
 \end{lstlisting}
 
-Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM32 ST-LINK Utility használata, melyben implementálva van a ''LiveUpdate'' funkció, mellyel futás közben monitorozhatjuk a flash memória tartalmát, ennek egy képernyõképét láthatjuk az \ref{STLINK_LIVE} ábrán. Ezzel a kalibrációs függvények fejlesztése nagyban egyszerûsödött, az esetleges hibákat az elsõ futásnál fel lehetett ismerni. 
+Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM32 ST-LINK Utility \cite{ST_UM0892} használata, melyben implementálva van a ''LiveUpdate'' funkció, mellyel futás közben monitorozhatjuk a flash memória tartalmát, ennek egy képernyõképét láthatjuk az \ref{STLINK_LIVE} ábrán. Ezzel a kalibrációs függvények fejlesztése nagyban egyszerûsödött, az esetleges hibákat az elsõ futásnál fel lehetett ismerni. 
 
 \begin{figure}[H]
 \centering
@@ -62,7 +62,9 @@ Az emulált EEPROM használata közben rendkívül nagy segítségnek bizonyult az STM3
 \section{Firmware}
 %----------------------------------------------------------------------------
 
-A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett CR-BASE szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifejezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. Már az áramkörtervezés folyamatában használtam az STM32CubeMX programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert egy grafikus felületen keresztül. 
+A beágyazott szoftvert az STM32F303-as kontrollerre KDevelop környezetben írtam, STM32 Standard Peripheral Libraries-t, valamint a Prolan-on belül fejlesztett CR-BASE szoftver réteget használtam. Maga a környezet egy Kubuntu-t futtató virtuális gépen mûködött, melyet a szoftveres kollégák kifejezetten a hardverfejlesztõk igényeinek megfelelõen állítottak össze, ezzel megkímélve a hosszas fejlesztõi környezet konfigurálástól minket. 
+
+Már az áramkörtervezés folyamatában használtam az STM32CubeMX \cite{ST_UM1718} programot, amellyel egyszerûen felkonfigurálhatjuk a választott STM32-es mikrokontrollert egy grafikus felületen keresztül. 
 
 Mivel a cégen belül Standard Peripheral Libraries-t (SPL) alkalmazunk, a segédprogramot elsõsorban nem kódgenerálásra, hanem a különbözõ perifériák kiosztásának ellenõrzéséhez, az ütközések elkerülésére alkalmaztam. Az SPL az STMicroelectronics által fejlesztett szoftverréteg, amely a fejlesztõ elõl elfedi a regiszterszintû mûveleteket, azonban alacsonyabb szintû mint a szintén gyártó által fejlesztett Hardware Abstraction Layer (HAL), amely például már az interruptokat is elfedi, a fejlesztõnek pedig csak callback függvényeket szolgáltat az interruptból.
 
@@ -252,7 +254,7 @@ A végmérés és kalibráció a CR-PM3 esetében gyakorlatilag szétválaszthatatlan, mi
 %----------------------------------------------------------------------------
 
 
-A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer biztosította. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban az \ref{OmicronCMC356spec} táblázatban látható.
+A kalibrációhoz szükséges precíz jelforrást egy Omicron gyártmányú CMC 356 mûszer \cite{OMICRON_CMC_356} biztosította. Ez egy egyszerûen használható PC-s felületet biztosít, de késõbb, amennyiben szükséges, távoli vezérlés is megvalósítható egy automatizált teszthez. A mûszer specifikációja háromfázisú konfigurációban az \ref{OmicronCMC356spec} táblázatban látható.
 
 \begin{table}[!ht]
 \centering

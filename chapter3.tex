@@ -120,13 +120,13 @@ Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kiv
 
 \begin{figure*}[!ht]
     \centering
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=70mm]{figures/3_2_4_rogo_sema.png}
         \caption{Rogowski-tekercs sematikusan}
     \end{subfigure}%
     ~ 
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0.5\textwidth}
         \centering
         \includegraphics[width=70mm]{figures/3_2_3_rogo_real.png}
         \caption{Rogowski-tekercs a valóságban}
@@ -222,13 +222,13 @@ Az alkalmazás megvalósítható konfigurálható logikai eszközökkel is, például FPGA
 \subsection{Mérõ IC, beégetett DSP kóddal}
 %----------------------------------------------------------------------------
 
-Több gyártó kínál komplett megoldásokat egy tokban realizálva. Ezek tartalmazzák az analóg front-end-et, nagy felbontású analóg-digitális átalakítót, valamint egy elõre felprogramozott digitális jelfeldolgozó processzort. Az Analog Devices egyik termékcsaládja még 5kV RMS izolációt is biztosít a digitális interfészéhez egy tokban, illetve ugyanitt leválasztott segéd tápot is elõállít a mérõ oldalnak \cite{ADE_7978/ADE_7933/ADE_7932/ADE_7923}. Ezeknek a megoldásoknak elõnye a remek pontosság, jó paraméterezhetõség, illetve a sokkal rövidebb fejlesztési idõ. A különbözõ kompenzációs algoritmusok mind implementálva vannak, a fejlesztõnek az alkalmazáshoz megfelelõen fel kell konfigurálnia a mérõt, majd a kész adatokat kell kiolvasnia és felhasználnia. Közös hátrány azonban, hogy a gyártó bármikor kivonhatja az adott típust a forgalomból, így a fejlesztõnek át kell terveznie a terméket, új szoftvert kell fejleszteni, újra bevizsgáltatnia, ami költséges és idõigényes lehet, ezért ennél a megoldásnál elengedhetetlen utánanézni az adott alkatrész beszerezhetõségének.
+Több neves gyártó kínál komplett megoldásokat egy tokban realizálva, ilyen például az Analog Devices ADE79xx családja \cite{ADE_7978/ADE_7933/ADE_7932/ADE_7923}, a Microchip ATM90x sorozata \cite{MICROCHIP_METERING}, vagy az STMicroelectronics STPMx családja \cite{ST_METERING}. Ezek tartalmazzák az analóg front-end-et, nagy felbontású analóg-digitális átalakítót, valamint egy elõre felprogramozott digitális jelfeldolgozó processzort. Az Analog Devices egyik termékcsaládja még 5kV RMS izolációt is biztosít a digitális interfészéhez egy tokban, illetve ugyanitt leválasztott segéd tápot is elõállít a mérõ oldalnak \cite{ADE_7978/ADE_7933/ADE_7932/ADE_7923}. Ezeknek a megoldásoknak elõnye a remek pontosság, jó paraméterezhetõség, illetve a sokkal rövidebb fejlesztési idõ. A különbözõ kompenzációs algoritmusok mind implementálva vannak, a fejlesztõnek az alkalmazáshoz megfelelõen fel kell konfigurálnia a mérõt, majd a kész adatokat kell kiolvasnia és felhasználnia. Közös hátrány azonban, hogy a gyártó bármikor kivonhatja az adott típust a forgalomból, így a fejlesztõnek át kell terveznie a terméket, új szoftvert kell fejleszteni, újra bevizsgáltatnia, ami költséges és idõigényes lehet, ezért ennél a megoldásnál elengedhetetlen utánanézni az adott alkatrész beszerezhetõségének.
 
 %----------------------------------------------------------------------------
 \section{Választott megoldás}
 %----------------------------------------------------------------------------
 
-A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint, feszültségméréshez az Analog Devices ADE7978 beégetett kódú DSP-jét, illetve az ehhez a családhoz tartozó ADE7933-as, 3 analóg-digitális átalakítót, 5kV-os digitális izolációt, illetve tápleválasztást tartalmazó mérõ IC-t választottam. Ez a típus elsõsorban sönt ellenállásos árammérést támogat. Ezekkel az alkatrészekkel a specifikáció kielégítéséhez szükséges pontosságú, kis méretû megoldást lehet kialakítani. A választott megoldás ugyan áramméréshez sönt ellenállást használ, azonban ennek értéke rendkívül alacsony, mivel az ADE7933 árammérõ bemenetén a feszültség $\pm$31.25mV, amennyiben ehhez a 5m$\Omega$-os tervezett mérõsöntöt vesszük, a maximális disszipáció nem haladja meg a 100mW-ot sem, így a választott mérési elv nem jár jelentõs hõfejlõdéssel, a mûködési hõmérséklet a környezetitõl nem fog jelentõsen eltérni.
+A felsorolt tulajdonságokat összevetve, illetve súlyozva azok fontossága szerint, feszültségméréshez az Analog Devices ADE7978 beégetett kódú DSP-jét, illetve az ehhez a családhoz tartozó ADE7933-as, 3 analóg-digitális átalakítót, 5kV-os digitális izolációt, illetve tápleválasztást tartalmazó mérõ IC-t választottam. Ez a típus elsõsorban sönt ellenállásos árammérést támogat. Ezekkel az alkatrészekkel a specifikáció kielégítéséhez szükséges pontosságú, kis méretû megoldást lehet kialakítani. A választott megoldás ugyan áramméréshez sönt ellenállást használ, azonban ennek értéke rendkívül alacsony, mivel az ADE7933 árammérõ bemenetén a feszültség $\pm$31.25mV, amennyiben ehhez a 5m$\Omega$-os tervezett mérõsöntöt vesszük, a maximális disszipáció nem haladja meg a 100mW-ot sem, így a választott mérési elv nem jár jelentõs hõfejlõdéssel, a mûködési hõmérséklet a környezetitõl nem fog jelentõsen eltérni. A tervezés során az ST által gyártott STPMx sorozat is felmerült opcióként, mivel a CR-PM12-ben ennek a családnak az egyik tagja lett felhasználva, valamint ára a konkurens eszközök alatt van, azonban az ott szerzett negatív tapasztalatok, a hosszú hibajegyzék miatt inkább egy másik gyártót választottunk.
 
 Ezen döntések után kialakított rendszer felépítése a \ref{CRPM3SYS} ábrán látható
 
