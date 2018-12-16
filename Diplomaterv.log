@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  16 DEC 2018 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.30)  16 DEC 2018 16:41
 entering extended mode
 **./Diplomaterv.tex
 (Diplomaterv.tex
@@ -562,32 +562,28 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 Package hyperref Info: Option `pdfnewwindow' set `true' on input line 85.
 Package hyperref Info: Option `colorlinks' set `true' on input line 85.
-
-("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
-.sty"
-File: lstlang1.sty 2018/09/02 1.7 listings language file
-) (Diplomaterv.aux (task.aux) (titlepage.aux) (declaration.aux)
-(abstract.aux) (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux)
-(chapter4.aux) (chapter5.aux) (chapter6.aux) (overall.aux) (acknowledgement.aux
-) (appendices.aux))
+(Diplomaterv.aux (task.aux) (titlepage.aux) (declaration.aux) (abstract.aux)
+(introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
+(chapter5.aux) (chapter6.aux) (overall.aux) (acknowledgement.aux)
+(appendices.aux))
 \openout1 = `Diplomaterv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.m
 kii"
@@ -622,7 +618,7 @@ G,.JBIG2,.JB2,.eps]
 \c@lstlisting=\count147
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 193.
+(lastpage)             ! on input line 165.
 
 
 LaTeX Warning: Please use \usepackage[latin2]{inputenc} with
@@ -639,7 +635,7 @@ Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 193.
+Package hyperref Info: Link coloring ON on input line 165.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.
 sty"
@@ -651,9 +647,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 193.
-LaTeX Info: Redefining \pageref on input line 193.
-LaTeX Info: Redefining \nameref on input line 193.
+LaTeX Info: Redefining \ref on input line 165.
+LaTeX Info: Redefining \pageref on input line 165.
+LaTeX Info: Redefining \nameref on input line 165.
  (Diplomaterv.out) (Diplomaterv.out)
 \@outlinefile=\write3
 \openout3 = `Diplomaterv.out'.
@@ -1055,12 +1051,12 @@ File: figures/4_1_3_6_ESD_H.png Graphic file (type png)
 Package pdftex.def Info: figures/4_1_3_6_ESD_H.png  used on input line 402.
 (pdftex.def)             Requested size: 192.25882pt x 170.71652pt.
  [48]
-<figures/4_1_3_1_BURSTSURGE_SETUP.jpg, id=907, 3011.25pt x 2258.4375pt>
+<figures/4_1_3_1_BURSTSURGE_SETUP.jpg, id=907, 4015.0pt x 3011.25pt>
 File: figures/4_1_3_1_BURSTSURGE_SETUP.jpg Graphic file (type jpg)
 <use figures/4_1_3_1_BURSTSURGE_SETUP.jpg>
 Package pdftex.def Info: figures/4_1_3_1_BURSTSURGE_SETUP.jpg  used on input li
 ne 420.
-(pdftex.def)             Requested size: 341.43306pt x 256.04475pt.
+(pdftex.def)             Requested size: 341.43306pt x 256.06773pt.
  [49 <./figures/4_1_3_5_ESD_V.png> <./figures/4_1_3_6_ESD_H.png>]
 <figures/4_1_3_3_SURGE.png, id=919, 432.86719pt x 134.00063pt>
 File: figures/4_1_3_3_SURGE.png Graphic file (type png)
@@ -1091,65 +1087,63 @@ File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 39.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 25.
 <figures/5_1_0_emul_eeprom.PNG, id=960, 618.81187pt x 445.665pt>
 File: figures/5_1_0_emul_eeprom.PNG Graphic file (type png)
 <use figures/5_1_0_emul_eeprom.PNG>
-Package pdftex.def Info: figures/5_1_0_emul_eeprom.PNG  used on input line 56.
+Package pdftex.def Info: figures/5_1_0_emul_eeprom.PNG  used on input line 71.
 (pdftex.def)             Requested size: 341.43306pt x 245.90533pt.
 
 [54]
-Overfull \hbox (4.92308pt too wide) in paragraph at lines 65--66
+Overfull \hbox (4.92308pt too wide) in paragraph at lines 80--81
 \T1/cmr/m/n/10.95 A be-ágya-zott szoft-vert az STM32F303-as kont-rol-ler-re KDe
 -ve-lop kör-nye-zet-ben ír-tam, STM32
  []
 
 [55 <./figures/5_1_0_emul_eeprom.PNG>] [56] [57] [58] [59]
-<figures/5_1_1_dbg_serial.png, id=1074, 292.09125pt x 505.89pt>
+<figures/5_1_1_dbg_serial.png, id=1076, 292.09125pt x 505.89pt>
 File: figures/5_1_1_dbg_serial.png Graphic file (type png)
 <use figures/5_1_1_dbg_serial.png>
-Package pdftex.def Info: figures/5_1_1_dbg_serial.png  used on input line 207.
-(pdftex.def)             Requested size: 170.71652pt x 295.68585pt.
+Package pdftex.def Info: figures/5_1_1_dbg_serial.png  used on input line 221.
+(pdftex.def)             Requested size: 142.26378pt x 246.39844pt.
  [60 <./figures/5_1_1_dbg_serial.png>]
-<figures/5_3_1_CRWEB.png, id=1084, 1024.57782pt x 683.55376pt>
+<figures/5_3_1_CRWEB.png, id=1082, 1024.57782pt x 683.55376pt>
 File: figures/5_3_1_CRWEB.png Graphic file (type png)
 <use figures/5_3_1_CRWEB.png>
-Package pdftex.def Info: figures/5_3_1_CRWEB.png  used on input line 225.
+Package pdftex.def Info: figures/5_3_1_CRWEB.png  used on input line 239.
 (pdftex.def)             Requested size: 426.79134pt x 284.7334pt.
 
 ("C:\Users\Balazs\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
 .sty"
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 ) [61 <./figures/5_3_1_CRWEB.png>] [62] [63]
-<figures/5_4_2_kalibracio_1.PNG, id=1118, 510.40688pt x 331.2375pt>
+<figures/5_4_2_kalibracio_1.PNG, id=1128, 510.40688pt x 331.2375pt>
 File: figures/5_4_2_kalibracio_1.PNG Graphic file (type png)
 <use figures/5_4_2_kalibracio_1.PNG>
-Package pdftex.def Info: figures/5_4_2_kalibracio_1.PNG  used on input line 320
+Package pdftex.def Info: figures/5_4_2_kalibracio_1.PNG  used on input line 333
 .
 (pdftex.def)             Requested size: 341.43306pt x 221.58932pt.
-<figures/5_4_3_kalibracio_2.PNG, id=1119, 512.66531pt x 332.74312pt>
+<figures/5_4_3_kalibracio_2.PNG, id=1129, 512.66531pt x 332.74312pt>
 File: figures/5_4_3_kalibracio_2.PNG Graphic file (type png)
 <use figures/5_4_3_kalibracio_2.PNG>
-Package pdftex.def Info: figures/5_4_3_kalibracio_2.PNG  used on input line 327
+Package pdftex.def Info: figures/5_4_3_kalibracio_2.PNG  used on input line 340
 .
 (pdftex.def)             Requested size: 341.43306pt x 221.60648pt.
- [64 <./figures/5_4_2_kalibracio_1.PNG>]) [65 <./figures/5_4_3_kalibracio_2.PNG
->]
+ [64 <./figures/5_4_2_kalibracio_1.PNG> <./figures/5_4_3_kalibracio_2.PNG>]) [6
+5]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 6. fejezet.
-<figures/6_0_0_CRPM_SEM_1.jpg, id=1150, 722.7pt x 963.6pt>
+<figures/6_0_0_CRPM_SEM_1.jpg, id=1146, 3011.25pt x 4015.0pt>
 File: figures/6_0_0_CRPM_SEM_1.jpg Graphic file (type jpg)
 <use figures/6_0_0_CRPM_SEM_1.jpg>
 Package pdftex.def Info: figures/6_0_0_CRPM_SEM_1.jpg  used on input line 11.
-(pdftex.def)             Requested size: 426.79134pt x 569.06311pt.
+(pdftex.def)             Requested size: 426.79134pt x 569.019pt.
 [66
 
 
@@ -1302,7 +1296,7 @@ Overfull \hbox (1.13582pt too wide) in paragraph at lines 230--233
 
 
 ]
-<figures/4_4_1_CRPM3_PCB.png, id=1323, 1148.79187pt x 603.75563pt>
+<figures/4_4_1_CRPM3_PCB.png, id=1319, 1148.79187pt x 603.75563pt>
 File: figures/4_4_1_CRPM3_PCB.png Graphic file (type png)
 <use figures/4_4_1_CRPM3_PCB.png>
 Package pdftex.def Info: figures/4_4_1_CRPM3_PCB.png  used on input line 15.
@@ -1315,174 +1309,178 @@ Overfull \hbox (38.17094pt too wide) in paragraph at lines 15--16
 [79
 
  <./figures/4_4_1_CRPM3_PCB.png>]
-<figures/CRPM3_A_EGESZ.PNG, id=1328, 491.58656pt x 658.71094pt>
+<figures/CRPM3_A_EGESZ.PNG, id=1324, 491.58656pt x 658.71094pt>
 File: figures/CRPM3_A_EGESZ.PNG Graphic file (type png)
 <use figures/CRPM3_A_EGESZ.PNG>
 Package pdftex.def Info: figures/CRPM3_A_EGESZ.PNG  used on input line 22.
 (pdftex.def)             Requested size: 426.79134pt x 571.90796pt.
-<figures/CRPM3_C_EGESZ.PNG, id=1329, 812.28468pt x 661.72218pt>
-File: figures/CRPM3_C_EGESZ.PNG Graphic file (type png)
-<use figures/CRPM3_C_EGESZ.PNG>
-Package pdftex.def Info: figures/CRPM3_C_EGESZ.PNG  used on input line 28.
-(pdftex.def)             Requested size: 426.79134pt x 347.68196pt.
-
-
-pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1330, 597.55246pt x 845.19763pt>
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf  used on input l
-ine 32.
-(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-
-
-pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf  used on input l
-ine 32.
-(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-
-
-pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1333, page=1, 597.55246pt x 845.1976
-3pt>
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
-input line 32.
-(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
-input line 32.
-(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-[80
+ [80
 
  <./figures/CRPM3_A_EGESZ.PNG>]
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
-input line 32.
-(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
-input line 32.
-(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
-<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
-Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
-input line 32.
-(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
- [81 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
+<figures/CRPM3_C_EGESZ.PNG, id=1330, 812.28468pt x 661.72218pt>
+File: figures/CRPM3_C_EGESZ.PNG Graphic file (type png)
+<use figures/CRPM3_C_EGESZ.PNG>
+Package pdftex.def Info: figures/CRPM3_C_EGESZ.PNG  used on input line 29.
+(pdftex.def)             Requested size: 471.49728pt x 384.1096pt.
+
+[81
+
+ <./figures/CRPM3_C_EGESZ.PNG>]
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1395, page=2, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1336, 597.55246pt x 845.19763pt>
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf  used on input l
+ine 34.
+(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
+
+
+pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf  used on input l
+ine 34.
+(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
+
+
+pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1339, page=1, 597.55246pt x 845.1976
+3pt>
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
+input line 34.
+(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
+input line 34.
+(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
+input line 34.
+(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
+input line 34.
+(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
+File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
+<use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 1>
+Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page1 used on 
+input line 34.
+(pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
+[82
+
+ <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
+
+pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1396, page=2, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 2>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page2 used on 
-input line 32.
+input line 34.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 2>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page2 used on 
-input line 32.
+input line 34.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 2>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page2 used on 
-input line 32.
+input line 34.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-[82 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
+[83 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]
 
 pdfTeX warning: pdflatex (file ./figures/Muszaki_adatlap_CRPM3-V10.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1401, page=3, 597.55246pt x 845.1976
+<figures/Muszaki_adatlap_CRPM3-V10.pdf, id=1403, page=3, 597.55246pt x 845.1976
 3pt>
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 3>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page3 used on 
-input line 32.
+input line 34.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 3>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page3 used on 
-input line 32.
+input line 34.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: figures/Muszaki_adatlap_CRPM3-V10.pdf Graphic file (type pdf)
 <use figures/Muszaki_adatlap_CRPM3-V10.pdf, page 3>
 Package pdftex.def Info: figures/Muszaki_adatlap_CRPM3-V10.pdf , page3 used on 
-input line 32.
+input line 34.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
-[83 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>]) [84 <./figures/CRPM3_C_EGESZ.PN
-G>]
+[84 <./figures/Muszaki_adatlap_CRPM3-V10.pdf>])
 \tf@thm=\write7
 \openout7 = `Diplomaterv.thm'.
 
- 
+
+
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
 (Diplomaterv.aux (task.aux) (titlepage.aux) (declaration.aux) (abstract.aux)
 (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux)
 (chapter5.aux) (chapter6.aux) (overall.aux) (acknowledgement.aux)
 (appendices.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
 Package rerunfilecheck Info: File `Diplomaterv.out' has not changed.
 (rerunfilecheck)             Checksum: 56BA8D8D170B94630EDD7A9FD64AD2DE;11033.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 16747 strings out of 492970
- 249643 string characters out of 3126149
- 591091 words of memory out of 3000000
- 19795 multiletter control sequences out of 15000+200000
- 27084 words of font info for 65 fonts, out of 3000000 for 9000
+ 16734 strings out of 492970
+ 249383 string characters out of 3126149
+ 533753 words of memory out of 3000000
+ 19788 multiletter control sequences out of 15000+200000
+ 26769 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,18n,51p,1853b,2140s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,18n,51p,1853b,1417s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1095.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecit0900.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ectt0900.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Balazs\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Balazs\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk> <C:\Users\
-Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk>
+n\ec\dpi600\ectt0900.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Balazs\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk> <C:\Users\Balazs\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\
+Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk>
  <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx1000.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1200.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Balazs\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Balazs\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Ba
-lazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <
-C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
-m1095.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecbx1095.pk><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Balazs/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Balazs/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/U
-sers/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr9.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Balazs/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Diplomaterv.pdf (86 pages, 17693615 bytes).
+cbx1200.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2488.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Balazs\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Balazs\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Ba
+lazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <
+C:\Users\Balazs\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
+x1095.pk><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Balazs/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Balazs/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Balazs
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr9.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Balazs/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Diplomaterv.pdf (86 pages, 14166519 bytes).
 PDF statistics:
- 2319 PDF objects out of 2487 (max. 8388607)
- 455 named destinations out of 1000 (max. 500000)
+ 2286 PDF objects out of 2487 (max. 8388607)
+ 452 named destinations out of 1000 (max. 500000)
  787 words of extra memory for PDF output out of 10000 (max. 10000000)
 

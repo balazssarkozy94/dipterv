@@ -1,7 +1,22 @@
 %----------------------------------------------------------------------------
 \chapter{Szoftveres komponensek}
 %----------------------------------------------------------------------------
-\lstset{language=C, style=customc}
+\lstset{language=c,
+	captionpos=b,
+	numbers=left, %Nummerierung
+	numberstyle=\tiny, % kleine Zeilennummern
+	frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	escapeinside={(*@}{@*)},
+	%commentstyle=\color{green},
+	keywordstyle=\color{black},
+	stringstyle=\color{black},
+	basicstyle=\footnotesize\ttfamily,
+}
 
 %----------------------------------------------------------------------------
 \section{Mikrokontroller}
@@ -21,7 +36,7 @@ Mindezek ellenére, érdemes gondolni arra, hogy a mai mikrokontrollerek programme
 
 Az STMicroelectronics által kiadott emulált EEPROM driverek \cite{ST_AN4056} segítségével könnyen megvalósíthatjuk a nemfelejtõ memóriát, a fejlesztõnek mindössze néhány definiált konstans értékét kell megadni, majd néhány függvény használatával egyszerûen írni és olvasni a változókat. Mivel a flash memória egyik sajátossága, hogy már egyszer írt memória területet csak törlés után lehet újra írni, illetve törölni csak egész lapokat lehet, így az emulált EEPROM megvalósításához legalább két lapra van szükség. Az emulált EEPROM-ban 16 bites adatregiszterek vannak, ezekhez pedig 16 bites virtuális címek tartoznak. A driver beírás esetén a lista legvégére írja a virtuális címet és az adatot. A flash memóriában törlés után minden bit 1-es értéket vesz fel, ezt használja ki  az olvasás függvény, ami az emulált EEPROM memória végét a 0xFFFF virtuális címû regiszterrel detektálja. Az olvasás, amennyiben több azonos címet is talál a memóriában, mindig a legutolsó értékét adja vissza, hiszen ezt írtuk be legutoljára. Amennyiben a kijelölt lap betelne, a driver a változók legutolsó értékeit átmenti egy másik lapra, majd törli a betelt lapot. A driver publikus függvényei:
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Emulált EEPROM kezelõ függvényei},captionpos=b]
 uint16_t EE_Init(void);
 uint16_t EE_ReadVariable(uint16_t VirtAddress, uint16_t* Data);
 uint16_t EE_WriteVariable(uint16_t VirtAddress, uint16_t Data);
@@ -44,7 +59,7 @@ Olvasási idõ &  92$\mu$s  & 10...300$\mu$s\\ \hline
 
 A CR-PM3-ban a legtöbb kalibrációs változó  típusa egyszeres-precizitású lebegõpontos, ezek letárolása és visszaolvasása 16 bites regiszterekkel némi bit manipulációt igényel, az ezeket megvalósító függvényeket az ST által szolgáltatott függvénykönyvtár nem tartalmazza, azokkal nekem kellett kiegészíteni a programot:
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Saját fejlesztésû float kezelõ függvények emulált EEPROM-hoz},captionpos=b]
 void eeStoreFloat(float data, uint16_t ee_address);
 void eeReadFloat(volatile float* calib_address, uint16_t ee_address);
 \end{lstlisting}
@@ -74,7 +89,7 @@ Mivel a cégen belül Standard Peripheral Libraries-t (SPL) alkalmazunk, a segédpr
 
 A program reset után, még a hardver inicializáció elõtt a különbözõ mérést leíró struktúrák inicializációjával kezd, az ezekben található pointerek megfelelõ értékének beállításával, és listák feltöltésével. Ezen a ponton kell megadni az eszköznek, hogy pontosan melyik vizsgált paramétereket kívánjuk kiolvasni a DSP-bõl.
 
-	\begin{lstlisting}
+	\begin{lstlisting}[caption={Mérést leíró struktúrák inicializációja},captionpos=b]
   struct meas_register reg_list_L1[MAX_NO_OF_REGS_TO_READ/3];
   struct calib_data calibration_data_l1;
   regs_of_interest_L1.calibration_data = &calibration_data_l1;
@@ -83,7 +98,6 @@ A program reset után, még a hardver inicializáció elõtt a különbözõ mérést leíró
   
   addToRegsOfInterest(&regs_of_interest_L1, "L1 VRMS", AVRMS, 4, _signed, voltage, 50);
   addToRegsOfInterest(&regs_of_interest_L1, "L1 IRMS", AIRMS, 4, _signed, current, 50);
-  ...
 	\end{lstlisting}
 
 Ezt követõen a flash memóriából, az emulált EEPROM-ból kiolvassa a kalibrációs adatokat, ezeket hozzárendeli a megfelelõ változókhoz.
@@ -125,7 +139,7 @@ A modul mûködése során a három regisztrált ciklikus taszkban, interruptokban, il
 
 A firmware készítése során amennyire lehetett, az objektum orientáltságra törekedtem, így a mérési eredmények, kalibrációs adatok és beállítások struktúrákban vannak tárolva. Ahol csak lehetett a hibák elkerülésének érdekében enum típusokat vettem fel. 
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Méréshez kapcsolódó struktúrák},captionpos=b]
 enum issigned{
     _signed,
     _unsigned
@@ -180,7 +194,7 @@ A calib\_data struktúra tartalmazza az összes, valamilyen kompenzációhoz kapcsol
 
 A meas\_register-eket regs\_of\_interest\_type struktúrák foglalják össze fázisonként. Ezekhez hozzá van rendelve továbbá a kalibrációs adatokat tartalmazó calib\_data struktúra egy-egy példánya, valamint egy változó tartalmazza a felvett meas\_register-ek számát.  
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Fázishoz tartozó adatstruktúra},captionpos=b]
 struct regs_of_interest_type{
    struct meas_register* reg_array;
    struct calib_data* calibration_data;
@@ -190,7 +204,7 @@ struct regs_of_interest_type{
 
 A regs\_of\_interest\_type gyûjtõ objektumok kezelése egy hozzáadó, egy frissítõ, és egy kiolvasó függvénnyel történik.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Mérõstruktúra kezelõfüggvényei},captionpos=b]
   addToRegsOfInterest(&regs_of_interest_L1, "L1 VRMS", AVRMS, 4, _signed, voltage, 50);
   updateRegsOfInterest(regs_of_interest_L1);
   output_buffer[1] = readRegsOfInterest(regs_of_interest_L1, "L1 VRMS"); 
@@ -204,7 +218,7 @@ A fejlesztés támogatásához a készülékben helyet kapott egy kivezetett UART port.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=60mm, keepaspectratio]{figures/5_1_1_dbg_serial.png}
+\includegraphics[width=50mm, keepaspectratio]{figures/5_1_1_dbg_serial.png}
 \caption{Debug soros port kimenete}
 \end{figure}
 
@@ -228,7 +242,7 @@ Ezek a funkciók fejlesztéshez, mérésekhez rendkívül kényelmesek, az alapkészülék
 
 Egy adat adatbázisba való felvétele az alábbi néhány SQL mûvelet elvégzésével történik:
 
-\begin{lstlisting}[language = SQL]
+\begin{lstlisting}[language = SQL,caption={Adatok, adatcsatornák felvétele C-CAN-re},captionpos=b]
 insert into CRModuleDatas ( moduleTypeId, dataType,ccanChannel,description,tag, siUnit) VALUES ('CR-PM3','MEASURE',401,'L1 fázis feszültség', 'L1_VRMS', 'V');
 
 insert into CRModuleParams (moduleTypeId, ccanChannel, paramId, paramType, paramValue, description, siUnit) VALUES ('CR-PM3', 299,  3, 'uint32', 500,   'L1 fázis feszültség küdési ciklusidõ (>0 küld)', 'ms');
@@ -287,7 +301,7 @@ A kalibráció különbözõ lépéseit C-CAN üzenetek hatására végzi el a CR-PM3, majd 
 
 A C-CAN üzenetek vizsgálata egy beregisztrált kezelõ függvényben történik, amely egy dedikált C-CAN csatornára érkezõ üzenet esetén hívódik meg:
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Kalibráció függvényei a kiegészítõmodulban},captionpos=b]
 CHANNEL_ERR_e calibrateHandler(uint16_t channel, uint8_t* data, uint16_t length)
 {
     switch(channel)
@@ -305,7 +319,6 @@ CHANNEL_ERR_e calibrateHandler(uint16_t channel, uint8_t* data, uint16_t length)
             calibrateMeteringIC_VIOSMatching();
             break;
         }
-        ...
 }
 \end{lstlisting}
 
