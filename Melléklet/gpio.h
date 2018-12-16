@@ -1,0 +1,51 @@
+#ifndef GPIO_H
+#define GPIO_H
+
+#define nIRQ0_PORT GPIOA
+#define nIRQ0_PIN GPIO_Pin_10
+#define nIRQ0_EXTIPORT EXTI_PortSourceGPIOA
+#define nIRQ0_EXTI_PinSource EXTI_PinSource10
+#define nIRQ1_PORT GPIOB
+#define nIRQ1_PIN GPIO_Pin_15
+#define nIRQ1_EXTIPORT EXTI_PortSourceGPIOB
+#define nIRQ1_EXTI_PinSource EXTI_PinSource15
+#define nIRQ1_EXTI_Line EXTI_Line15
+#define nRESET_METER_PORT GPIOA
+#define nRESET_METER_PIN GPIO_Pin_9
+#define nDREADY_PORT GPIOA
+#define nDREADY_PIN GPIO_Pin_8
+#define PPS_PORT GPIOB
+#define PPS_PIN GPIO_Pin_14
+#define _12V_READOUT_PORT GPIOA
+#define _12V_READOUT_PIN GPIO_Pin_0
+#define _12V_READOUT_PIN_SOURCE GPIO_PinSource0
+#define SPI1_MISO_PORT GPIOA
+#define SPI1_MISO_PIN GPIO_Pin_6
+#define SPI1_MISO_PIN_SOURCE GPIO_PinSource6
+#define SPI1_MOSI_PORT GPIOA
+#define SPI1_MOSI_PIN GPIO_Pin_7
+#define SPI1_MOSI_PIN_SOURCE GPIO_PinSource7
+#define SPI1_SCK_PORT GPIOA
+#define SPI1_SCK_PIN GPIO_Pin_5
+#define SPI1_SCK_PIN_SOURCE GPIO_PinSource5
+#define SPI1_NSS_PORT GPIOA
+#define SPI1_NSS_PIN GPIO_Pin_4
+#define SPI3_NSS_PORT GPIOA
+#define SPI3_NSS_PIN GPIO_Pin_15
+#define SPI3_SCK_PORT GPIOB
+#define SPI3_SCK_PIN GPIO_Pin_3
+#define SPI3_MOSI_PORT GPIOB
+#define SPI3_MOSI_PIN GPIO_Pin_5
+#define DBG_UART_TX_PORT GPIOB
+#define DBG_UART_TX_PIN GPIO_Pin_10
+#define DBG_UART_TX_PIN_SOURCE GPIO_PinSource10
+#define DBG_UART_RX_PORT GPIOB
+#define DBG_UART_RX_PIN GPIO_Pin_11
+#define DBG_UART_RX_PIN_SOURCE GPIO_PinSource11
+#define A3_PORT GPIOB
+#define A3_PIN GPIO_Pin_9
+
+void initGpios();
+void initCalibSelectPin();
+
+#endif

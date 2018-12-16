@@ -1,0 +1,17 @@
+/*! \page page2 Történet
+  [U] - Uj tulajdonság\n
+  [C] - Megváltoztatott tulajdonság\n
+  [H] - Hibajavitás\n
+  [E] - Egyéb
+
+2016.11.22  v0.1 - [E] Bevezetés
+
+*/
+
+#define __VERSION_HIGH__ 0
+#define __VERSION_LOW__  1
+
+
+#define __HW_TYPE__    "CR-PM3\0"
+#define __APPL_TYPE__    "CR-PM3\0\0"
+

@@ -13,8 +13,8 @@ A termékszabványok egy-egy készülékkel szemben egyértelmû követelményeket támasz
 \begin{enumerate}
 \item\emph{Nyomtatott áramkör kialakítása:} Itt törekedni kell a NYÁK gyártó technológiájának megfelelõen tervezni, hiszen a túl vékony vezetõ vagy szigetelõ, túl apró furat használata jelentõsen emelheti az összes legyártott NYÁK árát. 
 \item\emph{Alkatrészek megválasztása:} Természetesen az alacsonyabb költségû alkatrészek csökkentik az összköltséget, azonban ez egy kétélû fegyver, mivel általában az olcsóbb alkatrészek kevésbé megbízhatóak, vagy kisebb biztonsági tényezõvel járnak, esetleg az adatlapok hiányosak lehetnek, vagy valótlan adatokat tartalmazhatnak, továbbá az életciklusuk rendkívül bizonytalan, a gyártóval a kommunikáció gyakran akadályokba ütközik, így a termék támogatás nehézkes. 
-\item\emph{Alkatrészértékek megválasztása:} Amennyiben egy ellenállás, kondenzátor, vagy induktivitás értéke nem kritikus, akkor azokat összevonhatjuk közeli értékû társaikkal, például felhúzó ellenállások esetén az egész termékben ugyanazt az értéket használjuk. Ez a gyártás során csökkenti az értéket, mivel a beültetõ gépbe több tekercs helyett csak egyet kell befogni, ezzel gyorsítva a folyamatot.
-\item\emph{Alkatrészek elhelyezése:} Szintén a gyártási folyamat költségét tudjuk csökkenteni, amennyiben ugyanazon a fázison csak egyszer, vagy egyszer sem kell átvinni az áramkört. Például ha felületszerelt alkatrészeket a NYÁK csak egyik oldalára tesszük, akkor az a reflow kemencén csak egyszer halad át, amennyiben pedig nem használunk furatszerelt alkatrészt, a forrasztó hullámon egyszer sem halad át. Természetesen fõ szempontnak a funkcionalitásnak kell lenni, nem szabad például egy mechanikailag kevésbé stabil csatlakozót használni a költség optimalizálás miatt. 
+\item\emph{Alkatrészértékek megválasztása:} Amennyiben egy ellenállás, kondenzátor, vagy induktivitás értéke nem kritikus, akkor azokat összevonhatjuk közeli értékû társaikkal, például felhúzó ellenállások esetén az egész termékben ugyanazt az értéket használjuk. Ez a gyártás során csökkenti a költséget, mivel a beültetõ gépbe több tekercs helyett csak egyet kell befogni, ezzel gyorsítva a folyamatot.
+\item\emph{Alkatrészek elhelyezése:} Szintén a gyártási folyamat költségét tudjuk csökkenteni, amennyiben ugyanazon a gyártási fázison csak egyszer, vagy egyszer sem kell átvinni az áramkört. Például ha a felületszerelt alkatrészeket a NYÁK csak egyik oldalára tesszük, akkor az a reflow kemencén csak egyszer halad át, amennyiben pedig nem használunk furatszerelt alkatrészt, a forrasztó hullámon egyszer sem halad át. Természetesen fõ szempontnak a funkcionalitásnak kell lenni, nem szabad például egy mechanikailag kevésbé stabil csatlakozót használni a költség optimalizálás miatt. 
 \end{enumerate} 
 
 %----------------------------------------------------------------------------
@@ -31,17 +31,11 @@ A CR-PM3 háromfázisú teljesítménymérõ modul három nyomtatott áramköri lapból épü
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=150mm, keepaspectratio]{figures/4_2_1_konstr_expl.png}
+\includegraphics[width=120mm, keepaspectratio]{figures/4_2_1_konstr_expl.png}
 \caption{CR-PM3 összeállítása}
 \end{figure}
 
 A készüléken 4 csatlakozó található, ezek a 3 fázis, valamint a nulla vezetõhöz tartozó jelek csatlakoztatásáért felelõsek.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=150mm, keepaspectratio]{figures/4_2_2_konstr_compl.png}
-\caption{CR-PM3 a készülékházban}
-\end{figure}
 
 A két elektronikát tartalmazó emelet közötti kapcsolatot a Samtec által gyártott speciális, DW \cite{SAMTEC_DW} családba tartozó tûsorával, és HLE \cite{SAMTEC_HLE} családba tartozó hüvelysorával valósítottam meg. A DW tûsorok a szokványos társaiktól eltérõen egy további mûanyag távtartóval rendelkeznek, amely magasságát 5mil felbontással lehet megválasztani rendelés során. Ezzel a távtartóval egyszerûen be lehet állítani a két NYÁK távolságát, az összeszerelést jelentõsen egyszerûsíti. A HLE hüvelysor pedig egy ''Pass-through'' típusú csatlakozó, vagyis akár alulról, akár felülrõl is képes fogadni az ellenpárját. Ez utóbbi tulajdonságát kihasználva tudtam a CR-PM3C-t egyoldalas szerelésûre kialakítani, mivel a NYÁK-on a csatlakozó felül helyezkedett el, alatta pedig fémezetlen furatok lettek kialakítva, így alulról akadálymentesen tudott a tûsor kontaktus kialakítani.
 
@@ -52,8 +46,6 @@ Az elõlapon a C-RTU család minden tagján kötelezõ bizonyos állapotokat LED-del m
 %----------------------------------------------------------------------------
 
 A kapcsolási rajzot OrCAD Capture CIS-ben hoztam létre, melynek számos funkciója segíti a tervezõ mérnökök, illetve a gyártás elõkészítés munkatársainak közös munkáját. A tervezõ az alkatrész lehelyezésekor láthatja, hogy az adott komponensbõl hány darab van raktáron, mennyi annak a beszerzési ára, így elkerülhetõek az olyan szituációk, hogy egy már nem beszerezhetõ, vagy feleslegesen drága alternatíva kerül egy új termékbe.
-
-A CR-PM3C-n egy 3.3V-os tápegységet és a hátlapi buszfeszültség visszaolvasását leszámítva tisztán digitális áramkörök helyezkednek el, míg a CR-PM3A-n a 4 darab ADE7933-as mérõ IC, illetve az ezekhez szükséges alkatrészek, az emeleti tûsor csatlakozó, továbbá a csatornák védelmei, a mérõ söntök, a nagyfeszültségû ellenállás osztók és a KIF csatlakozók találhatók. A két NYÁK szétválasztásánál elsõsorban a hálózati feszültségû rész és a feldolgozó elektronika szétválasztása volt a fõszempont.
 
 %----------------------------------------------------------------------------
 \subsection{Kapcsolóüzemû tápegység}
@@ -100,7 +92,7 @@ Ezután már a szükséges induktivitás értéke számolható:
 Az ehhez legközelebbi sztenderd érték 6.8 $\mu H$, így az áramkörben ezt választottam. Természetesen el lehet térni ettõl az értéktõl mind a két irányban. Amennyiben nagyobb induktivitást alkalmazunk, csökkentjük az áramhullámosságot, ezzel pedig a kimeneten fellépõ feszültséghullámosságot, de cserébe rontjuk a tranziens válaszát a tápnak, mivel az induktivitás áramát lassabban tudjuk növelni. Egy alacsonyabb érték választása esetén az elõzõvel éppen ellentétesen változnának a paraméterek: Gyorsabb kiszabályzás, de nagyobb feszültséghullámosság a kimeneten.
 
 Ezek mellett természetesen figyelembe kell vennünk a tekercs telítési áramát, amelynek minimális értéke:
-\[ I_{SAT} = + I_{OUT(MAX)} + \Delta I_L \]
+\[ I_{SAT} = I_{OUT(MAX)} + \Delta I_L \]
 Ezek után a be- és kimeneti kapacitások meghatározása következik. 
 
 A bemeneti kapacitásra a kapcsolások miatt kialakuló, gyors fel és lefutású áramtüskék miatt van szükség. A kondenzátoroknak kell szolgáltatniuk a szükséges áram egy részét, illetve kisimítaniuk a feszültséget a kapcsolóelemek elõtt. A bemeneten fellépõ 500kHz-es áramhullámosság, amelyet a kondenzátoroknak kell elviselni:
@@ -143,7 +135,7 @@ A CR-PM3 árammérõ bemeneteit elsõsorban árammérõ transzformátorok fogadására kel
 
 Áramváltó transzformátoros megoldás esetén a kis értékû sönt használata miatt egy lebegõ áramforrásként tekinthetünk a bemeneti jelforrásra, amely a mérõsöntön feszültséget ejt, ezt pedig a szûrõ- és védõáramkörökön keresztül az ADE7933 jelkondicionáló fokozatára, majd analóg digitális átalakítójára jut. 
 
-A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6m$\Omega$-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5m$\Omega$-os, négy vezetékes sönt \cite{vishay_shunt}, mely nagyobb költségû. A prototípus fejlesztése során végül csak a pontosabb, 4 vezetékes ellenállás lett beültetve. Ez a sönt konstans 1W maximális disszipációt visel el 70C$^{\circ}$-os környezeti hõmérsékletnél, amelyhez 14.14A-es áram társul, emellett legfeljebb 5 másodperces idõintervallumra 5W-ot, valamint az ehhez tartozó 31A-t is elvisel. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
+A söntök választásánál két, gyártás során eldönthetõ opció került kialakításra: Egy kisebb precizitású, 1$\%$-os 6m$\Omega$-os két vezetékes ellenállás, mely olcsóbb, illetve egy 0.1$\%$-os 5m$\Omega$-os, négy vezetékes sönt \cite{vishay_shunt}, mely nagyobb költségû. A prototípus fejlesztése során végül csak a pontosabb, 4 vezetékes ellenállás lett beültetve. Ez a sönt konstans 1W maximális disszipációt visel el 70C$^{\circ}$-os környezeti hõmérsékletnél, amelyhez 14.14A-es áram társul, emellett legfeljebb 5 másodperces idõintervallumra 5W-ot, valamint az ehhez tartozó 31A-t. A jövõben elképzelhetõ, hogy ez az opcionális ültetés kikerül a termékbõl, azonban egy prototípus tervezésénél minél több lehetõséget érdemes biztosítania a tervezõnek, hogy abból a termékfejlesztés korai szakaszában tapasztalatot meríthessen.
 
 A söntöket ferrit szûrõk követik, melyek néhány 10kHz-es tartományig $\Omega$-os nagyságrend alatti impedanciát képviselnek, szûrõ hatásukat a 100MHz, illetve afeletti tartományban fejtik ki.
 
@@ -192,11 +184,11 @@ Az ellenállás értéke mellett ebben a felhasználásban rendkívül fontos paraméter 
 A feszültség bemenetnek nagy energiájú túlfeszültségeket is el kell viselnie, gondoljunk itt induktív kapcsolási jelenségekre a hálózaton, villámcsapások másodlagos hatásaira, vagy bármilyen egyéb, a készülék bemeneteire csatolódott zavaró jelre. Ezt a különbséget pedig a szabványok is figyelembe veszik, például a CR-PM3-ra vonatkozó IEC 62052-11:2003 termékszabvány azt írja elõ, hogy az EMC immunitási vizsgálatok egy részében csak a feszültség bemeneteket terheli, az árambemeneteket üresen kell hagyni. A feszültségbemeneteket érõ zavarok ellen túlfeszültség védelmet kell implementálni a biztonságos, stabil mûködés érdekében. Ezekre a leggyakrabban alkalmazott megoldások \cite{KESZULEK_FESZ}:	
 
 \begin{enumerate}
-\item\emph{Szikraköz} A túlfeszültség védelmek közül ez a legegyszerûbb, itt az átütés jelenségét használjuk fel védelmi célokra, amelynek kritikus feszültsége viszont a környezeti körülményektõl erõsen függ. A szikraközt mindenképpen áramkorlátozó eszközzel (Kismegszakító, olvadóbiztosító \cite{KESZULEK_ARAM}) együtt kell alkalmazni, anélkül még nagyon kis áramok esetén is megmaradhat az ív, az pedig tûzveszélyes.
-\item\emph{Nemesgáz töltésû szikraköz (GDT)} A szikraközhöz hasonló, azonban itt egy hermetikusan lezárt eszközben alakul ki a kontrollált ív, amely biztonságosabb mûködést eredményez.
-\item\emph{Fémoxid varisztor} Egy nemlineáris ellenállásként viselkedõ eszköz, mely a szikraközzel ellentétben a túlfeszültség megszûnésekor, amennyiben a varisztor nem hibásodott meg, normál mûködésbe tér vissza, csak szivárgási árama lesz.
-\item\emph{Transient voltage supressor} Hasonló karakterisztikájú egy Zéner diódához, gyors nyitási idõvel, azonban kisebb szivárgási árammal, nagyobb impulzus teljesítménnyel. Hosszabb idejû túlfeszültség korlátozására alkalmatlan.
-\item\emph{Tirisztoros vágó áramkör} Egy nagy teljesítmény elvezetésére képes megoldás, azonban itt gondoskodni kell a zárlati áram megszakításáról. A túlfeszültség és áramkorlátozás megszüntetése után az áramkör alapállapotba kerül. Hátránya, hogy rövid idejû feszültségtüske esetén feleslegesen korlátozhatja a kimenetén a feszültséget.
+\item\emph{Szikraköz:} A túlfeszültség védelmek közül ez a legegyszerûbb, itt az átütés jelenségét használjuk fel védelmi célokra, amelynek kritikus feszültsége viszont a környezeti körülményektõl erõsen függ. A szikraközt mindenképpen áramkorlátozó eszközzel (Kismegszakító, olvadóbiztosító \cite{KESZULEK_ARAM}) együtt kell alkalmazni, anélkül még nagyon kis áramok esetén is megmaradhat az ív, az pedig tûzveszélyes.
+\item\emph{Nemesgáz töltésû szikraköz (GDT):} A szikraközhöz hasonló, azonban itt egy hermetikusan lezárt eszközben alakul ki a kontrollált ív, amely biztonságosabb mûködést eredményez.
+\item\emph{Fémoxid varisztor:} Egy nemlineáris ellenállásként viselkedõ eszköz, mely a szikraközzel ellentétben a túlfeszültség megszûnésekor, amennyiben a varisztor nem hibásodott meg, normál mûködésbe tér vissza, csak szivárgási árama lesz.
+\item\emph{Transient voltage supressor:} Hasonló karakterisztikájú egy Zéner diódához, gyors nyitási idõvel, azonban kisebb szivárgási árammal, nagyobb impulzus teljesítménnyel. Hosszabb idejû túlfeszültség korlátozására alkalmatlan.
+\item\emph{Tirisztoros vágó áramkör:} Egy nagy teljesítmény elvezetésére képes megoldás, azonban itt gondoskodni kell a zárlati áram megszakításáról. A túlfeszültség és áramkorlátozás megszüntetése után az áramkör alapállapotba kerül. Hátránya, hogy rövid idejû feszültségtüske esetén feleslegesen korlátozhatja a kimenetén a feszültséget.
 \end{enumerate}
 
 %----------------------------------------------------------------------------

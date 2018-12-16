@@ -35,9 +35,9 @@ Az 50Hz-es villamoshálózatok teljesítményminõség mérését az MSZ EN 61000-4-30 sz
 \caption{ENTSO-E tagállamok \cite{ENTSO_E}}
 \label{entso_e}
 \end{figure}
-\item\emph{Feszültség amplitúdó:} A hálózati feszültség amplitúdójának stabilitása szükséges a rákötött eszközök megfelelõ mûködéséhez. Amennyiben gyakran fordulnak elõ túlfeszültségek, az a készülékek öregedéséhez vezethet, míg a gyakori feszültség beesések, vagy kimaradások a villamosberendezések használatát akadályozzák.
-\item\emph{Áram amplitúdó:} Az áram amplitúdója már a fogyasztáshoz kapcsolódik, éppen emiatt ez már a teljesítményminõség méréséhez szükséges. Az áramfelvétel visszahathat a feszültségre, mivel a villamoshálózat az ideálistól eltér.
-\item\emph{Feszültség- és áramharmonikusok:} Az ideális szinusz helyett a valóságban torzult, harmonikusokkal terhelt feszültség mérhetõ a hálózaton. Ennek oka, hogy a fogyasztók nem tisztán rezisztív jellegûek, fogyasztásuk nagyon gyakran nemlineáris, ezért áramfelvételükban felharmonikusok jelennek meg. A torzult áramfelvétel pedig visszahat a feszültségre, mivel a hálózat impedanciája nem nulla.
+\item\emph{Feszültség amplitúdó:} A hálózati feszültség amplitúdójának stabilitása szükséges a rákötött eszközök megfelelõ mûködéséhez. Amennyiben gyakran fordulnak elõ túlfeszültségek, az a készülékek öregedéséhez vezethet, míg a gyakori feszültség beesések, vagy kimaradások a villamosberendezések gondtalan használatát akadályozhatják.
+\item\emph{Áram amplitúdó:} Az áram amplitúdója már a fogyasztáshoz köthetõ, éppen emiatt ez már a teljesítményminõség méréséhez szükséges. Az áramfelvétel visszahathat a feszültségre, mivel a villamosenergia-átviteli hálózat impedanciája 0-nál nagyobb.
+\item\emph{Feszültség- és áramharmonikusok:} Az ideális szinusz helyett a valóságban torzult, harmonikusokkal terhelt feszültség mérhetõ a hálózaton. Ennek oka, hogy a fogyasztók nem tisztán rezisztív jellegûek, fogyasztásuk nagyon gyakran nemlineáris, ezért áramfelvételükben felharmonikusok jelennek meg, a torzult áramfelvétel pedig visszahat a feszültségre.
 \end{enumerate}
 
 A szabványban különbözõ hálózati események is felsorolásra kerülnek, melyek vizsgálata fontos információkkal szolgálhat az energetikusoknak:
@@ -47,23 +47,23 @@ A szabványban különbözõ hálózati események is felsorolásra kerülnek, melyek vizs
 \item\emph{Feszültségcsökkenés:} Hosszabb ideig tartó esemény, mely során a névleges feszültség alá kerül a hálózat.
 \item\emph{Feszültségletörés:} Rövid idõre fennálló feszültség csökkenés, mely során a hálózati feszültség a névleges feszültség 90\%-a alá esik.
 \item\emph{Feszültségnövekedés:} Rövid ideig tartó jelenség, mely során a hálózati feszültség a névleges 110\%-a felé emelkedik.
-\item\emph{Feszültségkiesés:} A hálózati feszültség 10\% alá esik a feszültség, több részre osztják az alapján, hogy mennyi ideig áll fent: Lehet pillanatnyi, rövid, hosszú.
-\item\emph{Tranziensek:} Fél hálózati periódusnál rövidebb ideig tartó események tartoznak ide, legyen az akár túlfeszültség, vagy feszültségbeesés.
-\item\emph{Aszimmetria:} Amennyiben egy háromfázisú rendszerben a fázisfeszültségek nem egyenlõek, asszimmetriáról beszélhetünk, amely például a rákapcsolt fogyasztók károsodásához vezethet.
+\item\emph{Feszültségkiesés:} A hálózati feszültség 10\% alá esik a feszültség, több részre osztják az alapján, hogy mennyi ideig áll fent: Lehet pillanatnyi, rövid, vagy hosszú.
+\item\emph{Tranziensek:} Fél hálózati periódusnál rövidebb ideig tartó események tartoznak ide, ezek járhatnak akár a feszültség növekedésével vagy csökkenésével.
+\item\emph{Aszimmetria:} Amennyiben egy háromfázisú rendszerben a fázisfeszültségek nagysága nem egyenlõ, asszimmetriáról beszélhetünk, amely például a rákapcsolt fogyasztók károsodásához vezethet.
 \end{enumerate}
 
 %----------------------------------------------------------------------------
 \subsection{MSZ EN 61000-4-30 követelményei}
 %----------------------------------------------------------------------------
 
-A szabvány a mérési követelményeket két csoportra bontja, ezek az ''A'' és ''B'' osztályba vannak sorolva.
+A szabvány a teljesítményminõség mérési követelményeit két csoportra bontja, ezek az ''A'' és ''B'' osztályba vannak sorolva.
 
 \begin{enumerate}
 \item\emph{A osztály:} Az olyan helyeken használandó, ahol precíz mérések szükségesek, például szabványoknak való megfelelés vizsgálatánál, vagy valamilyen vitatott szituáció szakszerû rendezésénél. Két különbözõ A osztályú mûszerrel végzett bármely teljesítményminõségi értéknek a specifikált tolerancián belül kell lennie.
 \item\emph{B osztály:} Ahol csak statisztikai információk gyûjtése a cél, hibák felderítése több mérési pont alapján, ott használható az ebbe az osztályba tartozó mûszer.
 \end{enumerate}
 
-A osztály esetén a mért értékeket három különbözõ átlagolási intervallumon kell kiértékelni: 3 másodpercenként, 10 percenként, 2 óránként. B osztályú eszköznél a gyártóra van bízva a döntés, a választott megoldást közölnie kell a felhasználóval.
+''A'' osztály esetén a mért értékeket három különbözõ átlagolási intervallumon kell kiértékelni: 3 másodpercenként, 10 percenként, 2 óránként. ''B'' osztályú eszköznél a gyártóra van bízva a döntés, a választott megoldást közölnie kell a felhasználóval.
 
 A mérendõ paraméterek, illetve az ahhoz tartozó pontosságkritériumok a \ref{MSZ_EN_61000-4-30} táblázatban láthatók. A kihúzott részen a gyártóra van bízva, hogy megadjon egy specifikált értéket.
 
@@ -85,7 +85,7 @@ Feszültség & <$\pm$0.1\% & <$\pm$0.5\%	\\ \hline
 %----------------------------------------------------------------------------
 
 Az Európai Energia Szabályozók Tanácsa (CEER) rendszeresen hasonlítja össze és publikálja különbözõ országok feszültségminõség adatait, ezzel is ösztönözve az egységes, minõségi szolgáltatás biztosítását Európán belül.
-A legutóbbi ilyen összehasonlítás, a 6th CEER Benchmarking Report on all the Quality of Electricity and Gas Supply 2016 \cite{CEER_BENCHMARK_6TH} volt, mely immár a 6. ilyen kiadvány. Az ebben feltüntetett adatok jól szemléltetik a különbözõ fejlesztési lehetõségeket.
+A legutóbbi ilyen összehasonlítás, a 6th CEER Benchmarking Report on all the Quality of Electricity and Gas Supply 2016 \cite{CEER_BENCHMARK_6TH} volt, mely immár a 6. ilyen kiadvány. A dokumentumban a feldolgozott adatok mellett fejlesztési ötleteket is megfogalmaznak, iránymutatást adva ezzel.
 
 \begin{figure}[!ht]
 \centering

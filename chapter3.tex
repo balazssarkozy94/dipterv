@@ -2,7 +2,7 @@
 \chapter{Rendszer jellemzõk}
 %----------------------------------------------------------------------------
 
-A tervezendõ adatgyûjtõ rendszer a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségeihez közvetlenül, vagy feszültségváltókon, az áramaihoz közvetlen söntön, vagy áramváltókon keresztül csatlakozik. Minden megoldásnál egyformán elvárás a szabványoknak való megfelelés és az ezzel járó szükséges feszültségtûrésû szigetelések. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
+A tervezendõ adatgyûjtõ rendszer a kihelyezett mérõpontokon a KIF és KÖF rendszer feszültségeit és áramait méri. Minden megoldásnál egyformán elvárás a szabványoknak való megfelelés és az ezzel járó szükséges feszültségtûrésû szigetelések. A lehetséges mérési megoldásokat az eszköz szempontjából meghatározó tulajdonságok alapján hasonlítom össze.
 
 %----------------------------------------------------------------------------
 \section{Specifikáció}
@@ -75,7 +75,7 @@ Hasonlóan az elõzõ megoldáshoz, egy ellenállás osztóval kell leképezni az ADC mé
 \subsection{Feszültségmérési megoldások összehasonlítása}
 %----------------------------------------------------------------------------
 
-Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jellemzõik alapján:
+Vessük össze a felsorolt feszültségmérési módokat a legfontosabb jellemzõik alapján. Az összehasonlított tulajdonságokat a \ref{voltage_meas_comp} táblázatban láthatjuk.
 
 \begin{table}[!ht]
 \centering
@@ -110,7 +110,7 @@ Az árammérés eredményébõl következtethetünk a terhelés nagyságára, jellegére. Az
 \caption{Áramváltó transzformátor mûködési elve}
 \end{figure}
 
-A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldható. A transzformátor kialakítását tekintve a szekunder oldal fix menetszámmal rendelkezik, míg a primer oldalon az adott felhasználásnak megfelelõ menetszámban kell átfûzni egy nagyobb áramú vezetõt. Itt a menetszám tipikusan kevés, leggyakrabban 1-3 közötti. A szekunder oldalt egy minél alacsonyabb értékû sönt ellenállással zárjuk le, ezzel próbáljuk közelíteni a transzformátor rövidzárási állapotát. A passzív lezárás mellett létezik úgynevezett aktív lezárás is, ekkor ellenállás helyett egy mûveleti erõsítõs áramkörrel biztosítunk gyakorlatilag rövidzárási állapotot. A szekunder oldali áramot mérve tudunk ezután következtetni a primer áramra, mivel az áttétel elõre ismert. A feszültségváltó transzformátorral hasonló módon méretét tekintve nagy, precízebb típusok költségesek. Gyártanak bontható típusúakat is, azonban ezek tovább emelik a szenzor transzformátor árát, ennek ellenére az iparban gyakran alkalmazzák, mivel a már meglévõ rendszerbe a szolgáltatás szüneteltetése nélkül telepíthetõ. Egy jelentõs hátrány, hogy lezáratlan állapotban életveszélyes feszültségek jelennek meg a szekunder oldalon már alacsonyabb primer áramoknál is. Ez utóbbi abból következik, hogy míg normális mûködés közben a primer és szekunder oldalon keletkezõ fluxus azonos nagyságú és ellentétes irányú, ezzel kioltva egymást, addig a szekunder oldali szakadás esetén a vasmagban kialakuló fluxus megnõ, a szekunder tekercselésben az feszültséget indukál, az pedig a transzformátor tönkremeneteléhez vezethet, vagy pedig a telepítõ szakembert veszélyeztetheti, ezért a telepítésénél kellõ figyelemmel kell eljárni, a szekunder oldalt rövidzárban kell tartani, vagy a primer oldali áramot 0-án kell tartani a szekunder lezárásáig.
+A feszültségváltó transzformátorhoz hasonló megoldással az árammérés is megoldható. A transzformátor kialakítását tekintve a szekunder oldal fix menetszámmal rendelkezik, míg a primer oldalon az adott felhasználásnak megfelelõ menetszámban kell átfûzni egy nagyobb áramú vezetõt. Itt a menetszám tipikusan kevés, leggyakrabban 1-3 közötti. A szekunder oldalt egy minél alacsonyabb értékû sönt ellenállással zárjuk le, ezzel próbáljuk közelíteni a transzformátor rövidzárási állapotát. A passzív lezárás mellett létezik úgynevezett aktív lezárás is, ekkor ellenállás helyett egy mûveleti erõsítõs áramkörrel biztosítunk gyakorlatilag rövidzárási állapotot. A szekunder oldali áramot mérve tudunk ezután következtetni a primer áramra, mivel az áttétel elõre ismert. A feszültségváltó transzformátorral hasonló módon méretét tekintve nagy, precízebb típusok költségesek. Gyártanak bontható típusúakat is, azonban ezek tovább emelik a szenzor transzformátor árát, ennek ellenére az iparban gyakran alkalmazzák, mivel a már meglévõ rendszerbe a szolgáltatás szüneteltetése nélkül telepíthetõ. Egy jelentõs hátrány, hogy lezáratlan állapotban életveszélyes feszültségek jelenhetnek meg a szekunder oldalon már alacsonyabb primer áramoknál is. Ez utóbbi abból következik, hogy míg normális mûködés közben a primer és szekunder oldalon keletkezõ fluxus azonos nagyságú és ellentétes irányú, ezzel kioltva egymást, addig a szekunder oldali szakadás esetén a vasmagban kialakuló fluxus megnõ, a szekunder tekercselésben az feszültséget indukál, az pedig a transzformátor tönkremeneteléhez vezethet, vagy pedig a telepítõ szakembert veszélyeztetheti, ezért a installálásnál kellõ figyelemmel kell eljárni, a szekunder oldalt rövidzárban kell tartani, vagy a primer oldali áramot 0-án kell tartani a szekunder lezárásáig.
 
 %----------------------------------------------------------------------------
 \subsection{Rogowski-tekercs}
@@ -138,7 +138,7 @@ Egy olyan speciálisan kialakított tekercs, mely gyakran flexibilis, nyitható kiv
 \subsection{Sönt ellenállás és izolációs erõsítõ}
 %----------------------------------------------------------------------------
 
-Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció, valamint az alacsony beiktatott ellenállás miatt a magas zárlati áram üzemzavar esetén, amely az árammérõ áramkör tönkremenetelét okozhatja. A mérési pontosság növelésének érdekében érdemes Kelvin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn juttassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 terminális ellenállásokat is, melyekkel tovább növelhetõ a pontosság. A feszültségméréssel hasonló módon, egy kis teljesítményû leválasztott táp szükséges az erõsítõ mûködtetéséhez.
+Egy egyszerû sönt ellenállás és egy izolációs erõsítõ alkalmazásával kis helyen, nagy precizitással elõ tudjuk állítani a leválasztott, árammal arányos feszültség értéket, amit már a feldolgozó egység képes fogadni. Egy jelentõs hátránya ennek a megoldásnak az ellenálláson fellépõ disszipáció, illetve a szükséges izoláció, valamint az alacsony beiktatott ellenállás miatt a magas zárlati áram üzemzavar esetén, amely az árammérõ áramkör tönkremenetelét okozhatja. A mérési pontosság növelésének érdekében érdemes Kelvin bekötést alkalmazni. Ekkor valójában egy 4 vezetékes mérést valósítunk meg, biztosítjuk, hogy az árammérésbõl származó feszültséget egy külön vezetõn juttassuk el a feldolgozó bemenetéig. Választhatunk kifejezetten erre kialakított, 4 kivezetéssel rendelkezõ ellenállásokat is, melyekkel tovább növelhetõ a pontosság. A feszültségméréssel hasonló módon, egy kis teljesítményû leválasztott táp szükséges az erõsítõ mûködtetéséhez.
 
 \begin{figure}[!ht]
 \centering
@@ -159,7 +159,7 @@ A Hall-szenzor alapú árammérõket manapság már feldolgozó elektronikával egy tokb
 \label{hall_comp}
 \end{figure}
 
-Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, amely a mérendõ vezetõ körüli mágneses hurkot a Hall-szenzorhoz vezeti. A mágneses koncentrátorok a nulla térerõsség körül mûködnek a legpontosabban, így egy további mûveleti erõsítõs áramkörrel ezt kompenzálhatjuk, mint például a \ref{hall_comp}-as ábrán. A pontosabb szenzorok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján az integrált szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
+Egy másik Hall-szenzor alapú megvalósítás egy fluxus koncentrátor alkalmazása, amely a mérendõ vezetõ körüli mágneses hurkot a Hall-szenzorhoz vezeti. A mágneses koncentrátorok a nulla térerõsség körül mûködnek a legpontosabban, így egy további mûveleti erõsítõs áramkörrel ezt kompenzálhatjuk, mint például a \ref{hall_comp} ábrán. A pontosabb szenzorok ára viszonylag magas. Személyes, és munkatársaim tapasztalata, illetve egyetemi tanulmányaim alapján az integrált szenzoroknak a kimeneti jele rendkívül zajos, egy precíz mérõmûszerbe nem megfelelõk.
 
 %----------------------------------------------------------------------------
 \subsection{Árammérési megoldások összehasonlítása}
@@ -210,7 +210,7 @@ A mikrokontrollerek gyártónként és családonként is nagyon széles palettán mozogn
 \subsection{Digitális Jelfeldolgozó Processzor}
 %----------------------------------------------------------------------------
 
-Az elsõ lehetséges megoldás egy saját fejlesztésû szoftvert futtató digitális jelfeldolgozót tartalmaz, ez végzi el a méréseket, kompenzációt, valamint számolja ki a hálózati jellemzõket a mért feszültség- és áramértékekbõl. Ennek a megoldásnak elõnye a flexibilitás, illetve, hogy nem tartalmaz ''fekete dobozokat'', vagyis nem ismert belsõ mûködésû blokkokat. A piacon elérhetõ számos jelfeldolgozó processzor, így a tervezõ a célalkalmazásnak megfelelõ típust tud kiválasztani.
+Egy másik lehetséges megoldás egy saját fejlesztésû szoftvert futtató digitális jelfeldolgozót tartalmaz, ez végzi el a méréseket, kompenzációt, valamint számolja ki a hálózati jellemzõket a mért feszültség- és áramértékekbõl. Ennek a megoldásnak elõnye a flexibilitás, illetve, hogy nem tartalmaz ''fekete dobozokat'', vagyis nem ismert belsõ mûködésû blokkokat. A piacon elérhetõ számos jelfeldolgozó processzor, így a tervezõ a célalkalmazásnak megfelelõ típust tud kiválasztani.
 
 %----------------------------------------------------------------------------
 \subsection{Programozható Logika}
@@ -256,7 +256,7 @@ Mivel a mérõ az árammérõ csatornán kevesebb mint 100mW-ot disszipál el, így lega
 
 Maga a mérõ, mivel minden csatorna izolálva van egymástól, akár áramváltó transzformátor nélkül is alkalmazható, így az egyes csatornák a fázisok potenciáljára kerülnek. Az elrendezést a mérõ IC adatlapjában is feltüntetik. Ebben a konfigurációba arra kell figyelni, hogy az árammérõ valamint a feszültségmérõ bemenetek bekötésénél a fázisfeszültség ne kerüljön a mérõ IC bemenetei közé, csak a nagyfeszültségû ellenállásosztón keresztül. Ez vagy úgy érhetõ el, hogy a nullvezetõ áramát mérjük a sönttel, és ekkor a nagyfeszültségû ellenálláság a fázisra van kötve, vagy pedig a fázisvezetõ áramát nézzük, ilyen bekötésnél pedig a nullvezetõt kötjük a nagyfeszültségû ellenállásosztóra.
 
-Az adatok kiolvasását az ADE7978-bõl egy STM32F303-as mikrokontrollerrel valósítom meg, mivel az F3-as sorozaton belül ez már használva van más modulokban, teljesítménye pedig bõven elegendõ a tervezett számítási feladatok ellátásához.
+Az adatok kiolvasását az ADE7978-bõl egy STM32F303-as mikrokontrollerrel valósítom meg, mivel az F3-as sorozaton belül ez a típus már használva van más modulokban, teljesítménye pedig bõven elegendõ a tervezett számítási feladatok ellátásához.
 %----------------------------------------------------------------------------
 \subsection{Elméleti specifikáció, funkcionalitás}
 %----------------------------------------------------------------------------
@@ -294,7 +294,7 @@ Az AF500-zal összevetve az elméleti pontosság tekintetében a CR-PM3 képes lehet 
 \item \emph{Fázisonkénti teljes meddõ energia}
 \item \emph{Fázisonkénti alapharmonikushoz tartozó meddõ energia}
 \item \emph{Fázisonkénti látszólagos energia}
-\item \emph{Feszültség csúcs egy elõre megadott hálózati periódus számban}
+\item \emph{Fázisonkénti feszültség csúcs egy elõre megadott hálózati periódus számban}
 \item \emph{Fázisonkénti áram csúcs egy elõre megadott hálózati periódus számban}
 \item \emph{Fázisonkénti túláram esemény (Egy konfigurálható határértékhez képest)}
 \item \emph{Fázisonkénti túlfeszültség esemény (Egy konfigurálható határértékhez képest)}

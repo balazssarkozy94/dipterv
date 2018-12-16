@@ -56,6 +56,12 @@ A modulok a hátlapon keresztül egy differenciális PPS (Pulse Per Second) jelet k
 
 A modulokon programozáshoz Tag-Connect típusú csatlakozók \cite{TAG_CON} vannak elhelyezve, melyek alkatrész beültetése nélkül, egyszerûen NYÁK rajzolat kialakításával használhatók. Ez nem csak költséghatékony, de kisebb területet is foglal el az áramkör többi részétõl.
 
+%----------------------------------------------------------------------------
+\section{C-CAN protokoll}
+%----------------------------------------------------------------------------
+
+A kommunikáció az alapkészülék és modulok között egy CAN alapú, belsõ fejlesztésû C-CAN elnevezésû kommunikációval történik, ez speciális címzéseket és csomag típusokat definiál, egy master-es topológiával. A protokollban különbözõ csatornákat hozhatunk létre, és ezen keresztül folyhat a kommunikáció alapkészülék és bõvítõmodul között.
+
 A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a futásukhoz szükséges adatokat átadja. Ezt követõen a kiegészítõ készülékek életjelet küldenek, valamint a paramétereknek megfelelõen adatokat. A különbözõ adatokat a C-CAN protokollban kétféleképpen küldhetik fel az alapkészüléknek:
 
 \begin{enumerate}
@@ -64,12 +70,6 @@ A modulok indulás után egy paraméterezõ fázisba kerülnek, ahol az alapkészülék a
 \end{enumerate}
 
 A két változás figyelési módszer egyszerre is alkalmazható, ilyenkor mindig az éppen hamarabb bekövetkezõ kritérium alapján történik a felküldés.
-
-%----------------------------------------------------------------------------
-\section{C-CAN protokoll}
-%----------------------------------------------------------------------------
-
-A kommunikáció az alapkészülék és modulok között egy CAN alapú, belsõ fejlesztésû C-CAN elnevezésû kommunikációval történik, ez speciális címzéseket és csomag típusokat definiál, egy master-es topológiával.
 
 %----------------------------------------------------------------------------
 \section{Mechanikai kialakítás}
